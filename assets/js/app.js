@@ -2,16 +2,6 @@
    LegalHub — Lógica Principal
    ============================================= */
 
-const LEGALHUB_HOST = 'sentiege.github.io/legalhub';
-
-/** Devuelve la URL directa si el código debe linkear sin modal, o null si debe abrir modal. */
-function getDirectUrl(codigo) {
-  if (codigo.links.length === 1 && codigo.links[0].url.includes(LEGALHUB_HOST)) {
-    return codigo.links[0].url;
-  }
-  return null;
-}
-
 document.addEventListener('DOMContentLoaded', () => {
   renderCategorias(CATEGORIAS);
   crearModal();
@@ -38,25 +28,15 @@ function renderCategorias(cats) {
       </div>
       <div class="categoria-card__body">
         ${cat.codigos.map(c => {
-          const directUrl = getDirectUrl(c);
-          if (directUrl) {
-            return `
-              <a href="${directUrl}" class="codigo-item" data-id="${c.id}">
-                <span class="codigo-item__num">${c.ley}</span>
-                <span class="codigo-item__info">
-                  <span class="codigo-item__nombre">${c.nombre}</span>
-                  <span class="codigo-item__desc">${c.descripcion.substring(0, 80)}…</span>
-                </span>
-              </a>
-            `;
-          }
+          const hasExternalLinks = c.links && c.links.length > 0;
           return `
-            <a href="#" class="codigo-item" data-id="${c.id}" onclick="abrirModal('${c.id}');return false;">
+            <a href="${c.internalUrl}" class="codigo-item" data-id="${c.id}">
               <span class="codigo-item__num">${c.ley}</span>
               <span class="codigo-item__info">
                 <span class="codigo-item__nombre">${c.nombre}</span>
                 <span class="codigo-item__desc">${c.descripcion.substring(0, 80)}…</span>
               </span>
+              ${hasExternalLinks ? `<button class="codigo-item__ext" onclick="event.preventDefault();event.stopPropagation();abrirModal('${c.id}')" title="Ver fuentes externas">🔗</button>` : ''}
             </a>
           `;
         }).join('')}
@@ -66,7 +46,7 @@ function renderCategorias(cats) {
   });
 }
 
-/* ---- Modal ---- */
+/* ---- Modal (solo fuentes externas) ---- */
 function crearModal() {
   const overlay = document.createElement('div');
   overlay.id = 'modal-overlay';
@@ -93,9 +73,9 @@ function abrirModal(id) {
     <span class="ley-badge">${codigo.ley}</span>
     <p>${codigo.descripcion}</p>
     <div class="links-wrap">
-      ${codigo.links.length
+      ${codigo.links && codigo.links.length
         ? codigo.links.map(l => `<a href="${l.url}" target="_blank" rel="noopener noreferrer" class="btn-link">${l.label}</a>`).join('')
-        : '<p style="color:#888;font-size:.88rem">No hay enlaces disponibles aún.</p>'
+        : '<p style="color:#888;font-size:.88rem">No hay enlaces externos disponibles.</p>'
       }
     </div>
   `;
