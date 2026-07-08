@@ -24153,8 +24153,8 @@
                   "palabrasClave": [],
                   "rutasRelacionadas": [],
                   "notas": []
-[
-  {
+                 },
+                  {
     "numero": 2145,
     "epigrafe": "Impuestos y tasas municipales",
     "texto": [
@@ -25003,7 +25003,7 @@
     "palabrasClave": [],
     "rutasRelacionadas": [],
     "notas": []
-  }
+  },
   {
     "numero": 2230,
     "epigrafe": "Objeto del usufructo",
@@ -25744,4 +25744,11 @@
     "rutasRelacionadas": [],
     "notas": []
   }
-
+              ]       
+            }        
+          ]           
+        }             
+      ]               
+    }                
+  ]                  
+}                     
