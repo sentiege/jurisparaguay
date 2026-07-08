@@ -1,0 +1,12 @@
+{
+  "name": "Código Penal — LegalHub Paraguay",
+  "short_name": "Cód. Penal",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#1f3147",
+  "theme_color": "#1f3147",
+  "description": "Lector del Código Penal del Paraguay. Parte de LegalHub.",
+  "icons": [
+    { "src": "../../logo.png", "sizes": "any", "type": "image/png" }
+  ]
+}
