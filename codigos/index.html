@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Códigos Legales — LegalHub Paraguay</title>
+  <meta name="description" content="Catálogo completo de códigos legales vigentes del Paraguay. Accedé a los textos normativos organizados por materia jurídica." />
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <style>
+    /* ── Hub de Códigos ── */
+    .hub-hero {
+      background: linear-gradient(135deg, var(--clr-primary) 0%, var(--clr-primary-light) 100%);
+      color: #fff;
+      padding: 3rem 0 2.5rem;
+      text-align: center;
+    }
+    .hub-hero__breadcrumb {
+      font-size: .82rem;
+      opacity: .65;
+      margin-bottom: .75rem;
+      letter-spacing: .3px;
+    }
+    .hub-hero__breadcrumb a { color: var(--clr-accent); text-decoration: none; }
+    .hub-hero__breadcrumb a:hover { text-decoration: underline; }
+    .hub-hero__title { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 700; margin-bottom: .5rem; }
+    .hub-hero__sub { font-size: 1rem; opacity: .8; }
+
+    /* ── Stats Bar ── */
+    .stats-bar {
+      background: var(--clr-accent);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      padding: .9rem 1rem;
+      font-size: .88rem;
+      font-weight: 600;
+      flex-wrap: wrap;
+    }
+    .stats-bar span { display: flex; align-items: center; gap: .4rem; opacity: .95; }
+
+    /* ── Filtro ── */
+    .hub-filters {
+      display: flex;
+      gap: .6rem;
+      flex-wrap: wrap;
+      padding: 2rem 0 1rem;
+      align-items: center;
+    }
+    .filter-btn {
+      padding: .42rem 1rem;
+      border-radius: 50px;
+      border: 2px solid var(--clr-border);
+      background: var(--clr-card);
+      color: var(--clr-text-muted);
+      font-size: .83rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all .2s ease;
+    }
+    .filter-btn:hover, .filter-btn.active {
+      background: var(--clr-primary);
+      border-color: var(--clr-primary);
+      color: #fff;
+    }
+    .filter-label {
+      font-size: .82rem;
+      color: var(--clr-text-muted);
+      font-weight: 600;
+      margin-right: .2rem;
+    }
+
+    /* ── Grid de Códigos ── */
+    .codigos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.25rem;
+      padding-bottom: 3rem;
+    }
+
+    /* ── Card de Código ── */
+    .codigo-card {
+      background: var(--clr-card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border: 1px solid var(--clr-border);
+      display: flex;
+      flex-direction: column;
+      transition: transform .2s ease, box-shadow .2s ease;
+      overflow: hidden;
+      text-decoration: none;
+      color: var(--clr-text);
+    }
+    .codigo-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0,0,0,.13);
+    }
+    .codigo-card__top {
+      padding: 1.1rem 1.3rem .9rem;
+      display: flex;
+      align-items: flex-start;
+      gap: .9rem;
+      border-bottom: 1px solid var(--clr-border);
+    }
+    .codigo-card__icon {
+      font-size: 2rem;
+      line-height: 1;
+      flex-shrink: 0;
+      width: 2.8rem;
+      height: 2.8rem;
+      background: var(--clr-bg);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .codigo-card__meta { flex: 1; min-width: 0; }
+    .codigo-card__nombre {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--clr-primary);
+      line-height: 1.3;
+      margin-bottom: .2rem;
+    }
+    .codigo-card__ley {
+      font-size: .77rem;
+      color: var(--clr-text-muted);
+      font-weight: 600;
+      letter-spacing: .2px;
+    }
+    .codigo-card__bottom {
+      padding: .85rem 1.3rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .codigo-card__rama {
+      display: inline-flex;
+      align-items: center;
+      gap: .3rem;
+      font-size: .75rem;
+      font-weight: 700;
+      padding: .25rem .7rem;
+      border-radius: 50px;
+      letter-spacing: .3px;
+      text-transform: uppercase;
+    }
+    .codigo-card__desc {
+      font-size: .82rem;
+      color: var(--clr-text-muted);
+      line-height: 1.5;
+      margin-top: .3rem;
+    }
+    .codigo-card__arrow {
+      font-size: 1.1rem;
+      color: var(--clr-primary-light);
+      opacity: .6;
+      transition: opacity .2s, transform .2s;
+    }
+    .codigo-card:hover .codigo-card__arrow {
+      opacity: 1;
+      transform: translateX(4px);
+    }
+
+    /* ── Colores por rama ── */
+    .rama-civil      { background: #e8f0fe; color: #1a56b0; }
+    .rama-penal      { background: #fde8e8; color: #b01a1a; }
+    .rama-laboral    { background: #e8fdf0; color: #1a7a3c; }
+    .rama-procesal   { background: #fdf5e8; color: #8a5a00; }
+    .rama-especial   { background: #f0e8fd; color: #5a1aaa; }
+    .rama-admin      { background: #e8f8fd; color: #007a8a; }
+
+    /* ── Sin resultados ── */
+    .no-results {
+      display: none;
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 3rem;
+      color: var(--clr-text-muted);
+    }
+    .no-results .icon { font-size: 3rem; display: block; margin-bottom: .75rem; }
+
+    /* ── Búsqueda ── */
+    .hub-search {
+      display: flex;
+      max-width: 480px;
+      background: #fff;
+      border-radius: 50px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 2px solid var(--clr-border);
+      margin-bottom: 0;
+    }
+    .hub-search input {
+      flex: 1;
+      border: none;
+      padding: .65rem 1.1rem;
+      font-size: .95rem;
+      color: var(--clr-text);
+      outline: none;
+    }
+    .hub-search button {
+      background: var(--clr-accent);
+      color: #fff;
+      border: none;
+      padding: .65rem 1.1rem;
+      cursor: pointer;
+      font-size: .95rem;
+    }
+
+    .controls-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 1.5rem 0 .5rem;
+    }
+    .result-count { font-size: .85rem; color: var(--clr-text-muted); }
+
+    @media (max-width: 600px) {
+      .stats-bar { gap: 1.2rem; }
+      .codigos-grid { grid-template-columns: 1fr; }
+      .controls-row { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header__inner">
+      <div class="header__logo">
+        <a href="../index.html" style="text-decoration:none;color:inherit;display:flex;align-items:center;gap:.5rem">
+          <span class="logo-icon">⚖️</span>
+          <span class="logo-text">LegalHub</span>
+          <span class="logo-sub">Derecho Paraguayo</span>
+        </a>
+      </div>
+      <nav class="header__nav">
+        <a href="../index.html">Inicio</a>
+        <a href="#" style="color:var(--clr-accent)">Códigos</a>
+        <a href="../index.html#acerca">Acerca</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hub-hero">
+    <div class="container">
+      <p class="hub-hero__breadcrumb">
+        <a href="../index.html">🏠 Inicio</a> › Códigos Legales
+      </p>
+      <h1 class="hub-hero__title">📚 Códigos Legales del Paraguay</h1>
+      <p class="hub-hero__sub">Textos normativos vigentes organizados por rama del derecho</p>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <div class="stats-bar">
+    <span>📋 16 Códigos</span>
+    <span>⚖️ 6 Ramas del Derecho</span>
+    <span>🇵🇾 Legislación Vigente</span>
+    <span>🔍 Búsqueda Rápida</span>
+  </div>
+
+  <main class="container">
+
+    <!-- Controles -->
+    <div class="controls-row">
+      <div class="hub-search">
+        <input type="search" id="searchHub" placeholder="Buscar código…" autocomplete="off" />
+        <button>🔍</button>
+      </div>
+      <span class="result-count" id="resultCount">Mostrando <strong>16</strong> códigos</span>
+    </div>
+
+    <!-- Filtros por rama -->
+    <div class="hub-filters">
+      <span class="filter-label">Rama:</span>
+      <button class="filter-btn active" data-rama="all">Todos</button>
+      <button class="filter-btn" data-rama="civil">Civil</button>
+      <button class="filter-btn" data-rama="penal">Penal</button>
+      <button class="filter-btn" data-rama="laboral">Laboral</button>
+      <button class="filter-btn" data-rama="procesal">Procesal</button>
+      <button class="filter-btn" data-rama="especial">Especial</button>
+      <button class="filter-btn" data-rama="admin">Administrativo</button>
+    </div>
+
+    <!-- Grid de Códigos -->
+    <div class="codigos-grid" id="codigosGrid">
+
+      <!-- CIVIL -->
+      <a href="codigo-civil.html" class="codigo-card" data-rama="civil" data-nombre="código civil">
+        <div class="codigo-card__top">
+          <div class="codigo-card__icon">📘</div>
+          <div class="codigo-card__meta">
+            <div class="codigo-card__nombre">Código Civil</div>
+            <div class="codigo-card__ley">Ley N° 1183/1985</div>
+            <div class="codigo-card__desc">Regula las relaciones privadas entre personas: contratos, familia, sucesiones, bienes y obligaciones.</div>
+          </div>
+        </div>
+        <div class="codigo-card__bottom">
+          <span class="codigo-card__rama rama-civil">⚖️ Civil</span>
+          <span class="codigo-card__arrow">→</span>
+        </div>
+      </a>
+
+      <!-- NIÑEZ -->
+      <a href="codigo-ninez.html" class="codigo-card" data-rama="especial" data-nombre="código niñez adolescencia">
+        <div class="codigo-card__top">
+          <div class="codigo-card__icon">👶</div>
+          <div class="codigo-card__meta">
+            <div class="codigo-card__nombre">Código de la Niñez y Adolescencia</div>
+            <div class="codigo-card__ley">Ley N° 1680/2001</div>
+            <div class="codigo-card__desc">Protección integral de los derechos de niños, niñas y adolescentes.</div>
+          </div>
+        </div>
+        <div class="codigo-card__bottom">
+          <span class="codigo-card__rama rama-especial">🌟 Especial</span>
+          <span class="codigo-card__arrow">→</span>
+        </div>
+      </a>
+
+      <!-- PENAL -->
+      <a href="codigo-penal.html" class="codigo-card" data-rama="penal" data-nombre="código penal">
+        <div class="codigo-card__top">
+          <div class="codigo-card__icon">🔒</div>
+          <div class="codigo-card__meta">
+            <div class="codigo-card__nombre">Código Penal</div>
+            <div class="codigo-card__ley">Ley N° 1160/1997</div>
+            <div class="codigo-card__desc">Define los delitos y faltas, y establece las penas y medidas de seguridad aplicables.</div>
+          </div>
+        </div>
+        <div class="codigo-card__bottom">
+          <span class="codigo-card__rama rama-penal">⛔ Penal</span>
+          <span class="codigo-card__arrow">→</span>
+        </div>
+      </a>
+
+      <!-- EJECUCIÓN PENAL -->
+      <a href="codigo-ejecucion-penal.html" class="codigo-card" data-rama="penal" data-nombre="código ejecución penal">
+        <div class="codigo-card__top">
+          <div class="codigo-card__icon">🏛️</div>
+          <div class="codigo-card__meta">
+            <div class="codigo-card__nombre">Código de Ejecución Penal</div>
+            <div class="codigo-card__ley">Ley N° 5765/2016</div>
+            <div class="codigo-card__desc">Regula el cumplimiento de penas privativas de libertad y medidas de seguridad.</div>
+          </div>
+        </div>
+        <div class="codigo-card__bottom">
+          <span class="codigo-card__rama rama-penal">⛔ Penal</span>
+          <span class="codigo-card__arrow">→</span>
+        </div>
+      </a>
+
+      <!-- LABORAL -->
+      <a href="codigo-laboral.html" class="codigo-card" data-rama="laboral" data-nombre="código laboral trabajo">
+        <div class="codigo-card__top">
+          <div class="codigo-card__icon">👷</div>
+          <div class="codigo-card__meta">
+            <div class="codigo-card__nombre">Código Laboral</div>
+            <div class="codigo-card__ley">Ley N° 213/1993</div>
+            <div class="codigo-card__desc">Normas sobre el trabajo dependiente, derechos y obligaciones de trabajadores y empleadores.</div>
+          </div>
+        </div>
+        <div class="codigo-card__bottom">
+          <span class="codigo-card__rama rama-laboral">💼 Laboral</span>
+          <span class="codigo-card__arrow">→</span>
+        </div>
+      </a>
+
+      <!-- PROCESAL CIVIL -->
+      <a href="codigo-procesal-civil.html" class="codigo-card" data-rama="procesal" data-nombre="código procesal civil">
+        <div class="codigo-card__top">
+          <div class="codigo-card__icon">📋</div>
+          <div class="codigo-card__meta">
+            <div class="codigo-card__nombre">Código Procesal Civil</div>
+            <div class="codigo-card__ley">Ley N° 1337/1988</div>
+            <div class="codigo-card__desc">Procedimientos y formas para sustanciar los procesos ante la justicia civil.</div>
+          </div>
+        </div>
+        <div class="codigo-card__bottom">
+          <span class="codigo-card__rama rama-procesal">📑 Procesal</span>
+          <span class="codigo-card__arrow">→</span>
+        </div>
+      </a>
+
+      <!-- PROCESAL PENAL -->
+      <a href="codigo-procesal-penal.html" class="codigo-card" data-rama="procesal" data-nombre="código procesal penal">
+        <div class="codigo-card__top">
+          <div class="codigo-card__icon">⚖️</div>
+          <div class="codigo-card__meta">
+            <div class="codigo-card__nombre">Código Procesal Penal</div>
+            <div class="codigo-card__ley">Ley N° 1286/1998</div>
+            <div class="codigo-card__desc">Regula el proceso penal acusatorio: garantías, etapas, recursos y ejecución de resoluciones.</div>
+          </div>
+        </div>
+        <div class="codigo-card__bottom">
+          <span class="codigo-card__rama rama-procesal">📑 Procesal</span>
+          <span class="codigo-card__arrow">→</span>
+        </div>
+      </a>
+
+      <!-- PROCESAL LABORAL -->
+      <a href="codigo-procesal-laboral.html" class="codigo-card" data-rama="procesal" data-nombre="código procesal laboral">
+        <div class="codigo-card__top">
+          <div class="codigo-card__icon">🏗️</div>
+          <div class="codigo-card__meta">
+            <div class="codigo-card__nombre">Código Procesal Laboral</div>
+            <div class="codigo-card__ley">Ley N° 742/1961</div>
+            <div class="codigo-card__desc">Procedimiento para resolver controversias entre trabajadores y empleadores ante la justicia laboral.</div>
+          </div>
+        </div>
+        <div class="codigo-card__bottom">
+          <span class="codigo-card__rama rama-procesal">📑 Procesal</span>
+          <span class="codigo-card__arrow">→</span>
+        </div>
+      </a>
+
+      <!-- ORGANIZACIÓN JUDICIAL -->
+      <a href="codigo-organizacion-judicial.html" class="codigo-card" data-rama="admin" data-nombre="código organización judicial">
+        <div class="codigo-card__top">
+          <div class="codigo-card__icon">🏛️</div>
+          <div class="codigo-card__meta">
+            <div class="codigo-card__nombre">Código de Organización Judicial</div>
+            <div class="codigo-card__ley">Ley N° 879/1981</div>
+            <div class="codigo-card__desc">Estructura, competencias y funcionamiento del Poder Judicial paraguayo.</div>
+          </div>
+        </div>
+        <div class="codigo-card__bottom">
+          <span class="codigo-card__rama rama-admin">🏢 Administrativo</span>
+          <span class="codigo-card__arrow">→</span>
+        </div>
+      </a>
+
+      <!-- ELECTORAL -->
+      <a href="codigo-electoral.html" class="codigo-card" data-rama="admin" data-nombre="código electoral">
+        <div class="codigo-card__top">
+          <div class="codigo-card__icon">🗳️</div>
+          <div class="codigo-card__meta">
+            <div class="codigo-card__nombre">Código Electoral</div>
+            <div class="codigo-card__ley">Ley N° 834/1996</div>
+            <div class="codigo-card__desc">Regula los procesos electorales, partidos políticos y el ejercicio del sufragio.</div>
+          </div>
+        </div>
+        <div class="codigo-card__bottom">
+          <span class="codigo-card__rama rama-admin">🏢 Administrativo</span>
+          <span class="codigo-card__arrow">→</span>
+        </div>
+      </a>
+
+      <!-- NAVEGACIÓN -->
+      <a href="codigo-navegacion.html" class="codigo-card" data-rama="especial" data-nombre="código navegación fluvial lacustre">
+        <div class="codigo-card__top">
+          <div class="codigo-card__icon">🚢</div>
+          <div class="codigo-card__meta">
+            <div class="codigo-card__nombre">Código de Navegación</div>
+            <div class="codigo-card__ley">Ley N° 476/1957</div>
+            <div class="codigo-card__desc">Normas que regulan la navegación fluvial y lacustre en aguas paraguayas.</div>
+          </div>
+        </div>
+        <div class="codigo-card__bottom">
+          <span class="codigo-card__rama rama-especial">🌟 Especial</span>
+          <span class="codigo-card__arrow">→</span>
+        </div>
+      </a>
+
+      <!-- AERONÁUTICO -->
+      <a href="codigo-aeronautico.html" class="codigo-card" data-rama="especial" data-nombre="código aeronáutico aviación">
+        <div class="codigo-card__top">
+          <div class="codigo-card__icon">✈️</div>
+          <div class="codigo-card__meta">
+            <div class="codigo-card__nombre">Código Aeronáutico</div>
+            <div class="codigo-card__ley">Ley N° 1860/2002</div>
+            <div class="codigo-card__desc">Regula la actividad aeronáutica civil: aeronaves, aeropuertos, responsabilidad y tráfico aéreo.</div>
+          </div>
+        </div>
+        <div class="codigo-card__bottom">
+          <span class="codigo-card__rama rama-especial">🌟 Especial</span>
+          <span class="codigo-card__arrow">→</span>
+        </div>
+      </a>
+
+      <!-- RURAL -->
+      <a href="codigo-rural.html" class="codigo-card" data-rama="especial" data-nombre="código rural agrario">
+        <div class="codigo-card__top">
+          <div class="codigo-card__icon">🌾</div>
+          <div class="codigo-card__meta">
+            <div class="codigo-card__nombre">Código Rural</div>
+            <div class="codigo-card__ley">Ley N° 1248/1932</div>
+            <div class="codigo-card__desc">Regula las relaciones jurídicas en el ámbito rural, tierras, ganadería y actividades agropecuarias.</div>
+          </div>
+        </div>
+        <div class="codigo-card__bottom">
+          <span class="codigo-card__rama rama-especial">🌟 Especial</span>
+          <span class="codigo-card__arrow">→</span>
+        </div>
+      </a>
+
+      <!-- ADUANERO -->
+      <a href="codigo-aduanero.html" class="codigo-card" data-rama="admin" data-nombre="código aduanero comercio exterior">
+        <div class="codigo-card__top">
+          <div class="codigo-card__icon">🛃</div>
+          <div class="codigo-card__meta">
+            <div class="codigo-card__nombre">Código Aduanero</div>
+            <div class="codigo-card__ley">Ley N° 2422/2004</div>
+            <div class="codigo-card__desc">Regula el ingreso y egreso de mercaderías, derechos arancelarios y operaciones aduaneras.</div>
+          </div>
+        </div>
+        <div class="codigo-card__bottom">
+          <span class="codigo-card__rama rama-admin">🏢 Administrativo</span>
+          <span class="codigo-card__arrow">→</span>
+        </div>
+      </a>
+
+      <!-- MINERÍA -->
+      <a href="codigo-mineria.html" class="codigo-card" data-rama="especial" data-nombre="código minería recursos minerales">
+        <div class="codigo-card__top">
+          <div class="codigo-card__icon">⛏️</div>
+          <div class="codigo-card__meta">
+            <div class="codigo-card__nombre">Código de Minería</div>
+            <div class="codigo-card__ley">Ley N° 3180/2007</div>
+            <div class="codigo-card__desc">Regula la exploración, explotación y aprovechamiento de los recursos minerales del subsuelo.</div>
+          </div>
+        </div>
+        <div class="codigo-card__bottom">
+          <span class="codigo-card__rama rama-especial">🌟 Especial</span>
+          <span class="codigo-card__arrow">→</span>
+        </div>
+      </a>
+
+      <!-- SANITARIO -->
+      <a href="codigo-sanitario.html" class="codigo-card" data-rama="especial" data-nombre="código sanitario salud">
+        <div class="codigo-card__top">
+          <div class="codigo-card__icon">🏥</div>
+          <div class="codigo-card__meta">
+            <div class="codigo-card__nombre">Código Sanitario</div>
+            <div class="codigo-card__ley">Ley N° 836/1980</div>
+            <div class="codigo-card__desc">Normativa de salud pública, control sanitario, alimentos, medicamentos y ejercicio profesional médico.</div>
+          </div>
+        </div>
+        <div class="codigo-card__bottom">
+          <span class="codigo-card__rama rama-especial">🌟 Especial</span>
+          <span class="codigo-card__arrow">→</span>
+        </div>
+      </a>
+
+      <!-- Estado vacío -->
+      <div class="no-results" id="noResults">
+        <span class="icon">🔍</span>
+        <strong>Sin resultados</strong>
+        <p>No se encontraron códigos que coincidan con tu búsqueda.</p>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p><strong>LegalHub</strong> — Herramienta de consulta para juristas y litigantes del derecho paraguayo.</p>
+      <p>Los textos normativos son de acceso público. Esta plataforma no provee asesoramiento legal.</p>
+      <p style="margin-top:0.5rem;opacity:.6;font-size:.85rem">© 2026 LegalHub Paraguay</p>
+    </div>
+  </footer>
+
+  <script>
+    const cards   = document.querySelectorAll('.codigo-card');
+    const search  = document.getElementById('searchHub');
+    const filters = document.querySelectorAll('.filter-btn');
+    const count   = document.getElementById('resultCount');
+    const noRes   = document.getElementById('noResults');
+
+    let activeRama = 'all';
+
+    function updateGrid() {
+      const q = search.value.toLowerCase().trim();
+      let visible = 0;
+
+      cards.forEach(card => {
+        const nombre = card.dataset.nombre || '';
+        const rama   = card.dataset.rama   || '';
+        const matchQ = !q || nombre.includes(q);
+        const matchR = activeRama === 'all' || rama === activeRama;
+
+        if (matchQ && matchR) {
+          card.style.display = '';
+          visible++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      count.innerHTML = `Mostrando <strong>${visible}</strong> código${visible !== 1 ? 's' : ''}`;
+      noRes.style.display = visible === 0 ? 'block' : 'none';
+    }
+
+    search.addEventListener('input', updateGrid);
+
+    filters.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filters.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeRama = btn.dataset.rama;
+        updateGrid();
+      });
+    });
+  </script>
+
+</body>
+</html>
