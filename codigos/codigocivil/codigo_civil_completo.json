@@ -24155,12 +24155,1595 @@
                   "palabrasClave": [],
                   "rutasRelacionadas": [],
                   "notas": []
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  ]
-}
+[
+  {
+    "numero": 2145,
+    "epigrafe": "Impuestos y tasas municipales",
+    "texto": [
+      "Los impuestos y tasas municipales se cobrarán a cada propietario independientemente, debiendo efectuarse las evaluaciones en forma individual, computándose a la vez la parte proporcional indivisa de los bienes comunes."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2146,
+    "epigrafe": "Reglamento de copropiedad y administración",
+    "texto": [
+      "A los efectos de la construcción de la propiedad por pisos o departamentos, toda persona o grupo de personas, deberá instituir un reglamento de copropiedad y administración, formalizado por escritura pública, que será inscripta en el Registro de Inmuebles, así como toda modificación que del mismo se hiciere. Para su reforma, será necesario el voto de dos tercios de los propietarios que representen por lo menos la mitad del valor del edificio."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2147,
+    "epigrafe": "Contenido del reglamento",
+    "texto": [
+      "El reglamento deberá disponer obligatoriamente sobre los siguientes puntos: a) la forma de nombramiento de un representante de los propietarios, que podrá ser uno de ellos o un extraño, y tendrá facultades de administrar los bienes de uso común y recaudar los fondos para tal fin; b) determinación de las bases para la remuneración del representante, duración de sus funciones, forma de su remoción, facultades para actuar ante organismos administrativos y judiciales, y designación de sustituto; c) proporción y bases para la contribución de los propietarios destinada al pago de los gastos comunes; d) designación y despido del personal de servicio; e) el procedimiento de convocatoria de la asamblea de propietarios, forma de elegir un presidente, quórum para sesionar y mayoría especial para adoptar otras resoluciones; f) ubicación y enumeración de los pisos, de los departamentos y de las cosas comunes, así como el uso de los mismos; g) determinación del valor que se atribuye a cada piso o departamento con inclusión de sus partes accesorias; y h) cualesquiera otras facultades otorgadas al representante de los propietarios."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2148,
+    "epigrafe": "Fuerza obligatoria del reglamento",
+    "texto": [
+      "Formalizado el reglamento de copropiedad y administración, de acuerdo con lo establecido en este Código, tendrá fuerza obligatoria respecto de los terceros adquirentes a cualquier título. La inscripción del reglamento podrá practicarse, aun cuando no esté construido el edificio. Las mismas reglas serán aplicadas para modificar dicho reglamento o dejarlo sin efecto."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2149,
+    "epigrafe": "Silencio u obscuridad del reglamento",
+    "texto": [
+      "En caso de silencio y obscuridad de las disposiciones del reglamento de copropiedad, las relaciones jurídicas entre los propietarios se regirán por las normas de este Código."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2150,
+    "epigrafe": "Nombramiento judicial del administrador",
+    "texto": [
+      "Si la asamblea de propietarios no proveyere al nombramiento del administrador, éste será nombrado por el Juez de lo Civil, a petición de uno o varios propietarios. El administrador judicial durará un año en el cargo, y podrá ser removido por la asamblea de propietarios en cualquier momento, por causa justificada y decisión de la mayoría. Podrá igualmente ser removido por decisión judicial, en juicio breve y sumario, a instancia de uno de los propietarios, por haber dejado transcurrir un año sin rendir cuenta de su gestión, o si existen fundadas sospechas de haber el mismo incurrido en graves irregularidades. La remoción del administrador llevará implícita la revocación de sus poderes, de la que se tomará razón en el Registro Público respectivo."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2151,
+    "epigrafe": "Funciones del administrador",
+    "texto": [
+      "El administrador debe ejecutar las decisiones de la asamblea de propietarios y velar por el cumplimiento del reglamento. Le corresponde cobrar las contribuciones y pagar los gastos comunes y llevar a cabo los actos de conservación de las partes comunes del edificio. Debe rendir anualmente cuenta documentada de su gestión y realizar todas las gestiones inherentes a la administración."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2152,
+    "epigrafe": "Obligatoriedad de las medidas del administrador",
+    "texto": [
+      "Las medidas tomadas por el administrador en los límites de sus atribuciones serán obligatorias para los propietarios. Contra ellas se admite recurso ante la asamblea, sin perjuicio del que pueda interponerse ante la autoridad judicial en los casos y dentro del plazo establecido por ese Código."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2153,
+    "epigrafe": "Gastos sin autorización",
+    "texto": [
+      "El propietario que ha hecho gastos para las cosas comunes, sin autorización del administrador o de la asamblea, no tiene derecho al reembolso, salvo que se trate de gastos urgentes."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2154,
+    "epigrafe": "Atribuciones de la asamblea",
+    "texto": [
+      "Además de lo establecido en los artículos anteriores, la asamblea de los propietarios provee: a) la confirmación del administrador, en su caso y su retribución; b) la aprobación del presupuesto de gastos necesarios durante el año y su distribución entre los propietarios; c) la aprobación de la rendición anual de cuentas del administrador y el empleo del remanente de la gestión; y d) las obras de mantenimiento extraordinario del edificio."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2155,
+    "epigrafe": "Constitución y quórum de la asamblea",
+    "texto": [
+      "La asamblea queda regularmente constituida con la presencia de propietarios que representen los dos tercios del valor del edificio entero y esta misma proporción de los partícipes en el condominio. Son válidas las resoluciones aprobadas por el número de votos que representen la mayoría de los asambleístas y al menos la mitad del valor del edificio. Si la asamblea no puede deliberar por falta de número, se reunirá, en segunda convocatoria, dentro de los diez días contados desde la primera. La resolución será válida si es aprobada por un número de votos que represente el tercio de los propietarios y al menos un tercio del valor del edificio."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2156,
+    "epigrafe": "Mayorías especiales",
+    "texto": [
+      "Se requiere también la mayoría de votos de los asambleístas que representen la menos la mitad del valor del edificio para las resoluciones que conciernen al otorgamiento y revocación de los poderes del administrador, o para estar en juicio como actor o demandado, cuando excedan de sus atribuciones, asimismo como para las decisiones relativas a reparaciones extraordinarias de notable importancia. Las resoluciones que tienen por objeto de disponer las innovaciones que tiendan al mejoramiento o al uso más cómodo o al mayor rendimiento de las cosas comunes, deben ser aprobadas siempre con un número de votos que representen la mayoría de propietarios y los dos tercios del valor del edificio. La asamblea no puede deliberar si no consta que todos los propietarios han sido invitados a la reunión. Las deliberaciones de la asamblea se harán contar en un libro de actas llevado por el administrador y que suscribirán con él dos asambleístas designados por la asamblea."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2157,
+    "epigrafe": "Obligatoriedad y recurso contra las resoluciones",
+    "texto": [
+      "Las resoluciones tomadas por la asamblea a tenor de los artículos anteriores son obligatorias para todos los propietarios. Contra las resoluciones contrarias a la ley o al reglamento, todo propietarios disidente puede interponer recurso ante el juez; pero el recurso no suspenderá su ejecución, salvo que la suspensión sea ordenada por el juez. El recurso debe interponerse bajo pena de decaimiento, dentro de los treinta días corridos de la fecha de la resolución, en cuanto a los disidentes, y desde la fecha de la comunicación, con respecto a los ausentes."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2158,
+    "epigrafe": "Obligación de asegurar el edificio",
+    "texto": [
+      "El administrador nombrado por los propietarios está obligado a asegurar el edificio contra incendio u otras causas fortuitas que puedan destruirlo en todo o parte. Cada propietario cargará con la cuota proporcional que le corresponda en el pago de las primas."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2159,
+    "epigrafe": "Registro por piso o departamento",
+    "texto": [
+      "El Registro de Inmuebles habilitará libros especiales para la Sección que denominará \"Registro por piso o departamento\" y en los que se tomará razón de los títulos de dominio de las fracciones de tierras destinadas al asiento de edificios divididos en pisos o departamentos, y que se conocerán con el nombre de finca matriz. En libros filiales, correlacionados con el del registro de las fincas matrices, se tomarán razón de las escrituras de dominio de los diversos pisos o departamentos de cada edificio."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2160,
+    "epigrafe": "Reagrupación de fincas filiales",
+    "texto": [
+      "La totalidad de los propietarios de un edificio de pisos o departamentos, o el propietario único de él, podrá solicitar del Registro de Inmuebles, la reagrupación o refundición de las fincas filiales en la finca matriz, siempre que aquéllas se encuentren libres de gravámenes."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2161,
+    "epigrafe": "Destrucción del edificio",
+    "texto": [
+      "Si el edificio se destruyere en su totalidad o en parte que represente las dos terceras partes de su valor, cada uno de los propietarios podrá pedir la venta del terreno y de los materiales, salvo que otra solución se hubiese convenido. En caso de destrucción de una parte menor, la asamblea de propietarios resolverá, por tres cuartas partes del valor del edificio, si ha de procederse o no a la reconstrucción, y cada uno está obligado a contribuir en proporción a sus derechos sobre aquél. Si uno o más propietarios se negare a participar en la reconstrucción estará obligado a ceder sus derechos preferentemente a los demás propietarios o a alguno de ellos, según su evaluación judicial."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2162,
+    "epigrafe": "Estado ruinoso del edificio",
+    "texto": [
+      "Salvo lo dispuesto por leyes especiales, en caso de estado ruinoso del edificio, admitido por la mayoría de los propietarios que represente la mitad del valor del mismo, se resolverá por la misma mayoría si debe procederse a la reconstrucción o a la demolición y venta del terreno y de los materiales. Si se resolviere la reconstrucción del edificio, la minoría de propietarios no podrá ser obligada a contribuir para el efecto, debiendo la mayoría tener preferencia para adquirir las partes de la minoría, según avaluación judicial."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2163,
+    "epigrafe": "Propiedad resoluble",
+    "texto": [
+      "Resuelto el dominio por el cumplimiento de la condición o por el vencimiento del plazo estipulado por las partes, se entienden también resueltos los derechos reales que se hayan constituido. El propietario en cuyo beneficio tiene lugar la resolución, puede reivindicar el inmueble del poder de quien lo posea, libre de todas las cargas, servidumbres o hipotecas con que hubiese sido gravado, pero estará obligado a respetar los arrendamientos que se hubieren hecho."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2164,
+    "epigrafe": "Resolución por causa sobreviniente",
+    "texto": [
+      "Si el dominio se resuelvo por otra causa sobreviniente, el que lo hubiese adquirido por causa anterior a la resolución será considerado propietarios perfecto, quedando a la persona a cuyo beneficio se operó la resolución, el derecho de accionar contra aquél cuyo dominio se resolvió para obtener la indemnización que corresponda."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2165,
+    "epigrafe": "Protección de la propiedad literaria, científica y artística",
+    "texto": [
+      "Las creaciones científicas, literarias y artísticas gozan de la protección que este Código les confiere. El autor es propietario de su obra durante su vida y su derecho subsiste por cincuenta años contados desde su muerte, a favor de sus sucesores a título universal o singular, o en su defecto, de quienes por actos entre vivos o de última voluntad, hayan recibido el encargo de publicar la obra."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2166,
+    "epigrafe": "Autor de la obra",
+    "texto": [
+      "A los efectos del artículo anterior, repútase autor de la obra literaria, científica o artística, al que la crea, o a sus causahabientes a título universal o particular, sea que la publique bajo su nombre o seudónimo. La edición de una obra anónima o seudónima crea la presunción de que el editor es el titular de los derechos resultantes de su legítima publicación, salvo la prueba contraria producida por el creador de la obra, dentro de tres años de su publicación. Las obras de los funcionarios públicos, o de los de una empresa privada, que sean fruto del trabajo inherente a sus funciones, pertenecen al Estado o al empleador, salvo las obras creadas por los profesores de institutos de enseñanza, aunque se trate de lecciones destinadas a sus alumnos."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2167,
+    "epigrafe": "Carácter del derecho de propiedad intelectual",
+    "texto": [
+      "El derecho de propiedad literaria, científica o artística protegido por este Código, no es renunciable ni puede cederse ni venderse; pero el valor económico o explotación comercial de la obra podrá transmitirse,total o parcialmente por actos entre vivos o de última voluntad. Esta regla se aplica igualmente a las colaboraciones firmadas de las compilaciones u obras colectivas, aunque sea otro quien al publicarlas, las presente coordinadas bajo una dirección única. En este caso, el editor o el director de la compilación tiene el derecho exclusivo de reproducirla y venderla, y cada colaborador podrá reproducir separadamente su trabajo, a condición de indicar la obra o la compilación de que procede."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2168,
+    "epigrafe": "Derechos patrimoniales del Estado y entidades de bien común",
+    "texto": [
+      "El Estado, por sus órganos destinados a investigaciones científicas y a la difusión de la cultura, así como las fundaciones y asociaciones con fines de bien común, gozan de derechos patrimoniales sobre las obras de la inteligencia o el ingenio que, con aquellos fines, compilaren y publicaren a sus expensas, con reserva del derecho de autor de los que hayan colaborado en ellas."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2169,
+    "epigrafe": "Duración de los derechos patrimoniales del Estado",
+    "texto": [
+      "Los derechos patrimoniales que ejercieren el Estado y los demás entes mencionados en el artículo anterior, durarán veinte y cinco años computados desde su primera publicación."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2170,
+    "epigrafe": "Compensación a artistas e intérpretes",
+    "texto": [
+      "Corresponde, dentro de los límites establecidos por este Código, a los artistas, actores o intérpretes de obras artísticas o literarias, aunque ellas hayan pasado al dominio público, una compensación equitativa por su interpretación, por parte de quienes las difunden o transmitan por cualquier medio idóneo para la reproducción sonora o visual. Esta retribución se deberá independientemente de la que corresponda por la recitación, representación o ejecución. Los artistas o intérpretes tienen derecho a oponerse a la difusión, transmisión, o reproducción que pueda dañar a su honor o reputación."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2171,
+    "epigrafe": "Derechos del traductor",
+    "texto": [
+      "El traductor de obras que no pertenecen al dominio privado, sólo tiene propiedad sobre su versión, y no podrá oponerse a que otros la traduzcan. Su derecho durará veinte y cinco años. Si el traductor reclamare contra una nueva traducción, alegando ser ésta una reproducción de la primera, y no un nuevo trabajo hecho sobre el original, decidirá la autoridad judicial competente."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2172,
+    "epigrafe": "Traducción de obras del dominio privado",
+    "texto": [
+      "Si la obra traducida fuere del dominio privado, su traducción deberá hacerse conforme a las limitaciones que el autor hubiere establecido respecto del idioma en que su obra podrá verterse, y a las estipulaciones del contrato celebrado con el traductor sobre la participación de ambos en sus respectivos derechos de autor, por cada edición de la obra traducida. El traductor gozará en este caso del derecho de propiedad respecto de su traducción, sin perjuicio de los derechos del autor sobre su obra."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2173,
+    "epigrafe": "Propiedad intelectual de las cartas",
+    "texto": [
+      "La propiedad intelectual de las cartas pertenecen a quien la suscribe, sea que las haya escrito personalmente o las haya dictado, y solo él gozará del derecho de publicarlas. Por su muerte le suceden en este derecho sus herederos legítimos o testamentarios."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2174,
+    "epigrafe": "Poseedor de manuscritos póstumos",
+    "texto": [
+      "Para que el poseedor de manuscritos de obras póstumas inéditas pueda invocar el dominio de ellos y ejercer todos los derechos garantizados por este Código a la propiedad literaria, científica o artística, debe justificar haberlos adquirido del autor o de sus herederos."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2175,
+    "epigrafe": "Protección de películas cinematográficas y fotografías",
+    "texto": [
+      "El autor de un película cinematográfica gozará de la protección de este Código, sin perjuicio de los derechos del autor de la obra adaptada o reproducida. El que obtuviere la imagen fotográfica original de un panorama, paisaje o vista, gozará también en su calidad de propietario de ella, de todos los derechos conferidos por este Código a la producción artística."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2176,
+    "epigrafe": "Obra en colaboración",
+    "texto": [
+      "Cuando una obra sea creación de dos o más autores, sin que pueda determinarse la parte realizada por cada uno de ellos, todos gozarán de derechos iguales sobre la obra, salvo pacto en contrario. La publicación de la obra se hará de común acuerdo. En caso de divergencia, resolverá el juez. Fallecido uno de los colaboradores sin dejar sucesores, sus derechos acrecerán a los sobrevivientes."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2177,
+    "epigrafe": "Letra y música como creaciones distintas",
+    "texto": [
+      "La letra y la música se consideran creaciones distintas en las obras artísticas. El autor de un libreto o composición escrita puesta en música, será dueño exclusivo de imprimir o hacer imprimir y vender ejemplares de su obra literaria, separadamente de la música, y autorizar o prohibir la ejecución o representación pública de su libreto; y de igual derecho gozará el compositor de la obra musical."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2178,
+    "epigrafe": "Publicación de discursos, disertaciones y conferencias",
+    "texto": [
+      "Los discursos, las disertaciones y conferencias o lecciones orales, no podrán ser publicados sin el consentimiento del que las pronunció."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2179,
+    "epigrafe": "Publicación de escritos forenses y discursos oficiales",
+    "texto": [
+      "Los escritos forenses sólo podrán publicarse con el consentimiento de las personas en cuyo interés o servicio se produjeron. Los discursos pronunciados en el Parlamento, Consejo de Estado, o en reuniones oficiales, pertenecen al dominio público. Si un particular quiere publicar una colección especial de un orador, no podrá hacerlo sin la autorización del autor. Las sentencias judiciales puede ser libremente reproducidas, siempre que su publicación no perjudique al buen nombre de los litigantes o encausados."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2180,
+    "epigrafe": "Excepciones a la lesión de derechos de autor",
+    "texto": [
+      "No se considera lesivo de los derechos de autor: a) la reproducción de pasajes o trozos de obras ya publicadas, y la inserción, aun íntegra, de pequeñas composiciones ajenas en el cuerpo de una obra mayor, siempre que se indique el origen y nombre de los autores; b) la reproducción en la prensa de noticias y artículos sin carácter literario o científico, publicados en otros diarios o periódicos, mencionándose los nombres de sus autores y de los periódicos de donde fueron transcriptos; c) la mención en libros, diarios o revistas, de trozos de cualquier obra con fines de crítica o polémica; d) la copia a mano de cualquier obra, con tal de no ser destinada a la venta; y e) la reproducción, en el cuerpo de un escrito, de dibujos artísticos ajenos, siempre que el escrito sea lo principal, y las figuras sirvan sólo para explicar el texto, y se indique el nombre del autor de la obra de arte."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2181,
+    "epigrafe": "Casos de falsificación",
+    "texto": [
+      "Hay falsificación cuando falta el consentimiento del autor: a) para publicar, traducir, reproducir, representar, ejecutar o imprimir en discos, cintas u otros medios idóneos, sus obras o parte de ellas; b) para omitir el nombre del autor o del traductor; c) para cambiar el título de la obra y suprimir o variar cualquier parte de ella; d) para publicar mayor número de ejemplares que el convenido; e) para publicar y ejecutar una pieza de música formada de extractos de otras; f) para hacer arreglos de una composición musical; g) para adaptar trucos escénicos originales en obras protegidas con arreglo de las disposiciones de este Código; y h) para representar partes aisladas, escenas o canciones ya registradas."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2182,
+    "epigrafe": "Acciones contra la falsificación",
+    "texto": [
+      "El autor o propietario, cuya obra hubiese sido falsificada, podrá requerir el embargo de los ejemplares reproducidos, y demandar del autor de la falsificación por los daños y perjuicios, hasta que la edición falsificada quede agotada, sin perjuicio de la acción penal."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2183,
+    "epigrafe": "Derecho exclusivo del autor",
+    "texto": [
+      "El autor tiene el derecho exclusivo de publicar su obra y de utilizarla económicamente en cualquier forma y modo, dentro de los límites y para los efectos fijados por este Código. El autor, aun después de la cesión de estos derechos, puede reivindicar la paternidad de la obra y oponerse a cualquier deformación, mutilación u otra modificación de dicha obra, que cause perjuicio a su honor o reputación. Los derechos de utilización económica son transferibles. La transferencia por actos entre vivos debe ser probada por escrito."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2184,
+    "epigrafe": "Registro de Derechos Intelectuales",
+    "texto": [
+      "En el Registro de Derechos Intelectuales, se tomará razón de las obras literarias, científicas o artísticas, publicadas en la República, como condición a que este Código subordina la protección de los derechos de autor respecto de terceros. A este efecto deberá el autor o el editor, en su caso, depositar dos ejemplares de la obra. El mismo requisito regirá para las obras impresas en el extranjero que tuvieren editor en la República. Para las pinturas, obras arquitectónicas, esculturas y demás obras de arte, consistirá el depósito en un croquis o fotografía del original, con las indicaciones suplementarias que permitan identificarlas. Para las películas cinematográficas, el depósito consistirá en una relación del argumento, diálogos, fotografías y algunas de sus principales escenas."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2185,
+    "epigrafe": "Certificado de registro",
+    "texto": [
+      "Al que se presente a inscribir una obra con los ejemplares respectivos, se le otorgará un recibo con los datos, fechas y circunstancias que sirvan para identificar la obras, haciendo costar en él la inscripción. Los certificados de registro así otorgados hacen presumir la propiedad de la obra, salvo prueba en contrario."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2186,
+    "epigrafe": "Publicación del pedido de inscripción",
+    "texto": [
+      "El Registro publicará por cinco días en un diario de la Capital el pedido de inscripción de la obra, con indicación de su autor, título, pie de imprenta y demás datos que la individualicen. Transcurrido un mes desde la última publicación y no habiendo reclamación alguna, el Jefe del Registro otorgará al interesado la constancia definitiva de inscripción, con el número de orden que le corresponda."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2187,
+    "epigrafe": "Reclamación contra la inscripción",
+    "texto": [
+      "Si hubiere alguna reclamación dentro del plazo indicado, deberá ésta formularse y fundarse por escrito. Se correrá traslado de ella por cinco días al interesado. El Jefe resolverá dentro de los diez días. Contra la resolución que se dicte podrá interponerse la acción judicial que corresponda."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2188,
+    "epigrafe": "Derecho real de servidumbre",
+    "texto": [
+      "En virtud del derecho real de servidumbre se puede ejercer ciertos actos de disposición o de uso sobre un inmueble ajeno, o impedir que el propietario ejerza algunas de las facultades inherentes al dominio. En caso de duda, respecto de la existencia, extensión, o modo de ejercicio de la servidumbre, se estará a favor de la libertad del inmueble gravado."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2189,
+    "epigrafe": "Utilidad de la servidumbre",
+    "texto": [
+      "La utilidad puede consistir también en la mayor comodidad o recreo del poseedor del fundo dominante, o ser inherente al destino industrial del fundo. Puede constituirse una servidumbre para asegurar a un fundo un beneficio futuro, a favor o a cargo de un edificio por construirse o de un fundo por adquirirse, pero en este caso la servidumbre solo tiene efecto desde que el edificio esté construido o el fundo adquirido."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2190,
+    "epigrafe": "Obligaciones del propietario del predio sirviente",
+    "texto": [
+      "El propietario del predio sirviente no está obligado a realizar ningún acto para hacer posible el ejercicio de la servidumbre por el titular de ella, salvo que la ley o el título disponga otra cosa. Tal acto valdrá como simple obligación para el deudor y sus herederos, sin afectar a las heredades ni pasar con ellas a los poseedores de los inmuebles."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2191,
+    "epigrafe": "Constitución de las servidumbres",
+    "texto": [
+      "Las servidumbres prediales puede ser constituidas coactiva o voluntariamente. Por título, si fuesen continuas y aparentes, o discontinuas de cualquier clase. Las aparentes y continuas pueden también ser constituidas por usucapión."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2192,
+    "epigrafe": "Titulares para constituir servidumbres",
+    "texto": [
+      "Sólo podrán constituir servidumbres prediales los propietarios de los fundos que hayan de ser beneficiados o gravados con ellas. Si quien aparezca inscripto en el Registro como dueño, la estableciere a favor de ese predio, la servidumbre subsistirá respecto del verdadero titular, sin necesidad de declaración alguna. Las constituidas a favor del fundo por el usufructuario, o usuario expresando que estipulan para el dueño, sólo producirán efecto desde que se inscriba en el Registro de la ratificación de éste. A falta de tal extremo, valdrá personalmente para quienes la estipularon, siempre que mediare inscripción. Los mismo resultará del convenio que limitare sus consecuencias a las partes."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2193,
+    "epigrafe": "Servidumbres y derechos reales preexistentes",
+    "texto": [
+      "Las servidumbres no perjudicarán los derechos reales ya inscriptos. Los acreedores hipotecarios podrán pedir en este caso, que la finca se venda como si el gravamen no hubiera existido. Si en igual rango concurrieren sobre el mismo fundo, una servidumbre predial con otra semejante, o con un derecho de uso, y por su naturaleza no fuere posible ejercer aquellas conjuntamente, o sólo pudieren serlo de un modo incompleto, los interesados podrá pedir al juez una reglamentación equitativa que consulte el ejercicio de los diversos derechos."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2194,
+    "epigrafe": "Signo aparente de servidumbre al enajenar",
+    "texto": [
+      "Cuando el dueño de dos heredades, entre las cuales exista un signo aparente de servidumbre, dispusiere de una de ellas sin que el contrato contenga cláusula alguna relativa al gravamen, éste continuará en favor o a cargo del fundo enajenado, pero sólo producirá efecto después de su inscripción. Cada uno de los propietarios podrá exigirla judicialmente, consignando las determinaciones del caso, y gozará también de las acciones posesorias."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2195,
+    "epigrafe": "Extensión de las servidumbres",
+    "texto": [
+      "La extensión de las servidumbres establecidas por voluntad del propietario, se determinará conforme al título de su origen, y en su defecto, por los principios siguientes: a) las activas o pasivas, serán ejercidas dentro de los límites que los inmuebles tuvieren el día de su constitución, con lo acrecido por accesión natural; y b) las constituidas para un uso determinado no podrán ampliarse para otros usos, y si lo fueren por prescripción, se limitarán al que tuvo el adquirente."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2196,
+    "epigrafe": "Derechos de los titulares de servidumbre",
+    "texto": [
+      "Corresponde a los titulares de una servidumbre: a) el derecho de ejercer las servidumbres accesorias indispensables para el uso de la principal, pero la concesión de una servidumbre no comportará la de otras para hacer más cómodo su goce; b) la facultad de hacer en el predio sirviente, todos los trabajos necesarios para el ejercicio y la conservación de la servidumbre, cargando con los gastos, aun en el caso de que la reparación se hiciere indispensable por vicio propio del fundo; c) el derecho de gozar de la servidumbre en al extensión compatible con la naturaleza del inmueble dominante, aunque las necesidades de éste se hubieren acrecentado desde la época en que se constituyó el gravamen. Pero si tal consecuencia proviniere de cambios en el destino o en la condición del inmueble, que agravasen de un modo anormal la carga del predio sirviente, el juez podrá limitar el uso, y si ello fuere imposible, declarar extinguida la servidumbre; y d) el derecho de usar de las acciones posesorias. Tendrán esta facultad, tanto los poseedores mediatos como los inmediatos de las heredades dominantes, siempre que fueren turbados o impedidos de usar las servidumbres inscriptas y hubieren ejercido estas últimas dentro del año, aunque fuere una sola vez."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2197,
+    "epigrafe": "Ejercicio menos perjudicial de la servidumbre",
+    "texto": [
+      "El propietario de la heredad dominante deberá ejercer la servidumbre del modo menos perjudicial para el fundo sirviente. No podrá introducir en éste cambios innecesarios y estará obligado, si posee una construcción sobre él para el ejercicio de la servidumbre, a mantenerla conforme lo requiera el interés del propietario del inmueble gravado."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2198,
+    "epigrafe": "Designación del lugar de ejercicio de la servidumbre",
+    "texto": [
+      "Si el modo de ejercicio de la servidumbre no estuviere designado en el título, o fuese de otro modo incierto, corresponde al dueño de la heredad sirviente indicar el lugar por donde habrá de ejercerse. Una vez fijado, no podrá mudarlo; pero si el que señaló, o el establecido al constituir el gravamen, hubiere llegado a serle más oneroso o incómodo, o le privare de efectuar construcciones o mejoras, podrá el propietario del fundo sirviente, ofrecer al del predio dominante otro igualmente apto, y éste deberá aceptarlo. Los gastos que exija el cambio serán de cargo del primero. Tal derecho no podrá renunciarse por contrato."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2199,
+    "epigrafe": "División del fundo dominante",
+    "texto": [
+      "En caso de dividirse el fundo dominante, la servidumbre subsistirá en beneficio de cada lote, sin que este hecho pueda agravar la condición del sirviente. Cuando la servidumbre sólo aprovecharse a una de las fracciones, o debiera ejercerse por cierta parte del fundo, quedará extinguida respecto de las restantes. Dividido el predio sirviente, se aplicará la misma regla."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2200,
+    "epigrafe": "Obligaciones del dueño del predio sirviente",
+    "texto": [
+      "El dueño o poseedor del predio sirviente estará obligado: a) a contribuir a los gastos de reparación o conservación de las obras exigidas por la servidumbre cuando las utilice en su provecho; b) a permitir el uso de la servidumbre, sin menoscabar en modo alguno su ejercicio; pero podrá exigir que él sea reglado de la manera menos perjudicial para sus intereses, con tal que no se prive a la heredad dominante de las ventajas derivadas de aquélla; y c) a restablecer por su cuenta las cosas a su antiguo estado, cuando efectuare trabajos contrarios al ejercicio de la servidumbre, indemnizado, en su caso, los perjuicios. Si la heredad pasare a un sucesor particular, éste sólo deberá permitir aquel restablecimiento; pero no satisfacer los daños ni los gastos que estas obras exijan. Por uno y otros, el titular de la servidumbre podrá demandar al que realizó las obras."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2201,
+    "epigrafe": "Derechos del propietario del predio sirviente",
+    "texto": [
+      "El propietario o poseedor del predio sirviente conservará todos los derechos propios del dominio, y podrá efectuar las construcciones que no impidieren el ejercicio de las servidumbres. Los poseedores de fundos sobre los cuales se pretendiese ejercer servidumbres no inscriptas, podrá usar de las acciones posesorias para impedirlo, y en caso de hallarse registradas, para limitar su ejercicio."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2202,
+    "epigrafe": "Estipulaciones sobre gastos de servidumbre",
+    "texto": [
+      "Podrán las partes estipular: a) que el propietario de la heredad dominante tome a su cargo los gastos de conservación y reparación de las obras exigidas por la servidumbre, aun en el caso de que usare de ellas el dueño del predio gravado. Tal acuerdo es aplicable a las construcciones sobre las cuales el propietario del fundo dominante pueda establecer otras suyas; y b) que el dueño del fundo sirviente tome a su cargo los gastos a que se refiere el inciso anterior. No puede pactarse que esa carga se extienda a las obras existentes en el predio dominante, y cuando se hiciere, valdrá como obligación personal, si como tal pudiere valer. El propietario del fundo dominante podrá eximirse de su carga en el primer caso de este artículo, haciendo renuncia de la servidumbre. En el segundo, el propietario del predio sirviente quedará exonerado de ella, si abandonare el dominio de la parte de la heredad en que existieren las obras."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2203,
+    "epigrafe": "Extinción de la servidumbre inscrita",
+    "texto": [
+      "Inscripta una servidumbre en el Registro, sólo se extinguirá respecto de terceros por su cancelación en dicho registro, o por expropiación por causa de utilidad pública o interés social."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2204,
+    "epigrafe": "Causas de extinción de las servidumbres",
+    "texto": [
+      "Son además causas de extinción de las servidumbres: a) la renuncia del propietario de la heredad dominante. Si ésta resultare de su autorización escrita para que en el predio gravado se ejecuten obras, que en forma permanente impidan el ejercicio de la servidumbre, podrá el dueño de aquél pedir la cancelación judicial. Fuera de este caso, tales trabajos, aunque permanentes y visibles, hechos por el propietario de la heredad dominante o sirviente, sólo extinguirán el gravamen cuando hubiere producido la extinción por el no uso; b) la confusión que reúna ambos predios en un mismo dueño. La servidumbre no revivirá, si luego fueren separados, salvo constancia expresa en el instrumento de enajenación, o si fuere el caso previsto en el apartado final de este artículo; c) cuando la servidumbre no reportare utilidad alguna al predio dominante; d) cuando los cambios sobrevenidos en las heredades, impidieren definitivamente su ejercicio; y e) el no uso durante diez años, computados en las servidumbres continuas desde que hiciere un acto contrario a su ejercicio, y en las discontinuas, desde que se dejare de ejercerla. En los casos de los incisos b) y d) la servidumbre revivirá si las condiciones anteriores de los predios se restablecieren, a menos que se hubiere producido la extinción por el no uso."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2205,
+    "epigrafe": "Casos en que no procede la prescripción extintiva de la servidumbre",
+    "texto": [
+      "No se extinguirá por la prescripción la servidumbre: a) siempre que terceros hicieren uso de ella, aunque no contaren con autorización del titular, o al hacerlo contraríen su voluntad; b) cuando el uso del beneficiario de la servidumbre, aunque conforme con el título, se hubiere limitado a sus conveniencias o necesidades, no obstante que con ello no hubiere hecho todo lo que estaba autorizado a efectuar; c) si uno de los titulares pro-indiviso de la heredad dominante, continuare gozando de la servidumbre, aunque no lo hicieren los demás; y d) si entre los copropietarios del fundo dominante, hubiere algunos contra el cual la prescripción no pudiere correr."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2206,
+    "epigrafe": "Prescripción del modo de ejercicio",
+    "texto": [
+      "El modo particular de ejercer la servidumbre puede prescribirse como la servidumbre misma y de la misma manera. El uso incompleto trae la extinción parcial de ella y la reducirá a la forma en que fue gozada."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2207,
+    "epigrafe": "Medida precautoria para servidumbre urgente",
+    "texto": [
+      "Interpuesta la demanda para el establecimiento de una servidumbre predial, y si de las circunstancias del caso surgiere la urgencia de su funcionamiento, el juez podrá autorizar su habilitación inmediata con el carácter de medida precautoria siempre que concurran, en lo pertinente, los requisitos previstos por las normas procesales para su adopción y que se garantice el resarcimiento del perjuicio que eventualmente pudiere sufrir el propietario del fundo sirviente."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2208,
+    "epigrafe": "Servidumbre de tránsito",
+    "texto": [
+      "Si una heredad estuviere privada de salida al camino público, o si ésta no bastare para su explotación rural o industrial, podrá el propietario, usufructuario o usuario imponer a los predios interpuestos, cualquiera sea su destino, la servidumbre de tránsito, debiendo indemnizarse el valor del uso del terreno necesario, y todo otro perjuicio. Se considera cerrado el predio cuyo acceso a la vía pública fuere impracticable, peligroso, o exigiere gastos, que no se hallaren en proporción con el daño que causaría al vecino el establecimiento de la servidumbre. No se juzgará tal, la heredad a la que separen de la vía pública, construcciones existentes en ella."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2209,
+    "epigrafe": "Medida del tránsito",
+    "texto": [
+      "El tránsito de personas y cosas debe ser concedido en la medida necesaria para la explotación y uso del inmueble encerrado y tomado sobre los fundos contiguos que presenten el trayecto más corto a la vía pública, a no ser que el interés de dichos fundos, el del predio encerrado, la situación de los lugares, o las circunstancias especiales, impusieren otra regla."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2210,
+    "epigrafe": "Modo de ejercer el tránsito",
+    "texto": [
+      "Cuando esta servidumbre hubiere sido constituida por título, y en él no se expresare el modo de ejercer el tránsito, éste comprenderá el de pasar en todas las formas necesarias, según la naturaleza y destino del inmueble dominante. Si aquél estuviere determinado, no será permitido ampliarlo, o ejercerlo de otra manera, por ninguna causa o necesidad."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2211,
+    "epigrafe": "Servidumbre de tránsito por fraccionamiento",
+    "texto": [
+      "Siempre que se adquiera o divida parte de un predio, que por consecuencia del fraccionamiento quedare separada del camino público, se entenderá constituida sobre las partes intermedias restantes una servidumbre de tránsito, sin indemnización alguna."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2212,
+    "epigrafe": "Paso para líneas eléctricas y telefónicas",
+    "texto": [
+      "Todo propietario está obligado a dar paso por sus fundos a las líneas de conducción eléctrica, de conformidad con las leyes especiales relativas a esta materia. Cuando para establecer comunicaciones telefónicas particulares entre dos o más fincas, sea necesario colocar postes y tender alambres en una finca ajena, el dueño de ésta tiene obligación de permitirlo, mediante la indemnización correspondiente del perjuicio que sufra por ello. Esta servidumbre trae consigo el derecho de tránsito de las personas y el de conducción de los materiales necesarios para la construcción y vigilancia de la línea."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2213,
+    "epigrafe": "Paso para vías funiculares aéreas",
+    "texto": [
+      "Todo propietario está igualmente obligado a dejar pasar sobre su fundo los canales de vías funiculares aéreas para uso agrario o industrial y a tolerar sobre un fundo las obras, los mecanismos y las ocupaciones necesarias a tal fin, de conformidad con las leyes sobre la materia."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2214,
+    "epigrafe": "Extinción de la servidumbre de tránsito",
+    "texto": [
+      "La servidumbre de tránsito se extingue cuando el paso se haga innecesario para el fundo dominante por la apertura de un camino o por cualquier otra circunstancia."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2215,
+    "epigrafe": "Servidumbre de acueducto",
+    "texto": [
+      "Consiste esta servidumbre en el derecho real de hacer entrar en un inmueble propio, las aguas procedentes de heredades ajenas. Excepto las casas, los corrales, los patios y jardines que dependan de ellas y las huertas de superficie menor a una hectárea, toda heredad está sujeta a la servidumbre de acueducto, en los siguientes casos: a) cuando beneficia a un predio que carezca de las aguas necesarias para el cultivo de la sementeras, plantaciones o pastos; b) si fuere a favor de una población que la exija para el servicio doméstico de sus habitantes; y c) cuando fuere en utilidad de un establecimiento industrial. Esta servidumbre es siempre continua y aparente."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2216,
+    "epigrafe": "Constitución de la servidumbre de acueducto",
+    "texto": [
+      "Puede constituirse servidumbre de acueducto: a) respecto de aguas que corran, de acuerdo con la concesión de la autoridad competente; b) de las que naturalmente o por medios mecánicos afloren a la superficie; y c) de las que se encuentren reunidas en represas o canales pertenecientes a particulares, siempre que éstos hubieren concedido la disposición de ellos."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2217,
+    "epigrafe": "Dirección del acueducto",
+    "texto": [
+      "El titular del derecho de acueducto deberá llevar las aguas por el rumbo que permita su libre descenso, siempre que por la naturaleza del suelo no resulte excesivamente dispendiosa la obra. Verificadas estas condiciones, el acueducto se establecerá en la dirección que menos perjuicio ocasione al predio sirviente, juzgándose tal el trayecto más corto para la heredad sirviente, y el menos costos para el interesado, salvo prueba en contrario."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2218,
+    "epigrafe": "Construcción y mantenimiento del acueducto",
+    "texto": [
+      "La conducción se hará en forma tal que no permita derrames, ni deje estancar el agua o acumular basuras y que ofrezca, de trecho en trecho, los puentes necesarios para la cómoda administración y cultivos de las heredades sirvientes. Deberá permitirse la entrada de trabajadores para la limpieza y reparación del acueducto, como también la de un inspector o cuidador, previo aviso al encargado del predio; pero sólo de tiempo en tiempo, o con la frecuencia que el juez determinare, atendidas las circunstancias."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2219,
+    "epigrafe": "Indemnizaciones por el acueducto",
+    "texto": [
+      "La servidumbre de acueducto obliga al titular de ella a pagar: a) el valor de uso del terreno que habrá de ocupar; b) el valor de uso de una franja de tierra de cada lado, no menor de un metro de ancho en todo el curso, la que podrá ampliarse por convenio de partes o disposición del juez; c) un diez por ciento más, sobre la suma que arrojen los dos incisos anteriores; y d) todo perjuicio causado por la construcción del acueducto, y el que provenga de las filtraciones o derrames originados por defectos de aquél."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2220,
+    "epigrafe": "Oposición al acueducto",
+    "texto": [
+      "El dueño o poseedor del predio sobre el que se intente establecer el acueducto podrá oponerse a ellos: a) cuando el que pretendiere construirlo, no fuere dueño o usufructuario del predio al que han de llevarse las aguas, o no lo fueren respecto de éstas, o no tuviere la concesión de ellas; y b) si pudiere establecerse sobre otros fundos, con iguales ventajas y menores molestias para la heredad sirviente."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2221,
+    "epigrafe": "Forma de construcción del acueducto",
+    "texto": [
+      "El acueducto deberá construirse: a) con acequia abierta, cuando no sea peligrosa por su profundidad o situación, ni ofrezca otros inconvenientes; b) con acequia cubierta, cuando lo exijan su hondura, su contigüidad a las habitaciones o caminos, o cualquier análogo motivo, según el criterio del juez; c) con cañerías o tuberías, cuando puedan sus aguas ser absorbidas por las pertenecientes a terceros o haya peligro de que infeccionen a otras, o lleguen a contaminarse con substancias nocivas a causen daños a obras o edificios, y siempre que resulte necesario según las circunstancias."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2222,
+    "epigrafe": "Derechos del titular del acueducto",
+    "texto": [
+      "El titular de la servidumbre tendrá derecho para alcanzar o rebajar el terreno del inmueble sirviente, a fin de que las aguas lleguen a su destino, pudiendo también tomar la tierra o arena que para esos trabajos le fuere menester. Si el acueducto hubiere de atravesar cursos naturales de aguas u otros acueductos, el dominante construirá y conservará las obras necesarias para que no se retarde o acelere la corriente de aquéllos, ni disminuya su caudal, ni se dañe la calidad del agua del curso atravesado."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2223,
+    "epigrafe": "Prohibición de alterar el acueducto",
+    "texto": [
+      "Quien tuviere acueducto no podrá convertir en descubierto el subterráneo o viceversa, privando al poseedor del inmueble sirviente del agua necesaria para el uso doméstico o para abrevar a sus animales. Estos derechos deberán ser ejercidos por el dueño del bien gravado, con las limitaciones establecidas en este Código."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2224,
+    "epigrafe": "Acueducto dentro de otro preexistente",
+    "texto": [
+      "No podrá establecerse la servidumbre de acueducto dentro de otro preexistente. Quien tuviere para su propio beneficio un acueducto en su heredad podrá oponerse a que se construya otro en el mismo predio, ofreciendo paso por el suyo a las aguas de que alguien quisiere servirse, siempre que con ello no se irrogue daño considerable al que deseare abrir el nuevo acueducto. Aceptada la oferta, se pagará previamente al dueño de la heredad, el valor del uso del suelo ocupado por el antiguo acueducto, incluso el del espacio lateral ya mencionado a prorrata del nuevo volumen de agua introducido, y se le reembolsará además, en la misma proporción, lo que valiere la obra en toda la longitud que aprovechare el interesado. Este, en caso necesario, ensanchará el acueducto a su costa, y pagará por el uso del nuevo terreno ocupado por él y por la banda lateral, y cualquier otro perjuicio, pero sin el diez por ciento de recargo."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2225,
+    "epigrafe": "Aumento de volumen de agua",
+    "texto": [
+      "Establecido el acueducto, podrá introducirse por él mayor volumen de agua, indemnizando a la heredad sirviente del daño derivado de esa causa, y si para ello fuese necesario realizar obras nuevas, se estará a lo dispuesto en este Código."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2226,
+    "epigrafe": "Propiedad del suelo del acueducto",
+    "texto": [
+      "El dueño del predio sirviente conserva la propiedad del suelo en que existe el acueducto, y todos los derechos compatibles con el ejercicio de la servidumbre."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2227,
+    "epigrafe": "Uso de las aguas por el sirviente",
+    "texto": [
+      "El poseedor del inmueble sirviente podrá usar de las aguas que corrieren por el acueducto descubierto y emplearlas en su heredad, si con ella no dañare el predio dominante. En tal supuesto, restituirá o abonará, según el caso, la parte proporcional del costo de instalación y de conservación en la medida prevista por este Código. No podrá cubrir el acueducto abierto para utilizar el terreno, ni plantar árboles a los lados de aquél, sin asentimiento del titular de la servidumbre."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2228,
+    "epigrafe": "Paso de agua en división de inmueble",
+    "texto": [
+      "Cuando un inmueble que recibe el agua por un solo punto, se dividiere entre dos o más dueños, el que llegare a serlo de la parte superior quedará obligado a dar paso al agua para ser utilizada en las inferiores. Por esta servidumbre no recibirá indemnización."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2229,
+    "epigrafe": "Paso de aguas sobrantes",
+    "texto": [
+      "Las disposiciones anteriores se aplicarán al paso de las aguas sobrantes llevadas a un fundo superior o acumuladas en él, o que provinieren de su explotación, cuya salida fuere necesaria para el terreno; y también a las que, procedentes del desagüe de lagunas, predios pantanosos, o de producción industrial, agrícola o minera, fueren conducidas a un río o arroyo, o con otro destino análogo. El paso de esas aguas se permitirá bajo la condición de proporcionarles una corriente adecuada, para evitar que ellas se estanquen."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  }
+  {
+    "numero": 2230,
+    "epigrafe": "Objeto del usufructo",
+    "texto": [
+      "El titular del derecho de usufructo sobre un bien podrá usarlo y gozar de él conforme con las disposiciones de este Código. El usufructo podrá establecerse sobre toda especie de bienes muebles o inmuebles, corporales o incorporales, que puedan ser vendidos o donados. Podrá establecerse sobre porciones materiales o indivisas, o limitarse a una parte del uso o goce del bien y constituirse sobre cosas de mero placer, aunque no produzca ninguna utilidad, o sobre un fundo improductivo. Si recayese sobre cosas consumibles, la propiedad de éstas quedará transferida al usufructuario."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2231,
+    "epigrafe": "Cosas que no pueden ser objeto de usufructo",
+    "texto": [
+      "No pueden ser objeto de usufructo: a) el propio usufructo; b) los derechos reales de uso y habitación; c) las servidumbres activas, separadas de los inmuebles a que fueren inherentes; y d) los derechos reales de garantía, independientemente de los créditos garantizados con ellos."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2232,
+    "epigrafe": "Duración del usufructo",
+    "texto": [
+      "No podrá existir usufructo por mayor tiempo que la vida del usufructuario, aunque se haya fijado término a su duración, o se lo haya constituido para durar después de la vida del usufructuario, o a su favor y de sus herederos. El usufructo no puede ser establecido a favor de personas jurídicas, sociedades, o asociaciones no lucrativas registradas, por más de treinta años. Si la entidad adquirente se disolviere antes, del usufructo establecido bajo término se extinguirá por su disolución."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2233,
+    "epigrafe": "Usufructo a favor de varias personas",
+    "texto": [
+      "El usufructo constituido a favor de varias personas, no acuerda el derecho de acrecer entre ellas, salvo lo que en contrario disponga el título constitutivo."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2234,
+    "epigrafe": "Adquisición del usufructo",
+    "texto": [
+      "El usufructo se adquiere: a) por contrato, en las mismas condiciones en que se adquiere el dominio de las cosas y de los derechos; b) por prescripción, en iguales casos que puede adquirirse el dominio de las cosas muebles o inmuebles por ese medio; c) por la ley; y d) por actos de última voluntad. El usufructo no puede constituirse por sentencia judicial."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2235,
+    "epigrafe": "Usufructo subordinado a condición o término",
+    "texto": [
+      "Es nula la constitución de usufructo subordinada a condición o término que suspenda su existencia o ejercicio. Ella es válida, si hecha por testamento, el término o la condición se hubiere cumplido antes del fallecimiento del causante, y el usufructuario le hubiere sobrevivido."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2236,
+    "epigrafe": "Regulación de los derechos y obligaciones del usufructuario",
+    "texto": [
+      "Los derechos y obligaciones del usufructuario serán regulados por lo que determine el título constitutivo del usufructo, y en su defecto o por su insuficiencia, por las disposiciones de este Código."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2237,
+    "epigrafe": "Inventario previo del usufructuario",
+    "texto": [
+      "El usufructuario, antes de entrar en el goce de los bienes, debe hacer a su costa inventario de los bienes muebles y un estado de los inmuebles sujetos al usufructo, en presencia del propietario, o su representante. Este requisito, del que no podrá dispensársele, se cumplirá por instrumento público o privado, pudiendo las partes de común acuerdo, referirse a un inventario judicial ya existente. Deberá comprender el avalúo de las cosas muebles y títulos de crédito, cuya disposición corresponda al usufructuario."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2238,
+    "epigrafe": "Entrega sin inventario",
+    "texto": [
+      "Cuando la entrega se efectuare sin cumplirse lo dispuesto por el artículo anterior, no por ello quedarán perjudicados los derechos del usufructuario, ni se lo obligará a restituir las cosas ni sus frutos; pero se presumirá que aquéllas se hallaban en buen estado cuando las recibió."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2239,
+    "epigrafe": "Caución del usufructuario",
+    "texto": [
+      "El usufructuario debe dar caución real o personal de que las cosas serán conservadas y restituidas al finalizar el usufructo. No estarán obligados a prestarlas, salvo caso de peligro justificado en los derechos de los propietario: a) los padres, respecto de los bienes de sus hijos; b) los que a título oneroso o gratuito hubieren enajenado bienes con reserva del usufructo; c) aquéllos a quienes el propietario hubiere dispensado de ello; y d) quienes fueron eximidos por el juez respecto de los muebles necesarios para su uso."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2240,
+    "epigrafe": "Falta de caución",
+    "texto": [
+      "Si el usufructuario no hubiese prestado caución, el propietario puede negarle la entrega de los objetos sujetos al usufructo. Si lo hubiese dejado entrar en posesión de los bienes sin exigirle la fianza podrá reclamarla en cualquier tiempo."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2241,
+    "epigrafe": "Consecuencias de la falta de fianza",
+    "texto": [
+      "Si el usufructuario no diere la fianza en el término que le señale el juez, los bienes inmuebles serán dados en arrendamiento, o puestos en secuestro, bajo la garantía de un encargado de hacer las reparaciones y entregar el excedente de los alquileres o arrendamiento al usufructuario. Si el usufructo consiste en dinero, será colocado a interés. Las mercaderías serán vendidas, y se colocará su producto en la misma forma. El propietario puede exonerarse de tener a disposición del usufructuario los muebles que se deterioran por el uso, y exigir que sean vendidos, y se coloque el precio como el dinero. El propietario puede, sin embargo, conservar los objetos del usufructo hasta que el usufructuario dé la fianza, sin estar obligado a pagar el interés por su valor estimativo."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2242,
+    "epigrafe": "Derechos del usufructuario",
+    "texto": [
+      "El usufructuario tendrá derecho: a) a poseer la cosa, y a reclamar su entrega con todos sus accesorios, salvo que el usufructo se limite a una parte de ella; b) a los frutos naturales, así como a los provenientes del cultivo de la tierra, que le pertenecerán desde su separación; c) a los frutos pendientes al comenzar el usufructo, sin hallarse obligado a resarcimiento alguno respecto al propietario; d) a los frutos civiles, que por juzgarse adquiridos día por día, corresponden al tiempo del usufructo, aunque no los hubiere percibido; e) a ejercer las servidumbres activas y los derechos de uso y goce que correspondieren al propietario, en los fundos ribereños con ríos o lagos, o en los inmuebles vecinos; f) el uso y goce de los aumentos que la cosa recibiere por accesión, pero no a la parte que al propietario le corresponda en el tesoro que se hallase en el fundo, ni lo que éste se le abonare por su crédito de medianería o cercas; g) a ceder el ejercicio del usufructo o darlo en arriendo, pero responderá directamente como fiador, aun por los menoscabos que sufran los bienes debido a negligencia de quienes le substituyan. Los contratos que celebre terminan al fin del usufructo, salvo los de locación que se regirán por lo dispuesto en este Código; h) a servirse de las cosas que se gastan y deterioran lentamente, en los usos a que se las destina. Deberá devolverlas en el estado en que se encuentren, salvo la responsabilidad por los deterioros producidos por su culpa; i) a ejercer todas las acciones inherentes a los derechos comprendidos en el usufructo, e intentar las posesorias y petitorias, que el nudo propietario estaría autorizado a deducir. Si este último no hubiere intervenido en tales juicios, podrá beneficiarse con la sentencia favorable, más no le afectará la dictada contra el usufructuario; y j) a retener la cosa hasta el pago de los reembolsos e indemnizaciones que le deba el propietario, según las reglas de este Código."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2243,
+    "epigrafe": "Frutos pendientes al concluir el usufructo",
+    "texto": [
+      "Si al concluir el usufructo existieren frutos pendientes, corresponderán al propietario, y si estuvieren vendidos, tendrá derecho a su precio. En este caso abonará los gastos que el usufructuario, según las reglas de una buena administración, hubiere realizado para producirlo, y siempre que no excedan del valor líquido de los cosechados."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2244,
+    "epigrafe": "Productos de minas en el usufructo",
+    "texto": [
+      "No corresponden al usufructuario de un predio en que existan minas, los productos de las denunciadas, concedidas o que se hallaren en laboreo al principiar el usufructo, a no ser que expresamente se le hubieren concedido en el título constitutivo, o sea un usufructo universal. La calidad de usufructuario no obstará el derecho que acuerdan leyes especiales sobre explotación de minerales e hidrocarburos, para denunciar y obtener la concesión de las que pudiere existir dentro del predio usufructuado, en los términos establecidos por dichas leyes."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2245,
+    "epigrafe": "Subsistencia de contratos de locación celebrados por el usufructuario",
+    "texto": [
+      "Los contratos de locación que de buena fe celebrare el usufructuario vitalicio, subsistirán después de su muerte por un plazo que no exceda de dos años, cuando se hubieren inscripto en el Registro. En el mismo caso, y bajo iguales condiciones, se mantendrán los realizados por el usufructuario a término fijo durante el tiempo aún pendiente, si falleciere antes de su cumplimiento."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2246,
+    "epigrafe": "Mejoras del usufructuario",
+    "texto": [
+      "Al usufructuario le será permitido hacer mejoras en la cosa con tal que no alteren su forma y substancia; como también reconstruir cualquier edificio arruinado, pero en ambos casos no tendrá derecho al pago de las mejoras o la reconstrucción. Podrá llevarse las mejores útiles o suntuarias, siempre que con ello obtuviere algún beneficio y fuese posible extraerlas sin daño de la cosa. Tendrá derecho a compensar su valor actual con el de los deterioros que esté obligado a pagar. Si el propietario quisiere retener las mejoras que pueden ser retiradas, deberá el valor de las mismas."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2247,
+    "epigrafe": "Obligaciones del usufructuario",
+    "texto": [
+      "El usufructuario está obligado a: a) usar y gozar de la cosa según el destino económico que ella tuviere al serle entregada, y conforme a las reglas de una prudente administración; b) mantener el estado de la cosa, sin que pueda modificarla, aun cuando por su modificación la tornare mejor o más útil; c) no cortar los árboles frutales o de adorno, ni los que hermosean los caminos o dan sombra a las casas. Los árboles frutales que perecieren o cayeren por cualquier causa, le pertenecerán, pero deberá reponerlos; d) reparar por su cuenta los deterioros de la cosa, a fin de conservarla en el estado requerido para su explotación regular, siempre que tales arreglos sean los ordinarios y de causa posterior a su entrega. Estará también obligado a efectuar las reparaciones extraordinarias, cuando han sido causadas por falta de las reparaciones de conservación a cargo del usufructuario o proviniesen de su culpa; e) satisfacer los impuestos que graven los frutos y las deudas correspondientes al goce de la cosa; f) concurrir con el nudo propietario al pago de las cargas que durante el usufructo hubieren sido impuestas a la propiedad; g) contribuir a los gastos de cerramientos forzosos y deslinde, con el pago de los intereses legales, siempre que fueren requeridos por vecinos de la propiedad, cuyo monto corresponda satisfacer al nudo propietario. Podrá el usufructuario optar por el pago total de esos gastos, con cargo de restitución, sin intereses, al fin del usufructo. Esta regla se aplicará a las cargas a que se refiere el inciso f) y a los gastos causados por la apertura de calles y caminos, u otros similares; h) ejercer las servidumbres activas y a impedir los actos de terceros que turben los derechos del propietario, dando a éste aviso de ello; i) comunicar inmediatamente al propietario la destrucción o deterioro de la cosa, o cuando ésta exija reparaciones extraordinarias; y j) constituir, por el tiempo del usufructo, seguro contra incendio y otros siniestros, cuando así lo impusieren las reglas de una prudente administración, y a pagar las primas si la cosa ya estuviere asegurada. En caso de inobservancia de los incisos h) e i), responderá al dueño por los perjuicios irrogados, como si provinieren de su culpa."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2248,
+    "epigrafe": "Siniestro de la cosa usufructuada",
+    "texto": [
+      "En caso de siniestro, el derecho del usufructuario se extiende al valor del resarcimiento. Tanto aquél como el dueño, podrán exigir que el importe se invierta en reconstruir o restablecer la cosa, cuando así lo impongan las reglas de una imprudente administración. El nudo propietario podrá encargarse de esas obras, o delegarlas en el usufructuario, sin que éste deba ser retribuido. El usufructo continuará en tal caso sobre la cosa restablecida."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2249,
+    "epigrafe": "Pago de intereses por el usufructuario",
+    "texto": [
+      "El usufructuario de un bien particular no está obligado a satisfacer intereses por las deudas, ni aun respecto de aquéllas garantizadas con hipoteca. Si debiera pagarlas para conservar el goce, podrá repetir contra el deudor del capital y los créditos, o contra el propietario no obligado, el capital solamente."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2250,
+    "epigrafe": "Reparaciones extraordinarias por el usufructuario",
+    "texto": [
+      "Siempre que el usufructuario de un inmueble hiciere por sí las reparaciones extraordinarias, o lo reconstruyere, podrá dentro de los límites de una buena administración, emplear con este fin las partes integrantes de la cosa. Si no realizare las obras, deberá permitir al propietario que las ejecutare, el empleo de aquellas partes constitutivas, y tolerar sin indemnización los trabajos."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2251,
+    "epigrafe": "Exigencia de reparaciones al nudo propietario",
+    "texto": [
+      "El usufructuario no podrá exigir que el nudo propietario efectúe en la cosa reparaciones o gastos de ninguna especie, por necesarios que sean. Cuando el usufructuario hiciere reparaciones o reconstrucciones que no fueren de su cargo, no tendrá derecho a resarcimiento."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2252,
+    "epigrafe": "Expropiación de la cosa usufructuada",
+    "texto": [
+      "Si la cosa fuer expropiada por causa de utilidad pública o interés social, el usufructuario, aunque sea solvente y esté dispensado de dar caución, no podrá recibir la indemnización, salvo que prestare fianza bastante."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2253,
+    "epigrafe": "Usufructo de un monte",
+    "texto": [
+      "El usufructuario de un monte disfrutará de sus frutos y productos, según su naturaleza. Podrá realizar los cortes normales, según la especie de árboles, en la forma, cantidad y época que corresponda, sujetándose a las disposiciones de leyes especiales."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2254,
+    "epigrafe": "Árboles frutales y de ornato",
+    "texto": [
+      "Los árboles y plantas frutales, los de sombra y ornato que perezcan, o hayan sido tronchados o arrancados por accidente, pertenecerán al usufructuario, quien tiene la obligación de reponerlos. Si hubiesen perecido tantos que su reposición fuere muy gravosa, podrá el usufructuario ponerlos a disposiciones del propietario, salvo que éste prefiriese abandonarlos."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2255,
+    "epigrafe": "Usufructo de cosas fungibles",
+    "texto": [
+      "El usufructuario de mercaderías o de cosas fungibles o consumibles por el primer uso, adquiere su dominio y dispone libremente de ellas, con cargo de restituir al fin del usufructo el valor establecido en el inventario. Si no se avaluaren, deberá restituir otras de igual clase y calidad, o pagar el precio corriente al tiempo de cesar el usufructo, y en su caso, con los daños e intereses."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2256,
+    "epigrafe": "Usufructo de un establecimiento comercial, industrial o agrícola",
+    "texto": [
+      "El usufructuario de un establecimiento comercial, industrial o agrícola debe mantenerlo en funcionamiento normal, renovando las existencias, conservando y reparando las maquinarias y enseres, según su naturaleza, para mantener su crédito y la clientela. Terminado el usufructo, se estimarán las existencias, y la parte a la que corresponda abonará la diferencia entre el valor actual y el que se estableció por inventario."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2257,
+    "epigrafe": "Usufructo de un rebaño",
+    "texto": [
+      "Si el usufructo se constituye sobre un rebaño o un conjunto de animales de cualquier especie, el usufructuario está obligado a reemplazar con las crías, las cabezas que falten por cualquier causa. Si el rebaño perece en parte, sin culpa del usufructuario, continuará el usufructo en la parte que queda, y lo que falte se repondrá con las crías."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2258,
+    "epigrafe": "Usufructo de animales individualmente considerados",
+    "texto": [
+      "En el usufructo de animales individualmente considerados, podrá el titular servirse de ellos, obtener los productos que dieren o alquilarlos, si tal fuere su destino. Si se perdieren o murieren sin culpa del usufructuario, no tendrá obligación de substituirlos con sus crías, y respecto de ellos, quedará terminado el usufructo."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2259,
+    "epigrafe": "Usufructo de parte indivisa",
+    "texto": [
+      "El usufructuario de parte indivisa tendrá los derechos del condómino para administrar la cosa y percibir los frutos. Si el condominio cesare, el usufructo quedará transferido sobre los objetos adjudicados al nudo propietario. Sólo de común acuerdo podrá pedirse la división por el condómino y el usufructuario."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2260,
+    "epigrafe": "Embargo del usufructo",
+    "texto": [
+      "Los acreedores del usufructuario podrá embargar el derecho del usufructo, y obtener se les conceda el ejercicio de éste para cobrar sus créditos, prestando en tal caso fianza suficiente de conservación y restitución de la cosa tenida en usufructo."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2261,
+    "epigrafe": "Facultades del nudo propietario",
+    "texto": [
+      "El nudo propietario podrá: a) ejecutar los actos que exigiere la conservación de la cosa; b) reconstruir los edificios destruidos por accidentes; c) inspeccionar con moderación el bien dado en usufructo; d) enajenar e hipotecar la cosa, y constituir servidumbres activas y pasivas. Estas últimas no podrán ejercerse sin el asentimiento del usufructuario, mientras subsista su derecho; e) demandar la cesación del empleo abusivo por parte del usufructuario, que cause peligro a la cosa; f) exigir del usufructuario el cumplimiento de todas sus obligaciones, sin esperar que termine el usufructo; g) cobrar las reparaciones a cargo del usufructuario; y h) en general, ejercer todas las facultades cuyo uso no irrogue perjuicio o molestias al usufructuario."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2262,
+    "epigrafe": "Limitaciones al nudo propietario",
+    "texto": [
+      "El nudo propietario no podrá dañar o restringir los derechos del usufructuario, ni hacer reformas en la cosa, aunque no perjudiquen a éste. No tendrá obligación de retirar los materiales, árboles u otras partes constitutivas de la cosa, que provengan de destrucciones de ella, si prefiriese abandonarlos."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2263,
+    "epigrafe": "Obligación de reparar antes de la entrega",
+    "texto": [
+      "El constituyente del usufructo, o el nudo propietario, no está obligado a reparar los bienes, antes de su entrega al usufructuario, aunque ellos sufran deterioro. Si la tardanza en recibirlos fuere porque el usufructuario no cumplió con sus obligaciones previas, y el nudo propietario hizo las reparaciones a cargo de aquél, tendrá derecho a exigir lo gastado y retener los bienes."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2264,
+    "epigrafe": "Extinción del usufructo",
+    "texto": [
+      "Sin perjuicio de las causas extintivas de los derechos reales y de lo convenido por las partes, el usufructo se extingue: a) por pérdida o destrucción total de la cosa, no siendo ésta fungible; b) por la muerte del usufructuario, y si fuere a favor de una persona jurídica y si no se hubiese determinado plazo, al cabo de treinta años; c) por vencimiento del plazo de su duración; d) por cesación de la causa que lo originó; e) por consolidación o confusión; f) por el no uso durante diez años; y g) por renuncia del usufructuario."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2265,
+    "epigrafe": "Restitución al extinguirse el usufructo",
+    "texto": [
+      "Extinguido el usufructo, deberá dejarse libre la posesión del bien y restituirlo al nudo propietario, salvo lo dispuesto en este Código sobre los contratos de locación celebrados por el usufructuario. Los frutos, así como los intereses, pertenecen de pleno derecho al propietario, desde el momento de la extinción, aunque el usufructuario de buena o mala fe, continuare en el goce de la cosa."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2266,
+    "epigrafe": "Plazo para desocupar tras la muerte del usufructuario",
+    "texto": [
+      "Terminado el usufructo por muerte del titular, la familia de éste dispondrá de noventa días para desocupar el inmueble que habitare, sin cargo alguno de alquiler por la ocupación. Las personas jurídicas y asociaciones registradas, gozarán de igual término para el desalojo del inmueble en que funcionaren, contado desde su disolución, cuando ésta se produjere antes de vencer el plazo."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2267,
+    "epigrafe": "Usufructo de derechos",
+    "texto": [
+      "Se aplicará al usufructo de derechos lo dispuesto sobre el de cosas, con las modificaciones que se establecen seguidamente. Los derechos intransmisibles no pueden ser objeto de usufructo."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2268,
+    "epigrafe": "Constitución del usufructo de derechos",
+    "texto": [
+      "Para constituir este usufructo se aplicará las disposiciones de la cesión de derechos. Cuando se tratare de un derecho que faculte a exigir una prestación del obligado, regirán las normas que regulan las relaciones entre cesionario y deudor. Realizada la prestación, el acreedor se hará dueño del objeto, y el usufructuario obtendrá el usufructo."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2269,
+    "epigrafe": "Usufructo de créditos productivos de intereses",
+    "texto": [
+      "Si el usufructo tuviere por objeto créditos por sumas productivas de intereses, deberá el deudor pagar el capital al acreedor y al usufructuario, conjuntamente, y cualquiera de ellos podrá reclamar que el pago se haga en esa forma, o por consignación judicial en cuanta común. Si la exigibilidad dependiere de una declaración o de una opción, deberán éstas realizarse por ambos. En caso de desacuerdo, cada interesado podrá pedir el depósito. Pagado el crédito, el usufructuario y el acreedor estarán obligados a reinvertir el capital. El primero podrá hacerlo según las reglas de una prudente administración."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2270,
+    "epigrafe": "Usufructo de otros créditos",
+    "texto": [
+      "El usufructuario de un crédito no comprendido en el artículo anterior tendrá derecho a cobrarlo, y cuando su exigibilidad dependiere de una declaración u opción del acreedor, le será lícito efectuarla. Estará aquel obligado a realizar todos los actos judiciales para obtener el cobro del crédito, sin poder extinguirlo o modificarlo por otros medios que no sean el pago efectivo, o la compensación. En caso de rentas vitalicias o temporarias, pensiones u otros derechos semejantes, la prestación que pueda exigirse corresponderá al usufructuario."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2271,
+    "epigrafe": "Usufructo de títulos al portador",
+    "texto": [
+      "Si el usufructo fuere de título al portador, o endosables en blanco, la posesión del papel y de sus renovaciones corresponderá en común al usufructuario y al propietario. La posesión de los cupones de intereses o dividendos, pertenecerá al primero. Para constituir el usufructo no será necesaria la entrega del título; bastará que se posea en común. A solicitud de cualquiera de las partes, deberá depositarse el documento en un banco, a la orden conjunta de ellas."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2272,
+    "epigrafe": "Reembolso del título en usufructo",
+    "texto": [
+      "En caso de reembolso del título, se procederá conforme a lo dispuesto para los créditos productivos de interés; si hubiere prima, o sin en los cupones estuviere incluida la amortización del capital, la prima y la amortización formarán parte de éste."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2273,
+    "epigrafe": "Usufructo con administrador",
+    "texto": [
+      "Si el ejercicio de un usufructo hubiere sido confiado a un administrador, la entrega sólo producirá efecto con respecto al obligado, después de notificársele del auto por el que se le nombrare, o cuando tuviere conocimiento de su existencia. Lo mismo ocurrirá respecto de la cesión."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2274,
+    "epigrafe": "Usufructo sobre un patrimonio",
+    "texto": [
+      "El usufructo constituido sobre un patrimonio, o parte alícuota del mismo, se reglará por las disposiciones siguientes, y subsidiariamente, en cuanto sean aplicables, por las relativas al usufructo de cosas y derechos. Al usufructuario de parte alícuota, se aplicará en proporción a su cuota, cuanto se establece respecto del que lo sea de todo el patrimonio."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2275,
+    "epigrafe": "Usufructo universal",
+    "texto": [
+      "Al titular de un usufructo universal le corresponderá todo cuanto pueda provenir de las cosas dadas en usufructo, aunque no fueren frutos."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2276,
+    "epigrafe": "Usufructo gratuito y acreedores",
+    "texto": [
+      "El usufructo de todos los bienes establecido a título gratuito, no obstará a que los acreedores ya existentes de quien lo constituyó, reclamen sobre ellos el pago de sus créditos. Cuando el usufructuario hubiere adquirido la propiedad de cosas consumibles, podrán ejercer ese derecho sobre el valor de ellas, requiriendo el pago inmediato."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2277,
+    "epigrafe": "Pago de intereses por el usufructuario de un patrimonio",
+    "texto": [
+      "El usufructuario de un patrimonio está obligado a pagar los intereses de las deudas que lo graven, pero podrá, si las circunstancias lo autorizan, demandar que se le exima de esta obligación. En este caso, su goce quedará reducido a los bienes que resten después de pagadas las deudas."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2278,
+    "epigrafe": "Pago anticipado de deudas en usufructo universal gratuito",
+    "texto": [
+      "El adquirente a título gratuito de un usufructo universal, podrá anticipar el pago de las deudas de la sucesión del donante, y en este caso, le será restituido el capital sin intereses al fin del usufructo. Pero si no las abonare, el heredero o el constituyente podrá elegir entre el vender los bienes necesarios, o pagar las obligaciones, y en tal supuesto, el usufructuario deberá del pleno derecho, los réditos, mientras gozare del beneficio. Si al usufructuario que abonó las deudas no se le reembolsare su importe al finalizar el usufructo, correrán de pleno derecho, los intereses a su favor."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2279,
+    "epigrafe": "Pensiones alimentarias y otros gravámenes en el usufructo universal gratuito",
+    "texto": [
+      "El usufructuario universal a título gratuito estará obligado a pagar en proporción a su goce, y sin derecho a repetir, las pensiones alimentarias, las rentas, sueldos e intereses devengados, que graviten sobre el patrimonio por créditos ya existentes."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2280,
+    "epigrafe": "Derecho real de uso",
+    "texto": [
+      "Por el derecho real de uso el propietario de una cosa no fungible confiere a otro la facultad de servirse de ella, y tratándose de un fundo, la de percibir sus frutos en la medida que sea preciso para satisfacer las necesidades del usuario y su familia, con cargo de conservar la sustancia de la cosa. Si el derecho constituido por el propietario se refiere a una casa y a la utilidad de morar en ella, se llama en este Código, derecho de habitación."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2281,
+    "epigrafe": "Constitución y régimen de los derechos de uso y habitación",
+    "texto": [
+      "Los derechos de uso y habitación se constituyen del mismo modo y con las mismas limitaciones que el usufructo, pero no existe uso ni habitación establecido por la ley. Se rigen ellos por su título constitutivo, y en su defecto, por las disposiciones siguientes."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2282,
+    "epigrafe": "Límites del uso y la habitación",
+    "texto": [
+      "El derecho de uso y el de habitación, se limitan a las necesidades personales del beneficiario y su familia, entendida por tal el cónyuge del titular, sus descendientes, así como las personas a quienes el usuario o habitador deba alimentos, con tal que unos y otros vivan con él, y las personas de su servicio."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2283,
+    "epigrafe": "Instalación de establecimiento y prohibición de ceder",
+    "texto": [
+      "El habitador o usuario podrá instalar un establecimiento industrial o comercial que sea compatible con el destino de la cosa; pero no podrá ceder el uso de la habitación, ni arrendarla. Las necesidades personales del usuario serán juzgadas en relación a las diversas circunstancias que puedan concurrir."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2284,
+    "epigrafe": "Uso de la totalidad del fundo",
+    "texto": [
+      "Si el fundo sobre el cual se ha establecido un derecho de uso no produjera normalmente en un año más que los fundos suficientes para satisfacer las necesidades del usuario, o si la cosa bastante sólo para él y su familia, debe entregársele la posesión entera del fundo o de la casa, como si fuera usufructuario. Quedará él sujeto a las reparaciones de conservación y al pago de las contribuciones, como el usufructuario. Si no tomare sino una parte de los frutos, o si lo ocupare una parte de la casa, contribuirá en proporción de lo que goce."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2285,
+    "epigrafe": "Uso de los frutos del fundo",
+    "texto": [
+      "El que tiene el uso de los frutos de un fundo tiene derecho a usar de todos los frutos naturales que produzca. Pero si éstos provienen del trabajo del propietario, sólo tiene derecho a usarlos, pagados que sean todos los costos para producirlos. El usuario tiene preferencia sobre el propietario, aunque por su uso todos los frutos fuese consumidos."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2286,
+    "epigrafe": "Uso sobre rebaño o piara",
+    "texto": [
+      "El que tiene el derecho de uso sobre un rebaño o una piara puede aprovecharse de las crías, leche y lana, en cuanto baste para su consumo y el de su familia."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2287,
+    "epigrafe": "Uso sobre animales",
+    "texto": [
+      "Si el uso se ha establecido sobre animales, el usuario tiene derecho a emplearlos en los trabajos y servicios propios de su especie, para las necesidades de su industria o comercio."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2288,
+    "epigrafe": "Alquiler del fundo por el usuario",
+    "texto": [
+      "El usuario que no fuere habitador, puede alquilar el fundo en el cual se ha constituido el uso."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2289,
+    "epigrafe": "Acción real del usuario",
+    "texto": [
+      "El usuario, para obtener el goce que le es debido, tiene una acción real en virtud de la cual puede obrar no sólo contra el propietario del fundo, sino también contra terceros poseedores en cuyo poder se encuentre la heredad, y tiene también las acciones posesorias del usufructuario."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2290,
+    "epigrafe": "Obligaciones del usuario",
+    "texto": [
+      "Las obligaciones del usuario son las mismas que las del usufructuario respecto de la conservación y reparaciones de la cosa, y el que tiene el derecho de habitación debe contribuir al pago de las cargas, contribuciones y reparaciones de conservación, a prorrata de la parte de la casa que ocupe."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2291,
+    "epigrafe": "Uso sobre cosas muebles",
+    "texto": [
+      "Cuando el uso fuere establecido sobre cosas muebles, el usuario no tiene facultad sino para emplearlas en su servicio personal, y el de su familia, sin poder cederlo a otros, aunque se trate de objetos que el propietario tenía costumbre de alquilar."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2292,
+    "epigrafe": "Cesión del uso",
+    "texto": [
+      "El que tiene el uso de los frutos de una cosa por un título gratuito no puede dar a otro por cesión o locación, el derecho de percibirlos, pero puede ceder el uso, si fue obtenido a título oneroso. En uno y otro caso, el uso de los frutos no puede ser embargado por los acreedores del usuario cuando tiene la calidad de alimentario."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2293,
+    "epigrafe": "Extinción del uso y habitación",
+    "texto": [
+      "Lo dispuesto sobre la extinción del usufructo se aplica igualmente al uso y la habitación, pero los acreedores del usuario no pueden impugnar la renuncia que hiciere de sus derechos. El derecho de habitación se extingue por el abuso grave del habitador, que el juez calificará según las circunstancias."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2294,
+    "epigrafe": "Prenda de cosas en general",
+    "texto": [
+      "Por la constitución de prenda, se entrega al acreedor una cosa mueble o un título de crédito en seguridad de una obligación cierta o condicional, presente o futura. La prenda convencional podrá ser constituida por el deudor o un tercero. Éste no quedará, en este caso, personalmente obligado, pero responderá por la evicción. La prenda puede ser, según el caso, prenda referida a deuda cierta o prenda abierta."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2295,
+    "epigrafe": "Capacidad para constituir y recibir prenda",
+    "texto": [
+      "Sólo puede constituir prenda el que es dueño de la cosa, o acreedor del crédito afectado, y goza de capacidad de disponer de sus bienes, sólo puede recibir la cosa en prenda, el que es capaz de contratar. El acreedor que de buena fe ha percibido del deudor o de un tercero un objeto del cual éstos no eran propietarios, puede negar su entrega al verdadero propietario si no hubiere sido robado o perdido, o si hubiere recibido el crédito de quien sólo estaba en posesión de él."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2296,
+    "epigrafe": "Formalidades de la prenda",
+    "texto": [
+      "Para que la prenda pueda oponerse a terceros, debe constar su constitución en instrumento público o privado de fecha cierta, sea cual fuere la importancia del crédito. Debe el instrumento mencionar el importe del crédito o tratándose de prenda abierta el monto máximo de afectación de la cosa dada en prenda. Además, deberá contener una designación detallada de la especie y naturaleza de los objetos dados en prenda, su calidad, peso y medida, si estas indicaciones fuesen necesarias para individualizarlos."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2297,
+    "epigrafe": "Prueba de la fecha de la prenda",
+    "texto": [
+      "Si la prenda resulta de póliza o de otro documento de entidades autorizadas que realizan habitualmente operaciones de crédito sobre prenda, la fecha del documento puede ser comprobada por cualquier otro medio de prueba."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2298,
+    "epigrafe": "Nulidad del pacto comisorio y cláusulas afines",
+    "texto": [
+      "Es nula la convención hecha antes de la exigibilidad de la deuda, por la que el acreedor prendario puede apropiarse la prenda aunque su valor sea menor que el crédito, o que permita disponer de ella fuera de los modos establecidos por este Código. Serán igualmente nulos el pacto comisorio y la convención que prive al acreedor del derecho de solicitar la venta de la cosa y la que impida al deudor oponer las excepciones de pago y falsedad extrínseca del título. El dueño de la cosa puede convenir con el acreedor que le pertenecerá ella con la estimación que se haga al tiempo del vencimiento de la deuda, pero no al tiempo de la celebración del contrato."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2299,
+    "epigrafe": "Garantía de la prenda",
+    "texto": [
+      "La prenda garantiza el pago preferente de la deuda, sus intereses convencionales así como los moratorios y punitorios, las cláusulas penales y, en su caso, los daños causados por la falta de cumplimiento de la obligación, como también las costas de la ejecución. Si la prenda es abierta, el monto de la deuda, los intereses, cláusulas penales, gastos, costas y daños serán pagados con preferencia sólo hasta el monto máximo de afectación. Si existiere remanente, éste constituirá un crédito sin garantía. Si la prenda se constituyó por un tercero, no puede ser extendida la obligación por actos jurídicos posteriores del deudor."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2300,
+    "epigrafe": "Accesorios y frutos de la prenda",
+    "texto": [
+      "La prenda comprende los accesorios y aumentos de la cosa cuya propiedad corresponde al constituyente. Si la prenda produce frutos, o dividendos, el acreedor está obligado a percibirlos por cuenta del deudor, y se imputarán, en defecto de convención, a los intereses de la deuda, si se debieren, o al capital, en caso contrario. Puede convenirse que los frutos y dividendos, en todo o en parte, pertenecerán al acreedor en vez de intereses, aunque no se haya obtenido."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2301,
+    "epigrafe": "Obligaciones del acreedor prendario",
+    "texto": [
+      "El acreedor no puede servirse de la cosa dada en prenda. Está obligado a conservarla con la diligencia exigida por su naturaleza, y a responder de la pérdida o deterioro, si provienen de su culpa o negligencia. El dueño debe al acreedor las expensas necesarias para la conservación de la cosa, aunque ésta pereciese después. No debe los gastos útiles o de mejoras, sino cuando hubieren dado mayor valor al objeto prendado y en la medida del aumento. El dueño no podrá reclamar la devolución de su cosa si el acreedor hubiere pagado esas impensas."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2302,
+    "epigrafe": "Restitución de la prenda",
+    "texto": [
+      "Extinguido el derecho de prenda, el acreedor está obligado a restituir al deudor la cosa empeñada, con todos los accesorios que dependían de ella al tiempo del contrato, y las accesiones que después hubiere recibido. Si hubiere cobrado créditos, restituirá el excedente, después de cubierto el suyo."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  },
+  {
+    "numero": 2303,
+    "epigrafe": "Ejecución de la prenda",
+    "texto": [
+      "No efectuando el deudor el pago de la obligación y sus accesorios a su vencimiento, podrá el acreedor pedir la venta en remate público de la cosa dada en prenda. El juez deberá oír previamente al deudor, y al tercero propietario, en el caso de que la prenda se hubiere constituido por éste. Si el valor de la cosa no excediere de diez jornales mínimos legales establecidos para trabajadores de actividades no especificadas de la capital, podrá el juez autorizar la venta en privado. El acreedor podrá adquirir la cosa prendada por la compra en remate, o en venta privada autorizada, o por adjudicación judicial, en caso de no existir postores."
+    ],
+    "palabrasClave": [],
+    "rutasRelacionadas": [],
+    "notas": []
+  }
+]
