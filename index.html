@@ -6,31 +6,38 @@
   <title>LegalHub — Derecho Paraguayo</title>
   <meta name="description" content="Plataforma de consulta de códigos legales vigentes del Paraguay para juristas y litigantes." />
   <link rel="stylesheet" href="assets/css/styles.css" />
+  <style>
+    .hero {
+      background: linear-gradient(135deg, var(--clr-primary) 0%, var(--clr-primary-light) 100%);
+      color: #fff;
+      padding: 3.5rem 0 3rem;
+      text-align: center;
+    }
+    .hero__logo {
+      display: block;
+      max-width: 220px;
+      width: 60%;
+      margin: 0 auto 1.2rem;
+      filter: drop-shadow(0 4px 16px rgba(0,0,0,.25));
+    }
+    .hero__tagline {
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      opacity: .9;
+      font-style: italic;
+      letter-spacing: .3px;
+      margin-bottom: 2rem;
+    }
+  </style>
 </head>
 <body>
 
-  <header class="header">
-    <div class="container header__inner">
-      <div class="header__logo">
-        <span class="logo-icon">⚖️</span>
-        <span class="logo-text">LegalHub</span>
-        <span class="logo-sub">Derecho Paraguayo</span>
-      </div>
-      <nav class="header__nav">
-        <a href="#codigos">Códigos</a>
-        <a href="#buscar">Buscar</a>
-        <a href="#acerca">Acerca</a>
-      </nav>
-    </div>
-  </header>
-
-  <section class="hero">
+  <section class="hero" id="buscar">
     <div class="container hero__inner">
-      <h1 class="hero__title">Consulta los Códigos Legales del Paraguay</h1>
-      <p class="hero__sub">Accedé rápidamente a los textos normativos vigentes organizados por materia jurídica.</p>
-      <div class="search-bar" id="buscar">
+      <img src="logo.png" alt="LegalHub Paraguay" class="hero__logo" />
+      <p class="hero__tagline">El mejor aliado del jurista, litigante y estudiante</p>
+      <div class="search-bar">
         <input type="search" id="searchInput" placeholder="Buscar código, ley o materia…" autocomplete="off" />
-        <button onclick="buscar()">🔍 Buscar</button>
+        <button onclick="buscar()">&#128269; Buscar</button>
       </div>
     </div>
   </section>
@@ -43,7 +50,7 @@
     <div class="container">
       <p><strong>LegalHub</strong> — Herramienta de consulta para juristas y litigantes del derecho paraguayo.</p>
       <p>Los textos normativos son de acceso público. Esta plataforma no provee asesoramiento legal.</p>
-      <p style="margin-top:0.5rem;opacity:.6;font-size:.85rem">© 2026 LegalHub Paraguay</p>
+      <p style="margin-top:0.5rem;opacity:.6;font-size:.85rem">&copy; 2026 LegalHub Paraguay</p>
     </div>
   </footer>
 
