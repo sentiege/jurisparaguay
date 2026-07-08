@@ -6,7 +6,7 @@ const CATEGORIAS = [
   {
     id: 'civil-familia',
     nombre: 'Códigos Civiles, Comerciales y de Familia',
-    icono: '🏛️',
+    icono: '🏗️',
     color: '#1a3a5c',
     codigos: [
       {
@@ -43,8 +43,7 @@ const CATEGORIAS = [
         ley: 'Ley N° 1160/97',
         descripcion: 'Define los delitos, crímenes y las sanciones aplicables a los infractores en el territorio nacional.',
         links: [
-          { label: '📚 BaseLegal.com.py', url: 'https://baselegal.com.py/' },
-          { label: '📚 CEDUNA', url: 'https://ceduna.jimdofree.com/codigos-y-leyes/' }
+          { label: '📚 Leer en LegalHub', url: 'https://sentiege.github.io/legalhub/codigos/codigopenal/index.html' }
         ]
       },
       {
