@@ -210,34 +210,67 @@
     function normalize(str){return(str||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');}
     function highlight(str,query){if(!query)return str;const re=new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')})`, 'gi');return str.replace(re,'<mark class="search-highlight">$1</mark>');}
 
-    /* === PATCH: buildFlat ahora soporta títulos sin nivel "capitulos" === */
+    /* === v9: helpers de normalización robusta de estructura === */
+    function asArray(v){return Array.isArray(v)?v:[];}
+
+    function normalizeArticulos(nodo, fallbackPrefix){
+      /* Devuelve siempre un array de artículos válidos, sin importar
+         si vienen anidados en "articulos" o directamente en el propio nodo. */
+      if (Array.isArray(nodo)) return nodo.filter(a=>a && typeof a==='object' && 'numero' in a);
+      if (nodo && Array.isArray(nodo.articulos)) return nodo.articulos;
+      return [];
+    }
+
+    function normalizeCapitulos(titulo){
+      /* Soporta 3 casos:
+         1) titulo.capitulos = [ {..., articulos:[...] }, ... ]  (estructura estándar)
+         2) titulo.articulos = [...]                              (título sin capítulos, artículos directos)
+         3) titulo.capitulos existe pero algún capítulo trae artículos en otra clave (p.ej. "items")
+      */
+      const caps = asArray(titulo.capitulos);
+      if (caps.length) {
+        return caps.map((cap, i) => {
+          const arts = normalizeArticulos(cap.articulos || cap.items || cap.arts || cap, null);
+          return {
+            id: cap.id || `${titulo.id || 'titulo'}-cap${i}`,
+            numero: cap.numero ?? (i+1),
+            nombre: cap.nombre || 'Capítulo',
+            rangoArticulos: cap.rangoArticulos || '',
+            articulos: arts.length ? arts : asArray(cap.articulos)
+          };
+        }).filter(cap => cap.articulos.length);
+      }
+      const direct = normalizeArticulos(titulo.articulos, null);
+      if (direct.length) {
+        return [{
+          id: `${titulo.id || 'titulo'}-directo`,
+          numero: titulo.numero ?? '',
+          nombre: titulo.nombre || 'Artículos',
+          rangoArticulos: titulo.rangoArticulos || '',
+          articulos: direct
+        }];
+      }
+      return [];
+    }
+
+    /* === v9: buildFlat totalmente tolerante a variaciones de esquema === */
     function buildFlat(data){
       const flat = [];
-      (data.libros || []).forEach(libro => {
-        (libro.titulos || []).forEach(titulo => {
-
-          if (Array.isArray(titulo.capitulos) && titulo.capitulos.length) {
-            titulo.capitulos.forEach(capitulo => {
-              (capitulo.articulos || []).forEach(articulo => {
+      asArray(data.libros).forEach(libro => {
+        asArray(libro.titulos).forEach(titulo => {
+          const capitulos = normalizeCapitulos(titulo);
+          capitulos.forEach(capitulo => {
+            asArray(capitulo.articulos).forEach(articulo => {
+              if (articulo && 'numero' in articulo) {
                 flat.push({ libro, titulo, capitulo, articulo });
-              });
+              }
             });
-          }
-
-          if (Array.isArray(titulo.articulos) && titulo.articulos.length) {
-            const capituloVirtual = {
-              id: `${titulo.id || 'titulo'}-directo`,
-              numero: titulo.numero ?? '',
-              nombre: titulo.nombre || 'Artículos',
-              rangoArticulos: titulo.rangoArticulos || ''
-            };
-            titulo.articulos.forEach(articulo => {
-              flat.push({ libro, titulo, capitulo: capituloVirtual, articulo });
-            });
-          }
-
+          });
         });
       });
+      /* Orden estable por número de artículo, evita que un árbol desordenado
+         corte la navegación antes de llegar al final real del código. */
+      flat.sort((a,b)=> (a.articulo.numero||0) - (b.articulo.numero||0));
       return flat;
     }
 
@@ -251,16 +284,19 @@
     function getSelectedVoice(){return voices[parseInt(playerVoice.value,10)]||null;}
     playerSpeed.addEventListener('input',()=>{playerSpeedVal.textContent=parseFloat(playerSpeed.value).toFixed(1)+'×';});
 
-    /* === PATCH: renderSidebar ahora renderiza capítulos virtuales cuando el título no tiene "capitulos" === */
+    /* === v9: renderSidebar usando normalizeCapitulos, ya no depende de la forma exacta del JSON === */
     function renderSidebar(){
       sidebarTree.innerHTML='';
-      DATA.libros.forEach(libro=>{
+      asArray(DATA.libros).forEach(libro=>{
         const groupTitle=document.createElement('div');
         groupTitle.className='tree-group-title';
         groupTitle.textContent=libro.nombre;
         sidebarTree.appendChild(groupTitle);
 
-        libro.titulos.forEach(titulo=>{
+        asArray(libro.titulos).forEach(titulo=>{
+          const capitulosRender = normalizeCapitulos(titulo);
+          if (!capitulosRender.length) return;
+
           const block=document.createElement('section');
           block.className='title-block';
           const head=document.createElement('button');
@@ -272,15 +308,6 @@
 
           const chList=document.createElement('div');
           chList.className='chapter-list';
-
-          const capitulosRender = Array.isArray(titulo.capitulos) && titulo.capitulos.length
-            ? titulo.capitulos
-            : [{
-                id: `${titulo.id || 'titulo'}-directo`,
-                numero: titulo.numero ?? '',
-                nombre: titulo.nombre || 'Artículos',
-                rangoArticulos: titulo.rangoArticulos || ''
-              }];
 
           capitulosRender.forEach(cap=>{
             const btn=document.createElement('button');
