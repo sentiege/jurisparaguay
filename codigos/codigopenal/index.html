@@ -309,9 +309,8 @@
   <!-- ── SIDEBAR ── -->
   <aside class="sidebar" id="sidebar" aria-label="Índice del Código Penal">
     <header class="sidebar-header">
-      <!-- Logo LegalHub adaptado -->
       <img class="sidebar-logo" src="../../logo.png" alt="LegalHub Paraguay" onerror="this.style.display='none'" />
-      <a class="back-link" href="/legalhub/index.html">&#8592; Volver al Hub de Códigos</a>
+      <a class="back-link" href="../../index.html">&#8592; Volver al Hub de Códigos</a>
       <div class="app-title">Código Penal</div>
       <div class="app-subtitle">Ley N° 1160/1997 · República del Paraguay</div>
       <div class="search-box">
@@ -345,7 +344,6 @@
       <button class="hamburger" id="hamburger" type="button" aria-label="Mostrar/ocultar índice">☰</button>
       <div class="breadcrumbs" id="breadcrumbs">
         <a href="../../index.html">🏠 Inicio</a> ›
-        <a href="../index.html">Códigos</a> ›
         <span id="breadcrumbArticulo">Seleccioná un artículo del índice</span>
       </div>
     </div>
@@ -542,7 +540,6 @@
     function savePosition(idx) { try { localStorage.setItem('cp_lastIdx', idx); } catch(e) {} }
     function loadPosition() { try { return parseInt(localStorage.getItem('cp_lastIdx'), 10) || 0; } catch(e) { return 0; } }
 
-    // JSON cargado desde la misma carpeta codigos/codigopenal/
     const jsonUrl = new URL('codigo_penal_completo.json', window.location.href).href;
 
     async function loadData() {
