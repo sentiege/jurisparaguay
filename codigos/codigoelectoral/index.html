@@ -1,1 +1,167 @@
-<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><title>Código Electoral — LegalHub</title></head><body style="font-family:sans-serif;background:#f7f3ea;display:flex;align-items:center;justify-content:center;min-height:100vh;"><div style="text-align:center;max-width:400px;padding:2rem"><h1 style="color:#1f3147">Código Electoral</h1><p style="color:#62666f;margin:1rem 0">Ley N° 834/1996 · República del Paraguay</p><p style="color:#62666f">El JSON de este código aún no ha sido cargado. Cuando esté disponible, el lector completo se activará automáticamente.</p><a href="../../index.html" style="display:inline-block;margin-top:1.5rem;padding:.6rem 1.4rem;background:#c9a227;color:#fff;border-radius:999px;text-decoration:none;font-size:.9rem">← Volver al inicio</a></div></body></html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Código Electoral del Paraguay — JurisParaguay</title>
+  <meta name="theme-color" content="#1f3147" />
+  <style>
+    :root {
+      --bg: #f7f3ea;
+      --panel: #ffffff;
+      --sidebar: #1f3147;
+      --sidebar-alt: #223650;
+      --border: #dde0e5;
+      --text: #1f2329;
+      --muted: #62666f;
+      --inverse: #f7f3ea;
+      --gold: #c9a227;
+      --gold-soft: #f0d9a0;
+      --blue: #34557f;
+      --radius: 16px;
+      --shadow: 0 10px 30px rgba(15,23,42,0.12);
+      --sidebar-width: 320px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      display: grid;
+      grid-template-columns: var(--sidebar-width) 1fr;
+      grid-template-rows: auto 1fr;
+    }
+    .sidebar {
+      grid-column: 1; grid-row: 1 / -1;
+      background: linear-gradient(180deg, var(--sidebar), var(--sidebar-alt));
+      color: var(--inverse);
+      padding: 18px;
+      border-right: 1px solid rgba(148,163,184,0.45);
+    }
+    .sidebar-logo {
+      display: block; width: 100%; max-width: 200px; height: auto;
+      margin: 0 auto 12px; object-fit: contain;
+    }
+    .back-link {
+      display: inline-flex; align-items: center; gap: .35rem;
+      font-size: 11px; color: var(--gold); text-decoration: none; margin-bottom: 10px;
+    }
+    .back-link:hover { text-decoration: underline; }
+    .app-title { font-size: 19px; font-weight: 700; }
+    .app-subtitle { font-size: 11px; color: rgba(248,250,252,0.75); margin-top: 4px; }
+    .status-card {
+      margin-top: 18px; padding: 14px; border-radius: 12px;
+      background: rgba(15,23,42,0.52); border: 1px solid rgba(148,163,184,0.35);
+      font-size: 12px; line-height: 1.65;
+    }
+    .status-card strong { color: var(--gold-soft); }
+    .header {
+      grid-column: 2; grid-row: 1;
+      padding: 12px 18px; border-bottom: 1px solid var(--border);
+      background: rgba(247,243,234,0.94);
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    }
+    .breadcrumbs { font-size: 11px; color: var(--muted); }
+    .breadcrumbs a { color: var(--blue); font-weight: 600; text-decoration: none; }
+    .breadcrumbs a:hover { text-decoration: underline; }
+    .badge {
+      font-size: 11px; padding: 6px 10px; border-radius: 999px;
+      border: 1px solid var(--border); background: var(--panel); color: var(--muted);
+    }
+    .main {
+      grid-column: 2; grid-row: 2;
+      padding: 20px;
+      background: radial-gradient(circle at top left, rgba(201,162,39,0.12), transparent 60%), var(--bg);
+    }
+    .reader {
+      max-width: 860px; margin: 0 auto; background: var(--panel);
+      border-radius: var(--radius); border: 1px solid var(--border);
+      box-shadow: var(--shadow); padding: 22px;
+    }
+    .eyebrow {
+      font-size: 11px; text-transform: uppercase; letter-spacing: .12em;
+      color: var(--blue); font-weight: 700; margin-bottom: 8px;
+    }
+    h1 {
+      font-size: 28px; line-height: 1.2; color: var(--blue); margin-bottom: 8px;
+    }
+    .lead {
+      font-size: 14px; color: var(--muted); line-height: 1.75; margin-bottom: 18px;
+    }
+    .section {
+      border-top: 1px solid #e5e7eb; padding-top: 16px; margin-top: 16px;
+    }
+    .section h2 {
+      font-size: 16px; color: var(--blue); margin-bottom: 8px;
+    }
+    .section p, .section li {
+      font-size: 14px; line-height: 1.8; color: var(--text);
+    }
+    ul { padding-left: 18px; }
+    li + li { margin-top: 6px; }
+    .note {
+      margin-top: 16px; padding: 12px 14px; border-radius: 12px;
+      background: #f8fafc; border: 1px solid var(--border); color: var(--muted); font-size: 13px; line-height: 1.7;
+    }
+    @media (max-width: 900px) {
+      body { display: block; }
+      .sidebar, .header, .main { grid-column: auto; grid-row: auto; }
+      .sidebar { border-right: none; }
+      .main { padding: 12px; }
+      .reader { padding: 16px; }
+      h1 { font-size: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <aside class="sidebar" aria-label="Información del Código Electoral">
+    <img class="sidebar-logo" src="../../logo.png" alt="JurisParaguay" onerror="this.style.display='none'" />
+    <a class="back-link" href="../../index.html">&#8592; Volver al Hub de Códigos</a>
+    <div class="app-title">Código Electoral</div>
+    <div class="app-subtitle">Ley N° 834/1996 · República del Paraguay</div>
+    <div class="status-card">
+      <strong>Estado actual:</strong> este index reemplaza la página mínima anterior por una portada consistente con la línea visual de JurisParaguay.<br /><br />
+      Cuando se cargue el JSON estructurado del Código Electoral, esta misma ruta puede transformarse en el lector completo sin cambiar la URL pública.
+    </div>
+  </aside>
+
+  <header class="header">
+    <div class="breadcrumbs">
+      <a href="../../index.html">🏠 Inicio</a> ›
+      <span>Código Electoral</span>
+    </div>
+    <div class="badge">Portada actualizada</div>
+  </header>
+
+  <main class="main">
+    <section class="reader" aria-label="Presentación del Código Electoral">
+      <div class="eyebrow">JurisParaguay</div>
+      <h1>Ley N° 834/96 — Código Electoral</h1>
+      <p class="lead">Esta página deja preparado un acceso más sólido y consistente para el Código Electoral dentro del repositorio publicado. La idea es que funcione desde ahora como portada estable y luego sirva como base directa para el lector interactivo.</p>
+
+      <div class="section">
+        <h2>Objetivo de esta versión</h2>
+        <p>La portada ya presenta el código con identidad visual uniforme, navegación de regreso al hub principal y una explicación clara sobre el estado de digitalización. Esto mejora la experiencia del usuario incluso antes de contar con el texto estructurado completo.</p>
+      </div>
+
+      <div class="section">
+        <h2>Evolución prevista</h2>
+        <ul>
+          <li>Incorporar el JSON completo del Código Electoral.</li>
+          <li>Agregar navegación por títulos, capítulos y artículos.</li>
+          <li>Habilitar búsqueda interna y acceso directo por número de artículo.</li>
+          <li>Unificar el comportamiento con los lectores ya más avanzados del repositorio.</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Ventaja de esta ruta</h2>
+        <p>Como la URL ya queda publicada con una presentación definitiva, después podés mejorar la funcionalidad sin romper enlaces externos ni referencias compartidas. Eso ayuda a mantener estabilidad pública mientras seguís cargando contenido jurídico estructurado.</p>
+      </div>
+
+      <div class="note">Fuente de trabajo: Ley N° 834/96, Código Electoral, en proceso de consolidación digital dentro de JurisParaguay.</div>
+    </section>
+  </main>
+</body>
+</html>
