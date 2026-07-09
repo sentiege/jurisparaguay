@@ -208,97 +208,137 @@
     function openTagsPanel(){if(!FLAT.length)return;const{articulo}=FLAT[currentIdx];const tags=articulo.palabrasClave||[];tagsArtTitle.textContent=`Art. ${articulo.numero}${articulo.epigrafe?' — '+articulo.epigrafe:''}`;tagsList.innerHTML='';if(!tags.length){tagsList.innerHTML='<span class="tags-empty">Sin palabras clave.</span>';}else{tags.forEach(tag=>{const chip=document.createElement('button');chip.className='tag-chip';chip.textContent=tag;chip.addEventListener('click',()=>{tagsOverlay.classList.remove('open');searchInput.value=tag;searchClear.classList.add('visible');runSearch(tag);if(window.innerWidth<=900)sidebar.classList.add('open');});tagsList.appendChild(chip);});}tagsOverlay.classList.add('open');}
     hamburger.addEventListener('click',()=>sidebar.classList.toggle('open'));
     function normalize(str){return(str||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');}
-    function highlight(str,query){if(!query)return str;const re=new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')})`, 'gi');return str.replace(re,'<mark class="search-highlight">$1</mark>');}
+    function highlight(str,query){if(!query)return str;const re=new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')})`,'gi');return str.replace(re,'<mark class="search-highlight">$1</mark>');}
 
-    /* === v9: helpers de normalización robusta de estructura === */
-    function asArray(v){return Array.isArray(v)?v:[];}
+    /* ============================================================
+       FIX v10: buildFlat ultra-robusto
+       Recorre el JSON de forma recursiva buscando artículos en
+       CUALQUIER nivel de anidamiento y bajo CUALQUIER nombre de
+       clave, sin asumir una estructura fija.
+       Luego agrupa los artículos encontrados en contenedores
+       (libro/titulo/capitulo) para renderizar la barra lateral.
+    ============================================================ */
 
-    function flattenArticulos(nodo, out){
-      out = out || [];
-      if (Array.isArray(nodo)) {
-        nodo.forEach(item => flattenArticulos(item, out));
-      } else if (nodo && typeof nodo === 'object' && 'numero' in nodo) {
-        out.push(nodo);
+    function asArray(v){ return Array.isArray(v) ? v : (v != null ? [v] : []); }
+
+    /**
+     * Extrae recursivamente todos los objetos que tienen la clave "numero"
+     * y al menos una de: texto, epigrafe. Los envuelve con su contexto
+     * jerárquico (libro, titulo, capitulo) inferido del camino recorrido.
+     */
+    function deepExtractArticulos(node, ctx, out) {
+      if (!node || typeof node !== 'object') return;
+      // Si el nodo ES un artículo
+      if ('numero' in node && (node.texto || node.epigrafe !== undefined)) {
+        out.push({ ...ctx, articulo: node });
+        return;
       }
-      return out;
+      // Candidatos a ser libros/titulos/capitulos según claves comunes
+      const LIBRO_KEYS   = ['libros','libro'];
+      const TITULO_KEYS  = ['titulos','titulo','partes','parte','secciones','seccion','libros_internos'];
+      const CAP_KEYS     = ['capitulos','capitulo','subcapitulos','subcapitulo'];
+      const ART_KEYS     = ['articulos','articulo','arts','items','artículos'];
+
+      // Intentar cada nivel en orden; si no se encuentran, bajar genéricamente
+      let handled = false;
+
+      // Nivel libro
+      for (const k of LIBRO_KEYS) {
+        if (Array.isArray(node[k]) && node[k].length) {
+          node[k].forEach((libro, li) => {
+            const libroCtx = {
+              libro: { id: libro.id||`libro-${li}`, nombre: libro.nombre||`Libro ${li+1}`, numero: libro.numero||(li+1) },
+              titulo: ctx.titulo, capitulo: ctx.capitulo
+            };
+            deepExtractArticulos(libro, libroCtx, out);
+          });
+          handled = true;
+        }
+      }
+      if (handled) return;
+
+      // Nivel titulo
+      for (const k of TITULO_KEYS) {
+        if (Array.isArray(node[k]) && node[k].length) {
+          node[k].forEach((titulo, ti) => {
+            const tituloCtx = {
+              libro: ctx.libro,
+              titulo: { id: titulo.id||`${ctx.libro&&ctx.libro.id||'l'}-t${ti}`, nombre: titulo.nombre||`Título ${ti+1}`, numero: titulo.numero||(ti+1) },
+              capitulo: ctx.capitulo
+            };
+            deepExtractArticulos(titulo, tituloCtx, out);
+          });
+          handled = true;
+        }
+      }
+      if (handled) return;
+
+      // Nivel capítulo
+      for (const k of CAP_KEYS) {
+        if (Array.isArray(node[k]) && node[k].length) {
+          node[k].forEach((cap, ci) => {
+            const capCtx = {
+              libro: ctx.libro,
+              titulo: ctx.titulo,
+              capitulo: { id: cap.id||`${ctx.titulo&&ctx.titulo.id||'t'}-c${ci}`, nombre: cap.nombre||`Capítulo ${ci+1}`, numero: cap.numero||(ci+1) }
+            };
+            deepExtractArticulos(cap, capCtx, out);
+          });
+          handled = true;
+        }
+      }
+      if (handled) return;
+
+      // Nivel artículos directos
+      for (const k of ART_KEYS) {
+        if (Array.isArray(node[k]) && node[k].length) {
+          node[k].forEach(art => {
+            // artículo puede ser un objeto directo o contener sub-artículos
+            if (art && 'numero' in art) {
+              out.push({ ...ctx, articulo: art });
+            } else {
+              deepExtractArticulos(art, ctx, out);
+            }
+          });
+          handled = true;
+        }
+      }
+      if (handled) return;
+
+      // Fallback: recorrer todas las claves que sean arrays de objetos
+      for (const k of Object.keys(node)) {
+        if (Array.isArray(node[k])) {
+          node[k].forEach(child => deepExtractArticulos(child, ctx, out));
+        }
+      }
     }
 
-    function normalizeArticulos(nodo, fallbackPrefix){
-      /* Devuelve siempre un array plano de artículos válidos, sin importar
-         cuántos niveles de arrays anidados haya (arrays dentro de arrays por
-         corchetes de más en ediciones manuales del JSON). */
-      if (Array.isArray(nodo)) return flattenArticulos(nodo);
-      if (nodo && Array.isArray(nodo.articulos)) return flattenArticulos(nodo.articulos);
-      return [];
-    }
-
-    function normalizeCapitulos(titulo){
-      /* Soporta 3 casos:
-         1) titulo.capitulos = [ {..., articulos:[...] }, ... ]  (estructura estándar)
-         2) titulo.articulos = [...]                              (título sin capítulos, artículos directos)
-         3) titulo.capitulos existe pero algún capítulo trae artículos en otra clave (p.ej. "items")
-      */
-      const caps = asArray(titulo.capitulos);
-      if (caps.length) {
-        return caps.map((cap, i) => {
-          const arts = flattenArticulos(cap.articulos || cap.items || cap.arts || []);
-          return {
-            id: cap.id || `${titulo.id || 'titulo'}-cap${i}`,
-            numero: cap.numero ?? (i+1),
-            nombre: cap.nombre || 'Capítulo',
-            rangoArticulos: computeRango(arts, cap.rangoArticulos),
-            articulos: arts
-          };
-        }).filter(cap => cap.articulos.length);
-      }
-      const direct = normalizeArticulos(titulo.articulos, null);
-      if (direct.length) {
-        return [{
-          id: `${titulo.id || 'titulo'}-directo`,
-          numero: titulo.numero ?? '',
-          nombre: titulo.nombre || 'Artículos',
-          rangoArticulos: computeRango(direct, titulo.rangoArticulos),
-          articulos: direct
-        }];
-      }
-      return [];
-    }
-
-    function computeRango(arts, fallback){
-      /* Calcula el rango real "primero-último" a partir de los artículos
-         efectivamente cargados, en vez de confiar en un rangoArticulos
-         de metadata que puede haber quedado desactualizado en el JSON. */
+    function computeRango(arts, fallback) {
       if (!arts || !arts.length) return fallback || '';
       const nums = arts.map(a => a.numero).filter(n => typeof n === 'number');
       if (!nums.length) return fallback || '';
-      const min = Math.min(...nums);
-      const max = Math.max(...nums);
+      const min = Math.min(...nums), max = Math.max(...nums);
       return min === max ? `${min}` : `${min}-${max}`;
     }
 
-    /* === v9: buildFlat totalmente tolerante a variaciones de esquema === */
-    function buildFlat(data){
-      const flat = [];
-      asArray(data.libros).forEach(libro => {
-        asArray(libro.titulos).forEach(titulo => {
-          const capitulos = normalizeCapitulos(titulo);
-          capitulos.forEach(capitulo => {
-            asArray(capitulo.articulos).forEach(articulo => {
-              if (articulo && 'numero' in articulo) {
-                flat.push({ libro, titulo, capitulo, articulo });
-              }
-            });
-          });
-        });
-      });
-      /* Orden estable por número de artículo, evita que un árbol desordenado
-         corte la navegación antes de llegar al final real del código. */
-      flat.sort((a,b)=> (a.articulo.numero||0) - (b.articulo.numero||0));
-      /* Deduplicado por número de artículo: si el mismo artículo quedó
-         registrado dos veces por anidamientos irregulares, nos quedamos
-         con la primera aparición. */
+    function buildFlat(data) {
+      const raw = [];
+      const LIBRO_FALLBACK  = { id: 'libro-1', nombre: 'Código Civil', numero: 1 };
+      const TITULO_FALLBACK = { id: 'titulo-1', nombre: 'General', numero: 1 };
+      const CAP_FALLBACK    = { id: 'cap-1',    nombre: 'General',  numero: 1 };
+
+      deepExtractArticulos(data, {
+        libro:   LIBRO_FALLBACK,
+        titulo:  TITULO_FALLBACK,
+        capitulo: CAP_FALLBACK
+      }, raw);
+
+      // Ordenar por número de artículo
+      raw.sort((a, b) => (a.articulo.numero || 0) - (b.articulo.numero || 0));
+
+      // Deduplicar por número de artículo
       const seen = new Set();
-      return flat.filter(e => {
+      return raw.filter(e => {
         const n = e.articulo.numero;
         if (seen.has(n)) return false;
         seen.add(n);
@@ -306,53 +346,68 @@
       });
     }
 
-    function getHashArtNum(){const h=window.location.hash.replace('#art-','').trim();return h?parseInt(h,10):null;}
-    function setHashFromIdx(idx){if(!FLAT.length)return;history.replaceState(null,'','#art-'+FLAT[idx].articulo.numero);}
-    function savePosition(idx){try{localStorage.setItem('cc_lastIdx',idx);}catch(e){}}
-    function loadPosition(){try{return parseInt(localStorage.getItem('cc_lastIdx'),10)||0;}catch(e){return 0;}}
-    const jsonUrl=new URL('codigo_civil_completo.json?v='+Date.now(),window.location.href).href;
-    async function loadData(){try{const res=await fetch(jsonUrl,{cache:'no-store'});if(!res.ok)throw new Error('HTTP '+res.status);DATA=await res.json();if(!DATA||!Array.isArray(DATA.libros))throw new Error('Estructura JSON inválida.');FLAT=buildFlat(DATA);renderSidebar();initVoices();const hashNum=getHashArtNum();let startIdx=loadPosition();if(hashNum!==null){const found=FLAT.findIndex(e=>e.articulo.numero===hashNum);if(found!==-1)startIdx=found;}startIdx=Math.max(0,Math.min(startIdx,FLAT.length-1));showArticleByIdx(startIdx);updatePlayerControls();}catch(err){sidebarTree.innerHTML=`<div class="search-empty">⚠️ Error al cargar el JSON.<br><small>${err.message}</small></div>`;articleBody.innerHTML=`<div class="article-empty"><div class="article-empty-icon">⚠️</div><p>No se pudo cargar <code>codigo_civil_completo.json</code>.</p></div>`;}}
-    function initVoices(){function populate(){voices=speechSynthesis.getVoices().filter(v=>v.lang.startsWith('es'));if(!voices.length)voices=speechSynthesis.getVoices();playerVoice.innerHTML='';voices.forEach((v,i)=>{const opt=document.createElement('option');opt.value=i;opt.textContent=v.name+(v.lang?` (${v.lang})`:'');playerVoice.appendChild(opt);});const pyIdx=voices.findIndex(v=>v.lang.startsWith('es-PY'));const esIdx=voices.findIndex(v=>v.lang.startsWith('es'));playerVoice.selectedIndex=pyIdx>=0?pyIdx:(esIdx>=0?esIdx:0);}if(speechSynthesis.onvoiceschanged!==undefined)speechSynthesis.onvoiceschanged=populate;populate();}
-    function getSelectedVoice(){return voices[parseInt(playerVoice.value,10)]||null;}
-    playerSpeed.addEventListener('input',()=>{playerSpeedVal.textContent=parseFloat(playerSpeed.value).toFixed(1)+'×';});
+    /* ============================================================
+       renderSidebar: agrupa el FLAT resultante por libro→titulo→cap
+       para mostrar la estructura jerárquica en la barra lateral.
+    ============================================================ */
+    function renderSidebar() {
+      sidebarTree.innerHTML = '';
 
-    /* === v9: renderSidebar usando normalizeCapitulos, ya no depende de la forma exacta del JSON === */
-    function renderSidebar(){
-      sidebarTree.innerHTML='';
-      asArray(DATA.libros).forEach(libro=>{
-        const groupTitle=document.createElement('div');
-        groupTitle.className='tree-group-title';
-        groupTitle.textContent=libro.nombre;
+      // Agrupar FLAT por libro → titulo → capitulo
+      const libros = new Map();
+      FLAT.forEach(entry => {
+        const libroId  = entry.libro.id;
+        const tituloId = entry.titulo.id;
+        const capId    = entry.capitulo.id;
+
+        if (!libros.has(libroId)) libros.set(libroId, { meta: entry.libro, titulos: new Map() });
+        const libroMap = libros.get(libroId).titulos;
+
+        if (!libroMap.has(tituloId)) libroMap.set(tituloId, { meta: entry.titulo, caps: new Map() });
+        const tituloMap = libroMap.get(tituloId).caps;
+
+        if (!tituloMap.has(capId)) tituloMap.set(capId, { meta: entry.capitulo, arts: [] });
+        tituloMap.get(capId).arts.push(entry.articulo);
+      });
+
+      libros.forEach(({ meta: libro, titulos }) => {
+        const groupTitle = document.createElement('div');
+        groupTitle.className = 'tree-group-title';
+        groupTitle.textContent = libro.nombre;
         sidebarTree.appendChild(groupTitle);
 
-        asArray(libro.titulos).forEach(titulo=>{
-          const capitulosRender = normalizeCapitulos(titulo);
-          if (!capitulosRender.length) return;
+        titulos.forEach(({ meta: titulo, caps }) => {
+          // Calcular rango real del título a partir de todos sus artículos
+          const allArts = [];
+          caps.forEach(({ arts }) => allArts.push(...arts));
+          if (!allArts.length) return;
 
-          const block=document.createElement('section');
-          block.className='title-block';
-          const head=document.createElement('button');
-          head.className='title-head';
-          head.type='button';
-          const tituloRango = computeRango(capitulosRender.flatMap(c => c.articulos), titulo.rangoArticulos);
-          head.innerHTML=`<div class="title-head-main"><span class="title-kicker">Título ${titulo.numero}</span><span class="title-name">${titulo.nombre}</span><span class="title-range">Arts. ${tituloRango}</span></div><span class="title-chevron">›</span>`;
-          head.addEventListener('click',()=>block.classList.toggle('open'));
+          const block = document.createElement('section');
+          block.className = 'title-block';
+
+          const tituloRango = computeRango(allArts, '');
+          const head = document.createElement('button');
+          head.className = 'title-head';
+          head.type = 'button';
+          head.innerHTML = `<div class="title-head-main"><span class="title-kicker">Título ${titulo.numero}</span><span class="title-name">${titulo.nombre}</span><span class="title-range">Arts. ${tituloRango}</span></div><span class="title-chevron">›</span>`;
+          head.addEventListener('click', () => block.classList.toggle('open'));
           block.appendChild(head);
 
-          const chList=document.createElement('div');
-          chList.className='chapter-list';
+          const chList = document.createElement('div');
+          chList.className = 'chapter-list';
 
-          capitulosRender.forEach(cap=>{
-            const btn=document.createElement('button');
-            btn.className='chapter-btn';
-            btn.type='button';
-            btn.dataset.capId=cap.id;
-            btn.innerHTML=`<span class="chapter-name">Cap. ${cap.numero} — ${cap.nombre}</span><span class="chapter-range">Arts. ${cap.rangoArticulos}</span>`;
-            btn.addEventListener('click',()=>{
+          caps.forEach(({ meta: cap, arts }) => {
+            const rango = computeRango(arts, '');
+            const btn = document.createElement('button');
+            btn.className = 'chapter-btn';
+            btn.type = 'button';
+            btn.dataset.capId = cap.id;
+            btn.innerHTML = `<span class="chapter-name">Cap. ${cap.numero} — ${cap.nombre}</span><span class="chapter-range">Arts. ${rango}</span>`;
+            btn.addEventListener('click', () => {
               setActiveChapterBtn(btn);
-              const flatIdx=FLAT.findIndex(e=>e.capitulo.id===cap.id);
-              if(flatIdx!==-1)showArticleByIdx(flatIdx);
-              if(window.innerWidth<=900)sidebar.classList.remove('open');
+              const flatIdx = FLAT.findIndex(e => e.capitulo.id === cap.id);
+              if (flatIdx !== -1) showArticleByIdx(flatIdx);
+              if (window.innerWidth <= 900) sidebar.classList.remove('open');
             });
             chList.appendChild(btn);
           });
@@ -363,8 +418,17 @@
       });
     }
 
+    function getHashArtNum(){const h=window.location.hash.replace('#art-','').trim();return h?parseInt(h,10):null;}
+    function setHashFromIdx(idx){if(!FLAT.length)return;history.replaceState(null,'','#art-'+FLAT[idx].articulo.numero);}
+    function savePosition(idx){try{localStorage.setItem('cc_lastIdx',idx);}catch(e){}}
+    function loadPosition(){try{return parseInt(localStorage.getItem('cc_lastIdx'),10)||0;}catch(e){return 0;}}
+    const jsonUrl=new URL('codigo_civil_completo.json?v='+Date.now(),window.location.href).href;
+    async function loadData(){try{const res=await fetch(jsonUrl,{cache:'no-store'});if(!res.ok)throw new Error('HTTP '+res.status);DATA=await res.json();if(!DATA||typeof DATA!=='object')throw new Error('JSON inválido.');FLAT=buildFlat(DATA);if(!FLAT.length)throw new Error('No se encontraron artículos en el JSON. Verificá la estructura.');renderSidebar();initVoices();const hashNum=getHashArtNum();let startIdx=loadPosition();if(hashNum!==null){const found=FLAT.findIndex(e=>e.articulo.numero===hashNum);if(found!==-1)startIdx=found;}startIdx=Math.max(0,Math.min(startIdx,FLAT.length-1));showArticleByIdx(startIdx);updatePlayerControls();}catch(err){sidebarTree.innerHTML=`<div class="search-empty">⚠️ Error al cargar el JSON.<br><small>${err.message}</small></div>`;articleBody.innerHTML=`<div class="article-empty"><div class="article-empty-icon">⚠️</div><p>No se pudo cargar <code>codigo_civil_completo.json</code>.<br><small>${err.message}</small></p></div>`;}}
+    function initVoices(){function populate(){voices=speechSynthesis.getVoices().filter(v=>v.lang.startsWith('es'));if(!voices.length)voices=speechSynthesis.getVoices();playerVoice.innerHTML='';voices.forEach((v,i)=>{const opt=document.createElement('option');opt.value=i;opt.textContent=v.name+(v.lang?` (${v.lang})`:'');playerVoice.appendChild(opt);});const pyIdx=voices.findIndex(v=>v.lang.startsWith('es-PY'));const esIdx=voices.findIndex(v=>v.lang.startsWith('es'));playerVoice.selectedIndex=pyIdx>=0?pyIdx:(esIdx>=0?esIdx:0);}if(speechSynthesis.onvoiceschanged!==undefined)speechSynthesis.onvoiceschanged=populate;populate();}
+    function getSelectedVoice(){return voices[parseInt(playerVoice.value,10)]||null;}
+    playerSpeed.addEventListener('input',()=>{playerSpeedVal.textContent=parseFloat(playerSpeed.value).toFixed(1)+'×';});
     function setActiveChapterBtn(activeBtn){document.querySelectorAll('.chapter-btn').forEach(b=>b.classList.remove('active'));if(activeBtn)activeBtn.classList.add('active');}
-    function showArticleByIdx(idx,fromPlayer){if(!FLAT.length)return;idx=Math.max(0,Math.min(idx,FLAT.length-1));currentIdx=idx;savePosition(idx);const{libro,titulo,capitulo,articulo}=FLAT[idx];setHashFromIdx(idx);breadcrumbArticulo.textContent=`Art. ${articulo.numero}${articulo.epigrafe?' — '+articulo.epigrafe:''}`;articleNumber.textContent=`Artículo ${articulo.numero}`;articleTitle.textContent=articulo.epigrafe||`Artículo ${articulo.numero}`;articleMeta.textContent=`Título ${titulo.numero} — ${titulo.nombre} · Capítulo ${capitulo.numero} — ${capitulo.nombre}`;const textos=articulo.texto||[];if(!textos.length){articleBody.innerHTML=`<div class="article-empty"><div class="article-empty-icon">📄</div><p>El texto de este artículo aún no ha sido cargado en el JSON.</p></div>`;}else{articleBody.innerHTML=textos.map(p=>`<p>${p}</p>`).join('');}btnPrev.disabled=idx===0;btnNext.disabled=idx===FLAT.length-1;const capBtn=document.querySelector(`.chapter-btn[data-cap-id="${capitulo.id}"]`);setActiveChapterBtn(capBtn);if(capBtn){const block=capBtn.closest('.title-block');if(block)block.classList.add('open');if(!fromPlayer)capBtn.scrollIntoView({block:'nearest',behavior:'smooth'});}}
+    function showArticleByIdx(idx,fromPlayer){if(!FLAT.length)return;idx=Math.max(0,Math.min(idx,FLAT.length-1));currentIdx=idx;savePosition(idx);const{libro,titulo,capitulo,articulo}=FLAT[idx];setHashFromIdx(idx);breadcrumbArticulo.textContent=`Art. ${articulo.numero}${articulo.epigrafe?' — '+articulo.epigrafe:''}`;articleNumber.textContent=`Artículo ${articulo.numero}`;articleTitle.textContent=articulo.epigrafe||`Artículo ${articulo.numero}`;articleMeta.textContent=`${titulo.nombre} · Capítulo ${capitulo.numero} — ${capitulo.nombre}`;const textos=articulo.texto||[];if(!textos.length){articleBody.innerHTML=`<div class="article-empty"><div class="article-empty-icon">📄</div><p>El texto de este artículo aún no ha sido cargado en el JSON.</p></div>`;}else{articleBody.innerHTML=textos.map(p=>`<p>${p}</p>`).join('');}btnPrev.disabled=idx===0;btnNext.disabled=idx===FLAT.length-1;const capBtn=document.querySelector(`.chapter-btn[data-cap-id="${capitulo.id}"]`);setActiveChapterBtn(capBtn);if(capBtn){const block=capBtn.closest('.title-block');if(block)block.classList.add('open');if(!fromPlayer)capBtn.scrollIntoView({block:'nearest',behavior:'smooth'});}}
     btnPrev.addEventListener('click',()=>showArticleByIdx(currentIdx-1));
     btnNext.addEventListener('click',()=>showArticleByIdx(currentIdx+1));
     window.addEventListener('hashchange',()=>{const hashNum=getHashArtNum();if(hashNum!==null&&FLAT.length){const found=FLAT.findIndex(e=>e.articulo.numero===hashNum);if(found!==-1&&found!==currentIdx)showArticleByIdx(found);}});
@@ -374,14 +438,14 @@
     searchInput.addEventListener('input',()=>{const q=searchInput.value.trim();searchClear.classList.toggle('visible',q.length>0);clearTimeout(searchDebounce);searchDebounce=setTimeout(()=>runSearch(q),200);});
     searchClear.addEventListener('click',()=>{searchInput.value='';searchClear.classList.remove('visible');hideSearchResults();searchInput.focus();});
     function runSearch(rawQuery){if(!rawQuery||!FLAT.length){hideSearchResults();return;}const q=normalize(rawQuery);const isNumeric=/^\d+$/.test(rawQuery.trim());const matches=FLAT.filter(({articulo})=>{if(isNumeric)return String(articulo.numero)===rawQuery.trim();return normalize(articulo.epigrafe).includes(q)||(articulo.texto||[]).some(t=>normalize(t).includes(q))||(articulo.palabrasClave||[]).some(p=>normalize(p).includes(q));});showSearchResults(matches,rawQuery);}
-    function showSearchResults(matches,rawQuery){sidebarTree.style.display='none';searchResults.classList.add('visible');searchResults.innerHTML='';if(!matches.length){searchResults.innerHTML=`<div class="search-empty">Sin resultados para "<strong>${rawQuery}</strong>"</div>`;return;}const count=document.createElement('div');count.className='search-count';count.textContent=`${matches.length} resultado${matches.length!==1?'s':''}`;searchResults.appendChild(count);matches.forEach(({articulo,titulo,capitulo})=>{const flatIdx=FLAT.findIndex(e=>e.articulo.numero===articulo.numero&&e.capitulo.id===capitulo.id);const item=document.createElement('div');item.className='search-result-item';item.setAttribute('role','button');item.setAttribute('tabindex','0');const q=normalize(rawQuery);const matchedParr=(articulo.texto||[]).find(t=>normalize(t).includes(q));let snippet='';if(matchedParr){const start=Math.max(0,normalize(matchedParr).indexOf(q)-40);snippet=(start>0?'…':'')+matchedParr.slice(start,start+100)+(matchedParr.length>start+100?'…':'');}item.innerHTML=`<span class="search-result-num">Art. ${articulo.numero}</span><span class="search-result-epig">${highlight(articulo.epigrafe||'(sin epígrafe)',rawQuery)}</span><span class="search-result-ctx">${highlight(snippet,rawQuery)||`Tít. ${titulo.numero} · Cap. ${capitulo.numero}`}</span>`;const go=()=>{showArticleByIdx(flatIdx);searchInput.value='';searchClear.classList.remove('visible');hideSearchResults();if(window.innerWidth<=900)sidebar.classList.remove('open');};item.addEventListener('click',go);item.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' ')go();});searchResults.appendChild(item);});}
+    function showSearchResults(matches,rawQuery){sidebarTree.style.display='none';searchResults.classList.add('visible');searchResults.innerHTML='';if(!matches.length){searchResults.innerHTML=`<div class="search-empty">Sin resultados para "<strong>${rawQuery}</strong>"</div>`;return;}const count=document.createElement('div');count.className='search-count';count.textContent=`${matches.length} resultado${matches.length!==1?'s':''}`;searchResults.appendChild(count);matches.forEach(({articulo,titulo,capitulo})=>{const flatIdx=FLAT.findIndex(e=>e.articulo.numero===articulo.numero&&e.capitulo.id===capitulo.id);const item=document.createElement('div');item.className='search-result-item';item.setAttribute('role','button');item.setAttribute('tabindex','0');const q=normalize(rawQuery);const matchedParr=(articulo.texto||[]).find(t=>normalize(t).includes(q));let snippet='';if(matchedParr){const start=Math.max(0,normalize(matchedParr).indexOf(q)-40);snippet=(start>0?'…':'')+matchedParr.slice(start,start+100)+(matchedParr.length>start+100?'…':'');}item.innerHTML=`<span class="search-result-num">Art. ${articulo.numero}</span><span class="search-result-epig">${highlight(articulo.epigrafe||'(sin epígrafe)',rawQuery)}</span><span class="search-result-ctx">${highlight(snippet,rawQuery)||`${titulo.nombre} · Cap. ${capitulo.numero}`}</span>`;const go=()=>{showArticleByIdx(flatIdx);searchInput.value='';searchClear.classList.remove('visible');hideSearchResults();if(window.innerWidth<=900)sidebar.classList.remove('open');};item.addEventListener('click',go);item.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' ')go();});searchResults.appendChild(item);});}
     function hideSearchResults(){searchResults.classList.remove('visible');searchResults.innerHTML='';sidebarTree.style.display='';}
     function speakArticle(idx){if(!window.speechSynthesis)return;speechSynthesis.cancel();if(idx>=FLAT.length){ttsStop();return;}ttsReadIdx=idx;const{articulo}=FLAT[idx];const textos=articulo.texto||[];showArticleByIdx(idx,true);const pEls=articleBody.querySelectorAll('p');pEls.forEach(p=>p.classList.remove('tts-reading'));if(pEls.length)pEls[0].classList.add('tts-reading');updatePlayerInfo(idx);if(!textos.length){setTimeout(()=>{if(ttsPlaying)speakArticle(idx+1);},300);return;}const heading=articulo.epigrafe?`Artículo número ${articulo.numero}. ${articulo.epigrafe}.`:`Artículo número ${articulo.numero}.`;const utt=new SpeechSynthesisUtterance(heading+' '+textos.join(' '));utt.rate=parseFloat(playerSpeed.value);utt.pitch=1;const voice=getSelectedVoice();if(voice)utt.voice=voice;else utt.lang='es';utt.onend=()=>{if(ttsPlaying)speakArticle(idx+1);};utt.onerror=e=>{if(e.error==='interrupted'||e.error==='canceled')return;if(ttsPlaying)speakArticle(idx+1);};speechSynthesis.speak(utt);}
     function ttsPlay(startFromIdx){if(!window.speechSynthesis){alert('Tu navegador no soporta Text-to-Speech.');return;}ttsPlaying=true;ttsPaused=false;ttsStartIdx=startFromIdx!==undefined?startFromIdx:currentIdx;playerPlay.textContent='⏸';playerPlay.title='Pausar';playerStop.disabled=false;playerPrev.disabled=false;playerNext.disabled=false;playerSkipBack.disabled=false;playerSkipFwd.disabled=false;speakArticle(ttsStartIdx);}
     function ttsPause(){if(speechSynthesis.speaking&&!speechSynthesis.paused){speechSynthesis.pause();ttsPaused=true;playerPlay.textContent='▶';playerPlay.title='Reanudar';}}
     function ttsResume(){if(speechSynthesis.paused){speechSynthesis.resume();ttsPaused=false;playerPlay.textContent='⏸';playerPlay.title='Pausar';}}
     function ttsStop(){speechSynthesis.cancel();ttsPlaying=false;ttsPaused=false;playerPlay.textContent='▶';playerPlay.title='Reproducir';playerStop.disabled=true;playerPrev.disabled=true;playerNext.disabled=true;playerSkipBack.disabled=true;playerSkipFwd.disabled=true;playerProgressFill.style.width='0%';playerTitle.textContent='Sin reproducción activa';playerSubtitle.textContent='Presioná ▶ para comenzar';playerCounter.textContent='';document.querySelectorAll('.tts-reading').forEach(p=>p.classList.remove('tts-reading'));}
-    function updatePlayerInfo(idx){if(!FLAT.length)return;const{articulo,titulo,capitulo}=FLAT[idx];playerTitle.textContent=`Art. ${articulo.numero}${articulo.epigrafe?' — '+articulo.epigrafe:''}`;playerSubtitle.textContent=`Tít. ${titulo.numero} · Cap. ${capitulo.numero} — ${capitulo.nombre}`;playerCounter.textContent=`${idx+1} / ${FLAT.length}`;playerProgressFill.style.width=(FLAT.length>1?(idx/(FLAT.length-1))*100:100).toFixed(1)+'%';}
+    function updatePlayerInfo(idx){if(!FLAT.length)return;const{articulo,titulo,capitulo}=FLAT[idx];playerTitle.textContent=`Art. ${articulo.numero}${articulo.epigrafe?' — '+articulo.epigrafe:''}`;playerSubtitle.textContent=`${titulo.nombre} · Cap. ${capitulo.numero} — ${capitulo.nombre}`;playerCounter.textContent=`${idx+1} / ${FLAT.length}`;playerProgressFill.style.width=(FLAT.length>1?(idx/(FLAT.length-1))*100:100).toFixed(1)+'%';}
     function updatePlayerControls(){const a=ttsPlaying;playerStop.disabled=!a;playerPrev.disabled=!a;playerNext.disabled=!a;playerSkipBack.disabled=!a;playerSkipFwd.disabled=!a;}
     playerPlay.addEventListener('click',()=>{if(!window.speechSynthesis){alert('Tu navegador no soporta Text-to-Speech.');return;}if(!ttsPlaying)ttsPlay(currentIdx);else if(ttsPaused)ttsResume();else ttsPause();});
     playerStop.addEventListener('click',ttsStop);
