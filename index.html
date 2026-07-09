@@ -20,6 +20,17 @@
       height: auto;
       margin: 0 auto 1.4rem;
       filter: drop-shadow(0 4px 20px rgba(0,0,0,.3));
+      transition: opacity .2s, transform .2s;
+    }
+    .hero__logo-link:hover .hero__logo {
+      opacity: .88;
+      transform: scale(1.02);
+    }
+    .hero__logo-link {
+      display: block;
+      width: fit-content;
+      margin: 0 auto;
+      cursor: pointer;
     }
     .hero__tagline {
       font-size: clamp(1rem, 2.5vw, 1.2rem);
@@ -34,7 +45,9 @@
 
   <section class="hero" id="buscar">
     <div class="container hero__inner">
-      <img src="logo.png" alt="JurisParaguay" class="hero__logo" />
+      <a href="#buscar" class="hero__logo-link" title="Ir al inicio" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">
+        <img src="logo.png" alt="JurisParaguay" class="hero__logo" />
+      </a>
       <p class="hero__tagline">El derecho paraguayo, al alcance de todos</p>
       <div class="search-bar">
         <input type="search" id="searchInput" placeholder="Buscar código, ley o materia…" autocomplete="off" />
