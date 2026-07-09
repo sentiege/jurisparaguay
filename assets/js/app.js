@@ -1,5 +1,5 @@
 /* =============================================
-   LegalHub — Lógica Principal
+   JurisParaguay — Lógica Principal
    ============================================= */
 
 document.addEventListener('DOMContentLoaded', () => {

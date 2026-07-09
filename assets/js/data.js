@@ -1,5 +1,5 @@
 /* =============================================
-   LegalHub — Base de Datos de Códigos
+   JurisParaguay — Base de Datos de Códigos
    ============================================= */
 
 const CATEGORIAS = [

@@ -1,16 +1,16 @@
-// lector.js — Lector compartido LegalHub
+// lector.js — Lector compartido JurisParaguay
 // Lee window.CODIGO_NOMBRE, window.CODIGO_LEY, window.CODIGO_JSON, window.CODIGO_LS_KEY
 
 const CODIGO_NOMBRE = window.CODIGO_NOMBRE || 'Código';
 const CODIGO_LEY    = window.CODIGO_LEY    || '';
 const CODIGO_JSON   = window.CODIGO_JSON   || 'codigo.json';
-const CODIGO_LS_KEY = window.CODIGO_LS_KEY || 'legalhub_lastIdx';
+const CODIGO_LS_KEY = window.CODIGO_LS_KEY || 'jurisparaguay_lastIdx';
 
 let DATA=null,FLAT=[],currentIdx=0,ttsPlaying=false,ttsPaused=false,ttsReadIdx=0,voices=[],deferredInstallPrompt=null;
 const $=id=>document.getElementById(id);
 
 document.addEventListener('DOMContentLoaded', () => {
-  document.title = CODIGO_NOMBRE + ' — LegalHub';
+  document.title = CODIGO_NOMBRE + ' — JurisParaguay';
 
   const sidebar=$('sidebar'),hamburger=$('hamburger'),sidebarTree=$('sidebarTree'),
     searchInput=$('searchInput'),searchClear=$('searchClear'),searchResults=$('searchResults'),
