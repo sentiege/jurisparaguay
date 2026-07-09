@@ -1,1 +1,709 @@
-<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><title>Código Rural — LegalHub</title></head><body style="font-family:sans-serif;background:#f7f3ea;display:flex;align-items:center;justify-content:center;min-height:100vh;"><div style="text-align:center;max-width:400px;padding:2rem"><h1 style="color:#1f3147">Código Rural</h1><p style="color:#62666f;margin:1rem 0">Ley N° 1248/1931 · República del Paraguay</p><p style="color:#62666f">El JSON de este código aún no ha sido cargado.</p><a href="../../index.html" style="display:inline-block;margin-top:1.5rem;padding:.6rem 1.4rem;background:#c9a227;color:#fff;border-radius:999px;text-decoration:none;font-size:.9rem">← Volver al inicio</a></div></body></html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Código Rural del Paraguay – JurisParaguay</title>
+<meta name="description" content="Código Rural del Paraguay · Ley N° 1248/1931 · Lector interactivo JurisParaguay"/>
+<style>
+  :root {
+    --bg: #f7f3ea;
+    --sidebar: #1f3147;
+    --accent: #c9a227;
+    --blue: #34557f;
+    --text: #1a1a1a;
+    --light: #fff8ee;
+    --border: #d9ceb0;
+    --radius: 8px;
+    --player-h: 72px;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Georgia', serif; background: var(--bg); color: var(--text); display: flex; flex-direction: column; min-height: 100vh; }
+
+  /* TOP BAR */
+  #topbar {
+    background: var(--sidebar);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 20px;
+    position: sticky; top: 0; z-index: 200;
+    box-shadow: 0 2px 8px rgba(0,0,0,.35);
+  }
+  #topbar img { height: 40px; width: auto; border-radius: 4px; }
+  #topbar .titles { flex: 1; }
+  #topbar h1 { font-size: 1.05rem; color: var(--accent); line-height: 1.2; }
+  #topbar .sub { font-size: .75rem; color: #aec6e8; font-style: italic; }
+  #back-link { font-size: .8rem; color: var(--accent); text-decoration: none; white-space: nowrap; border: 1px solid var(--accent); padding: 4px 10px; border-radius: 4px; transition: background .2s; }
+  #back-link:hover { background: var(--accent); color: #fff; }
+  #hamburger { display: none; background: none; border: none; cursor: pointer; flex-direction: column; gap: 5px; padding: 4px; }
+  #hamburger span { display: block; width: 24px; height: 2px; background: #fff; border-radius: 2px; }
+
+  /* LAYOUT */
+  #layout { display: flex; flex: 1; padding-bottom: var(--player-h); }
+
+  /* SIDEBAR */
+  #sidebar {
+    width: 300px; min-width: 300px;
+    background: var(--sidebar);
+    color: #dce8f5;
+    display: flex; flex-direction: column;
+    overflow: hidden;
+    transition: transform .3s;
+  }
+  #search-wrap { padding: 12px; border-bottom: 1px solid #2e4a6a; }
+  #search-input {
+    width: 100%; padding: 8px 12px;
+    border-radius: var(--radius); border: none;
+    font-size: .9rem; background: #16273a; color: #fff;
+    outline: none;
+  }
+  #search-input::placeholder { color: #7a9abf; }
+  #search-count { font-size: .72rem; color: #7a9abf; margin-top: 5px; padding: 0 2px; }
+  #index-tree { overflow-y: auto; flex: 1; padding: 8px 0; }
+  .tree-libro { padding: 8px 12px 4px; font-size: .72rem; text-transform: uppercase; letter-spacing: .08em; color: var(--accent); font-weight: bold; cursor: pointer; user-select: none; }
+  .tree-titulo { padding: 5px 16px; font-size: .8rem; color: #aec6e8; cursor: pointer; border-left: 3px solid transparent; transition: all .15s; }
+  .tree-titulo:hover, .tree-titulo.active { background: rgba(201,162,39,.15); border-left-color: var(--accent); color: #fff; }
+  .tree-capitulo { padding: 4px 24px; font-size: .75rem; color: #8ab0d0; cursor: pointer; border-left: 3px solid transparent; transition: all .15s; }
+  .tree-capitulo:hover, .tree-capitulo.active { background: rgba(52,85,127,.3); border-left-color: #34557f; color: #dce8f5; }
+  .tree-range { font-size: .68rem; color: #5a80a0; margin-left: 6px; }
+  .tree-children { display: block; }
+  .tree-children.collapsed { display: none; }
+
+  /* TAGS PANEL */
+  #tags-panel { padding: 10px 12px; border-top: 1px solid #2e4a6a; }
+  #tags-panel h4 { font-size: .72rem; text-transform: uppercase; letter-spacing: .07em; color: var(--accent); margin-bottom: 8px; }
+  #tags-container { display: flex; flex-wrap: wrap; gap: 5px; max-height: 100px; overflow-y: auto; }
+  .tag-chip {
+    background: #2e4a6a; color: #aec6e8; font-size: .68rem;
+    padding: 3px 9px; border-radius: 12px; cursor: pointer;
+    border: 1px solid transparent; transition: all .15s;
+  }
+  .tag-chip:hover, .tag-chip.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+  /* MAIN */
+  #main { flex: 1; overflow-y: auto; padding: 24px 32px; }
+  #results-banner { display: none; background: #fff3cd; border: 1px solid var(--accent); border-radius: var(--radius); padding: 8px 14px; margin-bottom: 16px; font-size: .85rem; color: #7a5a00; }
+  #results-banner button { background: none; border: none; cursor: pointer; color: var(--blue); font-size: .85rem; margin-left: 8px; text-decoration: underline; }
+
+  /* ARTICLE CARD */
+  .art-card {
+    background: var(--light); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 20px 24px; margin-bottom: 20px;
+    scroll-margin-top: 20px; transition: box-shadow .2s;
+  }
+  .art-card.current { box-shadow: 0 0 0 2px var(--accent), 0 4px 16px rgba(201,162,39,.2); }
+  .art-card.highlight { background: #fff8e1; }
+  .art-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; margin-bottom: 10px; }
+  .art-num { font-size: 1rem; font-weight: bold; color: var(--blue); white-space: nowrap; }
+  .art-epigrafe { font-size: .88rem; font-style: italic; color: #555; flex: 1; }
+  .art-actions { display: flex; gap: 6px; }
+  .btn-sm { background: none; border: 1px solid var(--border); border-radius: 5px; padding: 4px 9px; font-size: .75rem; cursor: pointer; color: var(--blue); transition: all .15s; white-space: nowrap; }
+  .btn-sm:hover { background: var(--blue); color: #fff; border-color: var(--blue); }
+  .art-body p { font-size: .92rem; line-height: 1.7; margin-bottom: .5em; text-align: justify; }
+  .art-tags { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 5px; }
+  .art-tag { background: #e8eff7; color: #34557f; font-size: .68rem; padding: 2px 8px; border-radius: 10px; cursor: pointer; border: 1px solid #c0d0e8; }
+  .art-tag:hover { background: var(--blue); color: #fff; }
+  mark { background: #ffe08a; border-radius: 2px; padding: 0 1px; }
+
+  /* PAGINATION */
+  #paginator { display: flex; align-items: center; justify-content: space-between; padding: 10px 32px; background: var(--bg); border-top: 1px solid var(--border); position: sticky; bottom: var(--player-h); z-index: 100; }
+  #pag-info { font-size: .82rem; color: #666; }
+  .pag-btn { background: var(--blue); color: #fff; border: none; border-radius: var(--radius); padding: 7px 16px; font-size: .85rem; cursor: pointer; transition: background .2s; }
+  .pag-btn:hover { background: var(--sidebar); }
+  .pag-btn:disabled { background: #ccc; cursor: default; }
+
+  /* TTS PLAYER */
+  #tts-player {
+    position: fixed; bottom: 0; left: 0; right: 0;
+    height: var(--player-h);
+    background: var(--sidebar);
+    border-top: 2px solid var(--accent);
+    display: flex; align-items: center; gap: 10px;
+    padding: 0 20px; z-index: 300;
+    flex-wrap: wrap;
+  }
+  .tts-label { color: var(--accent); font-size: .75rem; font-weight: bold; white-space: nowrap; }
+  .tts-btn { background: none; border: 1px solid #2e4a6a; border-radius: 5px; padding: 5px 10px; color: #dce8f5; cursor: pointer; font-size: .85rem; transition: all .15s; }
+  .tts-btn:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .tts-btn.active { background: var(--accent); color: #fff; }
+  #tts-title { color: #aec6e8; font-size: .75rem; flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 80px; }
+  #tts-speed { background: #16273a; color: #dce8f5; border: 1px solid #2e4a6a; border-radius: 5px; padding: 4px 6px; font-size: .8rem; cursor: pointer; }
+  #tts-voice { background: #16273a; color: #dce8f5; border: 1px solid #2e4a6a; border-radius: 5px; padding: 4px 6px; font-size: .8rem; max-width: 150px; cursor: pointer; }
+
+  /* FOOTER */
+  footer { background: var(--sidebar); color: #7a9abf; text-align: center; font-size: .75rem; padding: 10px; padding-bottom: calc(var(--player-h) + 10px); }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    #hamburger { display: flex; }
+    #sidebar { position: fixed; top: 0; left: 0; bottom: 0; z-index: 250; transform: translateX(-100%); width: 280px; min-width: 280px; }
+    #sidebar.open { transform: translateX(0); }
+    #main { padding: 16px; }
+    #paginator { padding: 8px 16px; }
+    #tts-player { gap: 6px; padding: 0 10px; }
+    #tts-voice { max-width: 100px; }
+    .art-card { padding: 14px 16px; }
+  }
+  #overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.45); z-index: 240; }
+  #overlay.show { display: block; }
+
+  /* LOADING */
+  #loading { text-align: center; padding: 60px 20px; color: #888; font-size: 1rem; }
+  #loading .spinner { width: 40px; height: 40px; border: 4px solid #ddd; border-top-color: var(--accent); border-radius: 50%; animation: spin .8s linear infinite; margin: 0 auto 16px; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* PDF hidden clone */
+  #pdf-area { display: none; }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<header id="topbar">
+  <button id="hamburger" aria-label="Menú" onclick="toggleSidebar()">
+    <span></span><span></span><span></span>
+  </button>
+  <img src="../../logo.png" alt="JurisParaguay" onerror="this.style.display='none'"/>
+  <div class="titles">
+    <h1>Código Rural del Paraguay</h1>
+    <div class="sub">Ley N° 1248/1931 · República del Paraguay</div>
+  </div>
+  <a href="../../index.html" class="back-link" id="back-link">← Volver al Hub</a>
+</header>
+
+<div id="overlay" onclick="toggleSidebar()"></div>
+
+<!-- LAYOUT -->
+<div id="layout">
+
+  <!-- SIDEBAR -->
+  <nav id="sidebar" aria-label="Índice">
+    <div id="search-wrap">
+      <input id="search-input" type="search" placeholder="🔍 Buscar artículos…" autocomplete="off" aria-label="Buscar"/>
+      <div id="search-count"></div>
+    </div>
+    <div id="index-tree" role="tree"></div>
+    <div id="tags-panel">
+      <h4>🏷 Palabras Clave</h4>
+      <div id="tags-container"></div>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main id="main" role="main">
+    <div id="loading"><div class="spinner"></div>Cargando Código Rural…</div>
+    <div id="results-banner" role="status">
+      <span id="results-text"></span>
+      <button onclick="clearSearch()">✕ Limpiar búsqueda</button>
+    </div>
+    <div id="articles-container"></div>
+  </main>
+</div>
+
+<!-- PAGINATOR -->
+<nav id="paginator" aria-label="Paginación">
+  <button class="pag-btn" id="btn-prev" onclick="navigate(-1)" disabled>← Art. anterior</button>
+  <span id="pag-info">–</span>
+  <button class="pag-btn" id="btn-next" onclick="navigate(1)">Art. siguiente →</button>
+</nav>
+
+<!-- TTS PLAYER -->
+<div id="tts-player" role="region" aria-label="Reproductor de voz">
+  <span class="tts-label">🔊 TTS</span>
+  <button class="tts-btn" id="btn-play" onclick="ttsPlay()" title="Reproducir">▶</button>
+  <button class="tts-btn" id="btn-pause" onclick="ttsPause()" title="Pausar">⏸</button>
+  <button class="tts-btn" onclick="ttsStop()" title="Detener">⏹</button>
+  <button class="tts-btn" onclick="ttsSkip(-5)" title="Retroceder 5">«−5</button>
+  <button class="tts-btn" onclick="ttsSkip(5)" title="Avanzar 5">+5»</button>
+  <span id="tts-title">—</span>
+  <label for="tts-speed" style="color:#aec6e8;font-size:.75rem">Vel:</label>
+  <select id="tts-speed" onchange="ttsUpdateRate()">
+    <option value="0.7">0.7×</option>
+    <option value="0.85">0.85×</option>
+    <option value="1" selected>1×</option>
+    <option value="1.2">1.2×</option>
+    <option value="1.5">1.5×</option>
+  </select>
+  <label for="tts-voice" style="color:#aec6e8;font-size:.75rem">Voz:</label>
+  <select id="tts-voice"></select>
+</div>
+
+<footer>CSJ – IIJ, edición digital · JurisParaguay 2026</footer>
+
+<script>
+// ─── STATE ────────────────────────────────────────────────────────────────────
+let allArticles = [];   // flat list
+let filtered = [];      // current displayed
+let currentIdx = 0;     // index in filtered
+let query = '';
+let activeTag = '';
+let ttsUtterance = null;
+let ttsIdx = 0;         // index in allArticles for TTS
+
+// ─── LOAD DATA ────────────────────────────────────────────────────────────────
+async function init() {
+  try {
+    const res = await fetch('codigo_rural_completo.json');
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const data = await res.json();
+    parseData(data);
+    document.getElementById('loading').style.display = 'none';
+    buildIndex(data);
+    buildTags();
+    renderArticles(allArticles);
+    loadVoices();
+    handleDeepLink();
+    restorePosition();
+  } catch(e) {
+    document.getElementById('loading').innerHTML =
+      `<p style="color:#c0392b">⚠ Error cargando datos: ${e.message}</p>
+       <p style="color:#888;font-size:.85rem;margin-top:8px">Asegúrese de que código_rural_completo.json esté en la misma carpeta.</p>`;
+  }
+}
+
+function parseData(data) {
+  allArticles = [];
+  const libros = data.libros || [data];
+  libros.forEach(libro => {
+    const titulos = libro.titulos || [];
+    titulos.forEach(titulo => {
+      const caps = titulo.capitulos || [{ capitulo: '', articulos: titulo.articulos || [] }];
+      caps.forEach(cap => {
+        (cap.articulos || []).forEach(art => {
+          allArticles.push({
+            ...art,
+            _libro: libro.libro || libro.nombre || '',
+            _libroNum: libro.numero || '',
+            _titulo: titulo.titulo || titulo.nombre || '',
+            _tituloNum: titulo.numero || '',
+            _capitulo: cap.capitulo || cap.nombre || '',
+            _capituloNum: cap.numero || '',
+          });
+        });
+      });
+    });
+  });
+  // Fallback: flat articulos
+  if (allArticles.length === 0 && data.articulos) {
+    allArticles = data.articulos.map(a => ({ ...a, _libro:'', _titulo:'', _capitulo:'' }));
+  }
+}
+
+// ─── INDEX TREE ───────────────────────────────────────────────────────────────
+function buildIndex(data) {
+  const tree = document.getElementById('index-tree');
+  tree.innerHTML = '';
+  const libros = data.libros || [data];
+  libros.forEach((libro, li) => {
+    const libroDiv = document.createElement('div');
+    libroDiv.className = 'tree-libro';
+    libroDiv.textContent = (libro.libro || libro.nombre || 'Libro') + (libro.numero ? ' ' + libro.numero : '');
+    const childrenDiv = document.createElement('div');
+    childrenDiv.className = 'tree-children';
+    libroDiv.onclick = () => childrenDiv.classList.toggle('collapsed');
+
+    (libro.titulos || []).forEach((titulo, ti) => {
+      const tDiv = document.createElement('div');
+      const tArts = getTituloArts(titulo);
+      const range = tArts.length ? ` <span class="tree-range">[${tArts[0].numero}–${tArts[tArts.length-1].numero}]</span>` : '';
+      tDiv.className = 'tree-titulo';
+      tDiv.innerHTML = (titulo.titulo || titulo.nombre || 'Título') + range;
+      const tChildren = document.createElement('div');
+      tChildren.className = 'tree-children collapsed';
+      tDiv.onclick = (e) => {
+        e.stopPropagation();
+        tChildren.classList.toggle('collapsed');
+        filterBySection({ libro: libro.libro || libro.nombre, titulo: titulo.titulo || titulo.nombre });
+        setActiveTree(tDiv);
+      };
+
+      (titulo.capitulos || []).forEach(cap => {
+        const cDiv = document.createElement('div');
+        const cArts = cap.articulos || [];
+        const cRange = cArts.length ? ` <span class="tree-range">[${cArts[0].numero}–${cArts[cArts.length-1].numero}]</span>` : '';
+        cDiv.className = 'tree-capitulo';
+        cDiv.innerHTML = (cap.capitulo || cap.nombre || 'Capítulo') + cRange;
+        cDiv.onclick = (e) => {
+          e.stopPropagation();
+          filterBySection({ libro: libro.libro || libro.nombre, titulo: titulo.titulo || titulo.nombre, capitulo: cap.capitulo || cap.nombre });
+          setActiveTree(cDiv);
+        };
+        tChildren.appendChild(cDiv);
+      });
+      childrenDiv.appendChild(tDiv);
+      if (titulo.capitulos?.length) childrenDiv.appendChild(tChildren);
+    });
+    tree.appendChild(libroDiv);
+    tree.appendChild(childrenDiv);
+  });
+}
+
+function getTituloArts(titulo) {
+  const arts = [];
+  (titulo.capitulos || []).forEach(c => arts.push(...(c.articulos||[])));
+  if (titulo.articulos) arts.push(...titulo.articulos);
+  return arts;
+}
+
+function setActiveTree(el) {
+  document.querySelectorAll('.tree-titulo.active, .tree-capitulo.active').forEach(e => e.classList.remove('active'));
+  el.classList.add('active');
+}
+
+// ─── TAGS ─────────────────────────────────────────────────────────────────────
+function buildTags() {
+  const tagMap = {};
+  allArticles.forEach(a => (a.palabrasClave||[]).forEach(t => tagMap[t] = (tagMap[t]||0)+1));
+  const sorted = Object.entries(tagMap).sort((a,b) => b[1]-a[1]).slice(0, 60);
+  const c = document.getElementById('tags-container');
+  c.innerHTML = '';
+  sorted.forEach(([tag, cnt]) => {
+    const chip = document.createElement('span');
+    chip.className = 'tag-chip';
+    chip.title = cnt + ' artículos';
+    chip.textContent = tag;
+    chip.onclick = () => toggleTag(tag, chip);
+    c.appendChild(chip);
+  });
+}
+
+function toggleTag(tag, chip) {
+  if (activeTag === tag) {
+    activeTag = '';
+    chip.classList.remove('active');
+    applyFilters();
+  } else {
+    activeTag = tag;
+    document.querySelectorAll('.tag-chip.active').forEach(e => e.classList.remove('active'));
+    chip.classList.add('active');
+    applyFilters();
+  }
+}
+
+// ─── SEARCH ───────────────────────────────────────────────────────────────────
+document.getElementById('search-input').addEventListener('input', e => {
+  query = e.target.value.trim();
+  activeTag = '';
+  document.querySelectorAll('.tag-chip.active').forEach(c => c.classList.remove('active'));
+  applyFilters();
+});
+
+function applyFilters() {
+  const q = query.toLowerCase();
+  filtered = allArticles.filter(a => {
+    const tagMatch = !activeTag || (a.palabrasClave||[]).includes(activeTag);
+    if (!tagMatch) return false;
+    if (!q) return true;
+    const numMatch = String(a.numero).includes(q);
+    const epigMatch = (a.epigrafe||'').toLowerCase().includes(q);
+    const textMatch = (a.texto||[]).join(' ').toLowerCase().includes(q);
+    const kwMatch = (a.palabrasClave||[]).join(' ').toLowerCase().includes(q);
+    return numMatch || epigMatch || textMatch || kwMatch;
+  });
+  const cnt = document.getElementById('search-count');
+  const banner = document.getElementById('results-banner');
+  const txt = document.getElementById('results-text');
+  if (q || activeTag) {
+    cnt.textContent = filtered.length + ' resultado(s)';
+    banner.style.display = 'block';
+    txt.textContent = filtered.length + ' artículo(s) encontrado(s)' + (q ? ` para "${q}"` : '') + (activeTag ? ` · tag: ${activeTag}` : '');
+  } else {
+    cnt.textContent = '';
+    banner.style.display = 'none';
+    filtered = [...allArticles];
+  }
+  currentIdx = 0;
+  renderArticles(filtered);
+}
+
+function clearSearch() {
+  query = '';
+  activeTag = '';
+  document.getElementById('search-input').value = '';
+  document.querySelectorAll('.tag-chip.active').forEach(c => c.classList.remove('active'));
+  filtered = [...allArticles];
+  document.getElementById('results-banner').style.display = 'none';
+  document.getElementById('search-count').textContent = '';
+  currentIdx = 0;
+  renderArticles(filtered);
+}
+
+function filterBySection({ libro, titulo, capitulo }) {
+  filtered = allArticles.filter(a => {
+    if (libro && a._libro !== libro) return false;
+    if (titulo && a._titulo !== titulo) return false;
+    if (capitulo && a._capitulo !== capitulo) return false;
+    return true;
+  });
+  currentIdx = 0;
+  renderArticles(filtered);
+  if (window.innerWidth <= 768) toggleSidebar();
+}
+
+// ─── RENDER ───────────────────────────────────────────────────────────────────
+function renderArticles(arts) {
+  const container = document.getElementById('articles-container');
+  const q = query.toLowerCase();
+  container.innerHTML = '';
+
+  if (arts.length === 0) {
+    container.innerHTML = '<p style="color:#888;text-align:center;padding:40px">No se encontraron artículos.</p>';
+    updatePaginator();
+    return;
+  }
+
+  arts.forEach((art, idx) => {
+    const card = document.createElement('article');
+    card.className = 'art-card' + (idx === currentIdx ? ' current' : '');
+    card.id = 'art-' + art.numero;
+    card.setAttribute('data-idx', idx);
+
+    const paragraphs = (art.texto || []).map(p => {
+      let t = escHtml(p);
+      if (q) t = highlight(t, q);
+      return `<p>${t}</p>`;
+    }).join('');
+
+    const tags = (art.palabrasClave||[]).map(t =>
+      `<span class="art-tag" onclick="tagSearch('${escAttr(t)}')">${escHtml(t)}</span>`
+    ).join('');
+
+    let epig = escHtml(art.epigrafe || '');
+    if (q && epig) epig = highlight(epig, q);
+
+    card.innerHTML = `
+      <div class="art-header">
+        <span class="art-num">Art. ${art.numero}</span>
+        <span class="art-epigrafe">${epig}</span>
+        <div class="art-actions">
+          <button class="btn-sm" onclick="copyArt(${idx})" title="Copiar">📋 Copiar</button>
+          <button class="btn-sm" onclick="ttsReadFrom(${allArticles.indexOf(art)})" title="Leer desde aquí">🔊 Leer</button>
+          <button class="btn-sm" onclick="exportPDF(${idx})" title="Exportar PDF">📄 PDF</button>
+        </div>
+      </div>
+      <div class="art-body">${paragraphs}</div>
+      ${tags ? `<div class="art-tags">${tags}</div>` : ''}
+    `;
+    container.appendChild(card);
+  });
+
+  updatePaginator();
+  scrollToCurrent();
+}
+
+function highlight(text, q) {
+  if (!q) return text;
+  const re = new RegExp('(' + q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+  return text.replace(re, '<mark>$1</mark>');
+}
+
+function escHtml(s) {
+  return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+function escAttr(s) { return String(s||'').replace(/'/g,"\\'"); }
+
+function tagSearch(tag) {
+  activeTag = tag;
+  query = '';
+  document.getElementById('search-input').value = '';
+  document.querySelectorAll('.tag-chip').forEach(c => {
+    c.classList.toggle('active', c.textContent === tag);
+  });
+  applyFilters();
+}
+
+// ─── PAGINATION ───────────────────────────────────────────────────────────────
+function navigate(dir) {
+  const next = currentIdx + dir;
+  if (next < 0 || next >= filtered.length) return;
+  currentIdx = next;
+  document.querySelectorAll('.art-card.current').forEach(c => c.classList.remove('current'));
+  const card = document.querySelector(`[data-idx="${currentIdx}"]`);
+  if (card) { card.classList.add('current'); card.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
+  updatePaginator();
+  savePosition();
+}
+
+function updatePaginator() {
+  const info = document.getElementById('pag-info');
+  const prev = document.getElementById('btn-prev');
+  const next = document.getElementById('btn-next');
+  if (!filtered.length) { info.textContent = '—'; prev.disabled = true; next.disabled = true; return; }
+  const art = filtered[currentIdx];
+  info.textContent = `Art. ${art.numero} (${currentIdx+1} / ${filtered.length})`;
+  prev.disabled = currentIdx === 0;
+  next.disabled = currentIdx === filtered.length - 1;
+}
+
+function scrollToCurrent() {
+  const card = document.querySelector('.art-card.current');
+  if (card) card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+// ─── DEEP LINK & PERSISTENCE ─────────────────────────────────────────────────
+function handleDeepLink() {
+  const hash = window.location.hash;
+  if (hash && hash.startsWith('#art-')) {
+    const num = hash.slice(5);
+    const idx = allArticles.findIndex(a => String(a.numero) === num);
+    if (idx >= 0) { filtered = [...allArticles]; currentIdx = idx; renderArticles(filtered); return; }
+  }
+}
+
+function savePosition() {
+  if (!filtered.length) return;
+  localStorage.setItem('cr_lastIdx', String(allArticles.indexOf(filtered[currentIdx])));
+}
+
+function restorePosition() {
+  const saved = localStorage.getItem('cr_lastIdx');
+  if (saved === null) return;
+  const idx = parseInt(saved, 10);
+  if (isNaN(idx) || idx < 0 || idx >= allArticles.length) return;
+  if (!window.location.hash) {
+    currentIdx = filtered.indexOf(allArticles[idx]);
+    if (currentIdx < 0) currentIdx = 0;
+    renderArticles(filtered);
+  }
+}
+
+window.addEventListener('hashchange', () => {
+  const hash = window.location.hash;
+  if (hash.startsWith('#art-')) {
+    const num = hash.slice(5);
+    const idx = filtered.findIndex(a => String(a.numero) === num);
+    if (idx >= 0) { currentIdx = idx; updatePaginator(); scrollToCurrent(); }
+  }
+});
+
+// ─── COPY ─────────────────────────────────────────────────────────────────────
+async function copyArt(idx) {
+  const art = filtered[idx];
+  const text = `Art. ${art.numero}${art.epigrafe ? ' – ' + art.epigrafe : ''}\n\n` +
+    (art.texto||[]).join('\n\n') + '\n\nFuente: Código Rural del Paraguay – JurisParaguay 2026';
+  try {
+    await navigator.clipboard.writeText(text);
+    showToast('✔ Copiado al portapapeles');
+  } catch { showToast('No se pudo copiar', true); }
+}
+
+function showToast(msg, err=false) {
+  const t = document.createElement('div');
+  t.style.cssText = `position:fixed;bottom:${parseInt(getComputedStyle(document.documentElement).getPropertyValue('--player-h'))+16}px;left:50%;transform:translateX(-50%);background:${err?'#c0392b':'#27ae60'};color:#fff;padding:8px 20px;border-radius:20px;font-size:.85rem;z-index:9999;pointer-events:none;`;
+  t.textContent = msg;
+  document.body.appendChild(t);
+  setTimeout(() => t.remove(), 2500);
+}
+
+// ─── PDF ──────────────────────────────────────────────────────────────────────
+function exportPDF(idx) {
+  const art = filtered[idx];
+  const w = window.open('', '_blank');
+  const paragraphs = (art.texto||[]).map(p => `<p style="margin:.5em 0;text-align:justify;line-height:1.7;">${escHtml(p)}</p>`).join('');
+  w.document.write(`<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"/>
+  <title>Art. ${art.numero} – Código Rural</title>
+  <style>body{font-family:Georgia,serif;max-width:700px;margin:40px auto;padding:0 30px;color:#1a1a1a;}
+  h1{font-size:1rem;color:#1f3147;border-bottom:2px solid #c9a227;padding-bottom:6px;margin-bottom:4px;}
+  h2{font-size:.9rem;color:#34557f;margin-bottom:14px;}
+  .meta{font-size:.75rem;color:#888;margin-bottom:18px;}
+  .epi{font-style:italic;color:#555;margin-bottom:10px;}
+  footer{margin-top:30px;font-size:.72rem;color:#999;border-top:1px solid #ddd;padding-top:8px;text-align:center;}
+  @media print{body{margin:0 20px;}}</style>
+  </head><body>
+  <h1>Código Rural del Paraguay</h1>
+  <h2>Artículo ${art.numero}${art.epigrafe ? ' – ' + escHtml(art.epigrafe) : ''}</h2>
+  <div class="meta">Ley N° 1248/1931 · República del Paraguay · JurisParaguay 2026</div>
+  ${art.epigrafe ? `<div class="epi">${escHtml(art.epigrafe)}</div>` : ''}
+  ${paragraphs}
+  <footer>CSJ – IIJ, edición digital · JurisParaguay 2026 · Artículo ${art.numero}</footer>
+  <script>window.onload=()=>{window.print();}<\/script>
+  </body></html>`);
+  w.document.close();
+}
+
+// ─── TTS ──────────────────────────────────────────────────────────────────────
+let ttsVoices = [];
+let ttsCurrentArt = 0;
+let ttsActive = false;
+
+function loadVoices() {
+  const populate = () => {
+    ttsVoices = window.speechSynthesis.getVoices().filter(v => v.lang.startsWith('es'));
+    if (!ttsVoices.length) ttsVoices = window.speechSynthesis.getVoices();
+    const sel = document.getElementById('tts-voice');
+    sel.innerHTML = '';
+    ttsVoices.forEach((v, i) => {
+      const o = document.createElement('option');
+      o.value = i; o.textContent = v.name.substring(0, 28);
+      sel.appendChild(o);
+    });
+  };
+  populate();
+  window.speechSynthesis.onvoiceschanged = populate;
+}
+
+function ttsReadFrom(artIdx) {
+  ttsCurrentArt = artIdx;
+  ttsStop();
+  ttsActive = true;
+  ttsPlayCurrent();
+}
+
+function ttsPlayCurrent() {
+  if (!ttsActive || ttsCurrentArt >= allArticles.length) return;
+  const art = allArticles[ttsCurrentArt];
+  const text = `Artículo ${art.numero}. ${art.epigrafe ? art.epigrafe + '. ' : ''}${(art.texto||[]).join('. ')}`;
+  document.getElementById('tts-title').textContent = `Art. ${art.numero} – ${art.epigrafe||''}`;
+  ttsUtterance = new SpeechSynthesisUtterance(text);
+  ttsUtterance.rate = parseFloat(document.getElementById('tts-speed').value);
+  const voiceIdx = parseInt(document.getElementById('tts-voice').value, 10);
+  if (ttsVoices[voiceIdx]) ttsUtterance.voice = ttsVoices[voiceIdx];
+  ttsUtterance.onend = () => { ttsCurrentArt++; ttsPlayCurrent(); };
+  window.speechSynthesis.speak(ttsUtterance);
+  document.getElementById('btn-play').classList.add('active');
+}
+
+function ttsPlay() {
+  if (window.speechSynthesis.paused) { window.speechSynthesis.resume(); return; }
+  if (!ttsActive) { ttsCurrentArt = allArticles.indexOf(filtered[currentIdx])||0; ttsActive = true; ttsPlayCurrent(); }
+}
+
+function ttsPause() {
+  window.speechSynthesis.pause();
+  document.getElementById('btn-play').classList.remove('active');
+}
+
+function ttsStop() {
+  ttsActive = false;
+  window.speechSynthesis.cancel();
+  document.getElementById('btn-play').classList.remove('active');
+  document.getElementById('tts-title').textContent = '—';
+}
+
+function ttsSkip(delta) {
+  const next = ttsCurrentArt + delta;
+  if (next < 0 || next >= allArticles.length) return;
+  ttsReadFrom(next);
+}
+
+function ttsUpdateRate() {
+  if (ttsUtterance) ttsUtterance.rate = parseFloat(document.getElementById('tts-speed').value);
+  if (ttsActive) { const cur = ttsCurrentArt; ttsStop(); ttsReadFrom(cur); }
+}
+
+// ─── SIDEBAR MOBILE ───────────────────────────────────────────────────────────
+function toggleSidebar() {
+  const sb = document.getElementById('sidebar');
+  const ov = document.getElementById('overlay');
+  sb.classList.toggle('open');
+  ov.classList.toggle('show');
+}
+
+// ─── BOOT ────────────────────────────────────────────────────────────────────
+filtered = [];
+init();
+</script>
+</body>
+</html>
