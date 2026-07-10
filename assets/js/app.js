@@ -2,49 +2,40 @@
    JurisParaguay — Lógica Principal
    ============================================= */
 
-// Detectar base URL (raiz del sitio) una sola vez
-const BASE_URL = (() => {
-  // En GitHub Pages: https://sentiege.github.io/jurisparaguay/
-  // En local: http://localhost:xxxx/
-  const loc = window.location.href;
-  // Subir hasta la raíz del repo (donde está index.html)
-  return loc.replace(/\/(?:codigos\/.*|[^/]*\.html.*)?$/, '/').replace(/\/+$/, '/');
-})();
+// URL base absoluta del repo en GitHub Pages (sin trailing slash)
+const BASE_URL = 'https://sentiege.github.io/jurisparaguay';
 
 const JSON_CODIGOS = [
-  { id: 'codigo-civil',               nombre: 'Código Civil',                            path: 'codigos/codigocivil/codigo_civil_completo.json' },
-  { id: 'codigo-penal',               nombre: 'Código Penal',                            path: 'codigos/codigopenal/codigo_penal_completo.json' },
-  { id: 'codigo-ninez',               nombre: 'Código de la Niñez y Adolescencia',       path: 'codigos/codigoninez/codigo_ninez_completo.json' },
-  { id: 'codigo-ejecucion-penal',     nombre: 'Código de Ejecución Penal',               path: 'codigos/codigoejecucionpenal/codigo_ejecucionpenal_completo.json' },
-  { id: 'codigo-laboral',             nombre: 'Código Laboral',                          path: 'codigos/codigolaboral/codigo_laboral_completo.json' },
-  { id: 'codigo-procesal-civil',      nombre: 'Código Procesal Civil',                   path: 'codigos/codigoprocesalcivil/codigo_procesal_civil_completo.json' },
-  { id: 'codigo-procesal-penal',      nombre: 'Código Procesal Penal',                   path: 'codigos/codigoprocesalpenal/codigo_procesalpenal_completo.json' },
-  { id: 'codigo-procesal-laboral',    nombre: 'Código Procesal Laboral',                 path: 'codigos/codigoprocesallaboral/codigo_procesallaboral_completo.json' },
-  { id: 'codigo-organizacion-judicial', nombre: 'Código de Organización Judicial',       path: 'codigos/codigoorganizacionjudicial/codigo_organizacion_judicial_completo.json' },
-  { id: 'codigo-electoral',           nombre: 'Código Electoral',                        path: 'codigos/codigoelectoral/codigo_electoral_completo.json' },
-  { id: 'codigo-navegacion',          nombre: 'Código de Navegación Fluvial y Marítima', path: 'codigos/codigonavegacion/codigo_navegacion_completo.json' },
-  { id: 'codigo-aeronautico',         nombre: 'Código Aeronáutico',                      path: 'codigos/codigoaeronautico/codigo_aeronautico_completo.json' },
-  { id: 'codigo-rural',               nombre: 'Código Rural',                            path: 'codigos/codigorural/codigo_rural_completo.json' },
-  { id: 'codigo-aduanero',            nombre: 'Código Aduanero',                         path: 'codigos/codigoaduanero/codigo_aduanero_completo.json' },
-  { id: 'codigo-mineria',             nombre: 'Código de Minería',                       path: 'codigos/codigomineria/codigo_minero_completo.json' },
-  { id: 'codigo-sanitario',           nombre: 'Código Sanitario',                        path: 'codigos/codigosanitario/codigo_sanitario_completo.json' },
+  { id: 'codigo-civil',                 nombre: 'Código Civil',                             path: 'codigos/codigocivil/codigo_civil_completo.json' },
+  { id: 'codigo-penal',                 nombre: 'Código Penal',                             path: 'codigos/codigopenal/codigo_penal_completo.json' },
+  { id: 'codigo-ninez',                 nombre: 'Código de la Niñez y Adolescencia',        path: 'codigos/codigoninez/codigo_ninez_completo.json' },
+  { id: 'codigo-ejecucion-penal',       nombre: 'Código de Ejecución Penal',                path: 'codigos/codigoejecucionpenal/codigo_ejecucionpenal_completo.json' },
+  { id: 'codigo-laboral',               nombre: 'Código Laboral',                           path: 'codigos/codigolaboral/codigo_laboral_completo.json' },
+  { id: 'codigo-procesal-civil',        nombre: 'Código Procesal Civil',                    path: 'codigos/codigoprocesalcivil/codigo_procesal_civil_completo.json' },
+  { id: 'codigo-procesal-penal',        nombre: 'Código Procesal Penal',                    path: 'codigos/codigoprocesalpenal/codigo_procesalpenal_completo.json' },
+  { id: 'codigo-procesal-laboral',      nombre: 'Código Procesal Laboral',                  path: 'codigos/codigoprocesallaboral/codigo_procesallaboral_completo.json' },
+  { id: 'codigo-organizacion-judicial', nombre: 'Código de Organización Judicial',          path: 'codigos/codigoorganizacionjudicial/codigo_organizacion_judicial_completo.json' },
+  { id: 'codigo-electoral',             nombre: 'Código Electoral',                         path: 'codigos/codigoelectoral/codigo_electoral_completo.json' },
+  { id: 'codigo-navegacion',            nombre: 'Código de Navegación Fluvial y Marítima',  path: 'codigos/codigonavegacion/codigo_navegacion_completo.json' },
+  { id: 'codigo-aeronautico',           nombre: 'Código Aeronáutico',                       path: 'codigos/codigoaeronautico/codigo_aeronautico_completo.json' },
+  { id: 'codigo-rural',                 nombre: 'Código Rural',                             path: 'codigos/codigorural/codigo_rural_completo.json' },
+  { id: 'codigo-aduanero',              nombre: 'Código Aduanero',                          path: 'codigos/codigoaduanero/codigo_aduanero_completo.json' },
+  { id: 'codigo-mineria',               nombre: 'Código de Minería',                        path: 'codigos/codigomineria/codigo_minero_completo.json' },
+  { id: 'codigo-sanitario',             nombre: 'Código Sanitario',                         path: 'codigos/codigosanitario/codigo_sanitario_completo.json' },
 ];
 
 let INDICE_GLOBAL = [];
 let indiceListoResolve;
 const indiceListoPromise = new Promise(res => { indiceListoResolve = res; });
-
 let cargaProgreso = { total: JSON_CODIGOS.length, listos: 0, fallidos: [] };
 
-/* ─── Utilidades ─────────────────────────────────────────── */
+/* ─── Utilidades ──────────────────────────────────────────── */
 function normalize(str) {
   return (str || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 }
-
 function escapeHtml(str) {
   return (str || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
 }
-
 function highlight(str, query) {
   if (!query || !str) return escapeHtml(str || '');
   const escaped = escapeHtml(str);
@@ -52,36 +43,35 @@ function highlight(str, query) {
   return escaped.replace(re, '<mark>$1</mark>');
 }
 
-/* ─── Extracción de artículos (recursiva, sin lista blanca) ─── */
+/* ─── Extracción recursiva de artículos ──────────────────── */
 function extractArticulos(node, out) {
   if (!node || typeof node !== 'object') return;
   if ('numero' in node && (node.texto !== undefined || node.epigrafe !== undefined)) {
-    out.push(node);
-    return;
+    out.push(node); return;
   }
   for (const key of Object.keys(node)) {
     const val = node[key];
-    if (Array.isArray(val))  val.forEach(child => extractArticulos(child, out));
+    if (Array.isArray(val)) val.forEach(child => extractArticulos(child, out));
     else if (val && typeof val === 'object') extractArticulos(val, out);
   }
 }
 
-/* ─── Ranking de relevancia ──────────────────────────────── */
+/* ─── Ranking ────────────────────────────────────────────── */
 function calcScore(art, qn) {
   let score = 0;
   const epNorm  = normalize(art.epigrafe);
   const kwNorms = (art.palabrasClave || []).map(normalize);
   const txNorms = (art.texto || []).map(normalize);
   const wordRe  = new RegExp(`\\b${qn}\\b`);
-  if (epNorm.includes(qn))            { score += 10; if (wordRe.test(epNorm)) score += 2; }
-  if (kwNorms.some(k => k.includes(qn))) { score += 5; if (kwNorms.some(k => wordRe.test(k))) score += 2; }
+  if (epNorm.includes(qn))               { score += 10; if (wordRe.test(epNorm)) score += 2; }
+  if (kwNorms.some(k => k.includes(qn))) { score += 5;  if (kwNorms.some(k => wordRe.test(k))) score += 2; }
   txNorms.forEach((t, i) => {
     if (t.includes(qn)) { score += i === 0 ? 3 : 1; if (wordRe.test(t)) score += 1; }
   });
   return score;
 }
 
-/* ─── Barra de progreso ─────────────────────────────────── */
+/* ─── Barra de progreso ──────────────────────────────────── */
 function mostrarBarraProgreso() {
   if (document.getElementById('jp-progress-wrap')) return;
   const wrap = document.createElement('div');
@@ -91,8 +81,8 @@ function mostrarBarraProgreso() {
     <div class="jp-progress-track"><div id="jp-progress-bar" style="width:0%"></div></div>
   `;
   const hero = document.querySelector('.hero');
-  if (hero && hero.nextSibling) hero.parentNode.insertBefore(wrap, hero.nextSibling);
-  else document.body.appendChild(wrap);
+  if (hero) hero.insertAdjacentElement('afterend', wrap);
+  else document.body.prepend(wrap);
 }
 
 function actualizarBarraProgreso() {
@@ -116,15 +106,14 @@ function actualizarBarraProgreso() {
   }
 }
 
-/* ─── Carga e indexado ──────────────────────────────────── */
+/* ─── Carga e indexado ───────────────────────────────────── */
 async function cargarIndiceGlobal() {
   mostrarBarraProgreso();
   cargaProgreso = { total: JSON_CODIGOS.length, listos: 0, fallidos: [] };
 
   const resultados = await Promise.allSettled(
     JSON_CODIGOS.map(async (cod) => {
-      // Usar ruta absoluta desde la raiz del sitio para evitar problemas de path
-      const url = BASE_URL + '/' + cod.path;
+      const url = `${BASE_URL}/${cod.path}`;
       const res = await fetch(url);
       if (!res.ok) throw new Error(`HTTP ${res.status} — ${url}`);
       const data = await res.json();
@@ -139,7 +128,7 @@ async function cargarIndiceGlobal() {
   INDICE_GLOBAL = [];
   resultados.forEach(r => {
     if (r.status !== 'fulfilled') {
-      cargaProgreso.fallidos.push(r.reason?.message || 'Error desconocido');
+      cargaProgreso.fallidos.push(r.reason?.message || 'Error');
       console.error('⚠️ JSON fallido:', r.reason?.message);
       return;
     }
@@ -159,21 +148,26 @@ async function cargarIndiceGlobal() {
   });
 
   actualizarBarraProgreso();
-  indiceListoResolve(); // ✔ solventa la Promise
-  console.log(`✅ Índice listo: ${INDICE_GLOBAL.length} artículos indexados`);
+  indiceListoResolve();
+
+  // Debug visible en consola y en pantalla
+  const total = INDICE_GLOBAL.length;
+  const errores = cargaProgreso.fallidos.length;
+  console.log(`✅ Índice listo: ${total} artículos | ${errores} errores`);
+  if (errores) console.warn('Errores:', cargaProgreso.fallidos);
 }
 
-/* ─── Renderizado de categorías ─────────────────────────── */
+/* ─── Render categorías ──────────────────────────────────── */
 function renderCategorias(cats) {
   const grid = document.getElementById('categorias-grid');
   if (!grid) return;
   grid.innerHTML = '';
-  const conCodigos = cats.filter(c => c.codigos && c.codigos.length);
-  if (!conCodigos.length) {
-    grid.innerHTML = '<div class="empty-state"><div class="big">🔎</div><p>No se encontraron categorías para esa búsqueda.</p></div>';
+  const con = cats.filter(c => c.codigos && c.codigos.length);
+  if (!con.length) {
+    grid.innerHTML = '<div class="empty-state"><div class="big">🔎</div><p>No se encontraron categorías.</p></div>';
     return;
   }
-  conCodigos.forEach(cat => {
+  con.forEach(cat => {
     const card = document.createElement('div');
     card.className = 'categoria-card';
     card.innerHTML = `
@@ -197,44 +191,37 @@ function renderCategorias(cats) {
   });
 }
 
-/* ─── INIT: un solo DOMContentLoaded ──────────────────────── */
+/* ─── INIT ───────────────────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', () => {
-  // Render inicial de categorías
   renderCategorias(CATEGORIAS);
-
-  // Arrancar carga del índice
   cargarIndiceGlobal().catch(err => console.error('Error cargando índice:', err));
 
-  // Listener del input (búsqueda en tiempo real)
   const input = document.getElementById('searchInput');
   if (!input) return;
 
   let debounceTimer = null;
+
   input.addEventListener('input', () => {
     clearTimeout(debounceTimer);
     const q = input.value.trim();
     ocultarResultadosGlobales();
-    if (!q) {
-      renderCategorias(CATEGORIAS);
-      return;
-    }
+    if (!q) { renderCategorias(CATEGORIAS); return; }
     buscarMetadatos(q);
     debounceTimer = setTimeout(() => buscarArticulos(q), 400);
   });
 
-  // Enter
   input.addEventListener('keydown', e => {
     if (e.key === 'Enter') {
       clearTimeout(debounceTimer);
       const q = input.value.trim();
       if (!q) return;
+      ocultarResultadosGlobales();
       buscarMetadatos(q);
       buscarArticulos(q);
     }
   });
 });
 
-// Botón "Buscar" onclick desde HTML
 async function buscar() {
   const q = (document.getElementById('searchInput')?.value || '').trim();
   ocultarResultadosGlobales();
@@ -243,33 +230,31 @@ async function buscar() {
   await buscarArticulos(q);
 }
 
-/* ─── Búsqueda de metadatos (instantánea) ────────────────── */
+/* ─── Búsqueda metadatos ─────────────────────────────────── */
 function buscarMetadatos(q) {
   const qn = normalize(q);
-  const filtradas = CATEGORIAS.map(cat => ({
+  renderCategorias(CATEGORIAS.map(cat => ({
     ...cat,
     codigos: cat.codigos.filter(c =>
       normalize(c.nombre).includes(qn) ||
       normalize(c.ley).includes(qn) ||
       normalize(c.descripcion).includes(qn)
     )
-  }));
-  renderCategorias(filtradas);
+  })));
 }
 
-/* ─── Búsqueda en artículos (usa el índice global) ──────── */
+/* ─── Búsqueda artículos ─────────────────────────────────── */
 async function buscarArticulos(q) {
   const qn = normalize(q);
 
-  // Si el índice aún está cargando, mostrar estado de espera
   if (INDICE_GLOBAL.length === 0) {
-    mostrarEstadoBusqueda('⏳ Cargando artículos… por favor espera un momento.');
+    mostrarEstadoBusqueda('⏳ Cargando artículos… esperá un momento y volvé a buscar.');
     await indiceListoPromise;
     ocultarResultadosGlobales();
   }
 
   if (INDICE_GLOBAL.length === 0) {
-    mostrarEstadoBusqueda('⚠️ No se pudieron cargar los artículos. Recargar la página.');
+    mostrarEstadoBusqueda('⚠️ No se pudieron cargar los artículos. Recargá la página.');
     return;
   }
 
@@ -280,7 +265,7 @@ async function buscarArticulos(q) {
     .map(({ art }) => art);
 
   if (!matches.length) {
-    mostrarEstadoBusqueda(`🔍 No se encontraron artículos que mencionen "${escapeHtml(q)}".`);
+    mostrarEstadoBusqueda(`🔍 No se encontraron artículos que mencionen "<strong>${escapeHtml(q)}</strong>".`);
     return;
   }
 
@@ -296,16 +281,14 @@ function mostrarEstadoBusqueda(html) {
   document.getElementById('codigos').appendChild(el);
 }
 
-/* ─── Render de resultados ──────────────────────────────── */
+/* ─── Render resultados ──────────────────────────────────── */
 const PREVIEW_POR_GRUPO = 5;
 
 function mostrarResultadosGlobales(matches, rawQuery) {
   ocultarResultadosGlobales();
   const qn = normalize(rawQuery);
 
-  // Agrupar por código manteniendo el orden de aparición (ya vienen ordenados por score)
-  const resumen = {};
-  const orden = [];
+  const resumen = {}, orden = [];
   matches.forEach(m => {
     if (!resumen[m.codigoId]) {
       resumen[m.codigoId] = { nombre: m.codigoNombre, url: m.codigoUrl, total: 0, arts: [] };
@@ -318,7 +301,7 @@ function mostrarResultadosGlobales(matches, rawQuery) {
   const container = document.createElement('div');
   container.id = 'resultados-globales';
 
-  // Encabezado + chips
+  // Encabezado
   const header = document.createElement('div');
   header.className = 'jp-resultados-header';
   header.innerHTML = `
@@ -338,23 +321,22 @@ function mostrarResultadosGlobales(matches, rawQuery) {
   `;
   container.appendChild(header);
 
-  // Grupos
+  // Grupos por código
   orden.forEach(id => {
     const grupo = resumen[id];
     const section = document.createElement('div');
     section.className = 'jp-grupo';
     section.id = `jp-grupo-${id}`;
 
-    const grpHeader = document.createElement('div');
-    grpHeader.className = 'jp-grupo__header';
-    grpHeader.innerHTML = `
-      <span class="jp-grupo__nombre">${escapeHtml(grupo.nombre)}</span>
-      <span class="jp-grupo__meta">
-        <span class="jp-grupo__count">${grupo.total} resultado${grupo.total !== 1 ? 's' : ''}</span>
-        <a href="${grupo.url}" class="jp-grupo__link">Abrir código →</a>
-      </span>
+    section.innerHTML = `
+      <div class="jp-grupo__header">
+        <span class="jp-grupo__nombre">${escapeHtml(grupo.nombre)}</span>
+        <span class="jp-grupo__meta">
+          <span class="jp-grupo__count">${grupo.total} resultado${grupo.total !== 1 ? 's' : ''}</span>
+          <a href="${grupo.url}" class="jp-grupo__link">Abrir código →</a>
+        </span>
+      </div>
     `;
-    section.appendChild(grpHeader);
 
     const lista = document.createElement('div');
     lista.className = 'jp-art-lista';
@@ -365,16 +347,16 @@ function mostrarResultadosGlobales(matches, rawQuery) {
       const verMas = document.createElement('button');
       verMas.className = 'jp-ver-mas';
       verMas.dataset.shown = PREVIEW_POR_GRUPO;
-      const restantes0 = grupo.total - PREVIEW_POR_GRUPO;
-      verMas.textContent = `▼ Ver ${Math.min(restantes0, 20)} artículos más (${restantes0} restantes)`;
+      const r0 = grupo.total - PREVIEW_POR_GRUPO;
+      verMas.textContent = `▼ Ver ${Math.min(r0, 20)} artículos más (${r0} restantes)`;
       verMas.addEventListener('click', () => {
         const shown = parseInt(verMas.dataset.shown);
         const next  = shown + 20;
         renderArts(lista, grupo.arts, qn, rawQuery, shown, next);
         verMas.dataset.shown = next;
-        const restantes = grupo.total - next;
-        if (restantes <= 0) verMas.remove();
-        else verMas.textContent = `▼ Ver ${Math.min(restantes, 20)} artículos más (${restantes} restantes)`;
+        const rest = grupo.total - next;
+        if (rest <= 0) verMas.remove();
+        else verMas.textContent = `▼ Ver ${Math.min(rest, 20)} artículos más (${rest} restantes)`;
       });
       section.appendChild(verMas);
     }
@@ -398,7 +380,7 @@ function renderArts(lista, arts, qn, rawQuery, desde, hasta) {
     }).join('');
 
     const item = document.createElement('a');
-    item.href  = `${art.codigoUrl}#art-${art.numero}`;
+    item.href      = `${art.codigoUrl}#art-${art.numero}`;
     item.className = 'jp-art-item';
     item.innerHTML = `
       <div class="jp-art-item__header">
