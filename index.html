@@ -4,72 +4,133 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>JurisParaguay — Derecho Paraguayo</title>
-  <meta name="description" content="Plataforma de consulta de códigos legales vigentes del Paraguay para juristas y litigantes." />
+  <meta name="description" content="Plataforma de consulta de códigos legales vigentes del Paraguay." />
   <link rel="stylesheet" href="assets/css/styles.css" />
   <style>
+    /* ── Hero ── */
     .hero {
-      background: linear-gradient(135deg, var(--clr-primary) 0%, var(--clr-primary-light) 100%);
-      color: #fff;
-      padding: 3.5rem 0 3rem;
-      text-align: center;
+      background: linear-gradient(135deg, var(--clr-primary,#1a3a5c) 0%, var(--clr-primary-light,#2a5a8c) 100%);
+      color:#fff; padding:3.5rem 0 3rem; text-align:center;
     }
-    .hero__logo {
-      display: block;
-      width: 90%;
-      max-width: 600px;
-      height: auto;
-      margin: 0 auto 1.4rem;
-      filter: drop-shadow(0 4px 20px rgba(0,0,0,.3));
-      transition: opacity .2s, transform .2s;
+    .hero__logo { display:block; width:90%; max-width:600px; height:auto; margin:0 auto 1.4rem;
+      filter:drop-shadow(0 4px 20px rgba(0,0,0,.3)); transition:opacity .2s,transform .2s; }
+    .hero__logo-link { display:block; width:fit-content; margin:0 auto; cursor:pointer; }
+    .hero__logo-link:hover .hero__logo { opacity:.88; transform:scale(1.02); }
+    .hero__tagline { font-size:clamp(1rem,2.5vw,1.2rem); opacity:.9; font-style:italic;
+      letter-spacing:.3px; margin-bottom:2rem; }
+
+    /* ── Barra progreso ── */
+    #jp-progress-wrap {
+      background:#f0f4f8; border-bottom:1px solid #d1dce8;
+      padding:.6rem 1.2rem; font-size:.82rem; color:#1a3a5c;
+      display:flex; align-items:center; gap:1rem;
     }
-    .hero__logo-link:hover .hero__logo {
-      opacity: .88;
-      transform: scale(1.02);
-    }
-    .hero__logo-link {
-      display: block;
-      width: fit-content;
-      margin: 0 auto;
-      cursor: pointer;
-    }
-    .hero__tagline {
-      font-size: clamp(1rem, 2.5vw, 1.2rem);
-      opacity: .9;
-      font-style: italic;
-      letter-spacing: .3px;
-      margin-bottom: 2rem;
-    }
+    .jp-progress-track { flex:1; height:6px; background:#c9d8e8; border-radius:3px; overflow:hidden; }
+    #jp-progress-bar   { height:100%; background:#1a3a5c; border-radius:3px; transition:width .3s; }
+    #jp-progress-wrap.done { display:none; }
+
+    /* ── Grid categorías ── */
+    .categorias-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+      gap:1.5rem; padding:2rem 0; }
+    .categoria-card { border-radius:10px; overflow:hidden;
+      box-shadow:0 2px 12px rgba(0,0,0,.1); background:#fff; }
+    .categoria-card__header { padding:1rem 1.2rem; display:flex; align-items:center; gap:.7rem; }
+    .categoria-card__header .icon { font-size:1.6rem; }
+    .categoria-card__header h2 { margin:0; font-size:1rem; color:#fff; font-weight:700; }
+    .categoria-card__body { padding:.4rem 0; }
+    .codigo-item { display:flex; align-items:flex-start; gap:.8rem; padding:.6rem 1.2rem;
+      text-decoration:none; color:inherit; border-bottom:1px solid #f0f0f0;
+      transition:background .15s; }
+    .codigo-item:last-child { border-bottom:none; }
+    .codigo-item:hover { background:#f5f8ff; }
+    .codigo-item__num { font-size:.72rem; color:#fff; background:#1a3a5c;
+      border-radius:4px; padding:.2rem .5rem; white-space:nowrap; flex-shrink:0; margin-top:2px; }
+    .codigo-item__nombre { display:block; font-weight:600; font-size:.9rem; color:#1a3a5c; }
+    .codigo-item__desc { display:block; font-size:.78rem; color:#666; margin-top:2px; }
+
+    /* ── Resultados artículos ── */
+    #resultados-container { padding-bottom:3rem; }
+    .jp-search-status { padding:1.5rem; color:#555; font-size:.95rem; text-align:center; }
+    .jp-resultados-header { padding:1.2rem 0 .8rem; border-bottom:2px solid #e0e8f0; margin-bottom:1rem; }
+    .jp-resultados-titulo { font-size:1.1rem; color:#1a3a5c; margin:0 0 .7rem; }
+    .jp-chips { display:flex; flex-wrap:wrap; gap:.4rem; }
+    .jp-chip { background:#1a3a5c; color:#fff; border-radius:20px; padding:.25rem .75rem;
+      font-size:.78rem; text-decoration:none; display:flex; align-items:center; gap:.4rem; }
+    .jp-chip:hover { background:#2a5a8c; }
+    .jp-chip__count { background:rgba(255,255,255,.25); border-radius:10px;
+      padding:.05rem .4rem; font-size:.72rem; }
+    .jp-grupo { margin-bottom:2rem; border:1px solid #e0e8f0; border-radius:8px; overflow:hidden; }
+    .jp-grupo__header { background:#f0f4f8; padding:.8rem 1.2rem;
+      display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:.5rem; }
+    .jp-grupo__nombre { font-weight:700; color:#1a3a5c; font-size:.95rem; }
+    .jp-grupo__meta { display:flex; align-items:center; gap:1rem; font-size:.82rem; }
+    .jp-grupo__count { color:#555; }
+    .jp-grupo__link { color:#1a3a5c; text-decoration:none; font-weight:600; }
+    .jp-grupo__link:hover { text-decoration:underline; }
+    .jp-art-lista { padding:.4rem 0; }
+    .jp-art-item { display:block; padding:.7rem 1.2rem; border-bottom:1px solid #f0f0f0;
+      text-decoration:none; color:inherit; transition:background .15s; }
+    .jp-art-item:last-child { border-bottom:none; }
+    .jp-art-item:hover { background:#f5f8ff; }
+    .jp-art-item__header { display:flex; align-items:baseline; gap:.7rem; margin-bottom:.3rem; }
+    .jp-art-item__num { font-size:.78rem; color:#fff; background:#7b1d1d;
+      border-radius:4px; padding:.15rem .45rem; white-space:nowrap; flex-shrink:0; }
+    .jp-art-item__epigrafe { font-weight:600; font-size:.88rem; color:#1a3a5c; }
+    .jp-art-item__snippet { font-size:.82rem; color:#444; line-height:1.5;
+      background:#fffbe6; border-left:3px solid #f0c040;
+      padding:.25rem .6rem; border-radius:0 4px 4px 0; margin-top:.25rem; }
+    .jp-art-item__snippet mark { background:#ffe566; color:inherit; border-radius:2px; padding:0 2px; }
+    .jp-ver-mas { display:block; width:100%; padding:.7rem; background:#f0f4f8;
+      border:none; border-top:1px solid #e0e8f0; cursor:pointer; font-size:.85rem;
+      color:#1a3a5c; font-weight:600; text-align:center; }
+    .jp-ver-mas:hover { background:#e0e8f0; }
+
+    /* ── Empty state ── */
+    .empty-state { text-align:center; padding:3rem 1rem; color:#888; }
+    .empty-state .big { font-size:3rem; margin-bottom:.5rem; }
+
+    /* ── Diagnóstico flotante ── */
+    #jp-diag { position:fixed; bottom:1rem; right:1rem; z-index:9999;
+      max-width:360px; font-size:.78rem; font-family:monospace;
+      display:flex; flex-direction:column; gap:.3rem; pointer-events:none; }
+    #jp-diag div { padding:.35rem .65rem; border-radius:6px;
+      box-shadow:0 2px 8px rgba(0,0,0,.3); color:#fff; }
   </style>
 </head>
 <body>
 
-  <section class="hero" id="buscar">
-    <div class="container hero__inner">
-      <a href="index.html" class="hero__logo-link" title="Ir al inicio">
+  <section class="hero" id="inicio">
+    <div class="container">
+      <a href="index.html" class="hero__logo-link" title="Inicio">
         <img src="logo.png" alt="JurisParaguay" class="hero__logo" />
       </a>
       <p class="hero__tagline">El derecho paraguayo, al alcance de todos</p>
       <div class="search-bar">
-        <input type="search" id="searchInput" placeholder="Buscar código, ley o materia…" autocomplete="off" />
+        <input type="search" id="searchInput" placeholder="Buscar código, ley o artículo…" autocomplete="off" />
         <button onclick="buscar()">&#128269; Buscar</button>
       </div>
     </div>
   </section>
 
-  <main class="container" id="codigos">
-    <!-- Grid de categorías: siempre presente, se filtra con buscarMetadatos -->
+  <div id="jp-progress-wrap">
+    <span id="jp-progress-text">Cargando índice…</span>
+    <div class="jp-progress-track"><div id="jp-progress-bar" style="width:0%"></div></div>
+  </div>
+
+  <main class="container" id="principal">
     <div id="categorias-grid" class="categorias-grid"></div>
-    <!-- Contenedor exclusivo para resultados de artículos: independiente del grid -->
     <div id="resultados-container"></div>
   </main>
 
-  <footer class="footer" id="acerca">
+  <footer class="footer">
     <div class="container">
       <p><strong>JurisParaguay</strong> — Herramienta de consulta para juristas y litigantes del derecho paraguayo.</p>
       <p>Los textos normativos son de acceso público. Esta plataforma no provee asesoramiento legal.</p>
-      <p style="margin-top:0.5rem;opacity:.6;font-size:.85rem">&copy; 2026 JurisParaguay</p>
+      <p style="margin-top:.5rem;opacity:.6;font-size:.85rem">&copy; 2026 JurisParaguay</p>
     </div>
   </footer>
+
+  <div id="jp-diag"></div>
 
   <script src="assets/js/data.js"></script>
   <script src="assets/js/app.js"></script>
