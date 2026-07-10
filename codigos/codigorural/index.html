@@ -1,709 +1,731 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Código Rural del Paraguay – JurisParaguay</title>
-<meta name="description" content="Código Rural del Paraguay · Ley N° 1248/1931 · Lector interactivo JurisParaguay"/>
-<style>
-  :root {
-    --bg: #f7f3ea;
-    --sidebar: #1f3147;
-    --accent: #c9a227;
-    --blue: #34557f;
-    --text: #1a1a1a;
-    --light: #fff8ee;
-    --border: #d9ceb0;
-    --radius: 8px;
-    --player-h: 72px;
-  }
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: 'Georgia', serif; background: var(--bg); color: var(--text); display: flex; flex-direction: column; min-height: 100vh; }
-
-  /* TOP BAR */
-  #topbar {
-    background: var(--sidebar);
-    color: #fff;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 10px 20px;
-    position: sticky; top: 0; z-index: 200;
-    box-shadow: 0 2px 8px rgba(0,0,0,.35);
-  }
-  #topbar img { height: 40px; width: auto; border-radius: 4px; }
-  #topbar .titles { flex: 1; }
-  #topbar h1 { font-size: 1.05rem; color: var(--accent); line-height: 1.2; }
-  #topbar .sub { font-size: .75rem; color: #aec6e8; font-style: italic; }
-  #back-link { font-size: .8rem; color: var(--accent); text-decoration: none; white-space: nowrap; border: 1px solid var(--accent); padding: 4px 10px; border-radius: 4px; transition: background .2s; }
-  #back-link:hover { background: var(--accent); color: #fff; }
-  #hamburger { display: none; background: none; border: none; cursor: pointer; flex-direction: column; gap: 5px; padding: 4px; }
-  #hamburger span { display: block; width: 24px; height: 2px; background: #fff; border-radius: 2px; }
-
-  /* LAYOUT */
-  #layout { display: flex; flex: 1; padding-bottom: var(--player-h); }
-
-  /* SIDEBAR */
-  #sidebar {
-    width: 300px; min-width: 300px;
-    background: var(--sidebar);
-    color: #dce8f5;
-    display: flex; flex-direction: column;
-    overflow: hidden;
-    transition: transform .3s;
-  }
-  #search-wrap { padding: 12px; border-bottom: 1px solid #2e4a6a; }
-  #search-input {
-    width: 100%; padding: 8px 12px;
-    border-radius: var(--radius); border: none;
-    font-size: .9rem; background: #16273a; color: #fff;
-    outline: none;
-  }
-  #search-input::placeholder { color: #7a9abf; }
-  #search-count { font-size: .72rem; color: #7a9abf; margin-top: 5px; padding: 0 2px; }
-  #index-tree { overflow-y: auto; flex: 1; padding: 8px 0; }
-  .tree-libro { padding: 8px 12px 4px; font-size: .72rem; text-transform: uppercase; letter-spacing: .08em; color: var(--accent); font-weight: bold; cursor: pointer; user-select: none; }
-  .tree-titulo { padding: 5px 16px; font-size: .8rem; color: #aec6e8; cursor: pointer; border-left: 3px solid transparent; transition: all .15s; }
-  .tree-titulo:hover, .tree-titulo.active { background: rgba(201,162,39,.15); border-left-color: var(--accent); color: #fff; }
-  .tree-capitulo { padding: 4px 24px; font-size: .75rem; color: #8ab0d0; cursor: pointer; border-left: 3px solid transparent; transition: all .15s; }
-  .tree-capitulo:hover, .tree-capitulo.active { background: rgba(52,85,127,.3); border-left-color: #34557f; color: #dce8f5; }
-  .tree-range { font-size: .68rem; color: #5a80a0; margin-left: 6px; }
-  .tree-children { display: block; }
-  .tree-children.collapsed { display: none; }
-
-  /* TAGS PANEL */
-  #tags-panel { padding: 10px 12px; border-top: 1px solid #2e4a6a; }
-  #tags-panel h4 { font-size: .72rem; text-transform: uppercase; letter-spacing: .07em; color: var(--accent); margin-bottom: 8px; }
-  #tags-container { display: flex; flex-wrap: wrap; gap: 5px; max-height: 100px; overflow-y: auto; }
-  .tag-chip {
-    background: #2e4a6a; color: #aec6e8; font-size: .68rem;
-    padding: 3px 9px; border-radius: 12px; cursor: pointer;
-    border: 1px solid transparent; transition: all .15s;
-  }
-  .tag-chip:hover, .tag-chip.active { background: var(--accent); color: #fff; border-color: var(--accent); }
-
-  /* MAIN */
-  #main { flex: 1; overflow-y: auto; padding: 24px 32px; }
-  #results-banner { display: none; background: #fff3cd; border: 1px solid var(--accent); border-radius: var(--radius); padding: 8px 14px; margin-bottom: 16px; font-size: .85rem; color: #7a5a00; }
-  #results-banner button { background: none; border: none; cursor: pointer; color: var(--blue); font-size: .85rem; margin-left: 8px; text-decoration: underline; }
-
-  /* ARTICLE CARD */
-  .art-card {
-    background: var(--light); border: 1px solid var(--border);
-    border-radius: var(--radius); padding: 20px 24px; margin-bottom: 20px;
-    scroll-margin-top: 20px; transition: box-shadow .2s;
-  }
-  .art-card.current { box-shadow: 0 0 0 2px var(--accent), 0 4px 16px rgba(201,162,39,.2); }
-  .art-card.highlight { background: #fff8e1; }
-  .art-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; margin-bottom: 10px; }
-  .art-num { font-size: 1rem; font-weight: bold; color: var(--blue); white-space: nowrap; }
-  .art-epigrafe { font-size: .88rem; font-style: italic; color: #555; flex: 1; }
-  .art-actions { display: flex; gap: 6px; }
-  .btn-sm { background: none; border: 1px solid var(--border); border-radius: 5px; padding: 4px 9px; font-size: .75rem; cursor: pointer; color: var(--blue); transition: all .15s; white-space: nowrap; }
-  .btn-sm:hover { background: var(--blue); color: #fff; border-color: var(--blue); }
-  .art-body p { font-size: .92rem; line-height: 1.7; margin-bottom: .5em; text-align: justify; }
-  .art-tags { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 5px; }
-  .art-tag { background: #e8eff7; color: #34557f; font-size: .68rem; padding: 2px 8px; border-radius: 10px; cursor: pointer; border: 1px solid #c0d0e8; }
-  .art-tag:hover { background: var(--blue); color: #fff; }
-  mark { background: #ffe08a; border-radius: 2px; padding: 0 1px; }
-
-  /* PAGINATION */
-  #paginator { display: flex; align-items: center; justify-content: space-between; padding: 10px 32px; background: var(--bg); border-top: 1px solid var(--border); position: sticky; bottom: var(--player-h); z-index: 100; }
-  #pag-info { font-size: .82rem; color: #666; }
-  .pag-btn { background: var(--blue); color: #fff; border: none; border-radius: var(--radius); padding: 7px 16px; font-size: .85rem; cursor: pointer; transition: background .2s; }
-  .pag-btn:hover { background: var(--sidebar); }
-  .pag-btn:disabled { background: #ccc; cursor: default; }
-
-  /* TTS PLAYER */
-  #tts-player {
-    position: fixed; bottom: 0; left: 0; right: 0;
-    height: var(--player-h);
-    background: var(--sidebar);
-    border-top: 2px solid var(--accent);
-    display: flex; align-items: center; gap: 10px;
-    padding: 0 20px; z-index: 300;
-    flex-wrap: wrap;
-  }
-  .tts-label { color: var(--accent); font-size: .75rem; font-weight: bold; white-space: nowrap; }
-  .tts-btn { background: none; border: 1px solid #2e4a6a; border-radius: 5px; padding: 5px 10px; color: #dce8f5; cursor: pointer; font-size: .85rem; transition: all .15s; }
-  .tts-btn:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
-  .tts-btn.active { background: var(--accent); color: #fff; }
-  #tts-title { color: #aec6e8; font-size: .75rem; flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 80px; }
-  #tts-speed { background: #16273a; color: #dce8f5; border: 1px solid #2e4a6a; border-radius: 5px; padding: 4px 6px; font-size: .8rem; cursor: pointer; }
-  #tts-voice { background: #16273a; color: #dce8f5; border: 1px solid #2e4a6a; border-radius: 5px; padding: 4px 6px; font-size: .8rem; max-width: 150px; cursor: pointer; }
-
-  /* FOOTER */
-  footer { background: var(--sidebar); color: #7a9abf; text-align: center; font-size: .75rem; padding: 10px; padding-bottom: calc(var(--player-h) + 10px); }
-
-  /* RESPONSIVE */
-  @media (max-width: 768px) {
-    #hamburger { display: flex; }
-    #sidebar { position: fixed; top: 0; left: 0; bottom: 0; z-index: 250; transform: translateX(-100%); width: 280px; min-width: 280px; }
-    #sidebar.open { transform: translateX(0); }
-    #main { padding: 16px; }
-    #paginator { padding: 8px 16px; }
-    #tts-player { gap: 6px; padding: 0 10px; }
-    #tts-voice { max-width: 100px; }
-    .art-card { padding: 14px 16px; }
-  }
-  #overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.45); z-index: 240; }
-  #overlay.show { display: block; }
-
-  /* LOADING */
-  #loading { text-align: center; padding: 60px 20px; color: #888; font-size: 1rem; }
-  #loading .spinner { width: 40px; height: 40px; border: 4px solid #ddd; border-top-color: var(--accent); border-radius: 50%; animation: spin .8s linear infinite; margin: 0 auto 16px; }
-  @keyframes spin { to { transform: rotate(360deg); } }
-
-  /* PDF hidden clone */
-  #pdf-area { display: none; }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Código — JurisParaguay</title>
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#1f3147" />
+  <style>
+    :root {
+      --bg: #f7f3ea; --bg-panel: #ffffff; --bg-sidebar: #1f3147; --bg-sidebar-alt: #223650;
+      --border-soft: #dde0e5; --text-main: #1f2329; --text-muted: #62666f; --text-inverse: #f7f3ea;
+      --accent-gold: #c9a227; --accent-gold-soft: #f0d9a0; --accent-blue: #34557f;
+      --radius-md: 10px; --radius-lg: 16px; --shadow-md: 0 10px 30px rgba(15,23,42,0.12);
+      --sidebar-width: 320px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { height: 100vh; background: var(--bg); color: var(--text-main); font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; display: grid; grid-template-columns: var(--sidebar-width) 1fr; grid-template-rows: auto 1fr auto; overflow: hidden; }
+    .sidebar { grid-column: 1; grid-row: 1 / -1; background: linear-gradient(180deg, var(--bg-sidebar), var(--bg-sidebar-alt)); color: var(--text-inverse); padding: 18px 18px 16px; border-right: 1px solid rgba(148,163,184,0.6); display: flex; flex-direction: column; overflow: hidden; }
+    .sidebar-header { margin-bottom: 14px; text-align: center; }
+    .sidebar-logo-link { display: block; width: fit-content; margin: 0 auto 12px; }
+    .sidebar-logo { display: block; width: 100%; max-width: 200px; height: auto; object-fit: contain; transition: opacity .15s; }
+    .sidebar-logo-link:hover .sidebar-logo { opacity: .8; }
+    .back-link { display: inline-flex; align-items: center; gap: .35rem; font-size: 11px; color: var(--accent-gold); text-decoration: none; margin-bottom: 10px; opacity: .9; transition: opacity .15s; }
+    .back-link:hover { opacity: 1; text-decoration: underline; }
+    .app-title { font-size: 18px; font-weight: 600; letter-spacing: 0.03em; }
+    .app-subtitle { font-size: 11px; color: rgba(248,250,252,0.75); margin-top: 3px; }
+    .search-box { margin-top: 12px; position: relative; text-align: left; }
+    .search-input { width: 100%; padding: 8px 32px 8px 10px; border-radius: 999px; border: 1px solid rgba(148,163,184,0.6); background: rgba(15,23,42,0.55); color: var(--text-inverse); font-size: 12px; }
+    .search-input::placeholder { color: rgba(226,232,240,0.7); }
+    .search-clear { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; color: rgba(226,232,240,0.6); cursor: pointer; font-size: 14px; display: none; line-height: 1; }
+    .search-clear.visible { display: block; }
+    .search-results { display: none; flex-direction: column; gap: 4px; margin-top: 8px; flex: 1; overflow-y: auto; }
+    .search-results.visible { display: flex; }
+    .search-result-item { padding: 8px 9px; border-radius: 8px; background: rgba(15,23,42,0.55); border: 1px solid rgba(148,163,184,0.3); cursor: pointer; font-size: 11px; color: var(--text-inverse); transition: background 0.15s; }
+    .search-result-item:hover { background: rgba(15,23,42,0.85); }
+    .search-result-num { font-weight: 700; color: var(--accent-gold); }
+    .search-result-epig { font-weight: 500; display: block; margin-top: 2px; }
+    .search-result-ctx { font-size: 10px; color: rgba(226,232,240,0.65); display: block; margin-top: 1px; }
+    .search-highlight { background: rgba(201,162,39,0.45); border-radius: 2px; padding: 0 1px; }
+    .search-empty { font-size: 12px; color: rgba(226,232,240,0.6); text-align: center; padding: 20px 0; }
+    .search-count { font-size: 10px; color: rgba(226,232,240,0.5); margin-bottom: 6px; padding-left: 2px; }
+    .sidebar-scroll { margin-top: 12px; padding-right: 4px; overflow-y: auto; flex: 1; }
+    .tree-group-title { font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em; color: rgba(226,232,240,0.85); margin-bottom: 8px; }
+    .title-block { border-radius: 12px; border: 1px solid rgba(148,163,184,0.5); background: rgba(15,23,42,0.65); margin-bottom: 8px; }
+    .title-head { width: 100%; padding: 8px 9px; display: flex; align-items: center; justify-content: space-between; font-size: 12px; text-align: left; cursor: pointer; border: none; background: transparent; color: var(--text-inverse); }
+    .title-head-main { display: flex; flex-direction: column; }
+    .title-kicker { font-size: 10px; color: rgba(226,232,240,0.8); text-transform: uppercase; letter-spacing: 0.08em; }
+    .title-name { font-size: 12px; font-weight: 600; margin-top: 2px; }
+    .title-range { font-size: 10px; color: rgba(226,232,240,0.75); margin-top: 1px; }
+    .title-chevron { font-size: 11px; color: rgba(226,232,240,0.75); transition: transform 0.15s ease; }
+    .title-block.open .title-chevron { transform: rotate(90deg); }
+    .chapter-list { display: none; border-top: 1px solid rgba(148,163,184,0.45); padding: 4px 5px 6px; }
+    .title-block.open .chapter-list { display: block; }
+    .chapter-block { border-radius: 8px; border: 1px solid rgba(148,163,184,0.3); background: rgba(15,23,42,0.45); margin-bottom: 5px; }
+    .chapter-head { width: 100%; padding: 6px 8px; display: flex; align-items: center; justify-content: space-between; font-size: 11px; text-align: left; cursor: pointer; border: none; background: transparent; color: var(--text-inverse); }
+    .chapter-head-main { display: flex; flex-direction: column; }
+    .chapter-name { font-weight: 500; display: block; }
+    .chapter-range { font-size: 10px; color: rgba(226,232,240,0.7); display: block; }
+    .chapter-chevron { font-size: 10px; color: rgba(226,232,240,0.6); transition: transform 0.15s ease; }
+    .chapter-block.open .chapter-chevron { transform: rotate(90deg); }
+    .art-group-list { display: none; border-top: 1px solid rgba(148,163,184,0.3); padding: 3px 4px 4px; }
+    .chapter-block.open .art-group-list { display: block; }
+    .art-group-btn { width: 100%; padding: 5px 7px; border-radius: 6px; border: none; background: transparent; color: var(--text-inverse); text-align: left; font-size: 11px; cursor: pointer; display: flex; flex-direction: column; gap: 1px; }
+    .art-group-btn:hover, .art-group-btn.active { background: rgba(15,23,42,0.9); }
+    .art-group-nums { font-weight: 700; color: var(--accent-gold); font-size: 11px; }
+    .art-group-epigs { font-size: 10px; color: rgba(226,232,240,0.7); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 220px; }
+    .hamburger { display: none; background: none; border: 1px solid var(--border-soft); border-radius: 8px; padding: 5px 8px; font-size: 18px; cursor: pointer; color: var(--text-main); line-height: 1; flex-shrink: 0; }
+    .header { grid-column: 2; grid-row: 1; padding: 10px 18px; border-bottom: 1px solid var(--border-soft); background: rgba(247,243,234,0.94); display: flex; align-items: center; justify-content: space-between; gap: 12px; min-width: 0; }
+    .breadcrumbs { font-size: 11px; color: var(--text-muted); min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .breadcrumbs a { color: var(--accent-blue); font-weight: 600; text-decoration: none; }
+    .breadcrumbs a:hover { text-decoration: underline; }
+    .header-actions { display: flex; gap: 6px; align-items: center; flex-shrink: 0; flex-wrap: wrap; }
+    .header-btn { font-size: 11px; padding: 6px 10px; border-radius: 999px; border: 1px solid var(--border-soft); background: var(--bg-panel); color: var(--text-muted); cursor: pointer; white-space: nowrap; transition: background 0.15s, border-color 0.15s; }
+    .header-btn:hover { background: var(--accent-gold-soft); border-color: var(--accent-gold); color: #4b3410; }
+    .header-btn.active-tool { background: var(--accent-gold); border-color: #a07c10; color: #1a2d45; font-weight: 600; }
+    .header-btn.pwa-btn { display: none; }
+    .header-btn.pwa-btn.visible { display: inline-block; }
+    .copy-menu-wrap { position: relative; }
+    .copy-menu { display: none; position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-panel); border: 1px solid var(--border-soft); border-radius: 10px; box-shadow: var(--shadow-md); min-width: 230px; max-width: 300px; z-index: 60; padding: 6px; }
+    .copy-menu.open { display: block; }
+    .copy-menu-item { width: 100%; text-align: left; padding: 8px 10px; border-radius: 8px; border: none; background: transparent; cursor: pointer; display: flex; flex-direction: column; gap: 2px; }
+    .copy-menu-item:hover, .copy-menu-item:focus-visible { background: var(--accent-gold-soft); outline: none; }
+    .copy-menu-item-num { font-weight: 700; color: var(--accent-blue); font-size: 11px; }
+    .copy-menu-item-epig { font-size: 11px; color: var(--text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .copy-menu-empty { font-size: 11px; color: var(--text-muted); padding: 10px; text-align: center; }
+    .reader-card.card-copy-flash { animation: copyFlash 1.4s ease; }
+    @keyframes copyFlash { 0% { box-shadow: 0 0 0 3px rgba(201,162,39,0.85), var(--shadow-md); } 100% { box-shadow: var(--shadow-md); } }
+    .marcadores-overlay { display: none; position: fixed; inset: 0; z-index: 200; background: rgba(15,23,42,0.45); backdrop-filter: blur(2px); align-items: flex-start; justify-content: flex-end; }
+    .marcadores-overlay.open { display: flex; }
+    .marcadores-panel { margin: 56px 18px 0 0; background: var(--bg-panel); border-radius: var(--radius-lg); border: 1px solid var(--border-soft); box-shadow: var(--shadow-md); padding: 16px 18px 18px; min-width: 280px; max-width: 360px; max-height: calc(100vh - 80px); overflow-y: auto; }
+    .marcadores-panel-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+    .marcadores-panel-title { font-size: 13px; font-weight: 700; color: var(--accent-blue); }
+    .marcadores-close { background: none; border: none; font-size: 18px; color: var(--text-muted); cursor: pointer; line-height: 1; }
+    .marcadores-empty { font-size: 12px; color: var(--text-muted); padding: 8px 0; }
+    .marcadores-list { display: flex; flex-direction: column; gap: 6px; }
+    .marcador-item { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 8px 10px; border-radius: 8px; background: var(--bg); border: 1px solid var(--border-soft); cursor: pointer; transition: background 0.15s; }
+    .marcador-item:hover { background: var(--accent-gold-soft); }
+    .marcador-info { flex: 1; min-width: 0; }
+    .marcador-num { font-size: 11px; font-weight: 700; color: var(--accent-blue); }
+    .marcador-epig { font-size: 11px; color: var(--text-main); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .marcador-del { background: none; border: none; font-size: 14px; color: var(--text-muted); cursor: pointer; flex-shrink: 0; padding: 2px 4px; border-radius: 4px; transition: color 0.15s; }
+    .marcador-del:hover { color: #c0392b; }
+    .tags-overlay { display: none; position: fixed; inset: 0; z-index: 200; background: rgba(15,23,42,0.45); backdrop-filter: blur(2px); align-items: flex-start; justify-content: flex-end; }
+    .tags-overlay.open { display: flex; }
+    .tags-panel { margin: 56px 18px 0 0; background: var(--bg-panel); border-radius: var(--radius-lg); border: 1px solid var(--border-soft); box-shadow: var(--shadow-md); padding: 16px 18px 18px; min-width: 260px; max-width: 340px; max-height: calc(100vh - 80px); overflow-y: auto; }
+    .tags-panel-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+    .tags-panel-title { font-size: 13px; font-weight: 700; color: var(--accent-blue); }
+    .tags-close { background: none; border: none; font-size: 18px; color: var(--text-muted); cursor: pointer; line-height: 1; }
+    .tags-empty { font-size: 12px; color: var(--text-muted); padding: 8px 0; }
+    .tags-list { display: flex; flex-wrap: wrap; gap: 7px; }
+    .tag-chip { font-size: 11px; padding: 4px 11px; border-radius: 999px; background: var(--accent-gold-soft); border: 1px solid var(--accent-gold); color: #4b3410; cursor: pointer; transition: background 0.15s; }
+    .tag-chip:hover { background: var(--accent-gold); color: #fff; }
+    .tags-art-title { font-size: 11px; color: var(--text-muted); margin-bottom: 10px; font-style: italic; }
+    .main { grid-column: 2; grid-row: 2; padding: 16px 18px; overflow-y: auto; background: radial-gradient(circle at top left, rgba(201,162,39,0.12), transparent 60%), var(--bg); }
+    .top-pager { position: sticky; top: 0; z-index: 5; display: flex; justify-content: center; gap: 10px; max-width: 860px; margin: 0 auto 14px; padding: 8px; background: rgba(247,243,234,0.96); backdrop-filter: blur(4px); border-radius: 999px; border: 1px solid var(--border-soft); box-shadow: var(--shadow-md); }
+    .top-pager button { font-size: 12px; padding: 6px 14px; border-radius: 999px; border: 1px solid var(--border-soft); background: var(--bg-panel); color: var(--text-main); cursor: pointer; transition: background 0.15s, border-color 0.15s; }
+    .top-pager button:hover:not(:disabled) { background: var(--accent-gold-soft); border-color: var(--accent-gold); }
+    .top-pager button:disabled { opacity: 0.35; cursor: default; }
+    .reader-group { max-width: 860px; margin: 0 auto; display: flex; flex-direction: column; gap: 14px; }
+    .reader-card { background: var(--bg-panel); border-radius: var(--radius-lg); border: 1px solid var(--border-soft); box-shadow: var(--shadow-md); padding: 18px 20px 20px; }
+    .reader-card.card-primary { border-left: 4px solid var(--accent-gold); }
+    .reader-card.card-secondary { opacity: .92; }
+    .article-header { border-bottom: 1px solid #e5e7eb; padding-bottom: 10px; margin-bottom: 10px; }
+    .article-number { font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent-blue); font-weight: 600; }
+    .article-title { font-size: 20px; margin-top: 4px; color: var(--accent-blue); letter-spacing: -0.01em; }
+    .article-subtitle { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+    .article-body { font-size: 13px; line-height: 1.8; color: var(--text-main); margin-top: 4px; }
+    .article-body p { margin-bottom: 8px; }
+    .article-body ol { margin: 6px 0 8px 18px; }
+    .article-body li { margin-bottom: 4px; }
+    .article-body p.tts-reading { background: rgba(201,162,39,0.18); border-left: 3px solid var(--accent-gold); padding-left: 8px; border-radius: 4px; transition: background 0.3s; }
+    .text-highlight { background: rgba(255,220,0,0.5); border-radius: 2px; cursor: pointer; }
+    .text-highlight:hover { background: rgba(255,180,0,0.7); }
+    .article-empty { display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 24px 0; color: var(--text-muted); font-size: 13px; text-align: center; }
+    .article-empty-icon { font-size: 32px; opacity: 0.4; }
+    .article-empty p { max-width: 320px; line-height: 1.6; }
+    .loading-state { display: flex; align-items: center; gap: 10px; padding: 40px 20px; color: var(--text-muted); font-size: 13px; }
+    .spinner { width: 18px; height: 18px; border: 2px solid var(--border-soft); border-top-color: var(--accent-blue); border-radius: 50%; animation: spin 0.7s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .article-footer { border-top: 1px solid #e5e7eb; margin-top: 10px; padding-top: 8px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; font-size: 11px; color: var(--text-muted); }
+    .audio-player { grid-column: 2; grid-row: 3; background: linear-gradient(135deg, #1a2d45, #243650); border-top: 1px solid rgba(148,163,184,0.3); padding: 10px 18px; display: flex; flex-direction: column; gap: 7px; box-shadow: 0 -4px 16px rgba(15,23,42,0.18); }
+    .player-top { display: flex; align-items: center; gap: 10px; min-width: 0; }
+    .player-controls { display: flex; gap: 4px; align-items: center; flex-shrink: 0; flex-wrap: wrap; }
+    .player-btn { width: 32px; height: 32px; border-radius: 50%; border: none; background: rgba(255,255,255,0.1); color: #f7f3ea; font-size: 14px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.15s, transform 0.1s; flex-shrink: 0; }
+    .player-btn:hover { background: rgba(255,255,255,0.2); }
+    .player-btn:active { transform: scale(0.92); }
+    .player-btn.play-btn { width: 40px; height: 40px; font-size: 17px; background: var(--accent-gold); color: #1a2d45; }
+    .player-btn.play-btn:hover { background: #dbb835; }
+    .player-btn:disabled { opacity: 0.35; cursor: default; }
+    .player-info { flex: 1; min-width: 0; }
+    .player-title { font-size: 12px; font-weight: 600; color: #f7f3ea; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .player-subtitle { font-size: 10px; color: rgba(247,243,234,0.6); margin-top: 1px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .player-counter { font-size: 10px; color: rgba(247,243,234,0.5); flex-shrink: 0; text-align: right; }
+    .player-bottom { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+    .player-progress { flex: 1; min-width: 80px; height: 4px; background: rgba(255,255,255,0.15); border-radius: 999px; overflow: hidden; }
+    .player-progress-fill { height: 100%; background: var(--accent-gold); border-radius: 999px; width: 0%; transition: width 0.4s linear; }
+    .player-speed-wrap { display: flex; align-items: center; gap: 4px; flex-shrink: 0; }
+    .player-speed-label { font-size: 10px; color: rgba(247,243,234,0.55); }
+    .player-speed { -webkit-appearance: none; appearance: none; width: 70px; height: 4px; border-radius: 999px; background: rgba(255,255,255,0.15); outline: none; cursor: pointer; }
+    .player-speed::-webkit-slider-thumb { -webkit-appearance: none; width: 12px; height: 12px; border-radius: 50%; background: var(--accent-gold); cursor: pointer; }
+    .player-speed-val { font-size: 10px; color: var(--accent-gold); min-width: 26px; text-align: right; }
+    .player-voice-wrap { display: flex; align-items: center; gap: 4px; flex-shrink: 0; }
+    .player-voice-label { font-size: 10px; color: rgba(247,243,184,0.55); }
+    .player-voice { font-size: 10px; padding: 2px 5px; border-radius: 6px; border: 1px solid rgba(148,163,184,0.35); background: rgba(15,23,42,0.5); color: #f7f3ea; cursor: pointer; max-width: 130px; }
+    @media print {
+      body { display: block !important; height: auto !important; overflow: visible !important; background: #fff !important; }
+      .sidebar, .header, .audio-player, .tags-overlay, .marcadores-overlay, .top-pager { display: none !important; }
+      .main { padding: 0 !important; overflow: visible !important; }
+      .reader-group { max-width: 100% !important; gap: 20px; }
+      .reader-card { box-shadow: none !important; border: 1px solid #ccc !important; border-radius: 0 !important; padding: 0 !important; }
+      .print-header { display: flex !important; align-items: center; gap: 14px; border-bottom: 2px solid #1f3147; padding-bottom: 10px; margin-bottom: 16px; }
+      .print-logo { width: 120px; height: auto; }
+      .print-org { font-size: 11px; color: #1f3147; line-height: 1.5; }
+      .print-org strong { font-size: 13px; display: block; }
+      .article-title { font-size: 18px !important; }
+      .article-body { font-size: 12px !important; line-height: 1.7 !important; }
+    }
+    .print-header { display: none; }
+    @media (max-width: 900px) {
+      body { display: flex; flex-direction: column; height: auto; min-height: 100vh; overflow-x: hidden; overflow-y: auto; }
+      .sidebar { order: 2; grid-row: unset; grid-column: unset; width: 100%; border-right: none; border-top: 1px solid rgba(148,163,184,0.4); max-height: 0; padding: 0 18px; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s ease; }
+      .sidebar.open { max-height: 420px; padding: 18px 18px 16px; overflow-y: auto; }
+      .header { order: 1; grid-row: unset; grid-column: unset; width: 100%; flex-wrap: wrap; padding: 8px 12px; }
+      .header-actions { gap: 4px; }
+      .header-btn { font-size: 10px; padding: 5px 8px; }
+      .main { order: 3; grid-row: unset; grid-column: unset; width: 100%; padding: 12px; padding-bottom: 130px; }
+      .audio-player { order: 4; grid-row: unset; grid-column: unset; width: 100%; position: fixed; bottom: 0; left: 0; right: 0; z-index: 100; padding: 8px 12px; }
+      .hamburger { display: inline-flex; align-items: center; }
+      .sidebar-logo { max-width: 160px; }
+      .reader-card { border-radius: 10px; padding: 14px 14px 16px; }
+      .article-title { font-size: 17px; }
+      .tags-panel, .marcadores-panel { margin: 56px 8px 0 8px; min-width: unset; max-width: calc(100vw - 16px); }
+    }
+    @media (max-width: 480px) {
+      .player-controls { justify-content: center; width: 100%; }
+      .player-info { width: 100%; order: -1; }
+      .player-counter { display: none; }
+      .player-top { justify-content: center; }
+    }
+  </style>
 </head>
-<body>
+<body data-json="codigo_rural_completo.json">
+  <aside class="sidebar" id="sidebar" aria-label="Índice del Código">
+    <header class="sidebar-header">
+      <a class="sidebar-logo-link" href="../../index.html" title="Ir al Hub de Códigos"><img class="sidebar-logo" src="../../logo.png" alt="JurisParaguay" onerror="this.style.display='none'" /></a>
+      <a class="back-link" href="../../index.html">&#8592; Volver al Hub de Códigos</a>
+      <div class="app-title" id="appTitle">Cargando…</div>
+      <div class="app-subtitle" id="appSubtitle"></div>
+      <div class="search-box">
+        <input class="search-input" type="search" id="searchInput" placeholder="Buscar por artículo o palabra clave…" autocomplete="off" />
+        <button class="search-clear" id="searchClear" type="button" title="Limpiar">✕</button>
+      </div>
+    </header>
+    <div class="search-results" id="searchResults" aria-live="polite"></div>
+    <div class="sidebar-scroll" id="sidebarTree">
+      <div class="tree-group-title">Estructura</div>
+      <div class="loading-state"><div class="spinner"></div> Cargando estructura…</div>
+    </div>
+  </aside>
 
-<!-- TOP BAR -->
-<header id="topbar">
-  <button id="hamburger" aria-label="Menú" onclick="toggleSidebar()">
-    <span></span><span></span><span></span>
-  </button>
-  <img src="../../logo.png" alt="JurisParaguay" onerror="this.style.display='none'"/>
-  <div class="titles">
-    <h1>Código Rural del Paraguay</h1>
-    <div class="sub">Ley N° 1248/1931 · República del Paraguay</div>
+  <div class="marcadores-overlay" id="marcadoresOverlay">
+    <div class="marcadores-panel" id="marcadoresPanel">
+      <div class="marcadores-panel-header">
+        <span class="marcadores-panel-title">🔖 Marcadores</span>
+        <button class="marcadores-close" id="marcadoresClose" type="button">✕</button>
+      </div>
+      <div class="marcadores-list" id="marcadoresList"></div>
+    </div>
   </div>
-  <a href="../../index.html" class="back-link" id="back-link">← Volver al Hub</a>
-</header>
 
-<div id="overlay" onclick="toggleSidebar()"></div>
-
-<!-- LAYOUT -->
-<div id="layout">
-
-  <!-- SIDEBAR -->
-  <nav id="sidebar" aria-label="Índice">
-    <div id="search-wrap">
-      <input id="search-input" type="search" placeholder="🔍 Buscar artículos…" autocomplete="off" aria-label="Buscar"/>
-      <div id="search-count"></div>
+  <div class="tags-overlay" id="tagsOverlay">
+    <div class="tags-panel" id="tagsPanel">
+      <div class="tags-panel-header"><span class="tags-panel-title">🏷️ Palabras clave</span><button class="tags-close" id="tagsClose" type="button">✕</button></div>
+      <div class="tags-art-title" id="tagsArtTitle"></div>
+      <div class="tags-list" id="tagsList"></div>
     </div>
-    <div id="index-tree" role="tree"></div>
-    <div id="tags-panel">
-      <h4>🏷 Palabras Clave</h4>
-      <div id="tags-container"></div>
-    </div>
-  </nav>
+  </div>
 
-  <!-- MAIN CONTENT -->
-  <main id="main" role="main">
-    <div id="loading"><div class="spinner"></div>Cargando Código Rural…</div>
-    <div id="results-banner" role="status">
-      <span id="results-text"></span>
-      <button onclick="clearSearch()">✕ Limpiar búsqueda</button>
+  <header class="header">
+    <div style="display:flex;align-items:center;gap:10px;min-width:0;flex:1;">
+      <button class="hamburger" id="hamburger" type="button" aria-label="Mostrar/ocultar índice">☰</button>
+      <div class="breadcrumbs" id="breadcrumbs"><a href="../../index.html">🏠 Inicio</a> › <span id="breadcrumbArticulo">Seleccioná un artículo del índice</span></div>
     </div>
-    <div id="articles-container"></div>
+    <div class="header-actions">
+      <button class="header-btn" id="btnMarcadores" type="button">🔖 Marcadores</button>
+      <button class="header-btn" id="btnResaltador" type="button">🖊️ Resaltador</button>
+      <button class="header-btn" id="btnTags" type="button">🏷️ Tags</button>
+      <button class="header-btn" id="btnPDF" type="button">📄 PDF</button>
+      <button class="header-btn pwa-btn" id="btnInstall" type="button">📱 Instalar</button>
+      <div class="copy-menu-wrap">
+        <button class="header-btn" id="btnCopyText" type="button" aria-haspopup="true" aria-expanded="false">Copiar texto ▾</button>
+        <div class="copy-menu" id="copyMenu" role="menu"></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main" id="mainArea">
+    <div class="top-pager" id="topPager">
+      <button id="btnPrev" type="button" disabled>← Art. anterior</button>
+      <button id="btnNext" type="button" disabled>Art. siguiente →</button>
+    </div>
+    <div class="reader-group" id="readerGroup">
+      <div class="reader-card card-primary">
+        <div class="print-header">
+          <img class="print-logo" src="../../logo.png" alt="JurisParaguay" onerror="this.style.display='none'" />
+          <div class="print-org"><strong id="printOrgName">JurisParaguay</strong><span id="printOrgLaw"></span><br>Fuente: CSJ – IIJ, edición digital · JurisParaguay 2026</div>
+        </div>
+        <header class="article-header">
+          <div class="article-number">—</div>
+          <h1 class="article-title" id="mainTitle">Cargando código…</h1>
+          <p class="article-subtitle">Seleccioná un capítulo del índice lateral para comenzar.</p>
+        </header>
+        <div class="article-body"><div class="loading-state"><div class="spinner"></div> Cargando datos…</div></div>
+        <footer class="article-footer"><div>Fuente: CSJ – IIJ, edición digital · JurisParaguay 2026</div></footer>
+      </div>
+    </div>
   </main>
-</div>
 
-<!-- PAGINATOR -->
-<nav id="paginator" aria-label="Paginación">
-  <button class="pag-btn" id="btn-prev" onclick="navigate(-1)" disabled>← Art. anterior</button>
-  <span id="pag-info">–</span>
-  <button class="pag-btn" id="btn-next" onclick="navigate(1)">Art. siguiente →</button>
-</nav>
+  <div class="audio-player" id="audioPlayer" aria-label="Reproductor de lectura">
+    <div class="player-top">
+      <div class="player-controls">
+        <button class="player-btn" id="playerSkipBack" title="-5 artículos" disabled>⏮</button>
+        <button class="player-btn" id="playerPrev" title="Artículo anterior" disabled>⏪</button>
+        <button class="player-btn play-btn" id="playerPlay" title="Reproducir / Pausar">▶</button>
+        <button class="player-btn" id="playerNext" title="Artículo siguiente" disabled>⏩</button>
+        <button class="player-btn" id="playerSkipFwd" title="+5 artículos" disabled>⏭</button>
+        <button class="player-btn" id="playerStop" title="Detener" disabled>⏹</button>
+      </div>
+      <div class="player-info">
+        <div class="player-title" id="playerTitle">Sin reproducción activa</div>
+        <div class="player-subtitle" id="playerSubtitle">Presioná ▶ para comenzar</div>
+      </div>
+      <div class="player-counter" id="playerCounter"></div>
+    </div>
+    <div class="player-bottom">
+      <div class="player-progress"><div class="player-progress-fill" id="playerProgressFill"></div></div>
+      <div class="player-speed-wrap">
+        <span class="player-speed-label">Vel.</span>
+        <input class="player-speed" type="range" id="playerSpeed" min="0.5" max="2" step="0.1" value="1" />
+        <span class="player-speed-val" id="playerSpeedVal">1×</span>
+      </div>
+      <div class="player-voice-wrap">
+        <span class="player-voice-label">Voz</span>
+        <select class="player-voice" id="playerVoice"></select>
+      </div>
+    </div>
+  </div>
 
-<!-- TTS PLAYER -->
-<div id="tts-player" role="region" aria-label="Reproductor de voz">
-  <span class="tts-label">🔊 TTS</span>
-  <button class="tts-btn" id="btn-play" onclick="ttsPlay()" title="Reproducir">▶</button>
-  <button class="tts-btn" id="btn-pause" onclick="ttsPause()" title="Pausar">⏸</button>
-  <button class="tts-btn" onclick="ttsStop()" title="Detener">⏹</button>
-  <button class="tts-btn" onclick="ttsSkip(-5)" title="Retroceder 5">«−5</button>
-  <button class="tts-btn" onclick="ttsSkip(5)" title="Avanzar 5">+5»</button>
-  <span id="tts-title">—</span>
-  <label for="tts-speed" style="color:#aec6e8;font-size:.75rem">Vel:</label>
-  <select id="tts-speed" onchange="ttsUpdateRate()">
-    <option value="0.7">0.7×</option>
-    <option value="0.85">0.85×</option>
-    <option value="1" selected>1×</option>
-    <option value="1.2">1.2×</option>
-    <option value="1.5">1.5×</option>
-  </select>
-  <label for="tts-voice" style="color:#aec6e8;font-size:.75rem">Voz:</label>
-  <select id="tts-voice"></select>
-</div>
+  <script>
+    const JSON_FILE = document.body.dataset.json || 'codigo_completo.json';
+    const jsonUrl   = new URL(JSON_FILE, window.location.href).href;
+    const CARDS_PER_PAGE = 3;
+    let DATA = null, FLAT = [], currentIdx = 0;
+    let ttsPlaying = false, ttsPaused = false, ttsStartIdx = 0, ttsReadIdx = 0;
+    let voices = [], deferredInstallPrompt = null;
+    let resaltadorActivo = false;
 
-<footer>CSJ – IIJ, edición digital · JurisParaguay 2026</footer>
+    const sidebar            = document.getElementById('sidebar');
+    const hamburger          = document.getElementById('hamburger');
+    const sidebarTree        = document.getElementById('sidebarTree');
+    const searchInput        = document.getElementById('searchInput');
+    const searchClear        = document.getElementById('searchClear');
+    const searchResults      = document.getElementById('searchResults');
+    const breadcrumbArticulo = document.getElementById('breadcrumbArticulo');
+    const readerGroup        = document.getElementById('readerGroup');
+    const btnCopyText        = document.getElementById('btnCopyText');
+    const copyMenu           = document.getElementById('copyMenu');
+    const btnTags            = document.getElementById('btnTags');
+    const btnPDF             = document.getElementById('btnPDF');
+    const btnInstall         = document.getElementById('btnInstall');
+    const btnPrev            = document.getElementById('btnPrev');
+    const btnNext            = document.getElementById('btnNext');
+    const btnMarcadores      = document.getElementById('btnMarcadores');
+    const btnResaltador      = document.getElementById('btnResaltador');
+    const marcadoresOverlay  = document.getElementById('marcadoresOverlay');
+    const marcadoresList     = document.getElementById('marcadoresList');
+    const marcadoresClose    = document.getElementById('marcadoresClose');
+    const tagsOverlay        = document.getElementById('tagsOverlay');
+    const tagsList           = document.getElementById('tagsList');
+    const tagsArtTitle       = document.getElementById('tagsArtTitle');
+    const tagsClose          = document.getElementById('tagsClose');
+    const playerPlay         = document.getElementById('playerPlay');
+    const playerStop         = document.getElementById('playerStop');
+    const playerPrev         = document.getElementById('playerPrev');
+    const playerNext         = document.getElementById('playerNext');
+    const playerSkipBack     = document.getElementById('playerSkipBack');
+    const playerSkipFwd      = document.getElementById('playerSkipFwd');
+    const playerTitle        = document.getElementById('playerTitle');
+    const playerSubtitle     = document.getElementById('playerSubtitle');
+    const playerCounter      = document.getElementById('playerCounter');
+    const playerProgressFill = document.getElementById('playerProgressFill');
+    const playerSpeed        = document.getElementById('playerSpeed');
+    const playerSpeedVal     = document.getElementById('playerSpeedVal');
+    const playerVoice        = document.getElementById('playerVoice');
 
-<script>
-// ─── STATE ────────────────────────────────────────────────────────────────────
-let allArticles = [];   // flat list
-let filtered = [];      // current displayed
-let currentIdx = 0;     // index in filtered
-let query = '';
-let activeTag = '';
-let ttsUtterance = null;
-let ttsIdx = 0;         // index in allArticles for TTS
+    if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});
+    window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); deferredInstallPrompt = e; btnInstall.classList.add('visible'); });
+    window.addEventListener('appinstalled', () => { btnInstall.classList.remove('visible'); deferredInstallPrompt = null; });
+    btnInstall.addEventListener('click', async () => { if (!deferredInstallPrompt) return; deferredInstallPrompt.prompt(); const { outcome } = await deferredInstallPrompt.userChoice; if (outcome === 'accepted') btnInstall.classList.remove('visible'); deferredInstallPrompt = null; });
+    btnPDF.addEventListener('click', () => window.print());
+    btnTags.addEventListener('click', openTagsPanel);
+    btnPrev.addEventListener('click', () => showArticleByIdx(currentIdx - CARDS_PER_PAGE));
+    btnNext.addEventListener('click', () => showArticleByIdx(currentIdx + CARDS_PER_PAGE));
+    tagsClose.addEventListener('click', () => tagsOverlay.classList.remove('open'));
+    tagsOverlay.addEventListener('click', e => { if (e.target === tagsOverlay) tagsOverlay.classList.remove('open'); });
+    hamburger.addEventListener('click', () => sidebar.classList.toggle('open'));
+    marcadoresClose.addEventListener('click', () => marcadoresOverlay.classList.remove('open'));
+    marcadoresOverlay.addEventListener('click', e => { if (e.target === marcadoresOverlay) marcadoresOverlay.classList.remove('open'); });
 
-// ─── LOAD DATA ────────────────────────────────────────────────────────────────
-async function init() {
-  try {
-    const res = await fetch('codigo_rural_completo.json');
-    if (!res.ok) throw new Error('HTTP ' + res.status);
-    const data = await res.json();
-    parseData(data);
-    document.getElementById('loading').style.display = 'none';
-    buildIndex(data);
-    buildTags();
-    renderArticles(allArticles);
-    loadVoices();
-    handleDeepLink();
-    restorePosition();
-  } catch(e) {
-    document.getElementById('loading').innerHTML =
-      `<p style="color:#c0392b">⚠ Error cargando datos: ${e.message}</p>
-       <p style="color:#888;font-size:.85rem;margin-top:8px">Asegúrese de que código_rural_completo.json esté en la misma carpeta.</p>`;
-  }
-}
+    function marcadoresKey() { return 'marcadores_' + (DATA && DATA.ley ? DATA.ley : window.location.pathname); }
+    function getMarcadores() { try { return JSON.parse(localStorage.getItem(marcadoresKey()) || '[]'); } catch(e) { return []; } }
+    function saveMarcadores(arr) { try { localStorage.setItem(marcadoresKey(), JSON.stringify(arr)); } catch(e) {} }
+    function isMarked(artNum) { return getMarcadores().some(m => m.num === artNum); }
+    function toggleMarcador(artNum) {
+      const arr = getMarcadores();
+      const idx = arr.findIndex(m => m.num === artNum);
+      if (idx === -1) {
+        if (!FLAT.length) return;
+        const entry = FLAT.find(e => e.articulo.numero === artNum);
+        if (!entry) return;
+        arr.push({ num: artNum, epig: entry.articulo.epigrafe || '' });
+      } else { arr.splice(idx, 1); }
+      saveMarcadores(arr);
+      updateMarcadorBtn(artNum);
+    }
+    function updateMarcadorBtn(artNum) {
+      const footers = readerGroup.querySelectorAll('.article-footer');
+      footers.forEach(footer => {
+        const card = footer.closest('[data-art-num]');
+        if (!card) return;
+        const num = parseInt(card.dataset.artNum, 10);
+        if (num !== artNum) return;
+        const btn = footer.querySelector('.btn-marcar');
+        if (btn) btn.textContent = isMarked(artNum) ? '🔖 Guardado' : '🔖 Marcar';
+      });
+    }
+    function renderMarcadoresPanel() {
+      const arr = getMarcadores();
+      marcadoresList.innerHTML = '';
+      if (!arr.length) { marcadoresList.innerHTML = '<div class="marcadores-empty">Aún no guardaste ningún artículo.<br><small>Usá el botón 🔖 Marcar al pie de cada artículo.</small></div>'; return; }
+      arr.forEach(m => {
+        const item = document.createElement('div'); item.className = 'marcador-item';
+        const info = document.createElement('div'); info.className = 'marcador-info';
+        info.innerHTML = `<div class="marcador-num">Art. ${m.num}</div><div class="marcador-epig">${m.epig || '(sin epígrafe)'}</div>`;
+        info.addEventListener('click', () => {
+          const found = FLAT.findIndex(e => e.articulo.numero === m.num);
+          if (found !== -1) { showArticleByIdx(found); marcadoresOverlay.classList.remove('open'); }
+        });
+        const del = document.createElement('button'); del.className = 'marcador-del'; del.title = 'Quitar marcador'; del.textContent = '✕';
+        del.addEventListener('click', e => { e.stopPropagation(); toggleMarcador(m.num); renderMarcadoresPanel(); });
+        item.appendChild(info); item.appendChild(del);
+        marcadoresList.appendChild(item);
+      });
+    }
+    btnMarcadores.addEventListener('click', () => { renderMarcadoresPanel(); marcadoresOverlay.classList.add('open'); });
 
-function parseData(data) {
-  allArticles = [];
-  const libros = data.libros || [data];
-  libros.forEach(libro => {
-    const titulos = libro.titulos || [];
-    titulos.forEach(titulo => {
-      const caps = titulo.capitulos || [{ capitulo: '', articulos: titulo.articulos || [] }];
-      caps.forEach(cap => {
-        (cap.articulos || []).forEach(art => {
-          allArticles.push({
-            ...art,
-            _libro: libro.libro || libro.nombre || '',
-            _libroNum: libro.numero || '',
-            _titulo: titulo.titulo || titulo.nombre || '',
-            _tituloNum: titulo.numero || '',
-            _capitulo: cap.capitulo || cap.nombre || '',
-            _capituloNum: cap.numero || '',
+    function resaltadoresKey() { return 'resaltados_' + (DATA && DATA.ley ? DATA.ley : window.location.pathname); }
+    function getResaltados() { try { return JSON.parse(localStorage.getItem(resaltadoresKey()) || '{}'); } catch(e) { return {}; } }
+    function saveResaltados(obj) { try { localStorage.setItem(resaltadoresKey(), JSON.stringify(obj)); } catch(e) {} }
+    function applyResaltados(artNum, bodyEl) {
+      const all = getResaltados();
+      const items = all[artNum] || [];
+      if (!items.length) return;
+      const paragraphs = Array.from(bodyEl.querySelectorAll('p'));
+      items.forEach(item => {
+        const isLegacy = typeof item === 'string';
+        const txt = isLegacy ? item : item.text;
+        if (!txt) return;
+        const re = new RegExp(txt.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'), 'g');
+        if (!isLegacy && paragraphs[item.pIndex]) {
+          const p = paragraphs[item.pIndex];
+          if (p.textContent.includes(txt)) {
+            p.innerHTML = p.innerHTML.replace(re, `<mark class="text-highlight" data-hl="${encodeURIComponent(txt)}">${txt}</mark>`);
+          }
+        } else {
+          paragraphs.forEach(p => {
+            if (!p.textContent.includes(txt)) return;
+            p.innerHTML = p.innerHTML.replace(re, `<mark class="text-highlight" data-hl="${encodeURIComponent(txt)}">${txt}</mark>`);
           });
+        }
+      });
+      bodyEl.querySelectorAll('.text-highlight').forEach(el => {
+        el.addEventListener('click', e => {
+          e.stopPropagation();
+          const t = decodeURIComponent(el.dataset.hl);
+          const all2 = getResaltados();
+          if (all2[artNum]) {
+            all2[artNum] = all2[artNum].filter(x => (typeof x === 'string' ? x !== t : x.text !== t));
+            if (!all2[artNum].length) delete all2[artNum];
+          }
+          saveResaltados(all2);
+          reRenderBody(artNum);
         });
       });
+    }
+    function reRenderBody(artNum) {
+      const card = readerGroup.querySelector(`[data-art-num="${artNum}"]`);
+      if (!card) return;
+      const entry = FLAT.find(e => e.articulo.numero === artNum);
+      if (!entry) return;
+      const bodyEl = card.querySelector('.article-body');
+      if (!bodyEl) return;
+      const textos = entry.articulo.texto || [];
+      bodyEl.innerHTML = textos.length ? textos.map(p => `<p>${p}</p>`).join('') : `<div class="article-empty"><div class="article-empty-icon">📄</div><p>El texto de este artículo aún no ha sido cargado en el JSON.</p></div>`;
+      applyResaltados(artNum, bodyEl);
+    }
+    btnResaltador.addEventListener('click', () => {
+      resaltadorActivo = !resaltadorActivo;
+      btnResaltador.classList.toggle('active-tool', resaltadorActivo);
+      btnResaltador.textContent = resaltadorActivo ? '🖊️ Resaltando…' : '🖊️ Resaltador';
+      document.body.style.cursor = resaltadorActivo ? 'text' : '';
     });
-  });
-  // Fallback: flat articulos
-  if (allArticles.length === 0 && data.articulos) {
-    allArticles = data.articulos.map(a => ({ ...a, _libro:'', _titulo:'', _capitulo:'' }));
-  }
-}
-
-// ─── INDEX TREE ───────────────────────────────────────────────────────────────
-function buildIndex(data) {
-  const tree = document.getElementById('index-tree');
-  tree.innerHTML = '';
-  const libros = data.libros || [data];
-  libros.forEach((libro, li) => {
-    const libroDiv = document.createElement('div');
-    libroDiv.className = 'tree-libro';
-    libroDiv.textContent = (libro.libro || libro.nombre || 'Libro') + (libro.numero ? ' ' + libro.numero : '');
-    const childrenDiv = document.createElement('div');
-    childrenDiv.className = 'tree-children';
-    libroDiv.onclick = () => childrenDiv.classList.toggle('collapsed');
-
-    (libro.titulos || []).forEach((titulo, ti) => {
-      const tDiv = document.createElement('div');
-      const tArts = getTituloArts(titulo);
-      const range = tArts.length ? ` <span class="tree-range">[${tArts[0].numero}–${tArts[tArts.length-1].numero}]</span>` : '';
-      tDiv.className = 'tree-titulo';
-      tDiv.innerHTML = (titulo.titulo || titulo.nombre || 'Título') + range;
-      const tChildren = document.createElement('div');
-      tChildren.className = 'tree-children collapsed';
-      tDiv.onclick = (e) => {
-        e.stopPropagation();
-        tChildren.classList.toggle('collapsed');
-        filterBySection({ libro: libro.libro || libro.nombre, titulo: titulo.titulo || titulo.nombre });
-        setActiveTree(tDiv);
-      };
-
-      (titulo.capitulos || []).forEach(cap => {
-        const cDiv = document.createElement('div');
-        const cArts = cap.articulos || [];
-        const cRange = cArts.length ? ` <span class="tree-range">[${cArts[0].numero}–${cArts[cArts.length-1].numero}]</span>` : '';
-        cDiv.className = 'tree-capitulo';
-        cDiv.innerHTML = (cap.capitulo || cap.nombre || 'Capítulo') + cRange;
-        cDiv.onclick = (e) => {
-          e.stopPropagation();
-          filterBySection({ libro: libro.libro || libro.nombre, titulo: titulo.titulo || titulo.nombre, capitulo: cap.capitulo || cap.nombre });
-          setActiveTree(cDiv);
-        };
-        tChildren.appendChild(cDiv);
+    document.addEventListener('mouseup', () => {
+      if (!resaltadorActivo) return;
+      const sel = window.getSelection();
+      if (!sel || sel.isCollapsed || sel.rangeCount === 0) return;
+      const range = sel.getRangeAt(0);
+      const startEl = range.startContainer.nodeType === 1 ? range.startContainer : range.startContainer.parentElement;
+      const card = startEl ? startEl.closest('[data-art-num]') : null;
+      if (!card) { sel.removeAllRanges(); return; }
+      const artNum = parseInt(card.dataset.artNum, 10);
+      const bodyEl = card.querySelector('.article-body');
+      if (!bodyEl) { sel.removeAllRanges(); return; }
+      const paragraphs = Array.from(bodyEl.querySelectorAll('p'));
+      const nuevos = [];
+      paragraphs.forEach((p, pIndex) => {
+        if (!range.intersectsNode(p)) return;
+        const pRange = document.createRange();
+        pRange.selectNodeContents(p);
+        if (range.compareBoundaryPoints(Range.START_TO_START, pRange) > 0) pRange.setStart(range.startContainer, range.startOffset);
+        if (range.compareBoundaryPoints(Range.END_TO_END, pRange) < 0) pRange.setEnd(range.endContainer, range.endOffset);
+        const txt = pRange.toString().trim();
+        if (txt && txt.length >= 2) nuevos.push({ pIndex, text: txt });
       });
-      childrenDiv.appendChild(tDiv);
-      if (titulo.capitulos?.length) childrenDiv.appendChild(tChildren);
+      sel.removeAllRanges();
+      if (!nuevos.length) return;
+      const all = getResaltados();
+      if (!all[artNum]) all[artNum] = [];
+      nuevos.forEach(n => {
+        const yaExiste = all[artNum].some(x => typeof x !== 'string' && x.pIndex === n.pIndex && x.text === n.text);
+        if (!yaExiste) all[artNum].push(n);
+      });
+      saveResaltados(all);
+      reRenderBody(artNum);
     });
-    tree.appendChild(libroDiv);
-    tree.appendChild(childrenDiv);
-  });
-}
 
-function getTituloArts(titulo) {
-  const arts = [];
-  (titulo.capitulos || []).forEach(c => arts.push(...(c.articulos||[])));
-  if (titulo.articulos) arts.push(...titulo.articulos);
-  return arts;
-}
-
-function setActiveTree(el) {
-  document.querySelectorAll('.tree-titulo.active, .tree-capitulo.active').forEach(e => e.classList.remove('active'));
-  el.classList.add('active');
-}
-
-// ─── TAGS ─────────────────────────────────────────────────────────────────────
-function buildTags() {
-  const tagMap = {};
-  allArticles.forEach(a => (a.palabrasClave||[]).forEach(t => tagMap[t] = (tagMap[t]||0)+1));
-  const sorted = Object.entries(tagMap).sort((a,b) => b[1]-a[1]).slice(0, 60);
-  const c = document.getElementById('tags-container');
-  c.innerHTML = '';
-  sorted.forEach(([tag, cnt]) => {
-    const chip = document.createElement('span');
-    chip.className = 'tag-chip';
-    chip.title = cnt + ' artículos';
-    chip.textContent = tag;
-    chip.onclick = () => toggleTag(tag, chip);
-    c.appendChild(chip);
-  });
-}
-
-function toggleTag(tag, chip) {
-  if (activeTag === tag) {
-    activeTag = '';
-    chip.classList.remove('active');
-    applyFilters();
-  } else {
-    activeTag = tag;
-    document.querySelectorAll('.tag-chip.active').forEach(e => e.classList.remove('active'));
-    chip.classList.add('active');
-    applyFilters();
-  }
-}
-
-// ─── SEARCH ───────────────────────────────────────────────────────────────────
-document.getElementById('search-input').addEventListener('input', e => {
-  query = e.target.value.trim();
-  activeTag = '';
-  document.querySelectorAll('.tag-chip.active').forEach(c => c.classList.remove('active'));
-  applyFilters();
-});
-
-function applyFilters() {
-  const q = query.toLowerCase();
-  filtered = allArticles.filter(a => {
-    const tagMatch = !activeTag || (a.palabrasClave||[]).includes(activeTag);
-    if (!tagMatch) return false;
-    if (!q) return true;
-    const numMatch = String(a.numero).includes(q);
-    const epigMatch = (a.epigrafe||'').toLowerCase().includes(q);
-    const textMatch = (a.texto||[]).join(' ').toLowerCase().includes(q);
-    const kwMatch = (a.palabrasClave||[]).join(' ').toLowerCase().includes(q);
-    return numMatch || epigMatch || textMatch || kwMatch;
-  });
-  const cnt = document.getElementById('search-count');
-  const banner = document.getElementById('results-banner');
-  const txt = document.getElementById('results-text');
-  if (q || activeTag) {
-    cnt.textContent = filtered.length + ' resultado(s)';
-    banner.style.display = 'block';
-    txt.textContent = filtered.length + ' artículo(s) encontrado(s)' + (q ? ` para "${q}"` : '') + (activeTag ? ` · tag: ${activeTag}` : '');
-  } else {
-    cnt.textContent = '';
-    banner.style.display = 'none';
-    filtered = [...allArticles];
-  }
-  currentIdx = 0;
-  renderArticles(filtered);
-}
-
-function clearSearch() {
-  query = '';
-  activeTag = '';
-  document.getElementById('search-input').value = '';
-  document.querySelectorAll('.tag-chip.active').forEach(c => c.classList.remove('active'));
-  filtered = [...allArticles];
-  document.getElementById('results-banner').style.display = 'none';
-  document.getElementById('search-count').textContent = '';
-  currentIdx = 0;
-  renderArticles(filtered);
-}
-
-function filterBySection({ libro, titulo, capitulo }) {
-  filtered = allArticles.filter(a => {
-    if (libro && a._libro !== libro) return false;
-    if (titulo && a._titulo !== titulo) return false;
-    if (capitulo && a._capitulo !== capitulo) return false;
-    return true;
-  });
-  currentIdx = 0;
-  renderArticles(filtered);
-  if (window.innerWidth <= 768) toggleSidebar();
-}
-
-// ─── RENDER ───────────────────────────────────────────────────────────────────
-function renderArticles(arts) {
-  const container = document.getElementById('articles-container');
-  const q = query.toLowerCase();
-  container.innerHTML = '';
-
-  if (arts.length === 0) {
-    container.innerHTML = '<p style="color:#888;text-align:center;padding:40px">No se encontraron artículos.</p>';
-    updatePaginator();
-    return;
-  }
-
-  arts.forEach((art, idx) => {
-    const card = document.createElement('article');
-    card.className = 'art-card' + (idx === currentIdx ? ' current' : '');
-    card.id = 'art-' + art.numero;
-    card.setAttribute('data-idx', idx);
-
-    const paragraphs = (art.texto || []).map(p => {
-      let t = escHtml(p);
-      if (q) t = highlight(t, q);
-      return `<p>${t}</p>`;
-    }).join('');
-
-    const tags = (art.palabrasClave||[]).map(t =>
-      `<span class="art-tag" onclick="tagSearch('${escAttr(t)}')">${escHtml(t)}</span>`
-    ).join('');
-
-    let epig = escHtml(art.epigrafe || '');
-    if (q && epig) epig = highlight(epig, q);
-
-    card.innerHTML = `
-      <div class="art-header">
-        <span class="art-num">Art. ${art.numero}</span>
-        <span class="art-epigrafe">${epig}</span>
-        <div class="art-actions">
-          <button class="btn-sm" onclick="copyArt(${idx})" title="Copiar">📋 Copiar</button>
-          <button class="btn-sm" onclick="ttsReadFrom(${allArticles.indexOf(art)})" title="Leer desde aquí">🔊 Leer</button>
-          <button class="btn-sm" onclick="exportPDF(${idx})" title="Exportar PDF">📄 PDF</button>
-        </div>
-      </div>
-      <div class="art-body">${paragraphs}</div>
-      ${tags ? `<div class="art-tags">${tags}</div>` : ''}
-    `;
-    container.appendChild(card);
-  });
-
-  updatePaginator();
-  scrollToCurrent();
-}
-
-function highlight(text, q) {
-  if (!q) return text;
-  const re = new RegExp('(' + q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
-  return text.replace(re, '<mark>$1</mark>');
-}
-
-function escHtml(s) {
-  return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-}
-function escAttr(s) { return String(s||'').replace(/'/g,"\\'"); }
-
-function tagSearch(tag) {
-  activeTag = tag;
-  query = '';
-  document.getElementById('search-input').value = '';
-  document.querySelectorAll('.tag-chip').forEach(c => {
-    c.classList.toggle('active', c.textContent === tag);
-  });
-  applyFilters();
-}
-
-// ─── PAGINATION ───────────────────────────────────────────────────────────────
-function navigate(dir) {
-  const next = currentIdx + dir;
-  if (next < 0 || next >= filtered.length) return;
-  currentIdx = next;
-  document.querySelectorAll('.art-card.current').forEach(c => c.classList.remove('current'));
-  const card = document.querySelector(`[data-idx="${currentIdx}"]`);
-  if (card) { card.classList.add('current'); card.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
-  updatePaginator();
-  savePosition();
-}
-
-function updatePaginator() {
-  const info = document.getElementById('pag-info');
-  const prev = document.getElementById('btn-prev');
-  const next = document.getElementById('btn-next');
-  if (!filtered.length) { info.textContent = '—'; prev.disabled = true; next.disabled = true; return; }
-  const art = filtered[currentIdx];
-  info.textContent = `Art. ${art.numero} (${currentIdx+1} / ${filtered.length})`;
-  prev.disabled = currentIdx === 0;
-  next.disabled = currentIdx === filtered.length - 1;
-}
-
-function scrollToCurrent() {
-  const card = document.querySelector('.art-card.current');
-  if (card) card.scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
-
-// ─── DEEP LINK & PERSISTENCE ─────────────────────────────────────────────────
-function handleDeepLink() {
-  const hash = window.location.hash;
-  if (hash && hash.startsWith('#art-')) {
-    const num = hash.slice(5);
-    const idx = allArticles.findIndex(a => String(a.numero) === num);
-    if (idx >= 0) { filtered = [...allArticles]; currentIdx = idx; renderArticles(filtered); return; }
-  }
-}
-
-function savePosition() {
-  if (!filtered.length) return;
-  localStorage.setItem('cr_lastIdx', String(allArticles.indexOf(filtered[currentIdx])));
-}
-
-function restorePosition() {
-  const saved = localStorage.getItem('cr_lastIdx');
-  if (saved === null) return;
-  const idx = parseInt(saved, 10);
-  if (isNaN(idx) || idx < 0 || idx >= allArticles.length) return;
-  if (!window.location.hash) {
-    currentIdx = filtered.indexOf(allArticles[idx]);
-    if (currentIdx < 0) currentIdx = 0;
-    renderArticles(filtered);
-  }
-}
-
-window.addEventListener('hashchange', () => {
-  const hash = window.location.hash;
-  if (hash.startsWith('#art-')) {
-    const num = hash.slice(5);
-    const idx = filtered.findIndex(a => String(a.numero) === num);
-    if (idx >= 0) { currentIdx = idx; updatePaginator(); scrollToCurrent(); }
-  }
-});
-
-// ─── COPY ─────────────────────────────────────────────────────────────────────
-async function copyArt(idx) {
-  const art = filtered[idx];
-  const text = `Art. ${art.numero}${art.epigrafe ? ' – ' + art.epigrafe : ''}\n\n` +
-    (art.texto||[]).join('\n\n') + '\n\nFuente: Código Rural del Paraguay – JurisParaguay 2026';
-  try {
-    await navigator.clipboard.writeText(text);
-    showToast('✔ Copiado al portapapeles');
-  } catch { showToast('No se pudo copiar', true); }
-}
-
-function showToast(msg, err=false) {
-  const t = document.createElement('div');
-  t.style.cssText = `position:fixed;bottom:${parseInt(getComputedStyle(document.documentElement).getPropertyValue('--player-h'))+16}px;left:50%;transform:translateX(-50%);background:${err?'#c0392b':'#27ae60'};color:#fff;padding:8px 20px;border-radius:20px;font-size:.85rem;z-index:9999;pointer-events:none;`;
-  t.textContent = msg;
-  document.body.appendChild(t);
-  setTimeout(() => t.remove(), 2500);
-}
-
-// ─── PDF ──────────────────────────────────────────────────────────────────────
-function exportPDF(idx) {
-  const art = filtered[idx];
-  const w = window.open('', '_blank');
-  const paragraphs = (art.texto||[]).map(p => `<p style="margin:.5em 0;text-align:justify;line-height:1.7;">${escHtml(p)}</p>`).join('');
-  w.document.write(`<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"/>
-  <title>Art. ${art.numero} – Código Rural</title>
-  <style>body{font-family:Georgia,serif;max-width:700px;margin:40px auto;padding:0 30px;color:#1a1a1a;}
-  h1{font-size:1rem;color:#1f3147;border-bottom:2px solid #c9a227;padding-bottom:6px;margin-bottom:4px;}
-  h2{font-size:.9rem;color:#34557f;margin-bottom:14px;}
-  .meta{font-size:.75rem;color:#888;margin-bottom:18px;}
-  .epi{font-style:italic;color:#555;margin-bottom:10px;}
-  footer{margin-top:30px;font-size:.72rem;color:#999;border-top:1px solid #ddd;padding-top:8px;text-align:center;}
-  @media print{body{margin:0 20px;}}</style>
-  </head><body>
-  <h1>Código Rural del Paraguay</h1>
-  <h2>Artículo ${art.numero}${art.epigrafe ? ' – ' + escHtml(art.epigrafe) : ''}</h2>
-  <div class="meta">Ley N° 1248/1931 · República del Paraguay · JurisParaguay 2026</div>
-  ${art.epigrafe ? `<div class="epi">${escHtml(art.epigrafe)}</div>` : ''}
-  ${paragraphs}
-  <footer>CSJ – IIJ, edición digital · JurisParaguay 2026 · Artículo ${art.numero}</footer>
-  <script>window.onload=()=>{window.print();}<\/script>
-  </body></html>`);
-  w.document.close();
-}
-
-// ─── TTS ──────────────────────────────────────────────────────────────────────
-let ttsVoices = [];
-let ttsCurrentArt = 0;
-let ttsActive = false;
-
-function loadVoices() {
-  const populate = () => {
-    ttsVoices = window.speechSynthesis.getVoices().filter(v => v.lang.startsWith('es'));
-    if (!ttsVoices.length) ttsVoices = window.speechSynthesis.getVoices();
-    const sel = document.getElementById('tts-voice');
-    sel.innerHTML = '';
-    ttsVoices.forEach((v, i) => {
-      const o = document.createElement('option');
-      o.value = i; o.textContent = v.name.substring(0, 28);
-      sel.appendChild(o);
+    function codeFullTitle() { return DATA && DATA.codigo ? DATA.codigo + (DATA.pais ? ` del ${DATA.pais}` : ' del Paraguay') : 'Código — JurisParaguay'; }
+    function codeSubtitle()  { return DATA && DATA.ley ? `Ley N° ${DATA.ley} · República del ${DATA.pais || 'Paraguay'}` : 'República del Paraguay'; }
+    function applyMeta() {
+      if (!DATA) return;
+      document.title = `${DATA.codigo || 'Código'} — JurisParaguay`;
+      const g = id => document.getElementById(id);
+      if (g('appTitle'))    g('appTitle').textContent    = DATA.codigo || codeFullTitle();
+      if (g('appSubtitle')) g('appSubtitle').textContent = codeSubtitle();
+      if (g('printOrgName'))g('printOrgName').textContent= codeFullTitle();
+      if (g('printOrgLaw')) g('printOrgLaw').textContent = codeSubtitle();
+      if (g('mainTitle'))   g('mainTitle').textContent   = codeFullTitle();
+      document.querySelector('aside[aria-label]')?.setAttribute('aria-label', `Índice — ${DATA.codigo || codeFullTitle()}`);
+    }
+    function openTagsPanel() {
+      if (!FLAT.length) return;
+      const { articulo } = FLAT[currentIdx];
+      const tags = articulo.palabrasClave || [];
+      tagsArtTitle.textContent = `Art. ${articulo.numero}${articulo.epigrafe ? ' — ' + articulo.epigrafe : ''}`;
+      tagsList.innerHTML = '';
+      if (!tags.length) { tagsList.innerHTML = '<span class="tags-empty">Sin palabras clave.</span>'; }
+      else tags.forEach(tag => { const chip = document.createElement('button'); chip.className = 'tag-chip'; chip.textContent = tag; chip.addEventListener('click', () => { tagsOverlay.classList.remove('open'); searchInput.value = tag; searchClear.classList.add('visible'); runSearch(tag); if (window.innerWidth <= 900) sidebar.classList.add('open'); }); tagsList.appendChild(chip); });
+      tagsOverlay.classList.add('open');
+    }
+    function normalize(s) { return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,''); }
+    function highlight(s, q) { if (!q) return s; return s.replace(new RegExp(`(${q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')})`, 'gi'), '<mark class="search-highlight">$1</mark>'); }
+    function humanize(key) { const small=new Set(['y','de','del','la','los','las','en','el','a']); return key.split('_').map((w,i)=>{ const lw=w.toLowerCase(); return (i>0&&small.has(lw))?lw:lw.charAt(0).toUpperCase()+lw.slice(1); }).join(' '); }
+    function deepExtractArticulos(node, ctx, out) {
+      if (!node || typeof node !== 'object') return;
+      if ('numero' in node && (node.texto || node.epigrafe !== undefined)) { out.push({...ctx, articulo: node}); return; }
+      const LIBRO_KEYS=['libros','libro'], TITULO_KEYS=['titulos','titulo','partes','parte','secciones','seccion','libros_internos'], CAP_KEYS=['capitulos','capitulo','subcapitulos','subcapitulo'], ART_KEYS=['articulos','articulo','arts','items','artículos'];
+      let handled=false;
+      for (const k of LIBRO_KEYS)  { if (Array.isArray(node[k])&&node[k].length) { node[k].forEach((l,li)=>deepExtractArticulos(l,{libro:{id:l.id||`libro-${li}`,nombre:l.nombre||`Libro ${li+1}`,numero:l.numero||(li+1)},titulo:ctx.titulo,capitulo:ctx.capitulo},out)); handled=true; } }
+      if (handled) return;
+      for (const k of TITULO_KEYS) { if (Array.isArray(node[k])&&node[k].length) { node[k].forEach((t,ti)=>deepExtractArticulos(t,{libro:ctx.libro,titulo:{id:t.id||`${ctx.libro&&ctx.libro.id||'l'}-t${ti}`,nombre:t.nombre||`Título ${ti+1}`,numero:t.numero||(ti+1)},capitulo:ctx.capitulo},out)); handled=true; } }
+      if (handled) return;
+      for (const k of CAP_KEYS)    { if (Array.isArray(node[k])&&node[k].length) { node[k].forEach((c,ci)=>deepExtractArticulos(c,{libro:ctx.libro,titulo:ctx.titulo,capitulo:{id:c.id||`${ctx.titulo&&ctx.titulo.id||'t'}-c${ci}`,nombre:c.nombre||`Capítulo ${ci+1}`,numero:c.numero||(ci+1)}},out)); handled=true; } }
+      if (handled) return;
+      for (const k of ART_KEYS)    { if (Array.isArray(node[k])&&node[k].length) { node[k].forEach(a=>{ if(a&&'numero'in a) out.push({...ctx,articulo:a}); else deepExtractArticulos(a,ctx,out); }); handled=true; } }
+      if (handled) return;
+      for (const k of Object.keys(node)) { if (Array.isArray(node[k])) node[k].forEach(child=>deepExtractArticulos(child,ctx,out)); }
+    }
+    function computeRango(arts,fb) { if(!arts||!arts.length) return fb||''; const nums=arts.map(a=>a.numero).filter(n=>typeof n==='number'); if(!nums.length) return fb||''; const mn=Math.min(...nums),mx=Math.max(...nums); return mn===mx?`${mn}`:`${mn}-${mx}`; }
+    function buildFlat(data) {
+      const raw=[], libroRoot={id:'libro-1',nombre:data.codigo||'Código',numero:1};
+      deepExtractArticulos(data,{libro:libroRoot,titulo:{id:'titulo-1',nombre:'General',numero:1},capitulo:{id:'cap-1',nombre:'General',numero:1}},raw);
+      const KNOWN=new Set(['codigo','ley','pais','fecha','titulos','libros','titulo','libro','capitulos','capitulo','articulos','articulo']);
+      Object.keys(data).forEach(key=>{ if(KNOWN.has(key)) return; const val=data[key]; if(Array.isArray(val)&&val.length&&val.every(a=>a&&typeof a==='object'&&'numero'in a)){ const nombre=humanize(key); val.forEach(art=>raw.push({libro:libroRoot,titulo:{id:`extra-${key}`,nombre,numero:null,kicker:'Sección'},capitulo:{id:`extra-${key}-c1`,nombre,numero:1},articulo:art})); } });
+      raw.sort((a,b)=>(a.articulo.numero||0)-(b.articulo.numero||0));
+      const seen=new Set(); return raw.filter(e=>{ const n=e.articulo.numero; if(seen.has(n)) return false; seen.add(n); return true; });
+    }
+    function buildCard(entry, isPrimary) {
+      const {titulo,capitulo,articulo}=entry;
+      const textos=articulo.texto||[];
+      const card=document.createElement('article');
+      card.className='reader-card '+(isPrimary?'card-primary':'card-secondary');
+      card.dataset.artNum=articulo.numero;
+      const bodyHtml=textos.length?textos.map(p=>`<p>${p}</p>`).join(''):`<div class="article-empty"><div class="article-empty-icon">📄</div><p>El texto de este artículo aún no ha sido cargado en el JSON.</p></div>`;
+      const marcarLabel = isMarked(articulo.numero) ? '🔖 Guardado' : '🔖 Marcar';
+      card.innerHTML=`${isPrimary?`<div class="print-header"><img class="print-logo" src="../../logo.png" alt="JurisParaguay" onerror="this.style.display='none'"/><div class="print-org"><strong>${codeFullTitle()}</strong><br>${codeSubtitle()}<br>Fuente: CSJ – IIJ · JurisParaguay 2026</div></div>`:''}<header class="article-header"><div class="article-number">Artículo ${articulo.numero}</div><h2 class="article-title">${articulo.epigrafe||`Artículo ${articulo.numero}`}</h2><p class="article-subtitle">${titulo.nombre} · Capítulo ${capitulo.numero} — ${capitulo.nombre}</p></header><div class="article-body">${bodyHtml}</div><footer class="article-footer"><div>Fuente: CSJ – IIJ · JurisParaguay 2026</div><button class="header-btn btn-marcar" type="button" style="font-size:11px;padding:4px 10px;">${marcarLabel}</button></footer>`;
+      card.querySelector('.btn-marcar').addEventListener('click', () => { toggleMarcador(articulo.numero); });
+      applyResaltados(articulo.numero, card.querySelector('.article-body'));
+      return card;
+    }
+    function closeCopyMenu() { copyMenu.classList.remove('open'); btnCopyText.setAttribute('aria-expanded','false'); }
+    function renderCards(startIdx) { closeCopyMenu(); readerGroup.innerHTML=''; for(let i=0;i<CARDS_PER_PAGE;i++){ const idx=startIdx+i; if(idx>=FLAT.length) break; readerGroup.appendChild(buildCard(FLAT[idx],i===0)); } btnPrev.disabled=startIdx===0; btnNext.disabled=startIdx+CARDS_PER_PAGE>=FLAT.length; }
+    function renderSidebar() {
+      sidebarTree.innerHTML='';
+      const GRUPO=3, libros=new Map();
+      FLAT.forEach(entry=>{ const {libro,titulo,capitulo}=entry; if(!libros.has(libro.id)) libros.set(libro.id,{meta:libro,titulos:new Map()}); const titMap=libros.get(libro.id).titulos; if(!titMap.has(titulo.id)) titMap.set(titulo.id,{meta:titulo,caps:new Map()}); const capMap=titMap.get(titulo.id).caps; if(!capMap.has(capitulo.id)) capMap.set(capitulo.id,{meta:capitulo,entries:[]}); capMap.get(capitulo.id).entries.push(entry); });
+      libros.forEach(({meta:libro,titulos})=>{
+        const gt=document.createElement('div'); gt.className='tree-group-title'; gt.textContent=libro.nombre; sidebarTree.appendChild(gt);
+        titulos.forEach(({meta:titulo,caps})=>{
+          const allArts=[]; caps.forEach(({entries})=>allArts.push(...entries.map(e=>e.articulo))); if(!allArts.length) return;
+          const block=document.createElement('section'); block.className='title-block';
+          const head=document.createElement('button'); head.className='title-head'; head.type='button'; head.setAttribute('aria-expanded','false');
+          head.innerHTML=`<div class="title-head-main"><span class="title-kicker">${titulo.kicker||`Título ${titulo.numero}`}</span><span class="title-name">${titulo.nombre}</span><span class="title-range">Arts. ${computeRango(allArts,'')}</span></div><span class="title-chevron">›</span>`;
+          head.addEventListener('click',()=>{ const open=block.classList.toggle('open'); head.setAttribute('aria-expanded',String(open)); });
+          block.appendChild(head);
+          const chList=document.createElement('div'); chList.className='chapter-list';
+          caps.forEach(({meta:cap,entries})=>{
+            const capBlock=document.createElement('div'); capBlock.className='chapter-block';
+            const capHead=document.createElement('button'); capHead.className='chapter-head'; capHead.type='button'; capHead.setAttribute('aria-expanded','false');
+            capHead.innerHTML=`<div class="chapter-head-main"><span class="chapter-name">Cap. ${cap.numero} — ${cap.nombre}</span><span class="chapter-range">Arts. ${computeRango(entries.map(e=>e.articulo),'')}</span></div><span class="chapter-chevron">›</span>`;
+            capHead.addEventListener('click',()=>{ const open=capBlock.classList.toggle('open'); capHead.setAttribute('aria-expanded',String(open)); });
+            capBlock.appendChild(capHead);
+            const artGroupList=document.createElement('div'); artGroupList.className='art-group-list';
+            for(let i=0;i<entries.length;i+=GRUPO){
+              const slice=entries.slice(i,i+GRUPO), firstEntry=slice[0];
+              const flatIdx=FLAT.findIndex(e=>e.articulo.numero===firstEntry.articulo.numero&&e.capitulo.id===cap.id);
+              const nums=slice.map(e=>e.articulo.numero);
+              const numsLabel=nums.length===1?`Art. ${nums[0]}`:`Arts. ${nums[0]}–${nums[nums.length-1]}`;
+              const epigs=slice.map(e=>e.articulo.epigrafe||`Art. ${e.articulo.numero}`).join(' · ');
+              const btn=document.createElement('button'); btn.className='art-group-btn'; btn.type='button'; btn.dataset.firstIdx=flatIdx;
+              btn.innerHTML=`<span class="art-group-nums">${numsLabel}</span><span class="art-group-epigs">${epigs}</span>`;
+              btn.addEventListener('click',()=>{ setActiveGroupBtn(btn); if(flatIdx!==-1) showArticleByIdx(flatIdx); if(window.innerWidth<=900) sidebar.classList.remove('open'); });
+              artGroupList.appendChild(btn);
+            }
+            capBlock.appendChild(artGroupList); chList.appendChild(capBlock);
+          });
+          block.appendChild(chList); sidebarTree.appendChild(block);
+        });
+      });
+    }
+    function setActiveGroupBtn(btn) { document.querySelectorAll('.art-group-btn').forEach(b=>b.classList.remove('active')); if(btn) btn.classList.add('active'); }
+    function syncActiveGroupBtn(idx) {
+      document.querySelectorAll('.art-group-btn').forEach(btn=>{
+        const fi=parseInt(btn.dataset.firstIdx,10); if(isNaN(fi)) return;
+        const covers=idx>=fi&&idx<=Math.min(fi+CARDS_PER_PAGE-1,FLAT.length-1);
+        btn.classList.toggle('active',covers);
+        if(covers){ btn.closest('.chapter-block')?.classList.add('open'); btn.closest('.title-block')?.classList.add('open'); btn.scrollIntoView({block:'nearest',behavior:'smooth'}); }
+      });
+    }
+    function getHashArtNum() { const h=window.location.hash.replace('#art-','').trim(); return h?parseInt(h,10):null; }
+    function setHashFromIdx(idx) { if(!FLAT.length) return; history.replaceState(null,'','#art-'+FLAT[idx].articulo.numero); }
+    function storageKey() { return 'lastIdx_'+(DATA&&DATA.ley?DATA.ley:window.location.pathname); }
+    function savePosition(idx) { try{localStorage.setItem(storageKey(),idx);}catch(e){} }
+    function loadPosition()    { try{return parseInt(localStorage.getItem(storageKey()),10)||0;}catch(e){return 0;} }
+    async function loadData() {
+      try {
+        const res=await fetch(jsonUrl,{cache:'no-store'}); if(!res.ok) throw new Error('HTTP '+res.status);
+        DATA=await res.json(); if(!DATA||typeof DATA!=='object') throw new Error('JSON inválido.');
+        applyMeta(); FLAT=buildFlat(DATA); if(!FLAT.length) throw new Error('No se encontraron artículos en el JSON.');
+        renderSidebar(); initVoices();
+        const hashNum=getHashArtNum(); let startIdx=loadPosition();
+        if(hashNum!==null){ const found=FLAT.findIndex(e=>e.articulo.numero===hashNum); if(found!==-1) startIdx=found; }
+        startIdx=Math.max(0,Math.min(startIdx,FLAT.length-1));
+        showArticleByIdx(startIdx); updatePlayerControls();
+      } catch(err) {
+        readerGroup.innerHTML=`<div class="reader-card card-primary"><div class="article-empty"><div class="article-empty-icon">⚠️</div><p>No se pudo cargar <code>${JSON_FILE}</code>.<br><small>${err.message}</small></p></div></div>`;
+        sidebarTree.innerHTML=`<div class="search-empty">⚠️ Error al cargar el JSON.<br><small>${err.message}</small></div>`;
+      }
+    }
+    function initVoices() {
+      function populate() {
+        voices = speechSynthesis.getVoices().filter(v => v.lang.startsWith('es'));
+        if (!voices.length) voices = speechSynthesis.getVoices();
+        playerVoice.innerHTML = '';
+        voices.forEach((v, i) => {
+          const opt = document.createElement('option');
+          opt.value = i;
+          opt.textContent = v.name + (v.lang ? ` (${v.lang})` : '');
+          playerVoice.appendChild(opt);
+        });
+        const pyIdx = voices.findIndex(v => v.lang.startsWith('es-PY'));
+        const esIdx = voices.findIndex(v => v.lang.startsWith('es'));
+        playerVoice.selectedIndex = pyIdx >= 0 ? pyIdx : (esIdx >= 0 ? esIdx : 0);
+      }
+      if (speechSynthesis.onvoiceschanged !== undefined) speechSynthesis.onvoiceschanged = populate;
+      populate();
+    }
+    function getSelectedVoice() { return voices[parseInt(playerVoice.value,10)]||null; }
+    playerSpeed.addEventListener('input',()=>{ playerSpeedVal.textContent=parseFloat(playerSpeed.value).toFixed(1)+'×'; });
+    function showArticleByIdx(idx,fromPlayer) {
+      if(!FLAT.length) return;
+      idx=Math.max(0,Math.min(idx,FLAT.length-1)); currentIdx=idx; savePosition(idx);
+      const {articulo}=FLAT[idx]; setHashFromIdx(idx);
+      breadcrumbArticulo.textContent=`Art. ${articulo.numero}${articulo.epigrafe?' — '+articulo.epigrafe:''}`;
+      renderCards(idx); if(!fromPlayer) syncActiveGroupBtn(idx);
+    }
+    window.addEventListener('hashchange',()=>{ const hashNum=getHashArtNum(); if(hashNum!==null&&FLAT.length){ const found=FLAT.findIndex(e=>e.articulo.numero===hashNum); if(found!==-1&&found!==currentIdx) showArticleByIdx(found); } });
+    btnCopyText.addEventListener('click', e => {
+      e.stopPropagation();
+      const isOpen = copyMenu.classList.contains('open');
+      closeCopyMenu();
+      if (isOpen) return;
+      if (!FLAT.length) return;
+      copyMenu.innerHTML = '';
+      const start = currentIdx, end = Math.min(currentIdx + CARDS_PER_PAGE, FLAT.length);
+      if (start >= end) { copyMenu.innerHTML = '<div class="copy-menu-empty">No hay artículos visibles.</div>'; copyMenu.classList.add('open'); btnCopyText.setAttribute('aria-expanded','true'); return; }
+      for (let i = start; i < end; i++) {
+        const {articulo} = FLAT[i];
+        const btn = document.createElement('button'); btn.className = 'copy-menu-item'; btn.type = 'button';
+        btn.innerHTML = `<span class="copy-menu-item-num">Art. ${articulo.numero}</span><span class="copy-menu-item-epig">${articulo.epigrafe || '(sin epígrafe)'}</span>`;
+        btn.addEventListener('click', () => {
+          const txt = [`Artículo ${articulo.numero}${articulo.epigrafe?' — '+articulo.epigrafe:''}`,'',...(articulo.texto||['(texto no disponible)'])].join('\n');
+          navigator.clipboard.writeText(txt).then(() => {
+            const card = readerGroup.querySelector(`[data-art-num="${articulo.numero}"]`);
+            if (card) { card.classList.remove('card-copy-flash'); void card.offsetWidth; card.classList.add('card-copy-flash'); }
+            closeCopyMenu();
+          }).catch(() => alert('No se pudo copiar al portapapeles.'));
+        });
+        copyMenu.appendChild(btn);
+      }
+      copyMenu.classList.add('open'); btnCopyText.setAttribute('aria-expanded','true');
     });
-  };
-  populate();
-  window.speechSynthesis.onvoiceschanged = populate;
-}
-
-function ttsReadFrom(artIdx) {
-  ttsCurrentArt = artIdx;
-  ttsStop();
-  ttsActive = true;
-  ttsPlayCurrent();
-}
-
-function ttsPlayCurrent() {
-  if (!ttsActive || ttsCurrentArt >= allArticles.length) return;
-  const art = allArticles[ttsCurrentArt];
-  const text = `Artículo ${art.numero}. ${art.epigrafe ? art.epigrafe + '. ' : ''}${(art.texto||[]).join('. ')}`;
-  document.getElementById('tts-title').textContent = `Art. ${art.numero} – ${art.epigrafe||''}`;
-  ttsUtterance = new SpeechSynthesisUtterance(text);
-  ttsUtterance.rate = parseFloat(document.getElementById('tts-speed').value);
-  const voiceIdx = parseInt(document.getElementById('tts-voice').value, 10);
-  if (ttsVoices[voiceIdx]) ttsUtterance.voice = ttsVoices[voiceIdx];
-  ttsUtterance.onend = () => { ttsCurrentArt++; ttsPlayCurrent(); };
-  window.speechSynthesis.speak(ttsUtterance);
-  document.getElementById('btn-play').classList.add('active');
-}
-
-function ttsPlay() {
-  if (window.speechSynthesis.paused) { window.speechSynthesis.resume(); return; }
-  if (!ttsActive) { ttsCurrentArt = allArticles.indexOf(filtered[currentIdx])||0; ttsActive = true; ttsPlayCurrent(); }
-}
-
-function ttsPause() {
-  window.speechSynthesis.pause();
-  document.getElementById('btn-play').classList.remove('active');
-}
-
-function ttsStop() {
-  ttsActive = false;
-  window.speechSynthesis.cancel();
-  document.getElementById('btn-play').classList.remove('active');
-  document.getElementById('tts-title').textContent = '—';
-}
-
-function ttsSkip(delta) {
-  const next = ttsCurrentArt + delta;
-  if (next < 0 || next >= allArticles.length) return;
-  ttsReadFrom(next);
-}
-
-function ttsUpdateRate() {
-  if (ttsUtterance) ttsUtterance.rate = parseFloat(document.getElementById('tts-speed').value);
-  if (ttsActive) { const cur = ttsCurrentArt; ttsStop(); ttsReadFrom(cur); }
-}
-
-// ─── SIDEBAR MOBILE ───────────────────────────────────────────────────────────
-function toggleSidebar() {
-  const sb = document.getElementById('sidebar');
-  const ov = document.getElementById('overlay');
-  sb.classList.toggle('open');
-  ov.classList.toggle('show');
-}
-
-// ─── BOOT ────────────────────────────────────────────────────────────────────
-filtered = [];
-init();
-</script>
+    document.addEventListener('click', e => { if (!btnCopyText.contains(e.target) && !copyMenu.contains(e.target)) closeCopyMenu(); });
+    let searchDebounce=null;
+    searchInput.addEventListener('input',()=>{ const q=searchInput.value.trim(); searchClear.classList.toggle('visible',q.length>0); clearTimeout(searchDebounce); searchDebounce=setTimeout(()=>runSearch(q),200); });
+    searchClear.addEventListener('click',()=>{ searchInput.value=''; searchClear.classList.remove('visible'); hideSearchResults(); searchInput.focus(); });
+    function runSearch(rawQuery){ if(!rawQuery||!FLAT.length){ hideSearchResults(); return; } const q=normalize(rawQuery), isNumeric=/^\d+$/.test(rawQuery.trim()); const matches=FLAT.filter(({articulo})=>{ if(isNumeric) return String(articulo.numero)===rawQuery.trim(); return normalize(articulo.epigrafe).includes(q)||(articulo.texto||[]).some(t=>normalize(t).includes(q))||(articulo.palabrasClave||[]).some(p=>normalize(p).includes(q)); }); showSearchResults(matches,rawQuery); }
+    function showSearchResults(matches,rawQuery){ sidebarTree.style.display='none'; searchResults.classList.add('visible'); searchResults.innerHTML=''; if(!matches.length){ searchResults.innerHTML=`<div class="search-empty">Sin resultados para "<strong>${rawQuery}</strong>"</div>`; return; } const count=document.createElement('div'); count.className='search-count'; count.textContent=`${matches.length} resultado${matches.length!==1?'s':''}`; searchResults.appendChild(count); matches.forEach(({articulo,titulo,capitulo})=>{ const flatIdx=FLAT.findIndex(e=>e.articulo.numero===articulo.numero&&e.capitulo.id===capitulo.id); const item=document.createElement('div'); item.className='search-result-item'; item.setAttribute('role','button'); item.setAttribute('tabindex','0'); const q=normalize(rawQuery), matchedParr=(articulo.texto||[]).find(t=>normalize(t).includes(q)); let snippet=''; if(matchedParr){ const start=Math.max(0,normalize(matchedParr).indexOf(q)-40); snippet=(start>0?'…':'')+matchedParr.slice(start,start+100)+(matchedParr.length>start+100?'…':''); } item.innerHTML=`<span class="search-result-num">Art. ${articulo.numero}</span><span class="search-result-epig">${highlight(articulo.epigrafe||'(sin epígrafe)',rawQuery)}</span><span class="search-result-ctx">${highlight(snippet,rawQuery)||`${titulo.nombre} · Cap. ${capitulo.numero}`}</span>`; const go=()=>{ showArticleByIdx(flatIdx); searchInput.value=''; searchClear.classList.remove('visible'); hideSearchResults(); if(window.innerWidth<=900) sidebar.classList.remove('open'); }; item.addEventListener('click',go); item.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' ')go();}); searchResults.appendChild(item); }); }
+    function hideSearchResults(){ searchResults.classList.remove('visible'); searchResults.innerHTML=''; sidebarTree.style.display=''; }
+    function speakArticle(idx){
+      if(!window.speechSynthesis) return; speechSynthesis.cancel();
+      if(idx>=FLAT.length){ ttsStop(); return; }
+      ttsReadIdx=idx; const {articulo}=FLAT[idx]; showArticleByIdx(idx,true);
+      document.querySelectorAll('.reader-card.card-primary .article-body p').forEach((p,i)=>{ p.classList.remove('tts-reading'); if(i===0) p.classList.add('tts-reading'); });
+      updatePlayerInfo(idx);
+      const textos=articulo.texto||[];
+      if(!textos.length){ setTimeout(()=>{ if(ttsPlaying) speakArticle(idx+1); },300); return; }
+      const heading=articulo.epigrafe?`Artículo número ${articulo.numero}. ${articulo.epigrafe}.`:`Artículo número ${articulo.numero}.`;
+      const utt=new SpeechSynthesisUtterance(heading+' '+textos.join(' '));
+      utt.rate=parseFloat(playerSpeed.value); utt.pitch=1;
+      const voice=getSelectedVoice(); if(voice) utt.voice=voice; else utt.lang='es';
+      utt.onend=()=>{ if(ttsPlaying) speakArticle(idx+1); };
+      utt.onerror=e=>{ if(e.error==='interrupted'||e.error==='canceled') return; if(ttsPlaying) speakArticle(idx+1); };
+      speechSynthesis.speak(utt);
+    }
+    function ttsPlay(startFromIdx){ if(!window.speechSynthesis){ alert('Tu navegador no soporta Text-to-Speech.'); return; } ttsPlaying=true; ttsPaused=false; ttsStartIdx=startFromIdx!==undefined?startFromIdx:currentIdx; playerPlay.textContent='⏸'; playerPlay.title='Pausar'; playerStop.disabled=false; playerPrev.disabled=false; playerNext.disabled=false; playerSkipBack.disabled=false; playerSkipFwd.disabled=false; speakArticle(ttsStartIdx); }
+    function ttsPause(){ if(speechSynthesis.speaking&&!speechSynthesis.paused){ speechSynthesis.pause(); ttsPaused=true; playerPlay.textContent='▶'; playerPlay.title='Reanudar'; } }
+    function ttsResume(){ if(speechSynthesis.paused){ speechSynthesis.resume(); ttsPaused=false; playerPlay.textContent='⏸'; playerPlay.title='Pausar'; } }
+    function ttsStop(){ speechSynthesis.cancel(); ttsPlaying=false; ttsPaused=false; playerPlay.textContent='▶'; playerPlay.title='Reproducir'; playerStop.disabled=true; playerPrev.disabled=true; playerNext.disabled=true; playerSkipBack.disabled=true; playerSkipFwd.disabled=true; playerProgressFill.style.width='0%'; playerTitle.textContent='Sin reproducción activa'; playerSubtitle.textContent='Presioná ▶ para comenzar'; playerCounter.textContent=''; document.querySelectorAll('.tts-reading').forEach(p=>p.classList.remove('tts-reading')); }
+    function updatePlayerInfo(idx){ if(!FLAT.length) return; const {articulo,titulo,capitulo}=FLAT[idx]; playerTitle.textContent=`Art. ${articulo.numero}${articulo.epigrafe?' — '+articulo.epigrafe:''}`; playerSubtitle.textContent=`${titulo.nombre} · Cap. ${capitulo.numero} — ${capitulo.nombre}`; playerCounter.textContent=`${idx+1} / ${FLAT.length}`; playerProgressFill.style.width=(FLAT.length>1?(idx/(FLAT.length-1))*100:100).toFixed(1)+'%'; }
+    function updatePlayerControls(){ const a=ttsPlaying; playerStop.disabled=!a; playerPrev.disabled=!a; playerNext.disabled=!a; playerSkipBack.disabled=!a; playerSkipFwd.disabled=!a; }
+    playerPlay.addEventListener('click',()=>{ if(!window.speechSynthesis){ alert('Tu navegador no soporta Text-to-Speech.'); return; } if(!ttsPlaying) ttsPlay(currentIdx); else if(ttsPaused) ttsResume(); else ttsPause(); });
+    playerStop.addEventListener('click',ttsStop);
+    playerPrev.addEventListener('click',()=>{ if(ttsPlaying) speakArticle(Math.max(0,ttsReadIdx-1)); });
+    playerNext.addEventListener('click',()=>{ if(ttsPlaying) speakArticle(Math.min(FLAT.length-1,ttsReadIdx+1)); });
+    playerSkipBack.addEventListener('click',()=>{ if(ttsPlaying) speakArticle(Math.max(0,ttsReadIdx-5)); });
+    playerSkipFwd.addEventListener('click',()=>{ if(ttsPlaying) speakArticle(Math.min(FLAT.length-1,ttsReadIdx+5)); });
+    loadData();
+  </script>
 </body>
 </html>
