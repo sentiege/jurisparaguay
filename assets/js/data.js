@@ -152,7 +152,7 @@ const CATEGORIAS = [
     codigos: [
       {
         id: 'codigo-navegacion',
-        nombre: 'Código de Navegación Fluvial y Marítima',
+        nombre: 'Código de Navegación Fluvial',
         ley: 'Ley N° 476/57',
         descripcion: 'Establece la legislación de las aguas interiores paraguayas, el tráfico fluvial, embarcaciones y la seguridad náutica.',
         links: [],
