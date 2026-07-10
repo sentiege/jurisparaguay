@@ -2,7 +2,6 @@
    JurisParaguay — Lógica Principal
    ============================================= */
 
-// Registrar SW raiz
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('/jurisparaguay/sw.js', { scope: '/jurisparaguay/' })
     .then(() => console.log('📦 SW raiz registrado'))
@@ -31,8 +30,7 @@ const JSON_CODIGOS = [
 ];
 
 let INDICE_GLOBAL = [];
-let indiceListoResolve;
-const indiceListoPromise = new Promise(res => { indiceListoResolve = res; });
+let INDICE_LISTO  = false;
 let cargaProgreso = { total: JSON_CODIGOS.length, listos: 0, fallidos: [] };
 
 /* ─── Utilidades ─────────────────────────────────────────── */
@@ -49,9 +47,7 @@ function highlight(str, query) {
   return escaped.replace(re, '<mark>$1</mark>');
 }
 
-/* ─── deepExtractArticulos ───────────────────────────────────
-   Maneja: titulos[] → capitulos[] → articulos[]
-   ─────────────────────────────────────────────────────────── */
+/* ─── deepExtractArticulos ───────────────────────────────── */
 const _LIBRO_KEYS  = ['libros','libro'];
 const _TITULO_KEYS = ['titulos','titulo','partes','parte','secciones','seccion','libros_internos'];
 const _CAP_KEYS    = ['capitulos','capitulo','subcapitulos','subcapitulo'];
@@ -60,8 +56,7 @@ const _ART_KEYS    = ['articulos','articulo','arts','items','artículos'];
 function deepExtractArticulos(node, out) {
   if (!node || typeof node !== 'object') return;
   if ('numero' in node && (node.texto !== undefined || node.epigrafe !== undefined)) {
-    out.push(node);
-    return;
+    out.push(node); return;
   }
   for (const k of [..._LIBRO_KEYS, ..._TITULO_KEYS, ..._CAP_KEYS, ..._ART_KEYS]) {
     if (Array.isArray(node[k]) && node[k].length) {
@@ -91,6 +86,19 @@ function calcScore(art, qn) {
   return score;
 }
 
+/* ─── Contenedor de resultados (separado del grid) ───────── */
+function getResultadosContainer() {
+  return document.getElementById('resultados-container');
+}
+function limpiarResultados() {
+  const c = getResultadosContainer();
+  if (c) c.innerHTML = '';
+}
+function mostrarEstadoBusqueda(html) {
+  const c = getResultadosContainer();
+  if (c) c.innerHTML = `<div class="jp-search-loading">${html}</div>`;
+}
+
 /* ─── Barra de progreso ──────────────────────────────────── */
 function mostrarBarraProgreso() {
   if (document.getElementById('jp-progress-wrap')) return;
@@ -104,7 +112,6 @@ function mostrarBarraProgreso() {
   if (hero) hero.insertAdjacentElement('afterend', wrap);
   else document.body.prepend(wrap);
 }
-
 function actualizarBarraProgreso() {
   const barra = document.getElementById('jp-progress-bar');
   const texto = document.getElementById('jp-progress-text');
@@ -126,7 +133,7 @@ function actualizarBarraProgreso() {
   }
 }
 
-/* ─── Diagnóstico visible en pantalla ───────────────────── */
+/* ─── Diagnóstico ────────────────────────────────────────── */
 function mostrarDiag(msg, tipo = 'info') {
   let diag = document.getElementById('jp-diag');
   if (!diag) {
@@ -153,11 +160,8 @@ async function cargarIndiceGlobal() {
     JSON_CODIGOS.map(async (cod) => {
       const url = `${BASE_URL}/${cod.path}`;
       let res;
-      try {
-        res = await fetch(url);
-      } catch(netErr) {
-        throw new Error(`Red: ${netErr.message} — ${url}`);
-      }
+      try { res = await fetch(url); }
+      catch(netErr) { throw new Error(`Red: ${netErr.message} — ${url}`); }
       if (!res.ok) throw new Error(`HTTP ${res.status} — ${url}`);
       const data = await res.json();
       const arts = [];
@@ -192,12 +196,12 @@ async function cargarIndiceGlobal() {
     });
   });
 
+  INDICE_LISTO = true;
   actualizarBarraProgreso();
-  indiceListoResolve();
 
   const total   = INDICE_GLOBAL.length;
   const errores = cargaProgreso.fallidos.length;
-  console.log(`✅ Índice: ${total} arts | ${errores} errores`);
+  console.log(`✅ Índice listo: ${total} arts | ${errores} errores`);
   mostrarDiag(
     total > 0
       ? `✅ Índice listo: ${total} artículos (${errores} errores)`
@@ -205,12 +209,10 @@ async function cargarIndiceGlobal() {
     total > 0 ? 'ok' : 'error'
   );
 
-  // FIX race condition: si el usuario ya tenía algo escrito mientras cargaba,
-  // re-ejecutar la búsqueda completa con el valor actual del input.
+  // Si el usuario ya tenia algo escrito, lanzar la busqueda ahora que el indice esta listo
   const inputEl = document.getElementById('searchInput');
   const qActual = inputEl ? inputEl.value.trim() : '';
-  if (qActual && total > 0) {
-    ocultarResultadosGlobales();
+  if (qActual) {
     buscarMetadatos(qActual);
     buscarArticulos(qActual);
   }
@@ -265,10 +267,17 @@ document.addEventListener('DOMContentLoaded', () => {
   input.addEventListener('input', () => {
     clearTimeout(debounceTimer);
     const q = input.value.trim();
-    ocultarResultadosGlobales();
-    if (!q) { renderCategorias(CATEGORIAS); return; }
+    limpiarResultados();
+    if (!q) {
+      renderCategorias(CATEGORIAS);
+      return;
+    }
     buscarMetadatos(q);
-    debounceTimer = setTimeout(() => buscarArticulos(q), 400);
+    if (INDICE_LISTO) {
+      debounceTimer = setTimeout(() => buscarArticulos(q), 300);
+    } else {
+      mostrarEstadoBusqueda('⏳ Cargando artículos… los resultados aparecerán automáticamente.');
+    }
   });
 
   input.addEventListener('keydown', e => {
@@ -276,19 +285,20 @@ document.addEventListener('DOMContentLoaded', () => {
       clearTimeout(debounceTimer);
       const q = input.value.trim();
       if (!q) return;
-      ocultarResultadosGlobales();
+      limpiarResultados();
       buscarMetadatos(q);
-      buscarArticulos(q);
+      if (INDICE_LISTO) buscarArticulos(q);
+      else mostrarEstadoBusqueda('⏳ Cargando artículos… los resultados aparecerán automáticamente.');
     }
   });
 });
 
 async function buscar() {
   const q = (document.getElementById('searchInput')?.value || '').trim();
-  ocultarResultadosGlobales();
+  limpiarResultados();
   if (!q) { renderCategorias(CATEGORIAS); return; }
   buscarMetadatos(q);
-  await buscarArticulos(q);
+  buscarArticulos(q);
 }
 
 /* ─── Búsqueda metadatos ─────────────────────────────────── */
@@ -305,12 +315,10 @@ function buscarMetadatos(q) {
 }
 
 /* ─── Búsqueda artículos ─────────────────────────────────── */
-async function buscarArticulos(q) {
+function buscarArticulos(q) {
   const qn = normalize(q);
 
-  // Si el índice todavía no cargó, avisar y esperar —
-  // pero NO re-buscar desde aquí: cargarIndiceGlobal() lo hará al terminar.
-  if (INDICE_GLOBAL.length === 0) {
+  if (!INDICE_LISTO || INDICE_GLOBAL.length === 0) {
     mostrarEstadoBusqueda('⏳ Cargando artículos… los resultados aparecerán automáticamente.');
     return;
   }
@@ -322,27 +330,21 @@ async function buscarArticulos(q) {
     .map(({ art }) => art);
 
   if (!matches.length) {
-    mostrarEstadoBusqueda(`🔍 No se encontraron artículos que mencionen "<strong>${escapeHtml(q)}</strong>".`);
+    mostrarEstadoBusqueda(`🔍 No se encontraron artículos que mencionen «<strong>${escapeHtml(q)}</strong>».`);
     return;
   }
 
   mostrarResultadosGlobales(matches, q);
 }
 
-function mostrarEstadoBusqueda(html) {
-  ocultarResultadosGlobales();
-  const el = document.createElement('div');
-  el.id = 'resultados-globales';
-  el.className = 'jp-search-loading';
-  el.innerHTML = html;
-  document.getElementById('codigos').appendChild(el);
-}
-
 /* ─── Render resultados ──────────────────────────────────── */
 const PREVIEW_POR_GRUPO = 5;
 
 function mostrarResultadosGlobales(matches, rawQuery) {
-  ocultarResultadosGlobales();
+  const c = getResultadosContainer();
+  if (!c) return;
+  c.innerHTML = '';
+
   const qn = normalize(rawQuery);
   const resumen = {}, orden = [];
   matches.forEach(m => {
@@ -353,9 +355,6 @@ function mostrarResultadosGlobales(matches, rawQuery) {
     resumen[m.codigoId].total++;
     resumen[m.codigoId].arts.push(m);
   });
-
-  const container = document.createElement('div');
-  container.id = 'resultados-globales';
 
   const header = document.createElement('div');
   header.className = 'jp-resultados-header';
@@ -374,7 +373,7 @@ function mostrarResultadosGlobales(matches, rawQuery) {
       `).join('')}
     </div>
   `;
-  container.appendChild(header);
+  c.appendChild(header);
 
   orden.forEach(id => {
     const grupo = resumen[id];
@@ -412,10 +411,8 @@ function mostrarResultadosGlobales(matches, rawQuery) {
       });
       section.appendChild(verMas);
     }
-    container.appendChild(section);
+    c.appendChild(section);
   });
-
-  document.getElementById('codigos').appendChild(container);
 }
 
 function renderArts(lista, arts, qn, rawQuery, desde, hasta) {
@@ -442,9 +439,4 @@ function renderArts(lista, arts, qn, rawQuery, desde, hasta) {
     `;
     lista.appendChild(item);
   });
-}
-
-function ocultarResultadosGlobales() {
-  const el = document.getElementById('resultados-globales');
-  if (el) el.remove();
 }
