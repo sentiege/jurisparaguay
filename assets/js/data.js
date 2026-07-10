@@ -4,6 +4,25 @@
 
 const CATEGORIAS = [
   {
+    id: 'constitucional',
+    nombre: 'Fundamento Constitucional',
+    svgIcon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>',
+    color: '#7a1a1a',
+    codigos: [
+      {
+        id: 'constitucion-nacional',
+        nombre: 'Constitución Nacional',
+        ley: '20 de junio de 1992',
+        descripcion: 'Ley suprema de la República del Paraguay. Establece la organización del Estado, los derechos y garantias fundamentales de todas las personas.',
+        links: [
+          { label: 'Texto Oficial (CSJ)', url: 'https://www.csj.gov.py/textos/constitucion.pdf' },
+          { label: 'OEA', url: 'https://www.oas.org/juridico/spanish/par_res3.htm' }
+        ],
+        internalUrl: 'codigos/constitucion/index.html'
+      }
+    ]
+  },
+  {
     id: 'civil-familia',
     nombre: 'Civil, Comercial y Familia',
     svgIcon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>',
