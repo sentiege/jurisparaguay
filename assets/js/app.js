@@ -21,7 +21,7 @@ const CODIGOS = [
   { id:'codigo-procesal-laboral',      nombre:'Código Procesal Laboral',                 path:'codigos/codigoprocesallaboral/codigo_procesallaboral_completo.json' },
   { id:'codigo-organizacion-judicial', nombre:'Código de Organización Judicial',         path:'codigos/codigoorganizacionjudicial/codigo_organizacion_judicial_completo.json' },
   { id:'codigo-electoral',             nombre:'Código Electoral',                        path:'codigos/codigoelectoral/codigo_electoral_completo.json' },
-  { id:'codigo-navegacion',            nombre:'Código de Navegación Fluvial',            path:'codigos/codigonavegacion/codigo_navegacion_completo.json' },
+  { id:'codigo-navegacion',            nombre:'Código de Navegación Fluvial y Marítima', path:'codigos/codigonavegacion/codigo_navegacion_completo.json' },
   { id:'codigo-aeronautico',           nombre:'Código Aeronáutico',                      path:'codigos/codigoaeronautico/codigo_aeronautico_completo.json' },
   { id:'codigo-rural',                 nombre:'Código Rural',                            path:'codigos/codigorural/codigo_rural_completo.json' },
   { id:'codigo-aduanero',              nombre:'Código Aduanero',                         path:'codigos/codigoaduanero/codigo_aduanero_completo.json' },
