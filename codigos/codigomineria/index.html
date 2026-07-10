@@ -595,7 +595,7 @@
     function savePosition(idx) { try { localStorage.setItem('cm_lastIdx', idx); } catch(e) {} }
     function loadPosition() { try { return parseInt(localStorage.getItem('cm_lastIdx'), 10) || 0; } catch(e) { return 0; } }
 
-    const jsonUrl = new URL('deepseek_json_20260710_e7f54e.json', window.location.href).href;
+    const jsonUrl = new URL('codigo_aeronautico_completo.json', window.location.href).href;
 
     async function loadData() {
       try {
