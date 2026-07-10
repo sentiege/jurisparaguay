@@ -76,10 +76,20 @@
     .title-block.open .title-chevron { transform: rotate(90deg); }
     .chapter-list { display: none; border-top: 1px solid rgba(148,163,184,0.45); padding: 4px 5px 6px; }
     .title-block.open .chapter-list { display: block; }
-    .chapter-btn { width: 100%; padding: 6px; border-radius: 8px; border: none; background: transparent; color: var(--text-inverse); text-align: left; font-size: 11px; cursor: pointer; }
-    .chapter-btn:hover, .chapter-btn.active { background: rgba(15,23,42,0.9); }
+    /* Capítulo con sub-grupos de 3 artículos */
+    .chapter-block { border-radius: 8px; border: 1px solid rgba(148,163,184,0.3); background: rgba(15,23,42,0.45); margin-bottom: 5px; }
+    .chapter-head { width: 100%; padding: 6px 8px; display: flex; align-items: center; justify-content: space-between; font-size: 11px; text-align: left; cursor: pointer; border: none; background: transparent; color: var(--text-inverse); }
+    .chapter-head-main { display: flex; flex-direction: column; }
     .chapter-name { font-weight: 500; display: block; }
     .chapter-range { font-size: 10px; color: rgba(226,232,240,0.7); display: block; }
+    .chapter-chevron { font-size: 10px; color: rgba(226,232,240,0.6); transition: transform 0.15s ease; }
+    .chapter-block.open .chapter-chevron { transform: rotate(90deg); }
+    .art-group-list { display: none; border-top: 1px solid rgba(148,163,184,0.3); padding: 3px 4px 4px; }
+    .chapter-block.open .art-group-list { display: block; }
+    .art-group-btn { width: 100%; padding: 5px 7px; border-radius: 6px; border: none; background: transparent; color: var(--text-inverse); text-align: left; font-size: 11px; cursor: pointer; display: flex; flex-direction: column; gap: 1px; }
+    .art-group-btn:hover, .art-group-btn.active { background: rgba(15,23,42,0.9); }
+    .art-group-nums { font-weight: 700; color: var(--accent-gold); font-size: 11px; }
+    .art-group-epigs { font-size: 10px; color: rgba(226,232,240,0.7); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 220px; }
     .hamburger { display: none; background: none; border: 1px solid var(--border-soft); border-radius: 8px; padding: 5px 8px; font-size: 18px; cursor: pointer; color: var(--text-main); line-height: 1; flex-shrink: 0; }
     .header { grid-column: 2; grid-row: 1; padding: 10px 18px; border-bottom: 1px solid var(--border-soft); background: rgba(247,243,234,0.94); display: flex; align-items: center; justify-content: space-between; gap: 12px; min-width: 0; }
     .breadcrumbs { font-size: 11px; color: var(--text-muted); min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
@@ -437,8 +447,12 @@
       return raw.filter(e => { const n = e.articulo.numero; if (seen.has(n)) return false; seen.add(n); return true; });
     }
 
+    /* ── SIDEBAR: agrupa artículos de a 3 dentro de cada capítulo ── */
     function renderSidebar() {
       sidebarTree.innerHTML = '';
+      const GRUPO = 3; // artículos por grupo
+
+      // Agrupar FLAT por libro → título → capítulo
       const libros = new Map();
       FLAT.forEach(entry => {
         const libroId = entry.libro.id, tituloId = entry.titulo.id, capId = entry.capitulo.id;
@@ -446,40 +460,113 @@
         const libroMap = libros.get(libroId).titulos;
         if (!libroMap.has(tituloId)) libroMap.set(tituloId, { meta: entry.titulo, caps: new Map() });
         const tituloMap = libroMap.get(tituloId).caps;
-        if (!tituloMap.has(capId)) tituloMap.set(capId, { meta: entry.capitulo, arts: [] });
-        tituloMap.get(capId).arts.push(entry.articulo);
+        if (!tituloMap.has(capId)) tituloMap.set(capId, { meta: entry.capitulo, entries: [] });
+        tituloMap.get(capId).entries.push(entry);
       });
+
       libros.forEach(({ meta: libro, titulos }) => {
         const groupTitle = document.createElement('div');
         groupTitle.className = 'tree-group-title';
         groupTitle.textContent = libro.nombre;
         sidebarTree.appendChild(groupTitle);
+
         titulos.forEach(({ meta: titulo, caps }) => {
-          const allArts = []; caps.forEach(({ arts }) => allArts.push(...arts));
+          const allArts = [];
+          caps.forEach(({ entries }) => allArts.push(...entries.map(e => e.articulo)));
           if (!allArts.length) return;
-          const block = document.createElement('section'); block.className = 'title-block';
-          const head = document.createElement('button'); head.className = 'title-head'; head.type = 'button';
+
+          // Bloque de Título (acordeón exterior)
+          const block = document.createElement('section');
+          block.className = 'title-block';
+          const head = document.createElement('button');
+          head.className = 'title-head'; head.type = 'button';
           head.innerHTML = `<div class="title-head-main"><span class="title-kicker">Título ${titulo.numero}</span><span class="title-name">${titulo.nombre}</span><span class="title-range">Arts. ${computeRango(allArts, '')}</span></div><span class="title-chevron">›</span>`;
           head.addEventListener('click', () => block.classList.toggle('open'));
           block.appendChild(head);
-          const chList = document.createElement('div'); chList.className = 'chapter-list';
-          caps.forEach(({ meta: cap, arts }) => {
-            const btn = document.createElement('button'); btn.className = 'chapter-btn'; btn.type = 'button'; btn.dataset.capId = cap.id;
-            btn.innerHTML = `<span class="chapter-name">Cap. ${cap.numero} — ${cap.nombre}</span><span class="chapter-range">Arts. ${computeRango(arts, '')}</span>`;
-            btn.addEventListener('click', () => {
-              setActiveChapterBtn(btn);
-              const flatIdx = FLAT.findIndex(e => e.capitulo.id === cap.id);
-              if (flatIdx !== -1) showArticleByIdx(flatIdx);
-              if (window.innerWidth <= 900) sidebar.classList.remove('open');
-            });
-            chList.appendChild(btn);
+
+          const chList = document.createElement('div');
+          chList.className = 'chapter-list';
+
+          caps.forEach(({ meta: cap, entries }) => {
+            // Bloque de Capítulo (acordeón interior)
+            const capBlock = document.createElement('div');
+            capBlock.className = 'chapter-block';
+
+            const capHead = document.createElement('button');
+            capHead.className = 'chapter-head'; capHead.type = 'button';
+            capHead.innerHTML = `<div class="chapter-head-main"><span class="chapter-name">Cap. ${cap.numero} — ${cap.nombre}</span><span class="chapter-range">Arts. ${computeRango(entries.map(e => e.articulo), '')}</span></div><span class="chapter-chevron">›</span>`;
+            capHead.addEventListener('click', () => capBlock.classList.toggle('open'));
+            capBlock.appendChild(capHead);
+
+            const artGroupList = document.createElement('div');
+            artGroupList.className = 'art-group-list';
+
+            // Dividir los artículos del capítulo en grupos de 3
+            for (let i = 0; i < entries.length; i += GRUPO) {
+              const slice = entries.slice(i, i + GRUPO);
+              const firstEntry = slice[0];
+              const flatIdx = FLAT.findIndex(e => e.articulo.numero === firstEntry.articulo.numero && e.capitulo.id === cap.id);
+
+              const nums = slice.map(e => e.articulo.numero);
+              const numsLabel = nums.length === 1
+                ? `Art. ${nums[0]}`
+                : `Arts. ${nums[0]}–${nums[nums.length - 1]}`;
+
+              const epigs = slice
+                .map(e => e.articulo.epigrafe || `Art. ${e.articulo.numero}`)
+                .join(' · ');
+
+              const btn = document.createElement('button');
+              btn.className = 'art-group-btn';
+              btn.type = 'button';
+              btn.dataset.firstIdx = flatIdx;
+              btn.innerHTML = `<span class="art-group-nums">${numsLabel}</span><span class="art-group-epigs">${epigs}</span>`;
+
+              btn.addEventListener('click', () => {
+                setActiveGroupBtn(btn);
+                if (flatIdx !== -1) showArticleByIdx(flatIdx);
+                if (window.innerWidth <= 900) sidebar.classList.remove('open');
+              });
+
+              artGroupList.appendChild(btn);
+            }
+
+            capBlock.appendChild(artGroupList);
+            chList.appendChild(capBlock);
           });
-          block.appendChild(chList); sidebarTree.appendChild(block);
+
+          block.appendChild(chList);
+          sidebarTree.appendChild(block);
         });
       });
     }
 
-    function setActiveChapterBtn(activeBtn) { document.querySelectorAll('.chapter-btn').forEach(b => b.classList.remove('active')); if (activeBtn) activeBtn.classList.add('active'); }
+    function setActiveGroupBtn(activeBtn) {
+      document.querySelectorAll('.art-group-btn').forEach(b => b.classList.remove('active'));
+      if (activeBtn) activeBtn.classList.add('active');
+    }
+
+    // Sincroniza el botón de grupo activo según el artículo actual
+    function syncActiveGroupBtn(idx) {
+      const artNum = FLAT[idx] ? FLAT[idx].articulo.numero : null;
+      if (!artNum) return;
+      document.querySelectorAll('.art-group-btn').forEach(btn => {
+        const firstIdx = parseInt(btn.dataset.firstIdx, 10);
+        if (isNaN(firstIdx)) return;
+        // El grupo cubre desde firstIdx hasta firstIdx+2 (o fin)
+        const lastIdx = Math.min(firstIdx + 2, FLAT.length - 1);
+        const covers = idx >= firstIdx && idx <= lastIdx;
+        btn.classList.toggle('active', covers);
+        if (covers) {
+          const block = btn.closest('.chapter-block');
+          if (block) block.classList.add('open');
+          const titleBlock = btn.closest('.title-block');
+          if (titleBlock) titleBlock.classList.add('open');
+          btn.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+        }
+      });
+    }
+
     function getHashArtNum() { const h = window.location.hash.replace('#art-', '').trim(); return h ? parseInt(h, 10) : null; }
     function setHashFromIdx(idx) { if (!FLAT.length) return; history.replaceState(null, '', '#art-' + FLAT[idx].articulo.numero); }
     function savePosition(idx) { try { localStorage.setItem('ca_lastIdx', idx); } catch(e) {} }
@@ -536,9 +623,7 @@
       const textos = articulo.texto || [];
       articleBody.innerHTML = textos.length ? textos.map(p => `<p>${p}</p>`).join('') : `<div class="article-empty"><div class="article-empty-icon">📄</div><p>El texto de este artículo aún no ha sido cargado en el JSON.</p></div>`;
       btnPrev.disabled = idx === 0; btnNext.disabled = idx === FLAT.length - 1;
-      const capBtn = document.querySelector(`.chapter-btn[data-cap-id="${capitulo.id}"]`);
-      setActiveChapterBtn(capBtn);
-      if (capBtn) { const block = capBtn.closest('.title-block'); if (block) block.classList.add('open'); if (!fromPlayer) capBtn.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); }
+      if (!fromPlayer) syncActiveGroupBtn(idx);
     }
 
     btnPrev.addEventListener('click', () => showArticleByIdx(currentIdx - 1));
