@@ -440,6 +440,24 @@
     tagsOverlay.addEventListener('click', e => { if (e.target === tagsOverlay) tagsOverlay.classList.remove('open'); });
     hamburger.addEventListener('click', () => sidebar.classList.toggle('open'));
 
+    // ── Normaliza texto: acepta string, array de strings, y secciones con incisos
+    function normalizeTextos(art) {
+      const out = [];
+      const raw = art.texto;
+      if (Array.isArray(raw)) {
+        raw.forEach(t => out.push(String(t)));
+      } else if (raw && typeof raw === 'string') {
+        out.push(raw);
+      }
+      if (Array.isArray(art.incisos)) {
+        art.incisos.forEach(inc => {
+          const label = inc.letra ? inc.letra + ') ' : '';
+          if (inc.texto) out.push(label + inc.texto);
+        });
+      }
+      return out;
+    }
+
     function openTagsPanel() {
       if (!FLAT.length) return;
       const { articulo } = FLAT[currentIdx];
@@ -473,14 +491,29 @@
       return str.replace(re, '<mark class="search-highlight">$1</mark>');
     }
 
+    // ── buildFlat: soporta libros → titulos → capitulos → [secciones →] articulos
     function buildFlat(data) {
       const flat = [];
+      function collectArticulos(capitulo, titulo, libro, secciones) {
+        // Primero intenta artículos directos en el capítulo
+        if (Array.isArray(capitulo.articulos) && capitulo.articulos.length) {
+          capitulo.articulos.forEach(articulo =>
+            flat.push({ libro, titulo, capitulo, seccion: null, articulo })
+          );
+        }
+        // Luego recorre secciones (si existen)
+        if (Array.isArray(capitulo.secciones)) {
+          capitulo.secciones.forEach(seccion => {
+            (seccion.articulos || []).forEach(articulo =>
+              flat.push({ libro, titulo, capitulo, seccion, articulo })
+            );
+          });
+        }
+      }
       (data.libros || []).forEach(libro =>
         (libro.titulos || []).forEach(titulo =>
           (titulo.capitulos || []).forEach(capitulo =>
-            (capitulo.articulos || []).forEach(articulo =>
-              flat.push({ libro, titulo, capitulo, articulo })
-            )
+            collectArticulos(capitulo, titulo, libro)
           )
         )
       );
@@ -592,13 +625,15 @@
       idx = Math.max(0, Math.min(idx, FLAT.length - 1));
       currentIdx = idx;
       savePosition(idx);
-      const { titulo, capitulo, articulo } = FLAT[idx];
+      const { titulo, capitulo, seccion, articulo } = FLAT[idx];
       setHashFromIdx(idx);
       breadcrumbArticulo.textContent = `Art. ${articulo.numero}${articulo.epigrafe ? ' — ' + articulo.epigrafe : ''}`;
       articleNumber.textContent = `Artículo ${articulo.numero}`;
       articleTitle.textContent  = articulo.epigrafe || `Artículo ${articulo.numero}`;
-      articleMeta.textContent   = `Título ${titulo.numero} — ${titulo.nombre} · Capítulo ${capitulo.numero} — ${capitulo.nombre}`;
-      const textos = articulo.texto || [];
+      const metaParts = [`Título ${titulo.numero} — ${titulo.nombre}`, `Capítulo ${capitulo.numero} — ${capitulo.nombre}`];
+      if (seccion) metaParts.push(`Sección ${seccion.numero} — ${seccion.nombre}`);
+      articleMeta.textContent = metaParts.join(' · ');
+      const textos = normalizeTextos(articulo);
       if (!textos.length) {
         articleBody.innerHTML = `<div class="article-empty"><div class="article-empty-icon">📄</div><p>El texto de este artículo aún no ha sido cargado en el JSON.</p></div>`;
       } else {
@@ -628,7 +663,8 @@
     btnCopyText.addEventListener('click', () => {
       if (!FLAT.length) return;
       const { articulo } = FLAT[currentIdx];
-      const txt = [`Artículo ${articulo.numero}${articulo.epigrafe ? ' — ' + articulo.epigrafe : ''}`, '', ...(articulo.texto || ['(texto no disponible)'])].join('\n');
+      const textos = normalizeTextos(articulo);
+      const txt = [`Artículo ${articulo.numero}${articulo.epigrafe ? ' — ' + articulo.epigrafe : ''}`, '', ...(textos.length ? textos : ['(texto no disponible)'])].join('\n');
       navigator.clipboard.writeText(txt).then(() => {
         btnCopyText.textContent = '✅ Copiado';
         setTimeout(() => { btnCopyText.textContent = 'Copiar texto'; }, 2000);
@@ -653,7 +689,7 @@
       const matches = FLAT.filter(({ articulo }) => {
         if (isNumeric) return String(articulo.numero) === rawQuery.trim();
         return normalize(articulo.epigrafe).includes(q) ||
-               (articulo.texto || []).some(t => normalize(t).includes(q)) ||
+               normalizeTextos(articulo).some(t => normalize(t).includes(q)) ||
                (articulo.palabrasClave || []).some(p => normalize(p).includes(q));
       });
       showSearchResults(matches, rawQuery);
@@ -676,7 +712,8 @@
         item.className = 'search-result-item';
         item.setAttribute('role', 'button'); item.setAttribute('tabindex', '0');
         const q = normalize(rawQuery);
-        const matchedParr = (articulo.texto || []).find(t => normalize(t).includes(q));
+        const textos = normalizeTextos(articulo);
+        const matchedParr = textos.find(t => normalize(t).includes(q));
         let snippet = '';
         if (matchedParr) {
           const start = Math.max(0, normalize(matchedParr).indexOf(q) - 40);
@@ -706,7 +743,7 @@
       if (idx >= FLAT.length) { ttsStop(); return; }
       ttsReadIdx = idx;
       const { articulo } = FLAT[idx];
-      const textos = articulo.texto || [];
+      const textos = normalizeTextos(articulo);
       showArticleByIdx(idx, true);
       const pEls = articleBody.querySelectorAll('p');
       pEls.forEach(p => p.classList.remove('tts-reading'));
