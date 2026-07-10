@@ -338,8 +338,6 @@
 
   <script>
     // ─── ÚNICA LÍNEA A CAMBIAR POR CÓDIGO ───────────────────────────────────
-    // Lee el nombre del JSON desde el atributo data-json del <body>.
-    // Ejemplo: <body data-json="codigo_civil_completo.json">
     const JSON_FILE = document.body.dataset.json || 'codigo_completo.json';
     const jsonUrl   = new URL(JSON_FILE, window.location.href).href;
     // ────────────────────────────────────────────────────────────────────────
@@ -401,7 +399,7 @@
     tagsOverlay.addEventListener('click', e => { if (e.target === tagsOverlay) tagsOverlay.classList.remove('open'); });
     hamburger.addEventListener('click', () => sidebar.classList.toggle('open'));
 
-    // ─── METADATA DINÁMICA (lee del JSON, sin hardcodear) ───────────────────
+    // ─── METADATA DINÁMICA ──────────────────────────────────────────────────
     function codeFullTitle() {
       if (DATA && DATA.codigo) return DATA.codigo + (DATA.pais ? ` del ${DATA.pais}` : ' del Paraguay');
       return 'Código — JurisParaguay';
@@ -455,7 +453,6 @@
       const re = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
       return str.replace(re, '<mark class="search-highlight">$1</mark>');
     }
-    // Convierte "disposiciones_comunes_transitorias_y_finales" → "Disposiciones Comunes Transitorias y Finales"
     function humanize(key) {
       const small = new Set(['y', 'de', 'del', 'la', 'los', 'las', 'en', 'el', 'a']);
       return key.split('_').map((w, i) => {
@@ -465,8 +462,6 @@
     }
 
     // ─── EXTRACCIÓN RECURSIVA ────────────────────────────────────────────────
-    // Navega cualquier estructura JSON (libros, títulos, capítulos, artículos)
-    // sin importar profundidad ni nomenclatura exacta de las claves.
     function deepExtractArticulos(node, ctx, out) {
       if (!node || typeof node !== 'object') return;
       if ('numero' in node && (node.texto || node.epigrafe !== undefined)) { out.push({ ...ctx, articulo: node }); return; }
@@ -515,8 +510,6 @@
     }
 
     // ─── BUILD FLAT ──────────────────────────────────────────────────────────
-    // FIX: detecta secciones sueltas en la raíz del JSON (ej. disposiciones
-    // transitorias fuera de "titulos") y las suma como grupo propio.
     function buildFlat(data) {
       const raw = [];
       const libroRoot = { id: 'libro-1', nombre: data.codigo || 'Código', numero: 1 };
@@ -525,7 +518,6 @@
         titulo:   { id: 'titulo-1', nombre: 'General', numero: 1 },
         capitulo: { id: 'cap-1',    nombre: 'General', numero: 1 }
       }, raw);
-      // Secciones raíz no estándar
       const KNOWN = new Set(['codigo','ley','pais','fecha','titulos','libros','titulo','libro','capitulos','capitulo','articulos','articulo']);
       Object.keys(data).forEach(key => {
         if (KNOWN.has(key)) return;
@@ -669,7 +661,6 @@
     // ─── HASH & STORAGE ──────────────────────────────────────────────────────
     function getHashArtNum() { const h = window.location.hash.replace('#art-','').trim(); return h ? parseInt(h,10) : null; }
     function setHashFromIdx(idx) { if (!FLAT.length) return; history.replaceState(null, '', '#art-' + FLAT[idx].articulo.numero); }
-    // storageKey dinámico: usa DATA.ley para evitar colisiones entre códigos
     function storageKey() { return 'lastIdx_' + (DATA && DATA.ley ? DATA.ley : window.location.pathname); }
     function savePosition(idx) { try { localStorage.setItem(storageKey(), idx); } catch(e) {} }
     function loadPosition()    { try { return parseInt(localStorage.getItem(storageKey()), 10) || 0; } catch(e) { return 0; } }
@@ -712,6 +703,51 @@
     }
     function getSelectedVoice() { return voices[parseInt(playerVoice.value, 10)] || null; }
     playerSpeed.addEventListener('input', () => { playerSpeedVal.textContent = parseFloat(playerSpeed.value).toFixed(1) + '×'; });
+
+    // ─── MEDIA SESSION + AUDIO BACKGROUND (pantalla bloqueada) ──────────────
+    // Un <audio> silencioso en loop mantiene activa la sesión de audio del OS,
+    // lo que evita que Android/iOS suspendan el SpeechSynthesis al bloquear pantalla.
+    // El audio es 1 segundo de silencio en base64 (no consume datos ni batería extra).
+    let _silentAudio = null;
+
+    function keepAudioSessionAlive() {
+      if (_silentAudio) { _silentAudio.play().catch(() => {}); return; }
+      // 1 segundo de silencio MP3 en base64
+      const b64 = 'data:audio/mpeg;base64,SUQzBAAAAAABEVRYWFgAAAAtAAADY29tbWVudABCaWdTb3VuZEJhbmsgU291bmQgRWZmZWN0cyBMaWJyYXJ5AB' +
+        'RDT00AAAACAA//uUZAAP8AAAaQAAAAgAAA0gAAABAAABpAAAACAAADSAAAAE' +
+        'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' +
+        'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' +
+        'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' +
+        'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' +
+        'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' +
+        'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==';
+      _silentAudio = new Audio(b64);
+      _silentAudio.loop = true;
+      _silentAudio.volume = 0.001;
+      _silentAudio.play().catch(() => {});
+    }
+
+    function stopAudioSession() {
+      if (_silentAudio) { _silentAudio.pause(); }
+    }
+
+    function registrarMediaSession(articulo) {
+      if (!('mediaSession' in navigator)) return;
+      navigator.mediaSession.metadata = new MediaMetadata({
+        title:  `Art. ${articulo.numero}${articulo.epigrafe ? ' — ' + articulo.epigrafe : ''}`,
+        artist: DATA ? (DATA.codigo || 'JurisParaguay') : 'JurisParaguay',
+        album:  'JurisParaguay · Códigos Legales',
+        artwork: [
+          { src: '../../logo.png', sizes: '512x512', type: 'image/png' }
+        ]
+      });
+      navigator.mediaSession.setActionHandler('play',          () => { if (ttsPaused) ttsResume(); else if (!ttsPlaying) ttsPlay(currentIdx); });
+      navigator.mediaSession.setActionHandler('pause',         () => ttsPause());
+      navigator.mediaSession.setActionHandler('stop',          () => ttsStop());
+      navigator.mediaSession.setActionHandler('previoustrack', () => speakArticle(Math.max(0, ttsReadIdx - 1)));
+      navigator.mediaSession.setActionHandler('nexttrack',     () => speakArticle(Math.min(FLAT.length - 1, ttsReadIdx + 1)));
+      navigator.mediaSession.playbackState = 'playing';
+    }
 
     function showArticleByIdx(idx, fromPlayer) {
       if (!FLAT.length) return;
@@ -784,6 +820,11 @@
       showArticleByIdx(idx, true);
       document.querySelectorAll('.reader-card.card-primary .article-body p').forEach((p,i) => { p.classList.remove('tts-reading'); if (i===0) p.classList.add('tts-reading'); });
       updatePlayerInfo(idx);
+
+      // Mantener sesión de audio activa (para pantalla bloqueada)
+      keepAudioSessionAlive();
+      registrarMediaSession(articulo);
+
       const textos = articulo.texto || [];
       if (!textos.length) { setTimeout(() => { if (ttsPlaying) speakArticle(idx + 1); }, 300); return; }
       const heading = articulo.epigrafe ? `Artículo número ${articulo.numero}. ${articulo.epigrafe}.` : `Artículo número ${articulo.numero}.`;
@@ -794,6 +835,7 @@
       utt.onerror = e => { if (e.error === 'interrupted' || e.error === 'canceled') return; if (ttsPlaying) speakArticle(idx + 1); };
       speechSynthesis.speak(utt);
     }
+
     function ttsPlay(startFromIdx) {
       if (!window.speechSynthesis) { alert('Tu navegador no soporta Text-to-Speech.'); return; }
       ttsPlaying = true; ttsPaused = false;
@@ -802,16 +844,40 @@
       playerStop.disabled = false; playerPrev.disabled = false; playerNext.disabled = false; playerSkipBack.disabled = false; playerSkipFwd.disabled = false;
       speakArticle(ttsStartIdx);
     }
-    function ttsPause() { if (speechSynthesis.speaking && !speechSynthesis.paused) { speechSynthesis.pause(); ttsPaused = true; playerPlay.textContent = '▶'; playerPlay.title = 'Reanudar'; } }
-    function ttsResume() { if (speechSynthesis.paused) { speechSynthesis.resume(); ttsPaused = false; playerPlay.textContent = '⏸'; playerPlay.title = 'Pausar'; } }
+
+    function ttsPause() {
+      if (speechSynthesis.speaking && !speechSynthesis.paused) {
+        speechSynthesis.pause();
+        ttsPaused = true;
+        playerPlay.textContent = '▶'; playerPlay.title = 'Reanudar';
+        if ('mediaSession' in navigator) navigator.mediaSession.playbackState = 'paused';
+      }
+    }
+
+    function ttsResume() {
+      if (speechSynthesis.paused) {
+        speechSynthesis.resume();
+        ttsPaused = false;
+        playerPlay.textContent = '⏸'; playerPlay.title = 'Pausar';
+        if ('mediaSession' in navigator) navigator.mediaSession.playbackState = 'playing';
+      }
+    }
+
     function ttsStop() {
-      speechSynthesis.cancel(); ttsPlaying = false; ttsPaused = false;
+      speechSynthesis.cancel();
+      ttsPlaying = false; ttsPaused = false;
+      stopAudioSession();
       playerPlay.textContent = '▶'; playerPlay.title = 'Reproducir';
       playerStop.disabled = true; playerPrev.disabled = true; playerNext.disabled = true; playerSkipBack.disabled = true; playerSkipFwd.disabled = true;
       playerProgressFill.style.width = '0%';
       playerTitle.textContent = 'Sin reproducción activa'; playerSubtitle.textContent = 'Presioná ▶ para comenzar'; playerCounter.textContent = '';
       document.querySelectorAll('.tts-reading').forEach(p => p.classList.remove('tts-reading'));
+      if ('mediaSession' in navigator) {
+        navigator.mediaSession.playbackState = 'none';
+        navigator.mediaSession.metadata = null;
+      }
     }
+
     function updatePlayerInfo(idx) {
       if (!FLAT.length) return;
       const { articulo, titulo, capitulo } = FLAT[idx];
@@ -820,7 +886,9 @@
       playerCounter.textContent  = `${idx + 1} / ${FLAT.length}`;
       playerProgressFill.style.width = (FLAT.length > 1 ? (idx / (FLAT.length - 1)) * 100 : 100).toFixed(1) + '%';
     }
+
     function updatePlayerControls() { const a = ttsPlaying; playerStop.disabled=!a; playerPrev.disabled=!a; playerNext.disabled=!a; playerSkipBack.disabled=!a; playerSkipFwd.disabled=!a; }
+
     playerPlay.addEventListener('click', () => {
       if (!window.speechSynthesis) { alert('Tu navegador no soporta Text-to-Speech.'); return; }
       if (!ttsPlaying) ttsPlay(currentIdx); else if (ttsPaused) ttsResume(); else ttsPause();
