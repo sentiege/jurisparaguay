@@ -1,0 +1,3388 @@
+{
+  "codigo": "Código Sanitario",
+  "ley": "836/80",
+  "pais": "Paraguay",
+  "fecha": "1980",
+  "libros": [
+    {
+      "id": "libro-I",
+      "numero": "I",
+      "nombre": "DE LA SALUD",
+      "titulos": [
+        {
+          "id": "l1-t-preliminar",
+          "numero": "PRELIMINAR",
+          "nombre": "DE LAS ACCIONES PARA LA SALUD",
+          "rangoArticulos": "10-14",
+          "capitulos": null,
+          "articulos": [
+            {
+              "numero": 10,
+              "epigrafe": "CUIDADO DE LA SALUD",
+              "texto": [
+                "El cuidado de la salud comprende:",
+                "a) En relación a las personas, las acciones integrales y coordinadas de promoción, protección, recuperación y rehabilitación del estado de bienestar físico, mental y social;",
+                "b) En relación al medio, el control de los factores condicionantes de la salud de las personas."
+              ],
+              "palabrasClave": ["promoción", "protección", "recuperación", "rehabilitación", "bienestar", "factores condicionantes"]
+            },
+            {
+              "numero": 11,
+              "epigrafe": "COORDINACIÓN",
+              "texto": [
+                "El Ministerio debe coordinar los planes y las acciones de las instituciones que desarrollan actividades relacionadas con la salud."
+              ],
+              "palabrasClave": ["coordinación", "planes", "instituciones"]
+            },
+            {
+              "numero": 12,
+              "epigrafe": "CONSEJO NACIONAL DE SALUD",
+              "texto": [
+                "El Poder Ejecutivo podrá disponer el funcionamiento de un Consejo Nacional de Salud, mediante la integración de los distintos componentes del sector para racionalizar los recursos, reducir los costos y evitar la superposición o dispersión de esfuerzos."
+              ],
+              "palabrasClave": ["Consejo Nacional de Salud", "racionalizar", "recursos", "costos"]
+            },
+            {
+              "numero": 13,
+              "epigrafe": "EMERGENCIA SANITARIA",
+              "texto": [
+                "En casos de epidemias o catástrofes, el Poder Ejecutivo está facultado a declarar en estado de emergencia sanitaria la totalidad o parte afectada del territorio nacional, determinando su carácter y estableciendo las medidas procedentes, pudiendo exigir acciones específicas extraordinarias a las instituciones públicas y privadas, así como a la población en general."
+              ],
+              "palabrasClave": ["emergencia sanitaria", "epidemias", "catástrofes", "medidas extraordinarias"]
+            },
+            {
+              "numero": 14,
+              "epigrafe": "SALUD FAMILIAR",
+              "texto": [
+                "La salud del grupo familiar es derecho irrenunciable que se reconoce a todos los habitantes del país.",
+                "El Estado promoverá y realizará las acciones necesarias en favor de la salud familiar."
+              ],
+              "palabrasClave": ["salud familiar", "derecho irrenunciable"]
+            }
+          ]
+        },
+        {
+          "id": "l1-t1",
+          "numero": "I",
+          "nombre": "DISPOSICIONES GENERALES",
+          "rangoArticulos": "1-7",
+          "capitulos": [
+            {
+              "id": "l1-t1-c-unico",
+              "numero": "ÚNICO",
+              "nombre": "DISPOSICIONES GENERALES",
+              "rangoArticulos": "1-7",
+              "articulos": [
+                {
+                  "numero": 1,
+                  "epigrafe": "OBJETO",
+                  "texto": [
+                    "Este Código regula las funciones del Estado en lo relativo al cuidado integral de la salud del pueblo y los derechos y obligaciones de las personas en la materia."
+                  ],
+                  "palabrasClave": ["funciones del Estado", "cuidado integral", "salud"]
+                },
+                {
+                  "numero": 2,
+                  "epigrafe": "SECTOR SALUD",
+                  "texto": [
+                    "El sector salud estará integrado por todas las instituciones, públicas y privadas, que tengan relación con la salud de la población por su acción directa o indirecta."
+                  ],
+                  "palabrasClave": ["sector salud", "instituciones públicas", "instituciones privadas"]
+                },
+                {
+                  "numero": 3,
+                  "epigrafe": "MINISTERIO DE SALUD",
+                  "texto": [
+                    "El Ministerio de Salud Pública y Bienestar Social, que en adelante se denominará el Ministerio, es la más alta dependencia del Estado competente en materia de salud y aspectos fundamentales del bienestar social."
+                  ],
+                  "palabrasClave": ["Ministerio de Salud Pública y Bienestar Social", "competente", "bienestar social"]
+                },
+                {
+                  "numero": 4,
+                  "epigrafe": "AUTORIDAD DE SALUD",
+                  "texto": [
+                    "La Autoridad de Salud será ejercido por el Ministro de Salud Pública y Bienestar Social, con la responsabilidad y atribuciones de cumplir y hacer cumplir las disposiciones previstas en este Código y su reglamentación."
+                  ],
+                  "palabrasClave": ["Autoridad de Salud", "Ministro", "responsabilidad", "atribuciones"]
+                },
+                {
+                  "numero": 5,
+                  "epigrafe": "POLÍTICA NACIONAL DE SALUD",
+                  "texto": [
+                    "La política nacional de salud y bienestar social deberán elaborarse de acuerdo con los objetivos, políticas y estrategias globales del desarrollo económico y social de la Nación."
+                  ],
+                  "palabrasClave": ["política nacional de salud", "bienestar social", "desarrollo económico y social"]
+                },
+                {
+                  "numero": 6,
+                  "epigrafe": "PLANES Y PROGRAMAS",
+                  "texto": [
+                    "Los planes y programas de salud y bienestar social deberán elaborarse de acuerdo con los objetivos, políticas y estrategias globales del desarrollo económico y social de la Nación."
+                  ],
+                  "palabrasClave": ["planes", "programas", "salud", "bienestar social"]
+                },
+                {
+                  "numero": 7,
+                  "epigrafe": "APROBACIÓN Y CONTROL",
+                  "texto": [
+                    "Los planes, programas y actividades de salud y bienestar social, a cargo de las instituciones públicas y privadas, serán aprobados y controlados por el Ministerio que debe orientarlos de acuerdo con la política de salud y bienestar social de la Nación."
+                  ],
+                  "palabrasClave": ["aprobación", "control", "orientación"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "l1-t2",
+          "numero": "II",
+          "nombre": "DE LA SALUD DE LAS PERSONAS",
+          "rangoArticulos": "8-65",
+          "capitulos": [
+            {
+              "id": "l1-t2-c1",
+              "numero": "I",
+              "nombre": "DE LA SALUD DE LAS PERSONAS",
+              "rangoArticulos": "8-9",
+              "articulos": [
+                {
+                  "numero": 8,
+                  "epigrafe": "DEFINICIÓN DE SALUD",
+                  "texto": [
+                    "La salud es un estado de completo bienestar físico, mental y social."
+                  ],
+                  "palabrasClave": ["salud", "bienestar físico", "bienestar mental", "bienestar social"]
+                },
+                {
+                  "numero": 9,
+                  "epigrafe": "SALUD PÚBLICA",
+                  "texto": [
+                    "Salud Pública es el estado de salud de la población de determinada área geográfica, en función a sus factores condicionantes."
+                  ],
+                  "palabrasClave": ["Salud Pública", "población", "factores condicionantes"]
+                }
+              ]
+            },
+            {
+              "id": "l1-t2-c1-s1",
+              "numero": "I",
+              "nombre": "DE LA SALUD DE LAS PERSONAS POR NACER",
+              "rangoArticulos": "15-17",
+              "articulos": [
+                {
+                  "numero": 15,
+                  "epigrafe": "PROTECCIÓN DE LAS PERSONAS POR NACER",
+                  "texto": [
+                    "Las personas por nacer tienen derecho a ser protegidos por el Estado, en su vida y en su salud, desde su concepción."
+                  ],
+                  "palabrasClave": ["personas por nacer", "protección", "concepción"]
+                },
+                {
+                  "numero": 16,
+                  "epigrafe": "PROTECCIÓN DURANTE LA GESTACIÓN",
+                  "texto": [
+                    "Durante la gestación la protección de la salud comprenderá a la madre y al ser en gestación como unidad biológica."
+                  ],
+                  "palabrasClave": ["gestación", "madre", "unidad biológica"]
+                },
+                {
+                  "numero": 17,
+                  "epigrafe": "ABORTO",
+                  "texto": [
+                    "El aborto en su calificación y sanción quedará sujeto a las disposiciones de la legislación penal común."
+                  ],
+                  "palabrasClave": ["aborto", "legislación penal"]
+                }
+              ]
+            },
+            {
+              "id": "l1-t2-c1-s2",
+              "numero": "II",
+              "nombre": "DE LA REPRODUCCION HUMANA",
+              "rangoArticulos": "18-20",
+              "articulos": [
+                {
+                  "numero": 18,
+                  "epigrafe": "REPRODUCCIÓN HUMANA",
+                  "texto": [
+                    "La reproducción humana debe ser practicada con libertad y responsabilidad protegiendo la salud de la persona desde su concepción."
+                  ],
+                  "palabrasClave": ["reproducción humana", "libertad", "responsabilidad"]
+                },
+                {
+                  "numero": 19,
+                  "epigrafe": "PROGRAMAS DE REPRODUCCIÓN",
+                  "texto": [
+                    "Corresponde al sector salud, bajo la supervisión y control del Ministerio, promover, orientar y desarrollar programas de investigación, información, educación y servicios médico-sociales dirigidos a la familia y todo lo relacionado con la reproducción humana, vigilando que ellos se lleven a cabo con el debido respeto de los derechos fundamentales del ser humano y a la dignidad de la familia."
+                  ],
+                  "palabrasClave": ["investigación", "información", "educación", "servicios médico-sociales", "familia", "derechos fundamentales"]
+                },
+                {
+                  "numero": 20,
+                  "epigrafe": "PROTECCIÓN FAMILIAR",
+                  "texto": [
+                    "Los programas de protección familiar deben obedecer a las estrategias del sector salud, en coincidencia con los planes y exigencias del desarrollo económico y social, de acuerdo con los valores y expectativas de la Nación."
+                  ],
+                  "palabrasClave": ["protección familiar", "estrategias", "desarrollo económico y social"]
+                }
+              ]
+            },
+            {
+              "id": "l1-t2-c1-s3",
+              "numero": "III",
+              "nombre": "DE LA SALUD DE LOS PROGENITORES Y DEL HIJO",
+              "rangoArticulos": "21-23",
+              "articulos": [
+                {
+                  "numero": 21,
+                  "epigrafe": "CUIDADO DE PROGENITORES",
+                  "texto": [
+                    "Es obligación y derecho de los progenitores el cuidado de su salud y la de su hijo desde el inicio de la gestación."
+                  ],
+                  "palabrasClave": ["progenitores", "cuidado", "gestación"]
+                },
+                {
+                  "numero": 22,
+                  "epigrafe": "PROTECCIÓN DEL ESTADO",
+                  "texto": [
+                    "El Estado por su parte, protegerá y asistirá sanitariamente al niño desde su concepción hasta la mayoría de edad."
+                  ],
+                  "palabrasClave": ["protección", "asistencia sanitaria", "niño", "mayoría de edad"]
+                },
+                {
+                  "numero": 23,
+                  "epigrafe": "RESPONSABILIDAD DE ESTABLECIMIENTOS",
+                  "texto": [
+                    "Es responsabilidad de los establecimientos que presten atención obstétrica y pediátrica la identificación, el cuidado, la seguridad y la custodia del recién nacido mientras dure la internación de la madre o del lactante."
+                  ],
+                  "palabrasClave": ["atención obstétrica", "pediátrica", "recién nacido", "custodia", "internación"]
+                }
+              ]
+            },
+            {
+              "id": "l1-t2-c2",
+              "numero": "II",
+              "nombre": "DE LA ATENCION MEDICA Y ODONTOLOGICA",
+              "rangoArticulos": "24",
+              "articulos": [
+                {
+                  "numero": 24,
+                  "epigrafe": "CONSENTIMIENTO",
+                  "texto": [
+                    "Ninguna persona podrá recibir atención médica u odontológica sin su expreso consentimiento y en caso de impedimento el de la persona autorizada. Se exceptúan de esta prohibición las atenciones de urgencia y las previstas en el Artículo 13."
+                  ],
+                  "palabrasClave": ["consentimiento", "atención médica", "odontológica", "urgencia"]
+                }
+              ]
+            },
+            {
+              "id": "l1-t2-c3",
+              "numero": "III",
+              "nombre": "DE LAS ENFERMEDADES TRANSMISIBLES",
+              "rangoArticulos": "25-38",
+              "articulos": [
+                {
+                  "numero": 25,
+                  "epigrafe": "PREVENCIÓN",
+                  "texto": [
+                    "El Ministerio arbitrará las medidas para disminuir o eliminar los riesgos de enfermedades transmisibles, mediante acciones preventivas, curativas y rehabilitadoras, que tiendan a elevar el nivel inmunitario de las personas y combatir las fuentes de infección en coordinación con las demás instituciones del sector."
+                  ],
+                  "palabrasClave": ["enfermedades transmisibles", "preventivas", "curativas", "rehabilitadoras", "nivel inmunitario"]
+                },
+                {
+                  "numero": 26,
+                  "epigrafe": "AISLAMIENTO Y VIGILANCIA",
+                  "texto": [
+                    "Las personas que padecen de enfermedades transmisibles y los portadores y contactos de ellas, podrán ser sometidos a aislamiento, observación o vigilancia personal por el tiempo y en la forma que determine el Ministerio, el que podrá ordenar todas las medidas sanitarias necesarias que tiendan a la protección de la salud pública."
+                  ],
+                  "palabrasClave": ["aislamiento", "observación", "vigilancia", "medidas sanitarias"]
+                },
+                {
+                  "numero": 27,
+                  "epigrafe": "MÉTODOS PREVENTIVOS",
+                  "texto": [
+                    "El Ministerio podrá declarar obligatorio el uso de métodos o productos preventivos, sobre todo cuando se trate de evitar la extensión epidémica de una enfermedad transmisible."
+                  ],
+                  "palabrasClave": ["métodos preventivos", "epidemia", "obligatorio"]
+                },
+                {
+                  "numero": 28,
+                  "epigrafe": "NOTIFICACIÓN OBLIGATORIA",
+                  "texto": [
+                    "El Ministerio determinará las enfermedades transmisibles sujetas a notificación obligatoria, así como las formas y condiciones de su comunicación, a las que deben ajustarse los establecimientos de salud."
+                  ],
+                  "palabrasClave": ["notificación obligatoria", "enfermedades transmisibles", "comunicación"]
+                },
+                {
+                  "numero": 29,
+                  "epigrafe": "CONTACTOS",
+                  "texto": [
+                    "Las personas consideradas contactos de enfermedades transmisibles de notificación obligatoria, deben someterse a los métodos de control y observancia que establezca el Ministerio."
+                  ],
+                  "palabrasClave": ["contactos", "control", "observancia"]
+                },
+                {
+                  "numero": 30,
+                  "epigrafe": "PRIVILEGIOS DE NOTIFICACIÓN",
+                  "texto": [
+                    "La comunicación de enfermedades transmisibles de notificación obligatoria, por cualquier medio, gozará de los privilegios de gratuidad y de preferencia en un despacho."
+                  ],
+                  "palabrasClave": ["gratuidad", "preferencia", "comunicación"]
+                },
+                {
+                  "numero": 31,
+                  "epigrafe": "PROHIBICIÓN DE CONCURRENCIA",
+                  "texto": [
+                    "Queda prohibido a personas afectadas por las enfermedades transmisibles, que determine el Ministerio, concurrir a lugares de reunión o concentración durante el período de transmisibilidad."
+                  ],
+                  "palabrasClave": ["prohibición", "lugares de reunión", "transmisibilidad"]
+                },
+                {
+                  "numero": 32,
+                  "epigrafe": "INSPECCIÓN MÉDICA",
+                  "texto": [
+                    "El Ministerio podrá disponer la inspección médica de cualquier persona sospechosa de padecer enfermedad transmisible de notificación obligatoria, para su diagnóstico, tratamiento y la adopción de medidas preventivas tendientes a evitar la propagación del mal."
+                  ],
+                  "palabrasClave": ["inspección médica", "diagnóstico", "tratamiento", "prevención"]
+                },
+                {
+                  "numero": 33,
+                  "epigrafe": "ALLANAMIENTO",
+                  "texto": [
+                    "En el caso del Artículo anterior, de mediar oposición al ingreso del médico destacado por el Ministerio por parte del propietario o moradores de la vivienda o local donde se hallare el presunto enfermo, se procederá al allanamiento por orden judicial, la que deberá ser expedida sin dilación por el Juez competente, a petición del Ministerio y que podrá cumplirse con la intervención de la fuerza pública, si fuere necesario."
+                  ],
+                  "palabrasClave": ["allanamiento", "orden judicial", "fuerza pública"]
+                },
+                {
+                  "numero": 34,
+                  "epigrafe": "VACUNACIÓN OBLIGATORIA",
+                  "texto": [
+                    "Es obligatoria la vacunación de las personas en los casos y formas que determine el Ministerio."
+                  ],
+                  "palabrasClave": ["vacunación obligatoria", "casos", "formas"]
+                },
+                {
+                  "numero": 35,
+                  "epigrafe": "PROGRAMAS DE VACUNACIÓN",
+                  "texto": [
+                    "El Ministerio debe desarrollar programas de vacunación contra las enfermedades prevenibles, en coordinación con las demás instituciones del sector."
+                  ],
+                  "palabrasClave": ["programas de vacunación", "enfermedades prevenibles", "coordinación"]
+                },
+                {
+                  "numero": 36,
+                  "epigrafe": "FABRICACIÓN DE VACUNAS",
+                  "texto": [
+                    "La fabricación y comercialización de vacunas de uso humano y contra las zoonosis requieren la autorización previa del Ministerio."
+                  ],
+                  "palabrasClave": ["fabricación", "comercialización", "vacunas", "autorización"]
+                },
+                {
+                  "numero": 37,
+                  "epigrafe": "VIGILANCIA EPIDEMIOLÓGICA",
+                  "texto": [
+                    "El Ministerio determinará las enfermedades sujetas a vigilancia epidemiológica, estableciendo los procedimientos a adoptar en cada caso."
+                  ],
+                  "palabrasClave": ["vigilancia epidemiológica", "procedimientos"]
+                },
+                {
+                  "numero": 38,
+                  "epigrafe": "CONTROL DE ENFERMEDADES TRANSMISIBLES",
+                  "texto": [
+                    "El control de las enfermedades transmisibles, se realizará conforme a los tratados, convenios, acuerdos internacionales vigentes y al presente Código y su reglamentación."
+                  ],
+                  "palabrasClave": ["control", "tratados internacionales", "convenios", "acuerdos"]
+                }
+              ]
+            },
+            {
+              "id": "l1-t2-c4",
+              "numero": "IV",
+              "nombre": "DE LAS ENFERMEDADES ENDEMICAS",
+              "rangoArticulos": "39",
+              "articulos": [
+                {
+                  "numero": 39,
+                  "epigrafe": "CONTROL DE ENDEMIAS",
+                  "texto": [
+                    "El Ministerio programará el control o erradicación de las enfermedades endémicas."
+                  ],
+                  "palabrasClave": ["enfermedades endémicas", "control", "erradicación"]
+                }
+              ]
+            },
+            {
+              "id": "l1-t2-c5",
+              "numero": "V",
+              "nombre": "DE LAS ENFERMEDADES CRONICAS NO TRANSMISIBLES",
+              "rangoArticulos": "40-41",
+              "articulos": [
+                {
+                  "numero": 40,
+                  "epigrafe": "CONTROL DE ENFERMEDADES CRÓNICAS",
+                  "texto": [
+                    "El Ministerio dictará las medidas relativas al control de las enfermedades crónicas no transmisibles, que pueden constituir problemas de salud pública."
+                  ],
+                  "palabrasClave": ["enfermedades crónicas", "no transmisibles", "salud pública"]
+                },
+                {
+                  "numero": 41,
+                  "epigrafe": "INVESTIGACIÓN",
+                  "texto": [
+                    "El Ministerio y las Universidades, separados o conjuntamente, procederán a la creación de establecimientos especializados en la investigación de enfermedades crónicas no transmisibles, con fines de diagnóstico, tratamiento y docencia. Podrán crear establecimientos con idéntica finalidad las instituciones públicas y privadas, previa aprobación del Ministerio."
+                  ],
+                  "palabrasClave": ["investigación", "diagnóstico", "tratamiento", "docencia"]
+                }
+              ]
+            },
+            {
+              "id": "l1-t2-c6",
+              "numero": "VI",
+              "nombre": "DE LOS DAÑOS POR ACCIDENTES",
+              "rangoArticulos": "42",
+              "articulos": [
+                {
+                  "numero": 42,
+                  "epigrafe": "PREVENCIÓN DE ACCIDENTES",
+                  "texto": [
+                    "El Ministerio dictará medidas y realizará actividades en coordinación con instituciones públicas y privadas competentes en la materia, para evitar o reducir las lesiones por accidentes."
+                  ],
+                  "palabrasClave": ["accidentes", "lesiones", "prevención", "coordinación"]
+                }
+              ]
+            },
+            {
+              "id": "l1-t2-c7",
+              "numero": "VII",
+              "nombre": "DE LA SALUD MENTAL",
+              "rangoArticulos": "43-48",
+              "articulos": [
+                {
+                  "numero": 43,
+                  "epigrafe": "PROGRAMAS DE HIGIENE MENTAL",
+                  "texto": [
+                    "El Ministerio desarrollará programas de higiene mental para prevenir, promover y recuperar el bienestar psíquico, individual, familiar y colectivo de las personas, y establecerá las normas a ser observadas ejerciendo el control de su fiel cumplimiento."
+                  ],
+                  "palabrasClave": ["higiene mental", "bienestar psíquico", "prevención", "promoción", "recuperación"]
+                },
+                {
+                  "numero": 44,
+                  "epigrafe": "INVESTIGACIÓN EPIDEMIOLÓGICA",
+                  "texto": [
+                    "El Ministerio promoverá y realizará la investigación epidemiológica de las enfermedades mentales, para detectar su incidencia, las causas y los factores que las condicionan."
+                  ],
+                  "palabrasClave": ["investigación epidemiológica", "enfermedades mentales", "incidencia", "causas"]
+                },
+                {
+                  "numero": 45,
+                  "epigrafe": "INTERNACIÓN PSIQUIÁTRICA",
+                  "texto": [
+                    "La internación de una persona en establecimientos destinados al tratamiento de las enfermedades mentales, sólo podrá cumplirse después de que dos médicos, uno de ellos psiquiatra, certifique que la misma padece de enfermedad mental."
+                  ],
+                  "palabrasClave": ["internación", "enfermedades mentales", "psiquiatra", "certificación"]
+                },
+                {
+                  "numero": 46,
+                  "epigrafe": "PROHIBICIÓN DE PRÁCTICAS PSICOLÓGICAS",
+                  "texto": [
+                    "Queda prohibido realizar cualquier tipo de orientación, tratamiento y aplicación de sistemas psicológicos que puedan crear o favorecer reacciones individuales o de grupos, dañinos a la salud mental o que pongan en peligro la estabilidad emocional de las personas o en riesgo la convivencia social."
+                  ],
+                  "palabrasClave": ["prohibición", "orientación psicológica", "salud mental", "estabilidad emocional", "convivencia social"]
+                },
+                {
+                  "numero": 47,
+                  "epigrafe": "NOTIFICACIÓN DE ALTERACIONES PSÍQUICAS",
+                  "texto": [
+                    "Los profesionales en ciencias de la salud notificarán inmediatamente al Ministerio la aparición de cualquier alteración psíquica colectiva."
+                  ],
+                  "palabrasClave": ["notificación", "alteración psíquica colectiva"]
+                },
+                {
+                  "numero": 48,
+                  "epigrafe": "PUBLICIDAD PROHIBIDA",
+                  "texto": [
+                    "Queda prohibida la publicidad de sustancias y productos que pueden afectar la salud mental de las personas. La promoción en sus características, calidad y técnica de elaboración, se limitará al ámbito de los profesionales de la salud."
+                  ],
+                  "palabrasClave": ["publicidad", "salud mental", "promoción", "profesionales de la salud"]
+                }
+              ]
+            },
+            {
+              "id": "l1-t2-c8",
+              "numero": "VIII",
+              "nombre": "DE LA SALUD DEPORTIVA",
+              "rangoArticulos": "49-54",
+              "articulos": [
+                {
+                  "numero": 49,
+                  "epigrafe": "RIESGOS DEPORTIVOS",
+                  "texto": [
+                    "El Ministerio determinará los deportes y gimnasias que, de acuerdo a su naturaleza, a la edad y sexo de quienes los practiquen, ofrecen riesgo para la salud."
+                  ],
+                  "palabrasClave": ["deportes", "gimnasia", "riesgo", "edad", "sexo"]
+                },
+                {
+                  "numero": 50,
+                  "epigrafe": "CONTROL MÉDICO DEPORTIVO",
+                  "texto": [
+                    "El Ministerio establecerá un sistema de control médico para la práctica de deportes y ejercicios de educación física, en clubes y gimnasios."
+                  ],
+                  "palabrasClave": ["control médico", "deportes", "educación física", "clubes", "gimnasios"]
+                },
+                {
+                  "numero": 51,
+                  "epigrafe": "COORDINACIÓN INTERMINISTERIAL",
+                  "texto": [
+                    "Los Ministerios de Salud Pública y Bienestar Social y de Educación y Culto coordinarán sus acciones para preservar la salud de los practicantes de deportes, gimnastas y alumnos de establecimientos educacionales."
+                  ],
+                  "palabrasClave": ["coordinación", "salud deportiva", "educación", "alumnos"]
+                },
+                {
+                  "numero": 52,
+                  "epigrafe": "PROHIBICIÓN DE SUSTANCIAS ESTIMULANTES",
+                  "texto": [
+                    "Queda prohibido, a quienes practiquen deportes, el uso de sustancias nocivas para la salud, en especial estimulantes, tendientes a superar cualquier impedimento físico o psíquico y aumentar sus posibilidades en las competencias deportivas."
+                  ],
+                  "palabrasClave": ["prohibición", "sustancias estimulantes", "dopaje", "deportes"]
+                },
+                {
+                  "numero": 53,
+                  "epigrafe": "SANCIÓN POR SUMINISTRO",
+                  "texto": [
+                    "El que suministrare, a quienes practiquen deportes, sustancias estimulantes, o los indujeren a su uso, así como los encubridores de tales hechos, serán pasibles de las sanciones previstas en este Código, sin perjuicio de las que correspondan en virtud de la legislación penal."
+                  ],
+                  "palabrasClave": ["suministro", "sustancias estimulantes", "encubridores", "sanciones"]
+                },
+                {
+                  "numero": 54,
+                  "epigrafe": "COMPETENCIA PARA VERIFICAR",
+                  "texto": [
+                    "El Ministerio es la única institución competente para verificar el consumo de las sustancias mencionadas en el artículo 52."
+                  ],
+                  "palabrasClave": ["competencia exclusiva", "verificación", "sustancias estimulantes"]
+                }
+              ]
+            },
+            {
+              "id": "l1-t2-c9",
+              "numero": "IX",
+              "nombre": "DE LA REHABILITACION",
+              "rangoArticulos": "55-56",
+              "articulos": [
+                {
+                  "numero": 55,
+                  "epigrafe": "CREACIÓN DE ESTABLECIMIENTOS",
+                  "texto": [
+                    "El Ministerio promoverá la creación de establecimientos de rehabilitación. Autorizará y coordinará las acciones de las instituciones públicas y privadas para proporcionar atención a los incapacitados físicos, mentales o sociales."
+                  ],
+                  "palabrasClave": ["rehabilitación", "establecimientos", "incapacitados"]
+                },
+                {
+                  "numero": 56,
+                  "epigrafe": "FORMACIÓN DE PROFESIONALES",
+                  "texto": [
+                    "El Ministerio promoverá la forma y capacitación de profesionales, técnicos y auxiliares que se requiera, en materia de rehabilitación."
+                  ],
+                  "palabrasClave": ["capacitación", "profesionales", "técnicos", "auxiliares"]
+                }
+              ]
+            },
+            {
+              "id": "l1-t2-c10",
+              "numero": "X",
+              "nombre": "DEL CONTROL DE LA SALUD DE LAS PERSONAS",
+              "rangoArticulos": "57-65",
+              "articulos": [
+                {
+                  "numero": 57,
+                  "epigrafe": "CONTROLES PERIÓDICOS",
+                  "texto": [
+                    "El Ministerio determinará las enfermedades que periódicamente deben ser objetos de control de la salud en las personas, en sus dependencias."
+                  ],
+                  "palabrasClave": ["controles periódicos", "enfermedades", "dependencias"]
+                },
+                {
+                  "numero": 58,
+                  "epigrafe": "CERTIFICADO DE SALUD",
+                  "texto": [
+                    "Cumplidos los controles exigidos por el Artículo precedente, el Ministerio expedirá el certificado de salud en formulario especialmente habilitado, sin cuya tenencia, persona alguna podrá ejercer sus funciones o trabajo ni realizar gestiones ante las autoridades u oficinas públicas."
+                  ],
+                  "palabrasClave": ["certificado de salud", "requisito", "funciones", "gestiones"]
+                },
+                {
+                  "numero": 59,
+                  "epigrafe": "OBLIGACIÓN DEL EMPLEADOR",
+                  "texto": [
+                    "Los empleadores no admitirán en sus establecimientos, el servicio de persona alguna que carezca de certificado de salud que lo habilite para el trabajo o empleo."
+                  ],
+                  "palabrasClave": ["empleadores", "certificado de salud", "trabajo", "empleo"]
+                },
+                {
+                  "numero": 60,
+                  "epigrafe": "EXENCIONES",
+                  "texto": [
+                    "Están exentos de cumplir la obligación impuesta por el Artículo 58, los Miembros del Cuerpo Diplomático y Consular, los funcionarios de Agencias Internacionales de cooperación y los extranjeros que ingresen al país en calidad de turistas."
+                  ],
+                  "palabrasClave": ["exenciones", "cuerpo diplomático", "turistas"]
+                },
+                {
+                  "numero": 61,
+                  "epigrafe": "EXAMEN MÉDICO PRENUPCIAL",
+                  "texto": [
+                    "Para contraer matrimonio se requiere, obligatoriamente, el examen médico previo de la pareja en las dependencias del Ministerio habilitadas para el efecto, con la finalidad de verificar que ninguno padece de enfermedad que pueda poner en peligro la salud del otro contrayente o de su descendencia."
+                  ],
+                  "palabrasClave": ["examen médico prenupcial", "matrimonio", "enfermedad", "descendencia"]
+                },
+                {
+                  "numero": 62,
+                  "epigrafe": "CERTIFICADO MÉDICO PRENUPCIAL",
+                  "texto": [
+                    "Cumplidos los exámenes, exigidos para el control de la salud de los contrayentes, el Ministerio expedirá el correspondiente certificado médico prenupcial."
+                  ],
+                  "palabrasClave": ["certificado médico prenupcial", "Ministerio"]
+                },
+                {
+                  "numero": 63,
+                  "epigrafe": "EXIGENCIA DEL REGISTRO CIVIL",
+                  "texto": [
+                    "Los encargados de la Oficina del Registro del Estado Civil de las Personas exigirán, a quienes deseen contraer matrimonio, el certificado médico prenupcial, sin cuya presentación no podrán realizar el acto."
+                  ],
+                  "palabrasClave": ["Registro del Estado Civil", "certificado médico prenupcial", "matrimonio"]
+                },
+                {
+                  "numero": 64,
+                  "epigrafe": "TRATAMIENTO MÉDICO IMPUESTO",
+                  "texto": [
+                    "El Ministerio, cuando lo considere necesario, podrá imponer el tratamiento médico de las personas enfermas que, por la naturaleza de su enfermedad o el género de las ocupaciones a que se dedican pueden representar riesgos para la salud pública."
+                  ],
+                  "palabrasClave": ["tratamiento médico impuesto", "salud pública", "riesgos"]
+                },
+                {
+                  "numero": 65,
+                  "epigrafe": "CONTROL PARA LICENCIA DE CONDUCIR",
+                  "texto": [
+                    "Las personas que deseen obtener licencia para conducir vehículos, terrestres, fluviales o aéreos, están obligados al control médico, en las dependencias del Ministerio habilitadas a ese efecto, para la certificación correspondiente de su estado de salud."
+                  ],
+                  "palabrasClave": ["licencia de conducir", "control médico", "vehículos", "certificación"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "l1-t3",
+          "numero": "III",
+          "nombre": "DE LA SALUD Y EL MEDIO",
+          "rangoArticulos": "66-133",
+          "capitulos": [
+            {
+              "id": "l1-t3-c1",
+              "numero": "I",
+              "nombre": "DEL SANEAMIENTO AMBIENTAL - DE LA CONTAMINACIÓN Y POLUCIÓN",
+              "rangoArticulos": "66-68",
+              "articulos": [
+                {
+                  "numero": 66,
+                  "epigrafe": "PROHIBICIÓN DE DETERIORO",
+                  "texto": [
+                    "Queda prohibida toda acción que deteriore el medio natural, disminuyendo su calidad, tornándola riesgoso para la salud."
+                  ],
+                  "palabrasClave": ["deterioro", "medio natural", "calidad", "riesgo para la salud"]
+                },
+                {
+                  "numero": 67,
+                  "epigrafe": "LÍMITES DE CONTAMINACIÓN",
+                  "texto": [
+                    "El Ministerio determinará los límites de tolerancia para la emisión o descarga de contaminantes o poluidores en la atmósfera, el agua y el suelo y establecerá las normas a que deben ajustarse las actividades laborales, industriales, comerciales y del transporte, para preservar el ambiente de deterioro."
+                  ],
+                  "palabrasClave": ["límites de tolerancia", "contaminantes", "atmósfera", "agua", "suelo", "actividades"]
+                },
+                {
+                  "numero": 68,
+                  "epigrafe": "PROGRAMAS DE PREVENCIÓN",
+                  "texto": [
+                    "El Ministerio promoverá programas encaminados a la prevención y control de la contaminación y de polución ambiental y dispondrá medidas para su preservación, debiendo realizar controles periódicos del medio para detectar los agentes y factores de riesgo."
+                  ],
+                  "palabrasClave": ["prevención", "control", "contaminación", "polución ambiental", "controles periódicos"]
+                }
+              ]
+            },
+            {
+              "id": "l1-t3-c2",
+              "numero": "II",
+              "nombre": "DEL AGUA PARA CONSUMO HUMANO Y DE RECREO",
+              "rangoArticulos": "69-76",
+              "articulos": [
+                {
+                  "numero": 69,
+                  "epigrafe": "APROBACIÓN DE OBRAS HÍDRICAS",
+                  "texto": [
+                    "Los proyectos de construcción o modificación de toda obra pública destinada al aprovechamiento o tratamiento de agua en una población, en un lugar de trabajo o de concurrencia de personas, deber ser aprobados por el Ministerio para su ejecución."
+                  ],
+                  "palabrasClave": ["obras hídricas", "aprobación", "agua", "población"]
+                },
+                {
+                  "numero": 70,
+                  "epigrafe": "ABASTECIMIENTO EN POBLACIONES MENORES",
+                  "texto": [
+                    "El Ministerio ejecutará y controlará obras de abastecimiento de agua potable, en poblaciones de menor concentración."
+                  ],
+                  "palabrasClave": ["abastecimiento de agua potable", "poblaciones menores"]
+                },
+                {
+                  "numero": 71,
+                  "epigrafe": "DEFINICIÓN DE POBLACIONES MENORES",
+                  "texto": [
+                    "El Poder Ejecutivo determinará el número máximo de habitantes que definirá a las poblaciones de menor concentración."
+                  ],
+                  "palabrasClave": ["número máximo de habitantes", "poblaciones menores"]
+                },
+                {
+                  "numero": 72,
+                  "epigrafe": "CONTROL DE PLANTAS DE TRATAMIENTO",
+                  "texto": [
+                    "El Ministerio controlará el estado higiénico sanitario de todas las plantas de tratamiento de agua, así como de la calidad del líquido suministrado."
+                  ],
+                  "palabrasClave": ["plantas de tratamiento", "control", "calidad del agua"]
+                },
+                {
+                  "numero": 73,
+                  "epigrafe": "NORMAS DE SUMINISTRO",
+                  "texto": [
+                    "El suministro de agua a la población, mediante sistemas de abastecimiento público, debe ajustarse a las normas de potabilidad, continuidad, cantidad y presión."
+                  ],
+                  "palabrasClave": ["suministro de agua", "potabilidad", "continuidad", "cantidad", "presión"]
+                },
+                {
+                  "numero": 74,
+                  "epigrafe": "SUSTANCIAS AUTORIZADAS",
+                  "texto": [
+                    "Sólo se podrá adicionar al agua de consumo público sustancias autorizadas por el Ministerio."
+                  ],
+                  "palabrasClave": ["sustancias", "agua de consumo", "autorización"]
+                },
+                {
+                  "numero": 75,
+                  "epigrafe": "DAÑO A SISTEMAS DE AGUA",
+                  "texto": [
+                    "Quien dañare u obstruyere los sistemas de abastecimiento público de agua, será pasible de las sanciones previstas en el presente Código, sin perjuicio de las establecidas por el Código Penal."
+                  ],
+                  "palabrasClave": ["daño", "obstrucción", "sistemas de agua", "sanciones", "Código Penal"]
+                },
+                {
+                  "numero": 76,
+                  "epigrafe": "CONDICIONES PARA ASENTAMIENTOS",
+                  "texto": [
+                    "Toda área destinada a nuevos asentamientos humanos deberá disponer de condiciones naturales capaces de abastecer de agua potable a la población."
+                  ],
+                  "palabrasClave": ["asentamientos humanos", "agua potable", "condiciones naturales"]
+                }
+              ]
+            },
+            {
+              "id": "l1-t3-c3",
+              "numero": "III",
+              "nombre": "DE LOS ALCANTARILLADOS Y DE LOS DESECHOS INDUSTRIALES",
+              "rangoArticulos": "77-85",
+              "articulos": [
+                {
+                  "numero": 77,
+                  "epigrafe": "DISPOSICIÓN DE EXCRETAS",
+                  "texto": [
+                    "En aquellos lugares donde no existiere red de alcantarillado, el Ministerio promocionará y asesorará a los propietarios u ocupantes, para que cada vivienda cuente con adecuada disposición de excretas."
+                  ],
+                  "palabrasClave": ["alcantarillado", "disposición de excretas", "vivienda"]
+                },
+                {
+                  "numero": 78,
+                  "epigrafe": "ALCANTARILLADOS EN POBLACIONES MENORES",
+                  "texto": [
+                    "El Ministerio promocionará, ejecutará y controlará la construcción de alcantarillados en las poblaciones de menor concentración."
+                  ],
+                  "palabrasClave": ["alcantarillados", "poblaciones menores"]
+                },
+                {
+                  "numero": 79,
+                  "epigrafe": "PROYECTOS DE VIVIENDA RURAL",
+                  "texto": [
+                    "Los programas de vivienda rural, asentamiento humano, desarrollo regional y de urbanización, deben prever la disposición sanitaria de excretas y sus proyectos requerirán aprobación previa del Ministerio."
+                  ],
+                  "palabrasClave": ["vivienda rural", "asentamiento humano", "urbanización", "disposición sanitaria", "aprobación"]
+                },
+                {
+                  "numero": 80,
+                  "epigrafe": "PROHIBICIÓN DE DESCARGA",
+                  "texto": [
+                    "Se prohíbe descargar aguas servidas o negras en sitios públicos, de tránsito o de recreo."
+                  ],
+                  "palabrasClave": ["aguas servidas", "sitios públicos", "prohibición"]
+                },
+                {
+                  "numero": 81,
+                  "epigrafe": "USO DE AGUAS CONTAMINADAS",
+                  "texto": [
+                    "Las aguas de alcantarillado, desagües o de fuentes contaminadas, no podrán destinarse a la crianza de especies animales, ni al cultivo de frutales o vegetales alimenticios."
+                  ],
+                  "palabrasClave": ["aguas contaminadas", "crianza", "cultivo", "frutales", "vegetales"]
+                },
+                {
+                  "numero": 82,
+                  "epigrafe": "DESECHOS INDUSTRIALES",
+                  "texto": [
+                    "Se prohíbe descargar desechos industriales en la atmósfera, canales, cursos de aguas superficiales o subterráneas, que causen o puedan causar contaminación o polución del suelo, del aire o de las aguas, sin previo tratamiento que los convierta en inofensivos para la salud de la población o que impida sus efectos perniciosos."
+                  ],
+                  "palabrasClave": ["desechos industriales", "contaminación", "polución", "tratamiento", "inofensivos"]
+                },
+                {
+                  "numero": 83,
+                  "epigrafe": "PROHIBICIÓN DE ARROJAR SUSTANCIAS",
+                  "texto": [
+                    "Se prohíbe arrojar en las aguas de uso doméstico y de aprovechamiento industrial, agrícola o recreativo, sustancias que produzcan su contaminación o polución y que puedan perjudicar, de cualquier modo, la salud del hombre y de los animales."
+                  ],
+                  "palabrasClave": ["sustancias contaminantes", "aguas", "salud", "animales"]
+                },
+                {
+                  "numero": 84,
+                  "epigrafe": "ELIMINACIÓN DE SUSTANCIAS NO BIODEGRADABLES",
+                  "texto": [
+                    "El Ministerio tiene facultad para autorizar, restringir, regular o prohibir la eliminación de sustancias no biodegradables a través de los sistemas de evacuación de los establecimientos industriales, comerciales y de salud, a fin de prevenir daños a la salud humana o animal y al sistema de desagüe."
+                  ],
+                  "palabrasClave": ["sustancias no biodegradables", "sistemas de evacuación", "prevención", "daños"]
+                },
+                {
+                  "numero": 85,
+                  "epigrafe": "OBRAS DE DRENAJE",
+                  "texto": [
+                    "El Ministerio podrá obligar al propietario de inmuebles a que construya obras de drenaje, con el objeto de prevenir la formación de focos insalubres o de infección y de sanear los que hubieren en los predios de su propiedad, pudiendo disponer su ejecución, con derecho de reembolso de los gastos efectuados, en caso de negativa."
+                  ],
+                  "palabrasClave": ["obras de drenaje", "focos insalubres", "infección", "reembolso"]
+                }
+              ]
+            },
+            {
+              "id": "l1-t3-c4",
+              "numero": "IV",
+              "nombre": "DE LA SALUD OCUPACIONAL Y DEL MEDIO LABORAL",
+              "rangoArticulos": "86-89",
+              "articulos": [
+                {
+                  "numero": 86,
+                  "epigrafe": "PROTECCIÓN DEL MEDIO LABORAL",
+                  "texto": [
+                    "El Ministerio determinará y autorizará las acciones tendientes a la protección de la salubridad del medio laboral para eliminar los riesgos de enfermedad, accidente o muerte, comprendiendo a toda clase de actividad ocupacional."
+                  ],
+                  "palabrasClave": ["salud ocupacional", "medio laboral", "riesgos", "actividad ocupacional"]
+                },
+                {
+                  "numero": 87,
+                  "epigrafe": "NORMAS TÉCNICAS",
+                  "texto": [
+                    "El Ministerio dictará normas técnicas y ejercerá el control de las condiciones de salubridad de los establecimientos comerciales, industriales y de salud, considerando la necesaria protección de los trabajadores y de la población en general."
+                  ],
+                  "palabrasClave": ["normas técnicas", "salubridad", "establecimientos", "trabajadores"]
+                },
+                {
+                  "numero": 88,
+                  "epigrafe": "AUTORIZACIÓN PARA FUNCIONAMIENTO",
+                  "texto": [
+                    "Se requerirá la previa autorización del Ministerio para la concesión de patente o permiso para el funcionamiento de establecimientos industriales y otros lugares de trabajo, así como para ampliar o modificar las instalaciones existentes."
+                  ],
+                  "palabrasClave": ["autorización", "patente", "permiso", "funcionamiento", "establecimientos industriales"]
+                },
+                {
+                  "numero": 89,
+                  "epigrafe": "CANCELACIÓN DE AUTORIZACIÓN",
+                  "texto": [
+                    "El Ministerio podrá cancelar la autorización otorgada a los establecimientos industriales, comerciales, o de salud, cuyo funcionamiento representen riesgos para la salud."
+                  ],
+                  "palabrasClave": ["cancelación", "autorización", "riesgos para la salud"]
+                }
+              ]
+            },
+            {
+              "id": "l1-t3-c5",
+              "numero": "V",
+              "nombre": "DE LA HIGIENE EN LA VIA PUBLICA",
+              "rangoArticulos": "90-93",
+              "articulos": [
+                {
+                  "numero": 90,
+                  "epigrafe": "DISPOSICIÓN DE BASURAS",
+                  "texto": [
+                    "El Ministerio determinará las normas sanitarias que deberán observarse para una adecuada disposición y tratamiento de basuras."
+                  ],
+                  "palabrasClave": ["basuras", "disposición", "tratamiento", "normas sanitarias"]
+                },
+                {
+                  "numero": 91,
+                  "epigrafe": "VEHÍCULOS DE TRANSPORTE",
+                  "texto": [
+                    "Estarán sujetos a las medidas sanitarias que dicte el Ministerio, todos los vehículos que se dediquen al transporte en la vía pública."
+                  ],
+                  "palabrasClave": ["vehículos", "transporte", "medidas sanitarias"]
+                },
+                {
+                  "numero": 92,
+                  "epigrafe": "MANIPULADORES DE ALIMENTOS",
+                  "texto": [
+                    "Todo manipulador o vendedor de alimentos, en la vía pública, debe contar con el certificado de salud, y en sus actividades, ajustarse a las normas sanitarias dictadas por el Ministerio."
+                  ],
+                  "palabrasClave": ["manipulador de alimentos", "vendedor", "certificado de salud", "normas sanitarias"]
+                },
+                {
+                  "numero": 93,
+                  "epigrafe": "PROHIBICIÓN DE PUBLICIDAD",
+                  "texto": [
+                    "Queda prohibido fijar, exhibir carteles, hacer inscripciones murales, proyecciones cinematográficas o fotográficas en la vía pública, que atenten contra la salud."
+                  ],
+                  "palabrasClave": ["publicidad", "carteles", "vía pública", "salud"]
+                }
+              ]
+            },
+            {
+              "id": "l1-t3-c6",
+              "numero": "VI",
+              "nombre": "DE LOS EDIFICIOS, DE LAS VIVIENDAS Y DE LAS URBANIZACIONES",
+              "rangoArticulos": "94-99",
+              "articulos": [
+                {
+                  "numero": 94,
+                  "epigrafe": "NORMAS DE SALUBRIDAD",
+                  "texto": [
+                    "El Ministerio establecerá las normas de salubridad que deben reunir las construcciones, viviendas, urbanizaciones y solares baldíos."
+                  ],
+                  "palabrasClave": ["normas de salubridad", "construcciones", "viviendas", "urbanizaciones"]
+                },
+                {
+                  "numero": 95,
+                  "epigrafe": "EXIGENCIA DE OBRAS CORRECTIVAS",
+                  "texto": [
+                    "Cuando el Ministerio constatare la violación de las normas de salubridad establecidas, exigirá y emplazará al propietario a la realización inmediata de los trabajos u obras correctivas."
+                  ],
+                  "palabrasClave": ["violación", "normas de salubridad", "obras correctivas"]
+                },
+                {
+                  "numero": 96,
+                  "epigrafe": "EJECUCIÓN POR EL MINISTERIO",
+                  "texto": [
+                    "Si los trabajos u obras correctivas de que trata el Artículo anterior, no fueren realizados dentro del plazo establecido por el Ministerio, éste podrá hacerlo ejecutar con cargo al propietario, sin perjuicio de la competencia en la materia de otras instituciones públicas y de las sanciones correspondientes."
+                  ],
+                  "palabrasClave": ["ejecución forzosa", "cargo al propietario", "sanciones"]
+                },
+                {
+                  "numero": 97,
+                  "epigrafe": "PROYECTOS DE ESTABLECIMIENTOS DE SALUD",
+                  "texto": [
+                    "Los proyectos de construcción, ampliación o remodelación de hospitales u otros establecimientos de salud, sean públicos o privados, deberán ser previamente aprobados por el Ministerio para su ejecución, el que verificará la obra en la materia de su competencia."
+                  ],
+                  "palabrasClave": ["hospitales", "establecimientos de salud", "aprobación", "verificación"]
+                },
+                {
+                  "numero": 98,
+                  "epigrafe": "CONTROL DE EDIFICIOS COLECTIVOS",
+                  "texto": [
+                    "El Ministerio reglamentará y ejercerá el control sanitario de los edificios y establecimientos de albergue colectivo o de recreación."
+                  ],
+                  "palabrasClave": ["edificios colectivos", "albergue", "recreación", "control sanitario"]
+                },
+                {
+                  "numero": 99,
+                  "epigrafe": "VIVIENDAS EN POBLACIONES MENORES",
+                  "texto": [
+                    "El Ministerio promocionará o ejecutará o controlará la construcción de viviendas en poblaciones de menor concentración."
+                  ],
+                  "palabrasClave": ["viviendas", "poblaciones menores", "construcción"]
+                }
+              ]
+            },
+            {
+              "id": "l1-t3-c7",
+              "numero": "VII",
+              "nombre": "DE LOS ESTABLECIMIENTOS ABIERTOS AL PUBLICO",
+              "rangoArticulos": "100-102",
+              "articulos": [
+                {
+                  "numero": 100,
+                  "epigrafe": "AUTORIZACIÓN SANITARIA",
+                  "texto": [
+                    "La instalación y el funcionamiento de cualquier establecimiento abierto al público, requerirá la previa autorización sanitaria del Ministerio, el que podrá disponer su inspección conforme a las normas legales pertinentes."
+                  ],
+                  "palabrasClave": ["autorización sanitaria", "establecimientos", "inspección"]
+                },
+                {
+                  "numero": 101,
+                  "epigrafe": "FACILITACIÓN DE INSPECCIÓN",
+                  "texto": [
+                    "Los propietarios o responsables de los establecimientos abiertos al público, facilitarán la inspección dispuesta por el Ministerio durante las horas de su funcionamiento."
+                  ],
+                  "palabrasClave": ["facilitación", "inspección", "horario de funcionamiento"]
+                },
+                {
+                  "numero": 102,
+                  "epigrafe": "AUTORIZACIÓN PARA ESTABLECIMIENTOS DE SALUD",
+                  "texto": [
+                    "Para la apertura y funcionamiento de consultorios médicos, policlínicas, clínicas, sanatorios, hospitales y establecimientos análogos, se requiere la previa autorización del Ministerio y, posteriormente, la aprobación de su funcionamiento."
+                  ],
+                  "palabrasClave": ["consultorios", "policlínicas", "clínicas", "sanatorios", "hospitales", "autorización"]
+                }
+              ]
+            },
+            {
+              "id": "l1-t3-c8",
+              "numero": "VIII",
+              "nombre": "DE LOS CAMPAMENTOS, DE LAS FINCAS RURALES Y DE LAS PEREGRINACIONES",
+              "rangoArticulos": "103-105",
+              "articulos": [
+                {
+                  "numero": 103,
+                  "epigrafe": "CAMPAMENTOS",
+                  "texto": [
+                    "Todo campamento debe contar con elementos básicos de saneamiento ambiental que establezca el Ministerio atendiendo a su naturaleza y al tiempo que dure su instalación."
+                  ],
+                  "palabrasClave": ["campamentos", "saneamiento ambiental"]
+                },
+                {
+                  "numero": 104,
+                  "epigrafe": "FINCAS RURALES",
+                  "texto": [
+                    "Los propietarios o administradores de fincas rurales están obligados a realizar las obras e instalaciones de carácter sanitario que serán determinadas reglamentariamente."
+                  ],
+                  "palabrasClave": ["fincas rurales", "obras sanitarias", "instalaciones"]
+                },
+                {
+                  "numero": 105,
+                  "epigrafe": "PEREGRINACIONES",
+                  "texto": [
+                    "En las peregrinaciones el Ministerio arbitrará las medidas sanitarias en coordinación con otros componentes del sector."
+                  ],
+                  "palabrasClave": ["peregrinaciones", "medidas sanitarias", "coordinación"]
+                }
+              ]
+            },
+            {
+              "id": "l1-t3-c9",
+              "numero": "IX",
+              "nombre": "DE LOS ASENTAMIENTOS HUMANOS",
+              "rangoArticulos": "106",
+              "articulos": [
+                {
+                  "numero": 106,
+                  "epigrafe": "PARTICIPACIÓN EN ASENTAMIENTOS",
+                  "texto": [
+                    "El Ministerio participará en todo proyecto de nuevos asentamientos humanos determinando sus condiciones de salubridad."
+                  ],
+                  "palabrasClave": ["asentamientos humanos", "condiciones de salubridad"]
+                }
+              ]
+            },
+            {
+              "id": "l1-t3-c10",
+              "numero": "X",
+              "nombre": "DE LOS INSECTOS, ROEDORES Y OTROS VECTORES DE ENFERMEDADES",
+              "rangoArticulos": "107-110",
+              "articulos": [
+                {
+                  "numero": 107,
+                  "epigrafe": "PROTECCIÓN CONTRA VECTORES",
+                  "texto": [
+                    "El Ministerio arbitrará medidas para proteger a la población de insectos, roedores y otros vectores de enfermedades."
+                  ],
+                  "palabrasClave": ["insectos", "roedores", "vectores", "enfermedades"]
+                },
+                {
+                  "numero": 108,
+                  "epigrafe": "PROGRAMAS DE EXTERMINIO",
+                  "texto": [
+                    "A los efectos de lo dispuesto en el artículo anterior, el Ministerio establecerá programas de investigación, normas técnicas y reglamentos para el exterminio de los mismos, pudiendo coordinar su acción con organismos públicos y privados del país o del extranjero."
+                  ],
+                  "palabrasClave": ["programas", "investigación", "normas técnicas", "exterminio", "coordinación"]
+                },
+                {
+                  "numero": 109,
+                  "epigrafe": "HABILITACIÓN DE EXTERMINADORES",
+                  "texto": [
+                    "El Ministerio habilitará, periódicamente, a las personas físicas y jurídicas que se dedican comercialmente al exterminio de insectos, roedores y otros vectores de enfermedades, reglamentando la idoneidad, equipos y productos utilizados, así como las precauciones para su aplicación."
+                  ],
+                  "palabrasClave": ["habilitación", "exterminadores", "idoneidad", "equipos", "productos"]
+                },
+                {
+                  "numero": 110,
+                  "epigrafe": "VIVEROS PARA INVESTIGACIÓN",
+                  "texto": [
+                    "Para mantener viveros o criaderos de animales, con fines de investigación en salud, se deberá contar con la autorización del Ministerio y observar las normas establecidas por el mismo."
+                  ],
+                  "palabrasClave": ["viveros", "criaderos", "investigación", "autorización"]
+                }
+              ]
+            },
+            {
+              "id": "l1-t3-c11",
+              "numero": "XI",
+              "nombre": "DE LA DEFENSA AMBIENTAL EN LOS PARQUES NACIONALES",
+              "rangoArticulos": "111-113",
+              "articulos": [
+                {
+                  "numero": 111,
+                  "epigrafe": "PARTICIPACIÓN EN PARQUES NACIONALES",
+                  "texto": [
+                    "El Ministerio participará, en los parques nacionales, en las acciones tendientes a asegurar la estabilidad ecológica para mantener en estado natural comunidades bióticas y especies silvestres amenazadas de extinción que no constituyen riesgos para la salud."
+                  ],
+                  "palabrasClave": ["parques nacionales", "estabilidad ecológica", "especies silvestres", "extinción"]
+                },
+                {
+                  "numero": 112,
+                  "epigrafe": "INVESTIGACIONES ECOLÓGICAS",
+                  "texto": [
+                    "El Ministerio promoverá investigaciones orientadas a la preservación de los sistemas ecológicos y a la aplicación de técnicas y procedimientos que permitan controlarlos atendiendo a las regiones en desarrollo, las zonas de represas y sistemas de regadíos."
+                  ],
+                  "palabrasClave": ["investigaciones", "sistemas ecológicos", "técnicas", "regiones en desarrollo"]
+                },
+                {
+                  "numero": 113,
+                  "epigrafe": "INTERVENCIÓN INMEDIATA",
+                  "texto": [
+                    "El Ministerio intervendrá, de inmediato, cuando en los parques nacionales se verifique la existencia de factores que puedan resultar dañinos a la salud."
+                  ],
+                  "palabrasClave": ["intervención", "parques nacionales", "factores dañinos", "salud"]
+                }
+              ]
+            },
+            {
+              "id": "l1-t3-c12",
+              "numero": "XII",
+              "nombre": "DE LA DISPOSICION DE CADAVERES Y DE LOS CEMENTERIOS",
+              "rangoArticulos": "114-127",
+              "articulos": [
+                {
+                  "numero": 114,
+                  "epigrafe": "INHUMACIÓN Y EXHUMACIÓN",
+                  "texto": [
+                    "La inhumación y exhumación de cadáveres humanos, sólo podrán hacerse según las normas establecidas por el Ministerio."
+                  ],
+                  "palabrasClave": ["inhumación", "exhumación", "cadáveres", "normas"]
+                },
+                {
+                  "numero": 115,
+                  "epigrafe": "CERTIFICACIÓN DE FALLECIMIENTO",
+                  "texto": [
+                    "Prohíbese la inhumación de un cadáver humano, sin que se certifique previamente su fallecimiento."
+                  ],
+                  "palabrasClave": ["prohibición", "inhumación", "certificación de fallecimiento"]
+                },
+                {
+                  "numero": 116,
+                  "epigrafe": "LUGARES HABILITADOS",
+                  "texto": [
+                    "Sólo en los lugares habilitados por la autoridad competente se podrán realizar inhumaciones."
+                  ],
+                  "palabrasClave": ["lugares habilitados", "inhumaciones"]
+                },
+                {
+                  "numero": 117,
+                  "epigrafe": "PLAZO PARA INHUMACIÓN",
+                  "texto": [
+                    "El cadáver humano debe ser inhumado o sometido a tratamiento, admitido por el Ministerio, entre las 12 y 36 horas siguientes al fallecimiento."
+                  ],
+                  "palabrasClave": ["plazo", "inhumación", "12 a 36 horas"]
+                },
+                {
+                  "numero": 118,
+                  "epigrafe": "INHUMACIÓN ANTICIPADA",
+                  "texto": [
+                    "El Ministerio podrá ordenar la inhumación, antes del plazo indicado en el Artículo anterior, cuando la muerte se hubiera producido por causa de enfermedad transmisibles de alto riesgo para la salud pública."
+                  ],
+                  "palabrasClave": ["inhumación anticipada", "enfermedad transmisible", "alto riesgo"]
+                },
+                {
+                  "numero": 119,
+                  "epigrafe": "AUTOPSIA Y EMBALSAMAMIENTO",
+                  "texto": [
+                    "La autopsia, embalsamamiento y otros tratamientos de cadáveres humanos serán practicados por profesionales médicos-cirujanos, de acuerdo a técnicas y procedimientos que autorice el Ministerio."
+                  ],
+                  "palabrasClave": ["autopsia", "embalsamamiento", "médicos-cirujanos", "técnicas"]
+                },
+                {
+                  "numero": 120,
+                  "epigrafe": "AUTOPSIA JUDICIAL",
+                  "texto": [
+                    "La autopsia será dispuesta por la autoridad judicial y efectuada por el médico designado para el efecto."
+                  ],
+                  "palabrasClave": ["autopsia judicial", "autoridad judicial", "médico designado"]
+                },
+                {
+                  "numero": 121,
+                  "epigrafe": "TRASLADO DE CADÁVERES",
+                  "texto": [
+                    "El traslado de cadáveres humanos, restos áridos o sus cenizas, dentro del país o el extranjero, requiere previamente la autorización expresa del Ministerio. Para su traslado al Paraguay, se exigirá autorización sanitaria del país de origen."
+                  ],
+                  "palabrasClave": ["traslado de cadáveres", "autorización", "restos áridos", "cenizas"]
+                },
+                {
+                  "numero": 122,
+                  "epigrafe": "COMUNICACIÓN DE DEFUNCIONES",
+                  "texto": [
+                    "Los servicios hospitalarios, de asistencia social y de internación de seres humanos, deben comunicar al Ministerio en un término de 12 horas, la defunción de toda persona internada cuyo cadáver no haya sido reclamado dentro de las 12 horas del fallecimiento."
+                  ],
+                  "palabrasClave": ["comunicación", "defunciones", "12 horas", "cadáver no reclamado"]
+                },
+                {
+                  "numero": 123,
+                  "epigrafe": "ENTREGA DE CADÁVERES NO RECLAMADOS",
+                  "texto": [
+                    "El Ministerio podrá convenir con instituciones médicas docentes la entrega de cadáveres humanos abandonados o no reclamados en el plazo fijado por el artículo anterior bajo compromiso de que ellas los conserven intactos durante el término de diez días, antes de disponer su utilización para los fines convenidos."
+                  ],
+                  "palabrasClave": ["cadáveres no reclamados", "instituciones médicas", "10 días"]
+                },
+                {
+                  "numero": 124,
+                  "epigrafe": "USO CON FINES CIENTÍFICOS",
+                  "texto": [
+                    "Podrán ser utilizados con fines de investigación científica y de docencia, cadáveres o restos humanos de personas que hayan manifestado expresamente esa voluntad o consentimiento de sus deudos directos."
+                  ],
+                  "palabrasClave": ["investigación científica", "docencia", "voluntad", "consentimiento"]
+                },
+                {
+                  "numero": 125,
+                  "epigrafe": "TRATAMIENTO ESPECIAL",
+                  "texto": [
+                    "Todo cadáver que pueda causar daño a la salud humana, por la naturaleza de la enfermedad que ocasionó la muerte, deberá ser tratado especialmente para prevenir la propagación de la enfermedad, hecho que será registrado por el Ministerio."
+                  ],
+                  "palabrasClave": ["tratamiento especial", "enfermedad", "propagación", "registro"]
+                },
+                {
+                  "numero": 126,
+                  "epigrafe": "CEMENTERIOS Y VELATORIOS",
+                  "texto": [
+                    "Los cementerios, locales permanentes de velatorios y casas mortuorias, en cuanto a su instalación, funcionamiento y control, quedan sometidos a las disposiciones establecidas por el Ministerio."
+                  ],
+                  "palabrasClave": ["cementerios", "velatorios", "casas mortuorias", "control"]
+                },
+                {
+                  "numero": 127,
+                  "epigrafe": "HABILITACIÓN DE CEMENTERIOS",
+                  "texto": [
+                    "Los cementerios serán habilitados en lugares y condiciones que no pongan en peligro la salud de las personas ni perturben el bienestar del vecindario."
+                  ],
+                  "palabrasClave": ["habilitación", "cementerios", "salud", "bienestar"]
+                }
+              ]
+            },
+            {
+              "id": "l1-t3-c13",
+              "numero": "XIII",
+              "nombre": "DE LOS RUIDOS, SONIDOS Y VIBRACIONES QUE PUEDEN DAÑAR LA SALUD",
+              "rangoArticulos": "128-130",
+              "articulos": [
+                {
+                  "numero": 128,
+                  "epigrafe": "RUIDOS COMO AGENTES DE TENSIÓN",
+                  "texto": [
+                    "En los programas de planificación urbana, higiene industrial y regulaciones de tránsito se considerarán a los ruidos, sonidos y vibraciones, agentes de tensión para la salud."
+                  ],
+                  "palabrasClave": ["ruidos", "sonidos", "vibraciones", "agentes de tensión", "salud"]
+                },
+                {
+                  "numero": 129,
+                  "epigrafe": "PREVENCIÓN DE MOLESTIAS PÚBLICAS",
+                  "texto": [
+                    "El Ministerio arbitrará las medidas tendientes a prevenir, disminuir o eliminar las molestias públicas provenientes de ruidos, sonidos o vibraciones que puedan afectar la salud y el bienestar de la población, y a su control en coordinación con las autoridades competentes."
+                  ],
+                  "palabrasClave": ["molestias públicas", "ruidos", "control", "coordinación"]
+                },
+                {
+                  "numero": 130,
+                  "epigrafe": "IDENTIFICACIÓN DE FUENTES",
+                  "texto": [
+                    "El Ministerio identificará y examinará las fuentes y formas prevalentes de ruidos, sonidos y vibraciones que afecten o puedan afectar a la salud debiendo establecer normas relativas a los límites tolerables de su exposición a ellos."
+                  ],
+                  "palabrasClave": ["identificación", "fuentes", "límites tolerables"]
+                }
+              ]
+            },
+            {
+              "id": "l1-t3-c14",
+              "numero": "XIV",
+              "nombre": "DE LA PUBLICIDAD DE LOS SERVICIOS Y PRODUCTOS RELACIONADOS CON LA SALUD",
+              "rangoArticulos": "131-133",
+              "articulos": [
+                {
+                  "numero": 131,
+                  "epigrafe": "PUBLICIDAD EN SALUD",
+                  "texto": [
+                    "Los mensajes publicitarios, por los diversos medios de comunicación, que guarden relación con los profesionales en ciencias de la salud, establecimientos correspondientes, productos farmacéuticos y afines se ajustarán a la reglamentación que establezca el Ministerio."
+                  ],
+                  "palabrasClave": ["mensajes publicitarios", "profesionales de la salud", "productos farmacéuticos", "reglamentación"]
+                },
+                {
+                  "numero": 132,
+                  "epigrafe": "AUTORIZACIÓN PARA PUBLICIDAD",
+                  "texto": [
+                    "Los propietarios o responsables de los medios de comunicación masiva deben exigir la autorización correspondiente del Ministerio, para la difusión del mensaje publicitario a que se refiere el Artículo anterior."
+                  ],
+                  "palabrasClave": ["autorización", "medios de comunicación", "difusión"]
+                },
+                {
+                  "numero": 133,
+                  "epigrafe": "NOTICIAS SOBRE ENFERMEDADES",
+                  "texto": [
+                    "La difusión de noticias sobre la aparición en el país de casos de enfermedades objeto de reglamentación internacional deberá ser autorizada por el Ministerio."
+                  ],
+                  "palabrasClave": ["noticias", "enfermedades", "reglamentación internacional", "autorización"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "l1-t4",
+          "numero": "IV",
+          "nombre": "DE LAS ACCIONES DE APOYO PARA LA SALUD",
+          "rangoArticulos": "134-149",
+          "capitulos": [
+            {
+              "id": "l1-t4-c1",
+              "numero": "I",
+              "nombre": "DE LA INVESTIGACION PARA LA SALUD",
+              "rangoArticulos": "134-139",
+              "articulos": [
+                {
+                  "numero": 134,
+                  "epigrafe": "INVESTIGACIÓN PARA LA SALUD",
+                  "texto": [
+                    "El Ministerio promoverá y realizará investigaciones tendientes a un mejor conocimiento de los factores condicionantes de la salud."
+                  ],
+                  "palabrasClave": ["investigación", "factores condicionantes", "salud"]
+                },
+                {
+                  "numero": 135,
+                  "epigrafe": "INVESTIGACIÓN EN SERES HUMANOS",
+                  "texto": [
+                    "Las investigaciones, en seres humanos, se ajustarán a los principios de la deontología médica, previa autorización por el Ministerio."
+                  ],
+                  "palabrasClave": ["investigación en seres humanos", "deontología médica", "autorización"]
+                },
+                {
+                  "numero": 136,
+                  "epigrafe": "RECURSOS NATURALES PARA LA SALUD",
+                  "texto": [
+                    "El Ministerio propiciará y realizará estudios de los recursos minerales, de la flora y la fauna del país, para su posible utilización en el campo de la salud."
+                  ],
+                  "palabrasClave": ["recursos minerales", "flora", "fauna", "salud"]
+                },
+                {
+                  "numero": 137,
+                  "epigrafe": "RECURSOS TERAPÉUTICOS NO REGISTRADOS",
+                  "texto": [
+                    "Excepcionalmente y cuando exista posibilidad fundada de salvar la vida o disminuir el sufrimiento de un paciente, el médico podrá apelar a recursos terapéuticos no registrados en el Ministerio, previa autorización del paciente o persona responsable de la familia y con notificación al Ministerio dentro de las 24 horas hábiles del empleo y con cargo de informar las razones médicas que motivaron su utilización y los resultados obtenidos con el tratamiento."
+                  ],
+                  "palabrasClave": ["recursos terapéuticos", "no registrados", "autorización", "notificación", "24 horas"]
+                },
+                {
+                  "numero": 138,
+                  "epigrafe": "AGENTES PATÓGENOS DE ALTA PELIGROSIDAD",
+                  "texto": [
+                    "El Ministerio concederá autorización a laboratorios y centros de investigación para aislar y conservar agentes patógenos de alta peligrosidad, exclusivamente con fines de investigación en ciencias de la salud y exigirá estrictas medidas de seguridad y las controlará en protección de las personas."
+                  ],
+                  "palabrasClave": ["agentes patógenos", "alta peligrosidad", "investigación", "medidas de seguridad"]
+                },
+                {
+                  "numero": 139,
+                  "epigrafe": "SUBVENCIONES EXTRANJERAS",
+                  "texto": [
+                    "Podrán efectuarse investigaciones en ciencias de la salud con subvenciones o donaciones de países u organismos extranjeros, previa autorización del Ministerio."
+                  ],
+                  "palabrasClave": ["subvenciones", "donaciones", "países extranjeros", "autorización"]
+                }
+              ]
+            },
+            {
+              "id": "l1-t4-c2",
+              "numero": "II",
+              "nombre": "DE LA SALUD Y EL DESARROLLO ECONOMICO Y SOCIAL",
+              "rangoArticulos": "140-142",
+              "articulos": [
+                {
+                  "numero": 140,
+                  "epigrafe": "INTEGRACIÓN DE PROGRAMAS",
+                  "texto": [
+                    "Los programas de salud integrarán los planes de desarrollo económico y social de la Nación."
+                  ],
+                  "palabrasClave": ["programas de salud", "desarrollo económico y social"]
+                },
+                {
+                  "numero": 141,
+                  "epigrafe": "PARTICIPACIÓN EN PROYECTOS REGIONALES",
+                  "texto": [
+                    "El Ministerio participará en la definición, formulación, ejecución, control y evaluación de todo proyecto de desarrollo regional, atendiendo los aspectos ecológicos y de bienestar social."
+                  ],
+                  "palabrasClave": ["proyectos regionales", "aspectos ecológicos", "bienestar social"]
+                },
+                {
+                  "numero": 142,
+                  "epigrafe": "ACUERDOS CON MUNICIPALIDADES",
+                  "texto": [
+                    "El Ministerio deberá convenir con las municipalidades el cumplimiento de las normas sanitarias establecidas en el presente Código, así como las que se dicten en el futuro."
+                  ],
+                  "palabrasClave": ["acuerdos", "municipalidades", "normas sanitarias"]
+                }
+              ]
+            },
+            {
+              "id": "l1-t4-c3",
+              "numero": "III",
+              "nombre": "DE LAS ESTADISTICAS VITALES Y SANITARIAS",
+              "rangoArticulos": "143-147",
+              "articulos": [
+                {
+                  "numero": 143,
+                  "epigrafe": "RECOLECCIÓN DE ESTADÍSTICAS",
+                  "texto": [
+                    "El Ministerio tendrá a su cargo la recolección, procesamiento, análisis y publicación anual de las estadísticas vitales y sanitarias del sector salud."
+                  ],
+                  "palabrasClave": ["estadísticas vitales", "estadísticas sanitarias", "recolección", "análisis"]
+                },
+                {
+                  "numero": 144,
+                  "epigrafe": "SUMINISTRO DE DATOS",
+                  "texto": [
+                    "Todas las instituciones, públicas y privadas, que tengan relación con la salud, están obligadas a recolectar y suministrar, periódicamente, al Ministerio, los datos que él necesite para hacer el análisis y la evaluación estadística establecidos por el Artículo anterior."
+                  ],
+                  "palabrasClave": ["instituciones", "suministro de datos", "evaluación estadística"]
+                },
+                {
+                  "numero": 145,
+                  "epigrafe": "REGISTRO DEL ESTADO CIVIL",
+                  "texto": [
+                    "A los efectos de la elaboración de las estadísticas vitales y sanitarias, los encargados del Registro del Estado Civil de las Personas, suministrarán los datos demográficos de su jurisdicción al Ministerio."
+                  ],
+                  "palabrasClave": ["Registro del Estado Civil", "datos demográficos"]
+                },
+                {
+                  "numero": 146,
+                  "epigrafe": "CERTIFICACIÓN DE NACIMIENTO Y DEFUNCIÓN",
+                  "texto": [
+                    "Todo nacimiento o defunción deberá ser certificado por el profesional actuante, consignando los datos necesarios para las estadísticas sanitarias, documento que será presentado al centro sanitario más próximo y al Registro del Estado Civil de las Personas, para lo que hubiere lugar. A falta de un profesional autorizado, el hecho será atestiguado por dos personas hábiles."
+                  ],
+                  "palabrasClave": ["nacimiento", "defunción", "certificación", "estadísticas sanitarias", "dos personas hábiles"]
+                },
+                {
+                  "numero": 147,
+                  "epigrafe": "PROVISIÓN DE DATOS",
+                  "texto": [
+                    "El Ministerio proporcionará, periódicamente, a la Dirección General de Estadísticas y Censos datos de estadísticas vitales, sanitarias y cualquier otra información que éste requiera en la materia."
+                  ],
+                  "palabrasClave": ["Dirección General de Estadísticas y Censos", "información"]
+                }
+              ]
+            },
+            {
+              "id": "l1-t4-c4",
+              "numero": "IV",
+              "nombre": "DE LA EDUCACION PARA LA SALUD",
+              "rangoArticulos": "148-149",
+              "articulos": [
+                {
+                  "numero": 148,
+                  "epigrafe": "COORDINACIÓN EDUCATIVA",
+                  "texto": [
+                    "Los Ministerios de Salud Pública y Bienestar Social y de Educación y Culto, coordinarán la educación para la salud desarrollada en las instituciones de enseñanza primaria y media."
+                  ],
+                  "palabrasClave": ["educación para la salud", "coordinación", "enseñanza primaria", "enseñanza media"]
+                },
+                {
+                  "numero": 149,
+                  "epigrafe": "APROBACIÓN DE PROGRAMAS",
+                  "texto": [
+                    "Los programas de educación para la salud desarrollados por instituciones, sean públicas o privadas, deberán ser previamente aprobados por el Ministerio."
+                  ],
+                  "palabrasClave": ["programas de educación", "aprobación", "instituciones"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "libro-II",
+      "numero": "II",
+      "nombre": "DE LOS ALIMENTOS",
+      "titulos": [
+        {
+          "id": "l2-t1",
+          "numero": "I",
+          "nombre": "DISPOSICIONES GENERALES",
+          "rangoArticulos": "150-157",
+          "capitulos": [
+            {
+              "id": "l2-t1-c-unico",
+              "numero": "ÚNICO",
+              "nombre": "DISPOSICIONES GENERALES",
+              "rangoArticulos": "150-157",
+              "articulos": [
+                {
+                  "numero": 150,
+                  "epigrafe": "EDUCACIÓN ALIMENTARIA",
+                  "texto": [
+                    "El Ministerio, en coordinación con otros organismos, promoverá el desarrollo de programas, a fin de proporcionar una mejor y permanente educación alimentaria."
+                  ],
+                  "palabrasClave": ["educación alimentaria", "programas", "coordinación"]
+                },
+                {
+                  "numero": 151,
+                  "epigrafe": "PAUTAS DE PRODUCCIÓN",
+                  "texto": [
+                    "El Ministerio suministrará, a los organismos de planificación nacional, pautas referentes a la producción necesaria en materia alimentaria con indicación de los problemas nutricionales y alimentarios existentes."
+                  ],
+                  "palabrasClave": ["pautas de producción", "problemas nutricionales", "planificación nacional"]
+                },
+                {
+                  "numero": 152,
+                  "epigrafe": "TÉCNICAS DE ENRIQUECIMIENTO",
+                  "texto": [
+                    "El Ministerio establecerá las normas y el control de las técnicas de enriquecimiento, restauración y fortificación de productos y subproductos alimenticios destinados al consumo humano, incluyendo posibles alternativas para la solución de los problemas nutricionales prevalentes."
+                  ],
+                  "palabrasClave": ["enriquecimiento", "restauración", "fortificación", "problemas nutricionales"]
+                },
+                {
+                  "numero": 153,
+                  "epigrafe": "TÉCNICAS DE CONSERVACIÓN",
+                  "texto": [
+                    "El Ministerio normará, aprobará y registrará las técnicas y métodos de preparación, envasamiento y conservación de los productos alimenticios refrigerados, congelados, deshidratados, irradiados, concentrados, fermentados, sometidos a acciones enzimáticas, tratados mecánicamente y, en general, de los alimentos sometidos a cualquier procedimiento tecnológico, determinando la duración de período de conservación de los productos envasados y afines."
+                  ],
+                  "palabrasClave": ["técnicas de conservación", "preparación", "envasamiento", "período de conservación"]
+                },
+                {
+                  "numero": 154,
+                  "epigrafe": "PUBLICIDAD PROHIBIDA",
+                  "texto": [
+                    "Queda prohibida toda publicidad que atribuya falsamente propiedades terapéuticas a los alimentos o que induzcan a error o engaño al público, en cuanto a su naturaleza, calidad u origen."
+                  ],
+                  "palabrasClave": ["publicidad", "propiedades terapéuticas", "engaño", "naturaleza", "calidad", "origen"]
+                },
+                {
+                  "numero": 155,
+                  "epigrafe": "VENTA DE ALIMENTOS DONADOS",
+                  "texto": [
+                    "Se prohíbe la venta de los alimentos que entreguen las instituciones públicas o privadas al grupo familiar en donación, como complemento de dieta."
+                  ],
+                  "palabrasClave": ["venta prohibida", "alimentos donados", "complemento de dieta"]
+                },
+                {
+                  "numero": 156,
+                  "epigrafe": "ALIMENTOS ARTIFICIALES",
+                  "texto": [
+                    "Queda aprobada la elaboración y comercialización de alimentos artificiales siempre que cumplan estrictamente las exigencias reglamentarias."
+                  ],
+                  "palabrasClave": ["alimentos artificiales", "exigencias reglamentarias"]
+                },
+                {
+                  "numero": 157,
+                  "epigrafe": "APTITUD PARA EL CONSUMO",
+                  "texto": [
+                    "Sólo se podrán elaborar, proveer, distribuir y expender alimentos aptos para el consumo. Queda prohibida la producción venta o donación de aquellos que están alterados, deteriorados, contaminados o adulterados."
+                  ],
+                  "palabrasClave": ["alimentos aptos", "alterados", "deteriorados", "contaminados", "adulterados"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "l2-t2",
+          "numero": "II",
+          "nombre": "DE LOS ALIMENTOS Y SU HIGIENE",
+          "rangoArticulos": "158-176",
+          "capitulos": [
+            {
+              "id": "l2-t2-c1",
+              "numero": "I",
+              "nombre": "DEL CONTROL DE LOS ALIMENTOS",
+              "rangoArticulos": "159-160",
+              "articulos": [
+                {
+                  "numero": 158,
+                  "epigrafe": "CONTROLES MÉDICOS A MANIPULADORES",
+                  "texto": [
+                    "Las personas dedicadas a manipular alimentos y bebidas se someterán a los controles médicos periódicos reglamentados y observarán el cumplimiento estricto de las medidas higiénicas para evitar la contaminación de los productos."
+                  ],
+                  "palabrasClave": ["manipuladores de alimentos", "controles médicos", "higiene", "contaminación"]
+                },
+                {
+                  "numero": 159,
+                  "epigrafe": "CONTROL DE ALIMENTOS",
+                  "texto": [
+                    "El Ministerio realizará el control de los alimentos en sus aspectos higiénico-sanitarios, debiendo coordinar sus acciones con otros organismos del Gobierno y las municipalidades."
+                  ],
+                  "palabrasClave": ["control", "higiénico-sanitario", "coordinación"]
+                },
+                {
+                  "numero": 160,
+                  "epigrafe": "EXTRACCIÓN DE MUESTRAS",
+                  "texto": [
+                    "Los propietarios de establecimientos de alimentos, así como los que se dedican a su transporte o comercialización, están obligados a facilitar a los funcionarios competentes del Ministerio, la extracción de muestras para ser sometidos a examen bromatológico y de aptitudes sanitarias, pudiendo dichos funcionarios ordenar su retención, cuando presenten riesgos para la salud de las personas."
+                  ],
+                  "palabrasClave": ["muestras", "examen bromatológico", "retención", "riesgos para la salud"]
+                }
+              ]
+            },
+            {
+              "id": "l2-t2-c2",
+              "numero": "II",
+              "nombre": "DE LA PREPARACION CULINARIA",
+              "rangoArticulos": "161",
+              "articulos": [
+                {
+                  "numero": 161,
+                  "epigrafe": "PREPARACIONES CULINARIAS",
+                  "texto": [
+                    "Las preparaciones culinarias de los establecimientos que produzcan, distribuyan o vendan alimentos preparados para consumo, deben ajustarse a las condiciones higiénico-sanitarias que establezca el reglamento pertinente."
+                  ],
+                  "palabrasClave": ["preparaciones culinarias", "condiciones higiénico-sanitarias"]
+                }
+              ]
+            },
+            {
+              "id": "l2-t2-c3",
+              "numero": "III",
+              "nombre": "DE LOS ESTABLECIMIENTOS DE ALIMENTOS",
+              "rangoArticulos": "162-166",
+              "articulos": [
+                {
+                  "numero": 162,
+                  "epigrafe": "HABILITACIÓN DE ESTABLECIMIENTOS",
+                  "texto": [
+                    "Para la habilitación de un establecimiento de alimentos para consumo del público será requisito previo, indispensable, contar con la correspondiente autorización del Ministerio, debiendo acreditarse para el efecto que reúna condiciones sanitariamente adecuadas. El Ministerio determinará los controles necesarios y los casos en que se requiere la dirección técnica de un profesional químico responsable."
+                  ],
+                  "palabrasClave": ["habilitación", "autorización", "condiciones sanitarias", "dirección técnica"]
+                },
+                {
+                  "numero": 163,
+                  "epigrafe": "VIGENCIA DE AUTORIZACIÓN",
+                  "texto": [
+                    "La autorización del Ministerio para que funcione un establecimiento de alimentos determinará el tiempo de su vigencia, debiendo realizar reinspecciones periódicas."
+                  ],
+                  "palabrasClave": ["autorización", "vigencia", "reinspecciones"]
+                },
+                {
+                  "numero": 164,
+                  "epigrafe": "MODIFICACIONES EN ESTABLECIMIENTOS",
+                  "texto": [
+                    "Los propietarios de establecimientos de alimentos, en funcionamiento, deben solicitar permiso al Ministerio para introducir modificaciones materiales en ellos cuando se relacione con el procesamiento o manipulación de los productos."
+                  ],
+                  "palabrasClave": ["modificaciones", "permiso", "procesamiento", "manipulación"]
+                },
+                {
+                  "numero": 165,
+                  "epigrafe": "PERSONAL TÉCNICO",
+                  "texto": [
+                    "Los propietarios de establecimientos industriales donde se manipulen, elaboren, empaquen y envasen alimentos, deben incluir en su plantel el personal técnico necesario que pueda garantizar la calidad, pureza, buena preparación y conservación de los productos."
+                  ],
+                  "palabrasClave": ["personal técnico", "calidad", "pureza", "conservación"]
+                },
+                {
+                  "numero": 166,
+                  "epigrafe": "INSPECCIÓN",
+                  "texto": [
+                    "Los propietarios o representantes de establecimientos de alimentos, están obligados a permitir el acceso a los funcionarios competentes del Ministerio para realizar las inspecciones que consideren necesarias."
+                  ],
+                  "palabrasClave": ["inspección", "acceso", "funcionarios"]
+                }
+              ]
+            },
+            {
+              "id": "l2-t2-c4",
+              "numero": "IV",
+              "nombre": "DE LA CONSERVACION, ALMACENAMIENTO Y TRANSPORTE DE ALIMENTOS",
+              "rangoArticulos": "167-174",
+              "articulos": [
+                {
+                  "numero": 167,
+                  "epigrafe": "NORMAS DE CONSERVACIÓN",
+                  "texto": [
+                    "Los métodos de conservación, almacenamiento y transporte de alimentos se ajustarán a las normas que dicte el Ministerio."
+                  ],
+                  "palabrasClave": ["conservación", "almacenamiento", "transporte", "normas"]
+                },
+                {
+                  "numero": 168,
+                  "epigrafe": "ALIMENTOS REFRIGERADOS",
+                  "texto": [
+                    "Todo alimento que requiere frío para su conservación, será guardado en cámara frigorífica y conservado a temperatura adecuada o mediante otros procedimientos, de acuerdo a normas establecidas por el Ministerio."
+                  ],
+                  "palabrasClave": ["alimentos refrigerados", "cámara frigorífica", "temperatura"]
+                },
+                {
+                  "numero": 169,
+                  "epigrafe": "RECONGELAMIENTO PROHIBIDO",
+                  "texto": [
+                    "Queda prohibida la comercialización de cualquier alimento sometido a proceso de recongelamiento."
+                  ],
+                  "palabrasClave": ["recongelamiento", "prohibición"]
+                },
+                {
+                  "numero": 170,
+                  "epigrafe": "ENVASADO DE ALIMENTOS CONSERVADOS",
+                  "texto": [
+                    "Los alimentos conservados deben envasarse únicamente en las industrias o establecimientos autorizados para el efecto, debiendo indicarse expresamente en el rótulo de cada envase, el procedimiento higiénico de conservación utilizado."
+                  ],
+                  "palabrasClave": ["envasado", "rótulo", "procedimiento higiénico"]
+                },
+                {
+                  "numero": 171,
+                  "epigrafe": "DESINFESTACIÓN",
+                  "texto": [
+                    "La desinfestación de los cereales, hortalizas, frutas secas y desecadas, se realizará en la forma y condiciones que determine el Ministerio de Agricultura y Ganadería, de común acuerdo con el Ministerio."
+                  ],
+                  "palabrasClave": ["desinfestación", "cereales", "hortalizas", "frutas"]
+                },
+                {
+                  "numero": 172,
+                  "epigrafe": "SUSTANCIAS DESINFECTANTES",
+                  "texto": [
+                    "Las sustancias o procedimientos empleados para desinfectar no deben modificar la pureza, composición natural ni los principios nutritivos de los alimentos tratados ni representar riesgos para la salud humana o animal."
+                  ],
+                  "palabrasClave": ["sustancias desinfectantes", "pureza", "principios nutritivos", "riesgos"]
+                },
+                {
+                  "numero": 173,
+                  "epigrafe": "IRRADIACIÓN DE ALIMENTOS",
+                  "texto": [
+                    "Se podrá recurrir a la irradiación de alimentos, en la forma y condiciones que determine el Poder Ejecutivo."
+                  ],
+                  "palabrasClave": ["irradiación", "alimentos", "Poder Ejecutivo"]
+                },
+                {
+                  "numero": 174,
+                  "epigrafe": "AUTORIZACIÓN DE ALIMENTOS IRRADIADOS",
+                  "texto": [
+                    "Queda a cargo del Poder Ejecutivo autorizar y controlar la producción, importación, exportación y distribución de alimentos irradiados."
+                  ],
+                  "palabrasClave": ["autorización", "control", "alimentos irradiados"]
+                }
+              ]
+            },
+            {
+              "id": "l2-t2-c5",
+              "numero": "V",
+              "nombre": "DE LA COMERCIALIZACION DE ALIMENTOS Y BEBIDAS",
+              "rangoArticulos": "175-176",
+              "articulos": [
+                {
+                  "numero": 175,
+                  "epigrafe": "REGISTRO DE PRODUCTOS",
+                  "texto": [
+                    "Los fabricantes, representantes e importadores de productos alimenticios o bebidas, a los efectos de su venta, registrarán sus productos previamente en el Ministerio, el cual determinará su aptitud para el consumo y el tiempo de validez de su registro."
+                  ],
+                  "palabrasClave": ["registro", "productos alimenticios", "bebidas", "aptitud para el consumo"]
+                },
+                {
+                  "numero": 176,
+                  "epigrafe": "INSCRIPCIÓN EN INDUSTRIA Y COMERCIO",
+                  "texto": [
+                    "El Ministerio de Industria y Comercio procederá a la inscripción de alimentos elaborados o bebidas para el consumo, de producción nacional o extranjera, cuando ellos hayan sido registrados por el Ministerio."
+                  ],
+                  "palabrasClave": ["inscripción", "Ministerio de Industria y Comercio", "registro"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "l2-t3",
+          "numero": "III",
+          "nombre": "DE OTRAS SUSTANCIAS RELACIONADAS CON LOS ALIMENTOS Y BEBIDAS",
+          "rangoArticulos": "177-187",
+          "capitulos": [
+            {
+              "id": "l2-t3-c1",
+              "numero": "I",
+              "nombre": "DE LAS SUSTANCIAS ESTIMULANTES EN LOS ALIMENTOS Y BEBIDAS",
+              "rangoArticulos": "177",
+              "articulos": [
+                {
+                  "numero": 177,
+                  "epigrafe": "SUSTANCIAS ESTIMULANTES",
+                  "texto": [
+                    "La industrialización, manipulación, denominación, tipo y características de las sustancias y productos estimulantes debe ajustarse a cuanto disponga la reglamentación pertinente. Los establecimientos que los elaboren deben registrarse en el Ministerio, el que llevará su control."
+                  ],
+                  "palabrasClave": ["sustancias estimulantes", "industrialización", "registro", "control"]
+                }
+              ]
+            },
+            {
+              "id": "l2-t3-c2",
+              "numero": "II",
+              "nombre": "DE LOS ADITIVOS ALIMENTARIOS",
+              "rangoArticulos": "178-179",
+              "articulos": [
+                {
+                  "numero": 178,
+                  "epigrafe": "USO DE ADITIVOS",
+                  "texto": [
+                    "Los fabricantes de alimentos y bebidas sólo podrán usar aditivos que hayan sido autorizados reglamentariamente, debiendo ejercer el Ministerio el control correspondiente."
+                  ],
+                  "palabrasClave": ["aditivos", "autorización", "control"]
+                },
+                {
+                  "numero": 179,
+                  "epigrafe": "REGISTRO DE ADITIVOS",
+                  "texto": [
+                    "El Ministerio habilitará un registro de los aditivos alimentarios y controlará que sean de composición y pureza conocidas y carentes de toxicidad."
+                  ],
+                  "palabrasClave": ["registro de aditivos", "composición", "pureza", "toxicidad"]
+                }
+              ]
+            },
+            {
+              "id": "l2-t3-c3",
+              "numero": "III",
+              "nombre": "DE LOS COADYUVANTES ALIMENTARIOS",
+              "rangoArticulos": "180-183",
+              "articulos": [
+                {
+                  "numero": 180,
+                  "epigrafe": "COADYUVANTES ALIMENTARIOS",
+                  "texto": [
+                    "Los fabricantes, representantes e importadores podrán utilizar coadyuvantes alimentarios en la forma que determine el Ministerio."
+                  ],
+                  "palabrasClave": ["coadyuvantes alimentarios", "utilización"]
+                },
+                {
+                  "numero": 181,
+                  "epigrafe": "REGISTRO DE ESTABLECIMIENTOS",
+                  "texto": [
+                    "Los establecimientos destinados a la elaboración, enriquecimiento, importación o exportación de coadyuvantes alimentarios deben registrarse previamente en el Ministerio."
+                  ],
+                  "palabrasClave": ["registro", "coadyuvantes", "establecimientos"]
+                },
+                {
+                  "numero": 182,
+                  "epigrafe": "SAL YODIZADA",
+                  "texto": [
+                    "La sal común destinada a consumo humano y animal se expenderá previamente yodizada. El Ministerio podrá exonerar de este requisito cuando se la destine a uso industrial."
+                  ],
+                  "palabrasClave": ["sal yodizada", "consumo humano", "consumo animal", "exoneración"]
+                },
+                {
+                  "numero": 183,
+                  "epigrafe": "SAL DE PROCESOS QUÍMICOS",
+                  "texto": [
+                    "No se utilizará en la alimentación humana sal común procedente de procesos químicos, recuperación de salazones o de usos industriales."
+                  ],
+                  "palabrasClave": ["prohibición", "sal", "procesos químicos", "salazones"]
+                }
+              ]
+            },
+            {
+              "id": "l2-t3-c4",
+              "numero": "IV",
+              "nombre": "DE LOS ALIMENTOS DIETETICOS",
+              "rangoArticulos": "184-187",
+              "articulos": [
+                {
+                  "numero": 184,
+                  "epigrafe": "REGISTRO DE DIETÉTICOS",
+                  "texto": [
+                    "Los establecimientos que elaboren alimentos dietéticos deben registrarse en el Ministerio, el que autorizará y fiscalizará su funcionamiento, así como la calidad del producto."
+                  ],
+                  "palabrasClave": ["alimentos dietéticos", "registro", "autorización", "fiscalización"]
+                },
+                {
+                  "numero": 185,
+                  "epigrafe": "APROBACIÓN DE ELABORACIÓN",
+                  "texto": [
+                    "La elaboración industrial de alimentos dietéticos requiere la aprobación previa del Ministerio, el que determinará la necesidad de la dirección técnica de un profesional registrado y habilitado por el mismo."
+                  ],
+                  "palabrasClave": ["elaboración industrial", "aprobación", "dirección técnica"]
+                },
+                {
+                  "numero": 186,
+                  "epigrafe": "PRODUCTOS DIETÉTICOS COMO MEDICAMENTOS",
+                  "texto": [
+                    "Los productos dietéticos elaborados industrialmente para variar las proporciones del cuerpo humano, son medicamentos, debiendo extenderse al público sólo en farmacias."
+                  ],
+                  "palabrasClave": ["productos dietéticos", "medicamentos", "farmacias"]
+                },
+                {
+                  "numero": 187,
+                  "epigrafe": "IMPORTACIÓN Y EXPORTACIÓN",
+                  "texto": [
+                    "Para importar o exportar alimentos dietéticos es requisito previo contar con la autorización del Ministerio."
+                  ],
+                  "palabrasClave": ["importación", "exportación", "autorización"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "libro-III",
+      "numero": "III",
+      "nombre": "DE CUANTO AFECTA A LA SALUD DE LAS PERSONAS",
+      "titulos": [
+        {
+          "id": "l3-t1",
+          "numero": "I",
+          "nombre": "DEL USO DE SUSTANCIAS NOCIVAS PARA LA SALUD HUMANA",
+          "rangoArticulos": "188-206",
+          "capitulos": [
+            {
+              "id": "l3-t1-c1",
+              "numero": "I",
+              "nombre": "DE LAS SUSTANCIAS ESTUPEFACIENTES Y OTRAS DROGAS PELIGROSAS Y DE LA FARMACODEPENDENCIA",
+              "rangoArticulos": "188-189",
+              "articulos": [
+                {
+                  "numero": 188,
+                  "epigrafe": "SUSTANCIAS ESTUPEFACIENTES",
+                  "texto": [
+                    "Las sustancias de origen natural o sintético que, por acción sobre el sistema nervioso central, pueden modificar la función psíquica, motora o sensorial de una persona, crearle estado de dependencia con alteración de sus hábitos de vida y producirle cambio de comportamiento, están sujetas al control del Ministerio por medio del Registro Nacional de Sustancias, Estupefacientes y Drogas Peligrosas."
+                  ],
+                  "palabrasClave": ["sustancias estupefacientes", "drogas peligrosas", "dependencia", "Registro Nacional", "control"]
+                },
+                {
+                  "numero": 189,
+                  "epigrafe": "REPRESIÓN DEL TRÁFICO ILÍCITO",
+                  "texto": [
+                    "Para la acción de represión del tráfico ilícito de estupefacientes y otras drogas peligrosas, el Ministerio colaborará con los organismos competentes suministrando las referencias necesarias para el efecto y arbitrará los medios para la recuperación de los farmacodependientes en establecimientos especializados."
+                  ],
+                  "palabrasClave": ["tráfico ilícito", "represión", "recuperación", "farmacodependientes"]
+                }
+              ]
+            },
+            {
+              "id": "l3-t1-c2",
+              "numero": "II",
+              "nombre": "DE LAS SUSTANCIAS TOXICAS O PELIGROSAS",
+              "rangoArticulos": "190-206",
+              "articulos": [
+                {
+                  "numero": 190,
+                  "epigrafe": "REGISTRO DE SUSTANCIAS TÓXICAS",
+                  "texto": [
+                    "Para importar, fabricar, almacenar, vender, transportar, distribuir o suministrar las sustancias o productos tóxicos o peligrosos, que autorice el Poder Ejecutivo, se requerirá la inscripción en el registro correspondiente del Ministerio, el que debe ejercer su control."
+                  ],
+                  "palabrasClave": ["sustancias tóxicas", "registro", "control"]
+                },
+                {
+                  "numero": 191,
+                  "epigrafe": "PROGRAMAS EDUCATIVOS",
+                  "texto": [
+                    "El Ministerio realizará programas educativos respecto a los riesgos que representan los productos tóxicos o peligrosos para la salud."
+                  ],
+                  "palabrasClave": ["programas educativos", "riesgos", "productos tóxicos"]
+                },
+                {
+                  "numero": 192,
+                  "epigrafe": "PROHIBICIÓN DE UTILIZACIÓN",
+                  "texto": [
+                    "El Ministerio, en determinadas circunstancias, podrá prohibir la utilización de ciertas sustancias tóxicas o peligrosas."
+                  ],
+                  "palabrasClave": ["prohibición", "sustancias tóxicas"]
+                },
+                {
+                  "numero": 193,
+                  "epigrafe": "SÍMBOLO DE PELIGRO",
+                  "texto": [
+                    "Toda sustancia tóxica o peligrosa exhibirá un símbolo que advierta respecto al peligro de la misma. Debe ser envasada, embalada y transportada en forma apropiada."
+                  ],
+                  "palabrasClave": ["símbolo", "peligro", "envasado", "embalado", "transporte"]
+                },
+                {
+                  "numero": 194,
+                  "epigrafe": "PLAGUICIDAS Y FERTILIZANTES",
+                  "texto": [
+                    "El Ministerio, conjuntamente con el Ministerio de Agricultura y Ganadería, establecerán la clasificación y las características de los diferentes productos plaguicidas y fertilizantes de acuerdo al riesgo que representen para la salud."
+                  ],
+                  "palabrasClave": ["plaguicidas", "fertilizantes", "clasificación", "riesgo"]
+                },
+                {
+                  "numero": 195,
+                  "epigrafe": "LÍMITES DE TOLERANCIA DE RESIDUOS",
+                  "texto": [
+                    "El Ministerio y el de Agricultura y Ganadería establecerán los límites de tolerancia de residuos de plaguicidas en alimentos y la relación de ingestión diaria admisible (IDA) en el hombre, de acuerdo a las recomendaciones del Comité de CODEX, sobre residuos de plaguicidas y de la Comisión del CODEX Alimentarius de la Organización Mundial de la Salud (OMS) y de la Organización de las Naciones Unidas para la Agricultura y la Alimentación (FAO)."
+                  ],
+                  "palabrasClave": ["límites de tolerancia", "residuos de plaguicidas", "IDA", "CODEX", "OMS", "FAO"]
+                },
+                {
+                  "numero": 196,
+                  "epigrafe": "REGISTRO DE PLAGUICIDAS",
+                  "texto": [
+                    "Para fabricar, importar o exportar plaguicidas y fertilizantes o hacer su publicidad, los interesados deben declarar su composición y antídoto e inscribirse en el registro del Ministerio, previa aprobación del Ministerio de Agricultura y Ganadería."
+                  ],
+                  "palabrasClave": ["registro", "plaguicidas", "fertilizantes", "composición", "antídoto"]
+                },
+                {
+                  "numero": 197,
+                  "epigrafe": "RÓTULOS DE PLAGUICIDAS",
+                  "texto": [
+                    "Los rótulos o etiquetas de los envases de plaguicidas y fertilizantes deben advertir, claramente, sobre los peligros que implica el manejo del producto, la forma en que debe usarse, sus antídotos en casos de intoxicación y las disposición de los envases que los contengan o hayan contenido."
+                  ],
+                  "palabrasClave": ["rótulos", "advertencias", "peligros", "antídotos", "envases"]
+                },
+                {
+                  "numero": 198,
+                  "epigrafe": "CONTACTO CON ALIMENTOS",
+                  "texto": [
+                    "Durante el proceso de elaboración, manipuleo y transporte de los plaguicidas y fertilizantes se prohíbe su contacto o proximidad con alimentos y otras sustancias cuya contaminación representan riesgos para la salud."
+                  ],
+                  "palabrasClave": ["prohibición", "contacto", "alimentos", "contaminación", "riesgos"]
+                },
+                {
+                  "numero": 199,
+                  "epigrafe": "RETENCIÓN DE ALIMENTOS",
+                  "texto": [
+                    "El Ministerio dispondrá, por un plazo de 24 horas, la retención de los alimentos y bebidas que presumiblemente estén contaminados con sustancias tóxicas o peligrosas, ínterin se realicen los análisis correspondientes."
+                  ],
+                  "palabrasClave": ["retención", "24 horas", "alimentos contaminados", "análisis"]
+                },
+                {
+                  "numero": 200,
+                  "epigrafe": "SUSTANCIAS PELIGROSAS EN UTENSILIOS",
+                  "texto": [
+                    "El Ministerio determinará las sustancias peligrosas en la fabricación y composición química de objetos y utensilios de uso familiar o colectivo que al entrar en contacto con la piel o mucosas, puedan representar riesgos para la salud humana."
+                  ],
+                  "palabrasClave": ["sustancias peligrosas", "utensilios", "contacto", "piel", "mucosas", "riesgos"]
+                },
+                {
+                  "numero": 201,
+                  "epigrafe": "PRODUCCIÓN PROHIBIDA",
+                  "texto": [
+                    "Se prohíbe la producción, importación y venta de objetos y utensilios de uso familiar o colectivo que contengan las sustancias de que trata el Artículo anterior."
+                  ],
+                  "palabrasClave": ["producción prohibida", "importación", "venta", "utensilios"]
+                },
+                {
+                  "numero": 202,
+                  "epigrafe": "PUBLICIDAD DEL TABACO",
+                  "texto": [
+                    "Toda publicidad del tabaco no debe inducir a su consumo, debiendo referirse solamente su calidad y origen. Se prohíbe usar en su publicidad figuras o personajes representativos de niños o adolescentes, o asociarlos con actividades deportivas, de trabajo, de estudio o del hogar."
+                  ],
+                  "palabrasClave": ["publicidad del tabaco", "prohibición", "niños", "adolescentes"]
+                },
+                {
+                  "numero": 203,
+                  "epigrafe": "ADVERTENCIA EN ENVASES DE TABACO",
+                  "texto": [
+                    "El Ministerio, cuando lo considere necesario, podrá determinar que los envases en que se expenden productos elaborados con tabaco, deben tener en forma clara y visible la advertencia que pueden ser nocivos para la salud."
+                  ],
+                  "palabrasClave": ["tabaco", "envases", "advertencia", "nocivos para la salud"]
+                },
+                {
+                  "numero": 204,
+                  "epigrafe": "REGISTRO DE BEBIDAS ALCOHÓLICAS",
+                  "texto": [
+                    "Las bebidas alcohólicas, producidas en el país o las importadas, deben ser registradas previamente en el Ministerio, el que practicará los análisis y controles periódicos."
+                  ],
+                  "palabrasClave": ["bebidas alcohólicas", "registro", "análisis", "controles periódicos"]
+                },
+                {
+                  "numero": 205,
+                  "epigrafe": "PUBLICIDAD DE BEBIDAS ALCOHÓLICAS",
+                  "texto": [
+                    "La publicidad de bebidas alcohólicas será sólo de información respecto a su calidad, origen y técnica de elaboración, sin atribuirles supuestos efectos benéficos para la salud. No deberá asociarla con el bienestar del hogar, trabajo, deportes ni representar a niños, adolescentes o personajes dirigidos al mundo infantil."
+                  ],
+                  "palabrasClave": ["publicidad", "bebidas alcohólicas", "información", "prohibición", "niños", "adolescentes"]
+                },
+                {
+                  "numero": 206,
+                  "epigrafe": "VENTA A MENORES",
+                  "texto": [
+                    "Se prohíbe la venta y consumo de bebidas alcohólicas en locales públicos a menores de edad."
+                  ],
+                  "palabrasClave": ["prohibición", "venta", "consumo", "bebidas alcohólicas", "menores de edad"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "l3-t2",
+          "numero": "II",
+          "nombre": "DE LAS ZOONOSIS",
+          "rangoArticulos": "207-210",
+          "capitulos": [
+            {
+              "id": "l3-t2-c1",
+              "numero": "ÚNICO",
+              "nombre": "ZOONOSIS",
+              "rangoArticulos": "207-210",
+              "articulos": [
+                {
+                  "numero": 207,
+                  "epigrafe": "PREVENCIÓN DE ZOONOSIS",
+                  "texto": [
+                    "El Ministerio arbitrará las medidas tendientes a eliminar los riesgos de enfermar por zoonosis. Promocionará, programará y ejecutará actividades de investigación, prevención y control de esas enfermedades en coordinación con otras instituciones competentes en la materia."
+                  ],
+                  "palabrasClave": ["zoonosis", "investigación", "prevención", "control", "coordinación"]
+                },
+                {
+                  "numero": 208,
+                  "epigrafe": "NOTIFICACIÓN DE ZOONOSIS",
+                  "texto": [
+                    "El Ministerio determinará aquellas zoonosis sujetas a notificación obligatoria, así como las formas y condiciones en que deben hacerla los profesionales en ciencias de la salud."
+                  ],
+                  "palabrasClave": ["notificación obligatoria", "zoonosis", "profesionales de la salud"]
+                },
+                {
+                  "numero": 209,
+                  "epigrafe": "PROHIBICIÓN DE INTRODUCCIÓN",
+                  "texto": [
+                    "Queda prohibida introducir en el país animales enfermos o sospechosos de padecer enfermedades directa o indirectamente transmisibles al hombre o de ser portadores de parásitos. El Ministerio participará con las autoridades competentes en la adopción de las medidas pertinentes."
+                  ],
+                  "palabrasClave": ["prohibición", "introducción", "animales enfermos", "enfermedades transmisibles"]
+                },
+                {
+                  "numero": 210,
+                  "epigrafe": "ANIMALES ENFERMOS DE ZOONOSIS",
+                  "texto": [
+                    "Todo poseedor de animales enfermos de zoonosis, está obligado a someterlos a observación, aislamiento y cuidado, en la forma que determine el Ministerio. Los animales enfermos podrán ser decomisados y sacrificados, cuando representen riesgos evidentes para la salud."
+                  ],
+                  "palabrasClave": ["zoonosis", "observación", "aislamiento", "decomiso", "sacrificio"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "libro-IV",
+      "numero": "IV",
+      "nombre": "DE LOS RECURSOS PARA LA SALUD",
+      "titulos": [
+        {
+          "id": "l4-t1",
+          "numero": "I",
+          "nombre": "DE LOS RECURSOS HUMANOS",
+          "rangoArticulos": "211-238",
+          "capitulos": [
+            {
+              "id": "l4-t1-c1",
+              "numero": "I",
+              "nombre": "DE LAS PROFESIONES EN CIENCIAS DE LA SALUD",
+              "rangoArticulos": "214-226",
+              "articulos": [
+                {
+                  "numero": 211,
+                  "epigrafe": "RECURSOS HUMANOS",
+                  "texto": [
+                    "Los recursos humanos para la salud están constituidos por profesionales universitarios, técnicos, auxiliares y voluntarios, habilitados para cumplir tareas tendientes a la conservación, prevención o mejoramiento de las condiciones bio-psicosociales de la población del país, en forma individual o colectiva."
+                  ],
+                  "palabrasClave": ["recursos humanos", "profesionales", "técnicos", "auxiliares", "voluntarios", "conservación", "prevención"]
+                },
+                {
+                  "numero": 212,
+                  "epigrafe": "REGISTRO DE RECURSOS HUMANOS",
+                  "texto": [
+                    "El Ministerio mantendrá un sistema permanente de registro de los recursos humanos para la salud debiendo exigir la actualización periódica de sus conocimientos profesionales, en la forma que determine la reglamentación del presente Código."
+                  ],
+                  "palabrasClave": ["registro", "recursos humanos", "actualización", "conocimientos profesionales"]
+                },
+                {
+                  "numero": 213,
+                  "epigrafe": "PARTICIPACIÓN COMUNITARIA",
+                  "texto": [
+                    "El Ministerio fomentará la participación activa de la comunidad en la formación y capacitación del personal de salud."
+                  ],
+                  "palabrasClave": ["participación comunitaria", "formación", "capacitación"]
+                },
+                {
+                  "numero": 214,
+                  "epigrafe": "PROFESIONES EN CIENCIAS DE LA SALUD",
+                  "texto": [
+                    "Se consideran profesiones en ciencias de la salud, todas aquellas disciplinas que tiendan, científica y técnicamente al empleo de acciones integrales y coordinadas de promoción, protección, recuperación y rehabilitación del estado de bienestar físico, mental y social y al control de los factores condicionantes de la salud de las personas. El Ministerio reglamentará las disciplinas comprendidas en la definición anterior."
+                  ],
+                  "palabrasClave": ["profesiones en ciencias de la salud", "promoción", "protección", "recuperación", "rehabilitación"]
+                },
+                {
+                  "numero": 215,
+                  "epigrafe": "EJERCICIO PROFESIONAL",
+                  "texto": [
+                    "Para el ejercicio de los profesionales en ciencia de la salud se requiere contar con título expedido por las Universidades del país o revalidado por la Universidad Nacional de Asunción, el que debe ser inscripto en el registro habilitado por el Ministerio."
+                  ],
+                  "palabrasClave": ["título", "Universidades", "revalidación", "registro"]
+                },
+                {
+                  "numero": 216,
+                  "epigrafe": "REGLAMENTACIÓN DEL EJERCICIO",
+                  "texto": [
+                    "El Ministerio reglamentará el ejercicio legal de las profesiones en ciencias de la salud."
+                  ],
+                  "palabrasClave": ["reglamentación", "ejercicio profesional"]
+                },
+                {
+                  "numero": 217,
+                  "epigrafe": "TÉCNICOS Y AUXILIARES",
+                  "texto": [
+                    "Para ejercer la condición de técnicos y auxiliares en ciencias de la salud se requiere registrar el certificado expedido por institución competente, nacional o extranjera, reconocido por el Ministerio como formadora de recursos humanos en ciencias de la salud."
+                  ],
+                  "palabrasClave": ["técnicos", "auxiliares", "certificado", "institución reconocida"]
+                },
+                {
+                  "numero": 218,
+                  "epigrafe": "PRÁCTICA SIMULTÁNEA",
+                  "texto": [
+                    "El Ministerio determinará las profesiones en ciencias de la salud cuya práctica simultánea por un mismo profesional sea compatible."
+                  ],
+                  "palabrasClave": ["práctica simultánea", "compatibilidad"]
+                },
+                {
+                  "numero": 219,
+                  "epigrafe": "PRESCRIPCIÓN POR PERSONAL TÉCNICO",
+                  "texto": [
+                    "El Ministerio determinará los medicamentos que pueden ser prescriptos por el personal técnico y auxiliar, en los lugares donde no existan profesionales."
+                  ],
+                  "palabrasClave": ["prescripción", "personal técnico", "auxiliar", "medicamentos"]
+                },
+                {
+                  "numero": 220,
+                  "epigrafe": "DESPACHO DE RECETAS",
+                  "texto": [
+                    "Los farmacéuticos no despacharán recetas de medicamentos cuando no se ajusten a las normas legales y reglamentarias o lo demorarán cuando tuviesen motivos fundados de que existe error en la prescripción, debiendo consultar inmediatamente al profesional que las expidió."
+                  ],
+                  "palabrasClave": ["farmacéuticos", "recetas", "despacho", "error", "consulta"]
+                },
+                {
+                  "numero": 221,
+                  "epigrafe": "MATERIAL RADIACTIVO",
+                  "texto": [
+                    "Los profesionales que en el ejercicio de su profesión trabajen con material radiactivo o aparatos diseñados para emitir radiaciones, con fines terapéuticos o de investigación, deberán recabar previamente la autorización del Poder Ejecutivo."
+                  ],
+                  "palabrasClave": ["material radiactivo", "radiaciones", "autorización", "Poder Ejecutivo"]
+                },
+                {
+                  "numero": 222,
+                  "epigrafe": "INVESTIGACIÓN EN ANIMALES",
+                  "texto": [
+                    "Los profesionales en ciencias de la salud que realicen investigaciones y estudios experimentales en animales que puedan poner en riesgo la salud de las personas, deben comunicarlo previamente al Ministerio que autorizará su realización y controlará su alcance y resultado."
+                  ],
+                  "palabrasClave": ["investigación en animales", "riesgo", "comunicación", "autorización", "control"]
+                },
+                {
+                  "numero": 223,
+                  "epigrafe": "EMERGENCIA SANITARIA",
+                  "texto": [
+                    "En casos de emergencia sanitaria y hasta tanto intervenga el Ministerio, los médicos o en su defecto otros profesionales en ciencias de la salud, habilitados, estarán investidos de autoridad suficiente para tomar las primeras medidas sanitarias y requerir la colaboración de otros recursos humanos para la salud, así como la intervención de las autoridades locales, para hacerlas cumplir."
+                  ],
+                  "palabrasClave": ["emergencia sanitaria", "médicos", "autoridad", "medidas sanitarias"]
+                },
+                {
+                  "numero": 224,
+                  "epigrafe": "MODIFICACIÓN DE IDENTIDAD",
+                  "texto": [
+                    "Los profesionales en ciencias de la salud cuyos conocimientos científicos y técnicos les permite modificar los signos característicos de identidad de las personas, deben comunicar al Ministerio los antecedentes y resultancias de la prestación a efectuar."
+                  ],
+                  "palabrasClave": ["modificación de identidad", "comunicación", "antecedentes", "resultancias"]
+                },
+                {
+                  "numero": 225,
+                  "epigrafe": "ENCUBRIMIENTO",
+                  "texto": [
+                    "El que teniendo autorización del Ministerio para ejercer la profesión en ciencias de la salud, la utilizara para encubrir o cohonestar las actividades de quien no se encuentra habilitado para el efecto, será solidariamente pasible de las sanciones previstas en este Código para el inhabilitado."
+                  ],
+                  "palabrasClave": ["encubrimiento", "solidaridad", "sanciones"]
+                },
+                {
+                  "numero": 226,
+                  "epigrafe": "EJERCICIO ILEGAL",
+                  "texto": [
+                    "Sin perjuicio de las medidas dispuestas por el Ministerio en los casos de ejercicio ilegal de las profesiones en ciencias de la salud, los antecedentes serán remitidos a la justicia ordinaria, a los efectos previstos en la legislación penal."
+                  ],
+                  "palabrasClave": ["ejercicio ilegal", "justicia ordinaria", "legislación penal"]
+                }
+              ]
+            },
+            {
+              "id": "l4-t1-c2",
+              "numero": "II",
+              "nombre": "DEL ESCALAFON SANITARIO",
+              "rangoArticulos": "227-228",
+              "articulos": [
+                {
+                  "numero": 227,
+                  "epigrafe": "CREACIÓN DEL ESCALAFÓN",
+                  "texto": [
+                    "Créase el escalafón sanitario para quienes ejercen, dirigen, administran, orienten o supervisen actividades de salud en el Ministerio."
+                  ],
+                  "palabrasClave": ["escalafón sanitario", "ejercen", "dirigen", "administran", "supervisan"]
+                },
+                {
+                  "numero": 228,
+                  "epigrafe": "REGLAMENTACIÓN DEL ESCALAFÓN",
+                  "texto": [
+                    "El Poder Ejecutivo establecerá el escalafón y lo reglamentará."
+                  ],
+                  "palabrasClave": ["establecimiento", "reglamentación"]
+                }
+              ]
+            },
+            {
+              "id": "l4-t1-c3",
+              "numero": "III",
+              "nombre": "DE LA FORMACION Y CAPACITACION DE RECURSOS HUMANOS EN CIENCIAS DE LA SALUD",
+              "rangoArticulos": "229-238",
+              "secciones": [
+                {
+                  "id": "l4-t1-c3-s1",
+                  "numero": "I",
+                  "nombre": "DISPOSICIONES GENERALES",
+                  "rangoArticulos": "229-231",
+                  "articulos": [
+                    {
+                      "numero": 229,
+                      "epigrafe": "FORMACIÓN DE PERSONAL",
+                      "texto": [
+                        "El Ministerio dispondrá la formación y capacitación del personal técnico y auxiliar en ciencias de la salud."
+                      ],
+                      "palabrasClave": ["formación", "capacitación", "personal técnico", "auxiliar"]
+                    },
+                    {
+                      "numero": 230,
+                      "epigrafe": "BECAS DE ESTUDIO",
+                      "texto": [
+                        "El usufructuario de beca de estudio en ciencias de la salud concedida por el Ministerio, queda posteriormente obligado a prestar servicios remunerados, conforme su especialización y por un período que se establecerá reglamentariamente."
+                      ],
+                      "palabrasClave": ["beca", "servicios remunerados", "especialización"]
+                    },
+                    {
+                      "numero": 231,
+                      "epigrafe": "AUTORIZACIÓN PARA FORMACIÓN",
+                      "texto": [
+                        "Se requiere la previa autorización del Ministerio para la formación o adiestramiento de técnicos y auxiliares en ciencias de la salud, con excepción de las Universidades del país."
+                      ],
+                      "palabrasClave": ["autorización", "formación", "adiestramiento", "técnicos", "auxiliares", "Universidades"]
+                    }
+                  ]
+                },
+                {
+                  "id": "l4-t1-c3-s2",
+                  "numero": "II",
+                  "nombre": "DE LA PASANTIA EN CIENCIAS DE LA SALUD",
+                  "rangoArticulos": "232-233",
+                  "articulos": [
+                    {
+                      "numero": 232,
+                      "epigrafe": "PASANTÍA",
+                      "texto": [
+                        "El Ministerio facilitará la pasantía en ciencias de la salud y determinará las formas y condiciones."
+                      ],
+                      "palabrasClave": ["pasantía", "formas", "condiciones"]
+                    },
+                    {
+                      "numero": 233,
+                      "epigrafe": "RÉGIMEN DE PASANTES",
+                      "texto": [
+                        "Los pasantes, profesionales, técnicos o auxiliares en ciencias de la salud estarán sujetos a las disposiciones que rijan para el funcionario público."
+                      ],
+                      "palabrasClave": ["pasantes", "funcionario público"]
+                    }
+                  ]
+                },
+                {
+                  "id": "l4-t1-c3-s3",
+                  "numero": "III",
+                  "nombre": "DE LA CAPACITACION Y ADIESTRAMIENTO DE EMPIRICOS EN SALUD",
+                  "rangoArticulos": "234-235",
+                  "articulos": [
+                    {
+                      "numero": 234,
+                      "epigrafe": "CAPACITACIÓN DE EMPÍRICOS",
+                      "texto": [
+                        "El Ministerio promoverá, realizará y autorizará la capacitación y adiestramiento de ciertos trabajadores empíricos en el campo de la salud, a los cuales registrará, habilitará y controlará, anualmente, para ejercer su actividad en localidades donde el Ministerio lo considere necesario."
+                      ],
+                      "palabrasClave": ["capacitación", "adiestramiento", "empíricos", "registro", "habilitación", "control"]
+                    },
+                    {
+                      "numero": 235,
+                      "epigrafe": "CANCELACIÓN DE HABILITACIÓN",
+                      "texto": [
+                        "El Ministerio podrá cancelar la habilitación de cualquier trabajador empírico cuando no cumpla las disposiciones reglamentarias o su trabajo lo considere deficiente o riesgoso."
+                      ],
+                      "palabrasClave": ["cancelación", "habilitación", "disposiciones reglamentarias"]
+                    }
+                  ]
+                },
+                {
+                  "id": "l4-t1-c3-s4",
+                  "numero": "IV",
+                  "nombre": "DE LA PARTICIPACION COMUNITARIA PARA LA SALUD",
+                  "rangoArticulos": "236-238",
+                  "articulos": [
+                    {
+                      "numero": 236,
+                      "epigrafe": "PARTICIPACIÓN COMUNITARIA",
+                      "texto": [
+                        "El Ministerio promoverá la participación y organizará a las comunidades para lograr su cooperación en la conservación y mejoramiento de los locales y servicios de salud."
+                      ],
+                      "palabrasClave": ["participación comunitaria", "cooperación", "locales de salud", "servicios de salud"]
+                    },
+                    {
+                      "numero": 237,
+                      "epigrafe": "ESTUDIOS COMUNITARIOS",
+                      "texto": [
+                        "Las entidades y los universitarios en ciencias de la salud que realicen estudios sobre la problemática de salud en el país o que desarrollen programas y acciones para beneficio de las comunidades lo coordinarán con el Ministerio."
+                      ],
+                      "palabrasClave": ["estudios", "problemática de salud", "programas", "coordinación"]
+                    },
+                    {
+                      "numero": 238,
+                      "epigrafe": "COOPERACIÓN DE AUTORIDADES",
+                      "texto": [
+                        "Las autoridades públicas y privadas deben cooperar y participar en los programas de salud comunitario ejecutados o autorizados por el Ministerio."
+                      ],
+                      "palabrasClave": ["cooperación", "participación", "programas de salud comunitario"]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "l4-t2",
+          "numero": "II",
+          "nombre": "DE LOS RECURSOS FISICOS Y TERAPEUTICOS",
+          "rangoArticulos": "239-280",
+          "capitulos": [
+            {
+              "id": "l4-t2-c1",
+              "numero": "I",
+              "nombre": "DE LOS ESTABLECIMIENTOS DE SALUD",
+              "rangoArticulos": "239-258",
+              "articulos": [
+                {
+                  "numero": 239,
+                  "epigrafe": "REGISTRO DE ESTABLECIMIENTOS",
+                  "texto": [
+                    "El Ministerio reglamentará la habilitación y el registro de los establecimientos de salud y los controlará."
+                  ],
+                  "palabrasClave": ["habilitación", "registro", "establecimientos de salud", "control"]
+                },
+                {
+                  "numero": 240,
+                  "epigrafe": "COLABORACIÓN CON FUNCIONARIOS",
+                  "texto": [
+                    "Los directores, regentes o administradores y profesionales de los establecimientos de salud, sean públicos o privados, colaborarán con los funcionarios competentes para verificar las condiciones de la prestación de servicios, cuando el Ministerio así lo disponga."
+                  ],
+                  "palabrasClave": ["directores", "regentes", "administradores", "colaboración", "verificación"]
+                },
+                {
+                  "numero": 241,
+                  "epigrafe": "RÉGIMEN DE ADMISIÓN",
+                  "texto": [
+                    "El Ministerio determinará el régimen de admisión de los profesionales, técnicos y auxiliares en los establecimientos de salud."
+                  ],
+                  "palabrasClave": ["régimen de admisión", "profesionales", "técnicos", "auxiliares"]
+                },
+                {
+                  "numero": 242,
+                  "epigrafe": "ATENCIÓN ESPECIALIZADA",
+                  "texto": [
+                    "Los establecimientos que prestan determinada atención especializada deben contar, con preferencia, con profesionales especializados."
+                  ],
+                  "palabrasClave": ["atención especializada", "profesionales especializados"]
+                },
+                {
+                  "numero": 243,
+                  "epigrafe": "PREVENCIÓN DE INFECCIONES",
+                  "texto": [
+                    "Los directores y administradores de establecimientos de atención médica están obligados a cumplir y hacer cumplir las normas dispuestas por el Ministerio, para evitar la transmisión de enfermedades infecto-contagiosas al personal del establecimiento y a la comunidad."
+                  ],
+                  "palabrasClave": ["prevención", "infecciones", "enfermedades infecto-contagiosas", "personal", "comunidad"]
+                },
+                {
+                  "numero": 244,
+                  "epigrafe": "CAMBIO DE PROPIETARIO O MODIFICACIONES",
+                  "texto": [
+                    "Todo cambio de propietario, regente o cualquier modificación en las instalaciones, así como el cese de la actividad o el traslado de los establecimientos de salud, requerirá la previa autorización del Ministerio."
+                  ],
+                  "palabrasClave": ["cambio de propietario", "modificaciones", "cese", "traslado", "autorización"]
+                },
+                {
+                  "numero": 245,
+                  "epigrafe": "SISTEMA DE ATENCIÓN MÉDICA PRE-PAGA",
+                  "texto": [
+                    "Las sociedades y empresas que prestan servicios de salud mediante el sistema de atención médica pre-paga, deben estar autorizadas y registradas previamente en el Ministerio, el cual reglamentará sus actividades."
+                  ],
+                  "palabrasClave": ["atención médica pre-paga", "autorización", "registro", "reglamentación"]
+                },
+                {
+                  "numero": 246,
+                  "epigrafe": "RADIACIONES IONIZANTES",
+                  "texto": [
+                    "El Poder Ejecutivo autorizará la habilitación de establecimientos destinados a la aplicación de radiaciones ionizantes."
+                  ],
+                  "palabrasClave": ["radiaciones ionizantes", "habilitación", "autorización"]
+                },
+                {
+                  "numero": 247,
+                  "epigrafe": "MANEJO DE FUENTES RADIACTIVAS",
+                  "texto": [
+                    "El Ministerio establecerá las normas para el manejo de fuentes radiactivas, instalaciones y protección del personal, debiendo considerar y prevenir la eliminación de los desechos radiactivos."
+                  ],
+                  "palabrasClave": ["fuentes radiactivas", "instalaciones", "protección", "desechos radiactivos"]
+                },
+                {
+                  "numero": 248,
+                  "epigrafe": "BENEFICIOS COMPENSATORIOS",
+                  "texto": [
+                    "Los que operan aparatos y equipos médicos, que emiten radiaciones ionizantes, gozarán de beneficios compensatorios por la riesgosidad de su trabajo."
+                  ],
+                  "palabrasClave": ["radiaciones ionizantes", "beneficios compensatorios", "riesgosidad"]
+                },
+                {
+                  "numero": 249,
+                  "epigrafe": "BANCOS DE SANGRE",
+                  "texto": [
+                    "Los bancos de sangre deben llevar el registro de los donantes y de las tipificaciones hematológicas, de acuerdo a las normas que dicte el Ministerio."
+                  ],
+                  "palabrasClave": ["bancos de sangre", "registro de donantes", "tipificaciones hematológicas", "normas"]
+                },
+                {
+                  "numero": 250,
+                  "epigrafe": "USO DE SANGRE HUMANA",
+                  "texto": [
+                    "Sólo para fines médico-quirúrgicos y bajo prescripción médica podrá utilizarse sangre humana, el plasma y sus derivados."
+                  ],
+                  "palabrasClave": ["sangre humana", "plasma", "derivados", "fines médico-quirúrgicos", "prescripción médica"]
+                },
+                {
+                  "numero": 251,
+                  "epigrafe": "EXPORTACIÓN DE SANGRE PROHIBIDA",
+                  "texto": [
+                    "Queda prohibido la exportación, con fines comerciales, de sangre humana, plasma y sus derivados."
+                  ],
+                  "palabrasClave": ["exportación", "sangre", "plasma", "derivados", "fines comerciales"]
+                },
+                {
+                  "numero": 252,
+                  "epigrafe": "PRODUCTOS BIOLÓGICOS",
+                  "texto": [
+                    "La importación y exportación de productos biológicos de uso humano y contra las zoonosis deben ser autorizadas previamente por el Ministerio, salvo lo previsto en el Artículo anterior."
+                  ],
+                  "palabrasClave": ["productos biológicos", "importación", "exportación", "autorización", "zoonosis"]
+                },
+                {
+                  "numero": 253,
+                  "epigrafe": "NORMAS PARA SANGRE",
+                  "texto": [
+                    "El Ministerio fijará las normas y los procedimientos para la extracción, almacenamiento y suministro de sangre, plasma y derivados, así como para los controles biológicos especializados a que deberán ajustarse."
+                  ],
+                  "palabrasClave": ["sangre", "plasma", "derivados", "extracción", "almacenamiento", "suministro", "controles biológicos"]
+                },
+                {
+                  "numero": 254,
+                  "epigrafe": "LABORATORIOS FARMACÉUTICOS EXTRANJEROS",
+                  "texto": [
+                    "Los laboratorios farmacéuticos cuyas plantas de elaboración se encuentren ubicados en el extranjero, podrán operar en el país solamente al por mayor y mediante representación farmacéutica autorizada por el Ministerio, quedándole prohibida la venta al detalle."
+                  ],
+                  "palabrasClave": ["laboratorios farmacéuticos", "extranjero", "representación", "venta al por mayor", "venta al detalle"]
+                },
+                {
+                  "numero": 255,
+                  "epigrafe": "REGISTRO DE ESTABLECIMIENTOS FARMACÉUTICOS",
+                  "texto": [
+                    "Los establecimientos farmacéuticos deben ser registrados, autorizados y controlados por el Ministerio."
+                  ],
+                  "palabrasClave": ["establecimientos farmacéuticos", "registro", "autorización", "control"]
+                },
+                {
+                  "numero": 256,
+                  "epigrafe": "VENTA DE MEDICAMENTOS",
+                  "texto": [
+                    "La venta de medicamentos, al público, se hará exclusivamente en las farmacias y establecimientos autorizados por el Ministerio."
+                  ],
+                  "palabrasClave": ["venta de medicamentos", "farmacias", "autorización"]
+                },
+                {
+                  "numero": 257,
+                  "epigrafe": "PRODUCTOS VETERINARIOS",
+                  "texto": [
+                    "Los establecimientos que elaboren productos veterinarios o fito sanitarios se registrarán previamente en el Ministerio."
+                  ],
+                  "palabrasClave": ["productos veterinarios", "fito sanitarios", "registro"]
+                },
+                {
+                  "numero": 258,
+                  "epigrafe": "ESTABLECIMIENTOS DE BELLEZA",
+                  "texto": [
+                    "Los establecimientos de belleza y actividades afines se registrarán previamente en el Ministerio, el que ejercerá el control de sus actividades."
+                  ],
+                  "palabrasClave": ["establecimientos de belleza", "registro", "control"]
+                },
+                {
+                  "numero": 259,
+                  "epigrafe": "PROHIBICIÓN DE SUSTANCIAS NO REGISTRADAS",
+                  "texto": [
+                    "Queda prohibido utilizar en los establecimientos de belleza y de actividades afines, sustancias, productos o aparatos que no hayan sido registrados previamente en el Ministerio."
+                  ],
+                  "palabrasClave": ["sustancias", "productos", "aparatos", "registro", "prohibición"]
+                }
+              ]
+            },
+            {
+              "id": "l4-t2-c2",
+              "numero": "II",
+              "nombre": "DE LOS ESTABLECIMIENTOS DE BELLEZA Y DE ACTIVIDADES AFINES",
+              "rangoArticulos": "260",
+              "articulos": [
+                {
+                  "numero": 260,
+                  "epigrafe": "REGISTRO DE ESTABLECIMIENTOS DE BELLEZA",
+                  "texto": [
+                    "Los establecimientos de belleza y actividades afines se registrarán previamente en el Ministerio, el que ejercerá el control de sus actividades."
+                  ],
+                  "palabrasClave": ["establecimientos de belleza", "registro", "control"]
+                }
+              ]
+            },
+            {
+              "id": "l4-t2-c3",
+              "numero": "III",
+              "nombre": "DE LOS RECURSOS TERAPEUTICOS",
+              "rangoArticulos": "261-280",
+              "secciones": [
+                {
+                  "id": "l4-t2-c3-s1",
+                  "numero": "I",
+                  "nombre": "DE LOS MEDICAMENTOS",
+                  "rangoArticulos": "261-272",
+                  "articulos": [
+                    {
+                      "numero": 261,
+                      "epigrafe": "DEFINICIÓN DE MEDICAMENTO",
+                      "texto": [
+                        "Medicamento es toda sustancia, simple o compuesta de origen orgánico o inorgánico, natural o sintética que, administrando en dosis adecuadas a un organismo humano o animal, sirve para el diagnóstico, la prevención, el tratamiento y la rehabilitación de su estado funcional. En los términos de este Código se considera como tal, así mismo, los alimentos dietéticos, los alimentos y cosméticos a los cuales se les ha adicionado sustancias medicinales."
+                      ],
+                      "palabrasClave": ["medicamento", "diagnóstico", "prevención", "tratamiento", "rehabilitación", "alimentos dietéticos"]
+                    },
+                    {
+                      "numero": 262,
+                      "epigrafe": "COMERCIALIZACIÓN CON NOMBRE REGISTRADO",
+                      "texto": [
+                        "Los medicamentos deben ser comercializados con nombre registrado."
+                      ],
+                      "palabrasClave": ["nombre registrado", "comercialización"]
+                    },
+                    {
+                      "numero": 263,
+                      "epigrafe": "FIJACIÓN DE PRECIOS",
+                      "texto": [
+                        "El Ministerio determinará, periódicamente, los medicamentos que pueden ser comercializados y fijará los precios."
+                      ],
+                      "palabrasClave": ["medicamentos autorizados", "fijación de precios"]
+                    },
+                    {
+                      "numero": 264,
+                      "epigrafe": "ANUARIO FARMACÉUTICO",
+                      "texto": [
+                        "El Ministerio editará el Anuario de Especialidades Farmacéuticas y el Informativo Semanal de Fijación de Precios."
+                      ],
+                      "palabrasClave": ["Anuario de Especialidades Farmacéuticas", "Informativo Semanal"]
+                    },
+                    {
+                      "numero": 265,
+                      "epigrafe": "COMERCIALIZACIÓN PROHIBIDA",
+                      "texto": [
+                        "Queda prohibido comercializar o donar medicamento deteriorado, adulterado, falsificado o cuyo uso no esté autorizado en el país de origen."
+                      ],
+                      "palabrasClave": ["medicamentos deteriorados", "adulterados", "falsificados", "prohibición"]
+                    },
+                    {
+                      "numero": 266,
+                      "epigrafe": "CONTROL DE FABRICACIÓN",
+                      "texto": [
+                        "El control de la fabricación y comercialización de los medicamentos se ajustará a las normas que dicte el Ministerio."
+                      ],
+                      "palabrasClave": ["control", "fabricación", "comercialización", "normas"]
+                    },
+                    {
+                      "numero": 267,
+                      "epigrafe": "RECETA MÉDICA",
+                      "texto": [
+                        "El Ministerio determinará los medicamentos que deben extenderse con receta archivada, con receta médica, así como los de venta libre."
+                      ],
+                      "palabrasClave": ["receta archivada", "receta médica", "venta libre"]
+                    },
+                    {
+                      "numero": 268,
+                      "epigrafe": "PUBLICIDAD DE ANÁLISIS",
+                      "texto": [
+                        "El resultado de los análisis y exámenes de medicamentos practicados por el Ministerio, y otros documentos oficiales relacionados con ellos, no podrán ser utilizados para publicidad comercial."
+                      ],
+                      "palabrasClave": ["análisis", "exámenes", "publicidad comercial", "prohibición"]
+                    },
+                    {
+                      "numero": 269,
+                      "epigrafe": "CONSERVACIÓN DE MEDICAMENTOS IMPORTADOS",
+                      "texto": [
+                        "El Ministerio podrá obligar a que los medicamentos importados se mantengan en buen estado de conservación mientras se cumplan los trámites de despacho para su retiro."
+                      ],
+                      "palabrasClave": ["medicamentos importados", "conservación", "despacho"]
+                    },
+                    {
+                      "numero": 270,
+                      "epigrafe": "MUESTRAS GRATIS",
+                      "texto": [
+                        "La importación y exportación de muestras gratis de medicamentos, de artículos de perfumería o de tocador pueden ser realizados únicamente por sus representantes registrados en el Ministerio."
+                      ],
+                      "palabrasClave": ["muestras gratis", "representantes", "registro"]
+                    },
+                    {
+                      "numero": 271,
+                      "epigrafe": "COMPOSICIÓN DE MUESTRAS GRATIS",
+                      "texto": [
+                        "Las muestras gratis deben tener la misma composición y elaboración que los destinados a la venta, consignándose en cada envase, en forma visible, que su venta está prohibida."
+                      ],
+                      "palabrasClave": ["muestras gratis", "composición", "prohibición de venta"]
+                    },
+                    {
+                      "numero": 272,
+                      "epigrafe": "MUESTRAS DE ESTUPEFACIENTES",
+                      "texto": [
+                        "La importación, exportación y producción de muestras gratis que contengan estupefacientes y otras drogas peligrosas, requieren la autorización previa del Ministerio."
+                      ],
+                      "palabrasClave": ["muestras gratis", "estupefacientes", "drogas peligrosas", "autorización"]
+                    }
+                  ]
+                },
+                {
+                  "id": "l4-t2-c3-s2",
+                  "numero": "II",
+                  "nombre": "DE LOS APARATOS, INSTRUMENTALES, EQUIPOS Y DISPOSITIVOS MEDICOS, ODONTOLOGICOS Y LABORATORIALES",
+                  "rangoArticulos": "273-274",
+                  "articulos": [
+                    {
+                      "numero": 273,
+                      "epigrafe": "REGLAMENTACIÓN DE APARATOS MÉDICOS",
+                      "texto": [
+                        "El Poder Ejecutivo podrá reglamentar el uso y comercio de los aparatos, instrumentales, equipos y dispositivos médicos, odontológicos y laboratoriales y determinar los precios máximos de venta."
+                      ],
+                      "palabrasClave": ["aparatos médicos", "odontológicos", "laboratoriales", "precios máximos"]
+                    },
+                    {
+                      "numero": 274,
+                      "epigrafe": "REGISTRO DE ESTABLECIMIENTOS",
+                      "texto": [
+                        "Los establecimientos que se dediquen a fabricar, importar, exportar o reparar aparatos, instrumentales, equipos y dispositivos médicos, odontológicos y laboratoriales, deben registrarse previamente en el Ministerio, el que ejercerá el control correspondiente."
+                      ],
+                      "palabrasClave": ["registro", "aparatos médicos", "odontológicos", "laboratoriales", "control"]
+                    }
+                  ]
+                },
+                {
+                  "id": "l4-t2-c3-s3",
+                  "numero": "III",
+                  "nombre": "DE LA DISPOSICION DE ORGANOS Y TEJIDOS HUMANOS",
+                  "rangoArticulos": "275-279",
+                  "articulos": [
+                    {
+                      "numero": 275,
+                      "epigrafe": "REGLAMENTACIÓN DE ÓRGANOS Y TEJIDOS",
+                      "texto": [
+                        "El Ministerio reglamentará y controlará la obtención, conservación, utilización y suministro de órganos, tejidos o sus partes de seres humanos vivos o de cadáveres con finalidad terapéutica, de investigación o docencia."
+                      ],
+                      "palabrasClave": ["órganos", "tejidos", "transplante", "obtención", "conservación", "utilización", "suministro"]
+                    },
+                    {
+                      "numero": 276,
+                      "epigrafe": "CONSENTIMIENTO DEL DONANTE",
+                      "texto": [
+                        "Para la utilización de órganos, tejidos o sus partes de seres vivos o de cadáveres a los fines previstos por el artículo anterior, es requisito que la voluntad del donante haya sido expresada por escrito libre de coacción, o que medie el consentimiento escrito de sus herederos."
+                      ],
+                      "palabrasClave": ["consentimiento", "donante", "herederos", "voluntad escrita"]
+                    },
+                    {
+                      "numero": 277,
+                      "epigrafe": "TRANSPLANTE COMO TÉCNICA CORRIENTE",
+                      "texto": [
+                        "Se considera el transplante de órganos, tejidos o sus partes, entre seres humanos, de técnica corriente y no con fines de experimentación."
+                      ],
+                      "palabrasClave": ["transplante", "técnica corriente", "experimentación"]
+                    },
+                    {
+                      "numero": 278,
+                      "epigrafe": "REQUISITOS PARA TRANSPLANTE",
+                      "texto": [
+                        "El transplante de órganos, tejidos o sus partes, en seres humanos, podrá hacerse siempre y cuando dos profesionales médicos, por lo menos, en consulta entre sí o en colaboración con otros profesionales en ciencias de la salud, acrediten que él no alterará las posibilidades de vida del donante y que fundadamente pueda servir para prolongar o mejorar la salud del receptor."
+                      ],
+                      "palabrasClave": ["transplante", "dos profesionales médicos", "acreditación", "donante", "receptor"]
+                    },
+                    {
+                      "numero": 279,
+                      "epigrafe": "PROHIBICIÓN DE OBLACIÓN",
+                      "texto": [
+                        "Se prohíbe la oblación para transplante de órganos, tejidos o sus partes de personas afectadas por las incapacidades previstas en la Ley, de las gestantes y de las personas privadas de su libertad."
+                      ],
+                      "palabrasClave": ["prohibición", "oblación", "gestantes", "privados de libertad"]
+                    }
+                  ]
+                },
+                {
+                  "id": "l4-t2-c3-s4",
+                  "numero": "IV",
+                  "nombre": "DE LOS PRODUCTOS DE PERFUMERIA, BELLEZA, TOCADOR Y ARTICULOS HIGIENICOS DE USO DOMESTICO",
+                  "rangoArticulos": "280",
+                  "articulos": [
+                    {
+                      "numero": 280,
+                      "epigrafe": "REGISTRO DE PRODUCTOS DE PERFUMERÍA",
+                      "texto": [
+                        "Para elaborar industrialmente o importar productos de perfumería, belleza, tocador y artículos higiénicos de uso doméstico, deben registrarse previamente en el Ministerio, el que ejercerá su control."
+                      ],
+                      "palabrasClave": ["productos de perfumería", "belleza", "tocador", "artículos higiénicos", "registro", "control"]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "libro-V",
+      "numero": "V",
+      "nombre": "DEL BIENESTAR SOCIAL",
+      "titulos": [
+        {
+          "id": "l5-t1",
+          "numero": "I",
+          "nombre": "DEL FOMENTO DEL BIENESTAR SOCIAL",
+          "rangoArticulos": "283-284",
+          "capitulos": null,
+          "articulos": [
+            {
+              "numero": 281,
+              "epigrafe": "ENTIDADES DE BIEN SOCIAL",
+              "texto": [
+                "El Ministerio fomentará la creación de entidades de bien social que propendan a la cooperación de la población mediante programas de solidaridad y trabajo voluntario."
+              ],
+              "palabrasClave": ["entidades de bien social", "cooperación", "solidaridad", "trabajo voluntario"]
+            },
+            {
+              "numero": 282,
+              "epigrafe": "REGISTRO DE ENTIDADES",
+              "texto": [
+                "El Ministerio llevará el registro de las entidades de bien social, públicas o privadas, autorizará su funcionamiento y controlará sus actividades."
+              ],
+              "palabrasClave": ["registro", "entidades de bien social", "autorización", "control"]
+            },
+            {
+              "numero": 283,
+              "epigrafe": "SISTEMA DE SERVICIOS SOCIALES",
+              "texto": [
+                "El Ministerio establecerá un sistema de servicios sociales para estimular la elevación del nivel de vida de la población."
+              ],
+              "palabrasClave": ["servicios sociales", "nivel de vida", "población"]
+            },
+            {
+              "numero": 284,
+              "epigrafe": "PARTICIPACIÓN COMUNITARIA",
+              "texto": [
+                "El Ministerio facilitará la participación activa de las comunidades en los planes, programas y actividades de bienestar social."
+              ],
+              "palabrasClave": ["participación comunitaria", "planes", "programas", "bienestar social"]
+            }
+          ]
+        },
+        {
+          "id": "l5-t2",
+          "numero": "II",
+          "nombre": "DEL BIENESTAR FAMILIAR, DEL MENOR Y DEL ANCIANO",
+          "rangoArticulos": "285-288",
+          "capitulos": null,
+          "articulos": [
+            {
+              "numero": 285,
+              "epigrafe": "BIENESTAR FAMILIAR",
+              "texto": [
+                "El Ministerio programará y ejecutará acciones tendientes a crear y mantener condiciones favorables para la constitución y estabilidad de las familias y su bienestar."
+              ],
+              "palabrasClave": ["bienestar familiar", "estabilidad", "familias"]
+            },
+            {
+              "numero": 286,
+              "epigrafe": "PROTECCIÓN DEL MENOR",
+              "texto": [
+                "El Ministerio promoverá la responsabilidad familiar, fundamentalmente en el desarrollo y educación del menor. Estimulará la creación de hogares sustitutivos para los menores desamparados y coordinará con las actividades de otras entidades, públicas o privadas en la materia."
+              ],
+              "palabrasClave": ["responsabilidad familiar", "menor", "hogares sustitutivos", "coordinación"]
+            },
+            {
+              "numero": 287,
+              "epigrafe": "ORIENTACIÓN PSICO-SOCIAL",
+              "texto": [
+                "El Ministerio promoverá servicio de orientación y asistencia psico-social para mujeres desamparadas y adolescentes abandonados."
+              ],
+              "palabrasClave": ["orientación psico-social", "mujeres desamparadas", "adolescentes abandonados"]
+            },
+            {
+              "numero": 288,
+              "epigrafe": "BIENESTAR DE ANCIANOS",
+              "texto": [
+                "El Ministerio programará y ejecutará acciones relativas a la salud y el bienestar de los ancianos, a fin de proporcionarles un sistema de vida adecuado a sus necesidades."
+              ],
+              "palabrasClave": ["bienestar de ancianos", "salud", "sistema de vida"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "libro-VI",
+      "numero": "VI",
+      "nombre": "DE LAS RELACIONES INTERNACIONALES EN MATERIA DE SALUD",
+      "titulos": [
+        {
+          "id": "l6-t1",
+          "numero": "I",
+          "nombre": "DISPOSICIONES GENERALES",
+          "rangoArticulos": "289-290",
+          "capitulos": null,
+          "articulos": [
+            {
+              "numero": 289,
+              "epigrafe": "RELACIONES INTERNACIONALES",
+              "texto": [
+                "El Ministerio representará al Gobierno Nacional en sus relaciones con la Organización Mundial de la Salud y sus filiales, así como con otros organismos de cooperación internacional, en materia de salud."
+              ],
+              "palabrasClave": ["Organización Mundial de la Salud", "cooperación internacional", "representación"]
+            },
+            {
+              "numero": 290,
+              "epigrafe": "REPRESENTACIONES OFICIALES",
+              "texto": [
+                "Las representaciones oficiales a congresos, seminarios, y reuniones científicas de alcance internacional relativas a la salud, serán designadas por el Poder Ejecutivo a propuesta del Ministerio."
+              ],
+              "palabrasClave": ["representaciones oficiales", "congresos", "seminarios", "reuniones científicas"]
+            }
+          ]
+        },
+        {
+          "id": "l6-t2",
+          "numero": "II",
+          "nombre": "DE LA SALUD EN MATERIA DE MIGRACION",
+          "rangoArticulos": "291-292",
+          "capitulos": null,
+          "articulos": [
+            {
+              "numero": 291,
+              "epigrafe": "CERTIFICADOS SANITARIOS PARA INGRESO",
+              "texto": [
+                "Para su ingreso al país, las personas deben exhibir, a funcionario del Ministerio, los certificados sanitarios que los Convenios Internacionales y demás leyes exigieren."
+              ],
+              "palabrasClave": ["ingreso", "certificados sanitarios", "Convenios Internacionales"]
+            },
+            {
+              "numero": 292,
+              "epigrafe": "ADMISIÓN PERMANENTE DE EXTRANJEROS",
+              "texto": [
+                "Los extranjeros, para su admisión permanente en el país, deben contar con los documentos sanitarios del país de origen, los que estipulen este Código y demás leyes. A este efecto el órgano de ejecución de la política migratoria nacional dará intervención previa al Ministerio."
+              ],
+              "palabrasClave": ["extranjeros", "admisión permanente", "documentos sanitarios", "política migratoria"]
+            }
+          ]
+        },
+        {
+          "id": "l6-t3",
+          "numero": "III",
+          "nombre": "DE LA SANIDAD FLUVIAL, AEREA Y TERRESTRE",
+          "rangoArticulos": "293-298",
+          "capitulos": null,
+          "articulos": [
+            {
+              "numero": 293,
+              "epigrafe": "CONDICIONES SANITARIAS DE TRANSPORTE",
+              "texto": [
+                "Las unidades de una empresa de transporte internacional, así como las que realice viajes de turismo accidentalmente, deben reunir las condiciones sanitarias exigidas por el Ministerio."
+              ],
+              "palabrasClave": ["transporte internacional", "condiciones sanitarias", "turismo"]
+            },
+            {
+              "numero": 294,
+              "epigrafe": "VISITA MÉDICA A UNIDADES DE TRANSPORTE",
+              "texto": [
+                "Las unidades de transporte internacional, sean fluviales, aéreas o terrestres, quedan sujetas a la visita médica que disponga el Ministerio, el que podrá ordenar el desembarco y aislamiento de cualquier persona o animal sospechoso de padecer enfermedad objeto de reglamentación internacional, el tratamiento de los objetos o materiales presumiblemente contaminados o la cuarentena de vehículos."
+              ],
+              "palabrasClave": ["visita médica", "desembarco", "aislamiento", "cuarentena", "reglamentación internacional"]
+            },
+            {
+              "numero": 295,
+              "epigrafe": "CERTIFICADO DE DESINFECCIÓN",
+              "texto": [
+                "Para su introducción o salida del país de todo artículo personal usado que no forme parte del equipaje de pasajeros, deben acompañarse el certificado de desinfección, expedido o visado por las autoridades sanitarias competentes del país de origen."
+              ],
+              "palabrasClave": ["artículo personal usado", "certificado de desinfección", "país de origen"]
+            },
+            {
+              "numero": 296,
+              "epigrafe": "DESINFECCIÓN DE TRANSPORTES",
+              "texto": [
+                "La periodicidad, el procedimiento y las normas generales de desinfección, desinsectación y desratización de todo medio de transporte público, terrestre, fluvial y aéreo internacional, se establecerán de conformidad con las disposiciones de este Código y sus reglamentos y en los términos que determinen los Convenios Internacionales suscriptos por el Paraguay, quedando a cargo del Ministerio el control de su cumplimiento."
+              ],
+              "palabrasClave": ["desinfección", "desinsectación", "desratización", "transporte internacional", "Convenios Internacionales"]
+            },
+            {
+              "numero": 297,
+              "epigrafe": "LIBRE PLÁTICA",
+              "texto": [
+                "Podrá concederse libre plática a las naves y aeronaves internacionales que se ajusten a las disposiciones establecidas en este Código y los Convenios Internacionales suscriptos por el Gobierno Nacional."
+              ],
+              "palabrasClave": ["libre plática", "naves", "aeronaves", "Convenios Internacionales"]
+            },
+            {
+              "numero": 298,
+              "epigrafe": "MEDIDAS PREVENTIVAS DE TRÁNSITO",
+              "texto": [
+                "El Poder Ejecutivo puede implantar las medidas preventivas y de restricción de tránsito necesarias, adoptando medidas sanitarias tendientes a prevenir y controlar la diseminación de enfermedades y la contaminación de zonas adyacentes, de acuerdo a las normas del derecho internacional."
+              ],
+              "palabrasClave": ["medidas preventivas", "restricción de tránsito", "diseminación de enfermedades", "derecho internacional"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "libro-VII",
+      "numero": "VII",
+      "nombre": "DE LAS INFRACCIONES, SANCIONES, PROCEDIMIENTOS, PRESCRIPCIONES Y PERENCIONES",
+      "titulos": [
+        {
+          "id": "l7-t1",
+          "numero": "I",
+          "nombre": "DE LAS INFRACCIONES",
+          "rangoArticulos": "299-301",
+          "capitulos": null,
+          "articulos": [
+            {
+              "numero": 299,
+              "epigrafe": "INFRACCIÓN SANITARIA",
+              "texto": [
+                "Los responsables de una acción u omisión violatoria de las disposiciones del presente Código incurren en infracción de orden sanitaria."
+              ],
+              "palabrasClave": ["infracción sanitaria", "acción u omisión", "violación"]
+            },
+            {
+              "numero": 300,
+              "epigrafe": "MEDIDAS CORRECTIVAS",
+              "texto": [
+                "Los establecimientos cuya instalación y funcionamiento no se ajusten a las normas de este Código serán objeto de las medidas correctivas previstas en el mismo."
+              ],
+              "palabrasClave": ["establecimientos", "medidas correctivas", "normas"]
+            },
+            {
+              "numero": 301,
+              "epigrafe": "PERSONAS JURÍDICAS",
+              "texto": [
+                "Las personas jurídicas estarán sujetas a las disposiciones legales que gobiernan la materia, y a las que determinaron su creación."
+              ],
+              "palabrasClave": ["personas jurídicas", "disposiciones legales"]
+            }
+          ]
+        },
+        {
+          "id": "l7-t2",
+          "numero": "II",
+          "nombre": "DE LAS SANCIONES",
+          "rangoArticulos": "302-308",
+          "capitulos": null,
+          "articulos": [
+            {
+              "numero": 302,
+              "epigrafe": "TIPOS DE SANCIONES",
+              "texto": [
+                "Las sanciones que establece esta Ley son: amonestación, multa, decomiso, clausura, suspensión y cancelación de registro, las que serán aplicadas por el Ministerio atendiendo a las circunstancias especiales de cada caso conforme a lo establecido en este TÍTULO."
+              ],
+              "palabrasClave": ["amonestación", "multa", "decomiso", "clausura", "suspensión", "cancelación de registro"]
+            },
+            {
+              "numero": 303,
+              "epigrafe": "AMONESTACIÓN",
+              "texto": [
+                "La persona que incurriere en una infracción leve y que no registrare antecedentes será sancionada con amonestación."
+              ],
+              "palabrasClave": ["amonestación", "infracción leve", "sin antecedentes"]
+            },
+            {
+              "numero": 304,
+              "epigrafe": "MULTA",
+              "texto": [
+                "Cuando la transgresión a las disposiciones de este Código revistan mayor gravedad, a la señalada en el Artículo anterior, el infractor será pasible de una multa cuyo monto se aplicará en cada caso, atendiendo a la gravedad del hecho y a los antecedentes del infractor."
+              ],
+              "palabrasClave": ["multa", "gravedad", "antecedentes"]
+            },
+            {
+              "numero": 305,
+              "epigrafe": "MONTO DE MULTAS",
+              "texto": [
+                "El monto de las multas se aplicará en sumas equivalentes a jornales para actividades diversas no especificadas en la Capital. Esto, en ningún caso, excederá de 100 jornales."
+              ],
+              "palabrasClave": ["jornales", "100 jornales", "límite máximo"]
+            },
+            {
+              "numero": 306,
+              "epigrafe": "DECOMISO",
+              "texto": [
+                "Cuando determinados objetos, elementos, sustancias o productos se hallaren en infracción a las normas de este Código, los mismos serán pasibles del decomiso, quedando a disposiciones del Ministerio para los efectos legales."
+              ],
+              "palabrasClave": ["decomiso", "objetos", "sustancias", "productos"]
+            },
+            {
+              "numero": 307,
+              "epigrafe": "SUSPENSIÓN O CANCELACIÓN DE REGISTRO",
+              "texto": [
+                "Los profesionales, técnicos y auxiliares en ciencias de la salud serán pasibles de la suspensión por un plazo no mayor de 6 meses o la cancelación del registro por un término no mayor de 3 años, cuando los mismos rehuyan prestar sus servicios a un enfermo o lo abandonen habiendo estado bajo su cuidado o por su negligencia sean responsables de la muerte o incapacidad de su paciente, o de la propagación de una enfermedad transmisible que ponga en grave riesgo la salud pública, así como los que expidan certificados, análisis, dictámenes o informes falsos o violen voluntariamente el secreto profesional."
+              ],
+              "palabrasClave": ["suspensión", "6 meses", "cancelación de registro", "3 años", "negligencia", "secreto profesional"]
+            },
+            {
+              "numero": 308,
+              "epigrafe": "CLAUSURA DE ESTABLECIMIENTOS",
+              "texto": [
+                "Cuando un establecimiento se hallare en infracción a las normas previstas, en este Código, el Ministerio podrá sancionar, disponiendo la clausura, parcial o total, temporal o definitiva de dicho establecimiento. La clausura temporal no podrá exceder de un tiempo máximo de 40 días."
+              ],
+              "palabrasClave": ["clausura", "parcial", "total", "temporal", "definitiva", "40 días"]
+            }
+          ]
+        },
+        {
+          "id": "l7-t3",
+          "numero": "III",
+          "nombre": "DE LAS CAUSAS AGRAVANTES Y CAUSAS ATENUANTES",
+          "rangoArticulos": "309-314",
+          "capitulos": null,
+          "articulos": [
+            {
+              "numero": 309,
+              "epigrafe": "CIRCUNSTANCIAS ATENUANTES Y AGRAVANTES",
+              "texto": [
+                "A los efectos de la aplicación de las sanciones previstas en este Código, el Ministerio tendrá en cuenta las circunstancias atenuantes y agravantes que puedan comprometer la responsabilidad del infractor."
+              ],
+              "palabrasClave": ["atenuantes", "agravantes", "responsabilidad"]
+            },
+            {
+              "numero": 310,
+              "epigrafe": "REINCIDENCIA Y REITERACIÓN",
+              "texto": [
+                "Se considerará circunstancias agravantes la reiteración y la reincidencia, así como las transgresiones a las medidas dispuestas como obligatorias por el Poder Ejecutivo en un estado de emergencia. En estos casos se aplicará la mayor sanción al infractor."
+              ],
+              "palabrasClave": ["reiteración", "reincidencia", "estado de emergencia", "mayor sanción"]
+            },
+            {
+              "numero": 311,
+              "epigrafe": "REINCIDENCIA - PLAZO",
+              "texto": [
+                "Cuando una persona fuere sancionada por una infracción o incurriere en la misma falta antes de transcurrido 2 años, será considerada como reincidente."
+              ],
+              "palabrasClave": ["reincidente", "2 años"]
+            },
+            {
+              "numero": 312,
+              "epigrafe": "REITERACIÓN",
+              "texto": [
+                "Cuando una persona cometiere dos o más infracciones en una misma ocasión o en distintas circunstancias dentro de un período de 2 años, sin haber sido sancionada por ninguna de ellas, se considerará a los efectos de este Código como reiterante."
+              ],
+              "palabrasClave": ["reiterante", "2 años", "múltiples infracciones"]
+            },
+            {
+              "numero": 313,
+              "epigrafe": "TRANSGRESIONES EN EMERGENCIA",
+              "texto": [
+                "Se considerarán transgresiones de las medidas dispuestas como obligatorias por el Poder Ejecutivo en un estado de emergencia, las acciones u omisiones violatorias de las disposiciones sanitarias tendientes a recuperar el control de los factores condicionantes de la salud de las personas."
+              ],
+              "palabrasClave": ["estado de emergencia", "transgresiones", "medidas sanitarias"]
+            },
+            {
+              "numero": 314,
+              "epigrafe": "CAUSAS ATENUANTES",
+              "texto": [
+                "Se consideran causas atenuantes o eximentes las que tienden a disminuir o eximir la responsabilidad al infractor, las que podrán ser: la confesión, la buena fe, la falta de antecedentes, el caso fortuito y el de fuerza mayor."
+              ],
+              "palabrasClave": ["atenuantes", "confesión", "buena fe", "falta de antecedentes", "caso fortuito", "fuerza mayor"]
+            }
+          ]
+        },
+        {
+          "id": "l7-t4",
+          "numero": "IV",
+          "nombre": "DEL PROCEDIMIENTO",
+          "rangoArticulos": "315-320",
+          "capitulos": null,
+          "articulos": [
+            {
+              "numero": 315,
+              "epigrafe": "SUMARIO ADMINISTRATIVO",
+              "texto": [
+                "Las sanciones previstas en este Código serán aplicadas por el Ministerio, previo sumario administrativo, en el que se dará intervención al presunto responsable de la infracción, pudiendo asumir su defensa personalmente o mediante profesional abogado."
+              ],
+              "palabrasClave": ["sumario administrativo", "defensa", "abogado"]
+            },
+            {
+              "numero": 316,
+              "epigrafe": "NOTIFICACIÓN",
+              "texto": [
+                "Dispuesta la instrucción del sumario administrativo se notificará al supuesto infractor que se presente a ejercer su defensa en un plazo no mayor de 48 horas, sin perjuicio de su ampliación en razón de la distancia. Si el afectado no concurriere, el Ministerio dictará resolución dentro del plazo de 3 días."
+              ],
+              "palabrasClave": ["notificación", "48 horas", "defensa", "3 días"]
+            },
+            {
+              "numero": 317,
+              "epigrafe": "AUDIENCIA",
+              "texto": [
+                "Si el infractor se presentare a ejercer su defensa, se fijará una audiencia en que serán escuchadas las partes y se labrará acta de la misma, debiendo el Ministerio dictar resolución en el plazo de 3 días."
+              ],
+              "palabrasClave": ["audiencia", "acta", "3 días"]
+            },
+            {
+              "numero": 318,
+              "epigrafe": "RECURSO DE RECONSIDERACIÓN",
+              "texto": [
+                "Contra la resolución dictada por el Ministerio, en el caso del Artículo anterior, se admite el recurso de reconsideración, el que será fundado y deberá ser presentado dentro del plazo de 5 días de la notificación."
+              ],
+              "palabrasClave": ["recurso de reconsideración", "5 días"]
+            },
+            {
+              "numero": 319,
+              "epigrafe": "RECURSO ANTE EL TRIBUNAL DE CUENTAS",
+              "texto": [
+                "La resolución recaída en el recurso de reconsideración se dictará en un plazo de 3 días y la misma podrá ser recurrida por el afectado, ante el Tribunal de Cuentas, en el término de 10 días hábiles, por vía de lo contencioso administrativo."
+              ],
+              "palabrasClave": ["Tribunal de Cuentas", "10 días hábiles", "contencioso administrativo"]
+            },
+            {
+              "numero": 320,
+              "epigrafe": "COBRO JUDICIAL DE MULTAS",
+              "texto": [
+                "A los efectos del cobro judicial de las multas impuestas, constituirá suficiente título ejecutivo el testimonio auténtico de la resolución ejecutoriada que la haya impuesto. En el trámite del juicio ejecutivo no se admitirán otras excepciones que la del pago comprobado por documento auténtico, o la de prescripción."
+              ],
+              "palabrasClave": ["título ejecutivo", "juicio ejecutivo", "pago", "prescripción"]
+            }
+          ]
+        },
+        {
+          "id": "l7-t5",
+          "numero": "V",
+          "nombre": "DE LA PRESCRIPCION Y DE LA PERENCION",
+          "rangoArticulos": "321-323",
+          "capitulos": null,
+          "articulos": [
+            {
+              "numero": 321,
+              "epigrafe": "PRESCRIPCIÓN DE SANCIONES",
+              "texto": [
+                "Las sanciones establecidas en este Código prescribirán a los 2 años, desde que las mismas fueron dictadas."
+              ],
+              "palabrasClave": ["prescripción", "2 años"]
+            },
+            {
+              "numero": 322,
+              "epigrafe": "PRESCRIPCIÓN DE ACCIONES",
+              "texto": [
+                "Las acciones tendientes a sancionar las infracciones a las normas de este Código, prescribirán al año de su comisión."
+              ],
+              "palabrasClave": ["prescripción de acciones", "1 año"]
+            },
+            {
+              "numero": 323,
+              "epigrafe": "PERENCIÓN DE LA INSTANCIA",
+              "texto": [
+                "Los sumarios administrativos que no hayan sido impulsados por el Ministerio o por el infractor en un plazo de 3 meses, contado a partir de la última actuación, harán perimir la instancia administrativa."
+              ],
+              "palabrasClave": ["perención", "3 meses", "impulso procesal"]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "disposiciones_finales": [
+    {
+      "numero": 324,
+      "epigrafe": "DESTINO DE MULTAS",
+      "texto": [
+        "El importe de las multas percibidas por el Ministerio será depositado en una cuenta especial que fiscalizará el Ministerio de Hacienda y será destinado a incrementar y fortalecer los programas de aquél."
+      ],
+      "palabrasClave": ["multas", "cuenta especial", "programas de salud"]
+    },
+    {
+      "numero": 325,
+      "epigrafe": "REGLAMENTACIÓN",
+      "texto": [
+        "El Poder Ejecutivo reglamentará las disposiciones contenidas en este Código."
+      ],
+      "palabrasClave": ["reglamentación", "Poder Ejecutivo"]
+    },
+    {
+      "numero": 326,
+      "epigrafe": "NORMAS TÉCNICAS",
+      "texto": [
+        "El Ministerio dictará las normas técnicas para el cumplimiento de cuanto establece este Código y sus reglamentos."
+      ],
+      "palabrasClave": ["normas técnicas", "cumplimiento"]
+    },
+    {
+      "numero": 327,
+      "epigrafe": "DEROGACIONES",
+      "texto": [
+        "Quedan derogadas las disposiciones legales contrarias a los del presente Código."
+      ],
+      "palabrasClave": ["derogaciones"]
+    },
+    {
+      "numero": 328,
+      "epigrafe": "COMUNICACIÓN",
+      "texto": [
+        "Comuníquese al Poder Ejecutivo. DADA EN LA SALA DE SESIONES DEL CONGRESO NACIONAL A LOS CUATRO DIAS DEL MES DE DICIEMBRE DEL AÑO UN MIL NOVECIENTOS OCHENTA. Asunción, 15 de Diciembre de 1980."
+      ],
+      "palabrasClave": ["comunicación", "1980"]
+    }
+  ],
+  "decreto_reglamentario": {
+    "numero": "1635",
+    "fecha": "1999",
+    "titulo": "POR EL CUAL SE REGLAMENTA EL ARTÍCULO No. 175 DE LA LEY No. 836/80 CODIGO SANITARIO",
+    "articulos": [
+      {
+        "numero": 1,
+        "texto": "Declárase obligatorio el registro sanitario de los productos alimenticios, bebidas, y aditivos destinados al consumo humano, en todo territorio nacional, para los fabricantes, representantes, importadores, fraccionadores y otros."
+      },
+      {
+        "numero": 2,
+        "texto": "Facúltase al Ministerio de Salud Pública y Bienestar Social, a través del Instituto Nacional de Alimentación y Nutrición (INAN), a establecer las condiciones y los requisitos para el funcionamiento de dicho registro sanitario."
+      },
+      {
+        "numero": 3,
+        "texto": "Establécese en cinco años el tiempo de validez del registro sanitario."
+      },
+      {
+        "numero": 4,
+        "texto": "Dispónese que la Dirección General de Aduanas no dará trámites a despachos de importación de productos alimenticios, bebidas y aditivos de origen vegetal, animal o mineral sin el Registro Sanitario expedido por el Ministerio de Salud Pública y Bienestar Social."
+      },
+      {
+        "numero": 5,
+        "texto": "Facúltase al Ministerio de Salud Pública y Bienestar Social a través del Instituto Nacional de Alimentación y Nutrición (INAN) a otorgar la vigencia del registro sanitario para cada operación de importación y a percibir el arancel correspondiente."
+      },
+      {
+        "numero": 6,
+        "texto": "Dispónese que para los casos de importación de alimentos de origen animal o vegetal se deberá contar con la correspondiente autorización del Ministerio de Agricultura y Ganadería."
+      },
+      {
+        "numero": 7,
+        "texto": "Establece que los organismos responsables de la aplicación del presente Decreto serán el Ministerio de Salud Pública y Bienestar Social, a través del Instituto Nacional de Alimentación y Nutrición (INAN); el Ministerio de Industria y Comercio, a través de la Sub Secretaría de Estado de Comercio; Ministerio de Agricultura y Ganadería respectivamente; y el Ministerio de Hacienda, a través de la Dirección General de Aduanas, de acuerdo a su ámbito de competencia."
+      },
+      {
+        "numero": 8,
+        "texto": "El presente Decreto será refrendado por los Ministros de Salud Pública y Bienestar Social, Industria y Comercio, Agricultura y Ganadería, y Hacienda, respectivamente."
+      },
+      {
+        "numero": 9,
+        "texto": "Comuníquese, publíquese y dése al Registro Oficial."
+      }
+    ]
+  }
+}
