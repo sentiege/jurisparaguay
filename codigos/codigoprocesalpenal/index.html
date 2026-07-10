@@ -3,80 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Código Procesal Penal — LegalHub</title>
+  <title>Código — JurisParaguay</title>
   <link rel="manifest" href="manifest.json" />
   <meta name="theme-color" content="#1f3147" />
   <style>
     :root {
-      --bg: #f7f3ea;
-      --bg-panel: #ffffff;
-      --bg-sidebar: #1f3147;
-      --bg-sidebar-alt: #223650;
-      --border-soft: #dde0e5;
-      --text-main: #1f2329;
-      --text-muted: #62666f;
-      --text-inverse: #f7f3ea;
-      --accent-gold: #c9a227;
-      --accent-gold-soft: #f0d9a0;
-      --accent-blue: #34557f;
-      --radius-md: 10px;
-      --radius-lg: 16px;
-      --shadow-md: 0 10px 30px rgba(15,23,42,0.12);
+      --bg: #f7f3ea; --bg-panel: #ffffff; --bg-sidebar: #1f3147; --bg-sidebar-alt: #223650;
+      --border-soft: #dde0e5; --text-main: #1f2329; --text-muted: #62666f; --text-inverse: #f7f3ea;
+      --accent-gold: #c9a227; --accent-gold-soft: #f0d9a0; --accent-blue: #34557f;
+      --radius-md: 10px; --radius-lg: 16px; --shadow-md: 0 10px 30px rgba(15,23,42,0.12);
       --sidebar-width: 320px;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      height: 100vh;
-      background: var(--bg);
-      color: var(--text-main);
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      display: grid;
-      grid-template-columns: var(--sidebar-width) 1fr;
-      grid-template-rows: auto 1fr auto;
-      overflow: hidden;
-    }
-
-    /* ── Sidebar ── */
-    .sidebar {
-      grid-column: 1; grid-row: 1 / -1;
-      background: linear-gradient(180deg, var(--bg-sidebar), var(--bg-sidebar-alt));
-      color: var(--text-inverse);
-      padding: 18px 18px 16px;
-      border-right: 1px solid rgba(148,163,184,0.6);
-      display: flex; flex-direction: column; overflow: hidden;
-    }
+    body { height: 100vh; background: var(--bg); color: var(--text-main); font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; display: grid; grid-template-columns: var(--sidebar-width) 1fr; grid-template-rows: auto 1fr auto; overflow: hidden; }
+    .sidebar { grid-column: 1; grid-row: 1 / -1; background: linear-gradient(180deg, var(--bg-sidebar), var(--bg-sidebar-alt)); color: var(--text-inverse); padding: 18px 18px 16px; border-right: 1px solid rgba(148,163,184,0.6); display: flex; flex-direction: column; overflow: hidden; }
     .sidebar-header { margin-bottom: 14px; text-align: center; }
-    .sidebar-logo { display: block; width: 100%; max-width: 200px; height: auto; margin: 0 auto 12px; object-fit: contain; }
-    .back-link {
-      display: inline-flex; align-items: center; gap: .35rem;
-      font-size: 11px; color: var(--accent-gold); text-decoration: none;
-      margin-bottom: 10px; opacity: .9;
-      transition: opacity .15s;
-    }
+    .sidebar-logo-link { display: block; width: fit-content; margin: 0 auto 12px; }
+    .sidebar-logo { display: block; width: 100%; max-width: 200px; height: auto; object-fit: contain; transition: opacity .15s; }
+    .sidebar-logo-link:hover .sidebar-logo { opacity: .8; }
+    .back-link { display: inline-flex; align-items: center; gap: .35rem; font-size: 11px; color: var(--accent-gold); text-decoration: none; margin-bottom: 10px; opacity: .9; transition: opacity .15s; }
     .back-link:hover { opacity: 1; text-decoration: underline; }
     .app-title { font-size: 18px; font-weight: 600; letter-spacing: 0.03em; }
     .app-subtitle { font-size: 11px; color: rgba(248,250,252,0.75); margin-top: 3px; }
     .search-box { margin-top: 12px; position: relative; text-align: left; }
-    .search-input {
-      width: 100%; padding: 8px 32px 8px 10px;
-      border-radius: 999px; border: 1px solid rgba(148,163,184,0.6);
-      background: rgba(15,23,42,0.55); color: var(--text-inverse); font-size: 12px;
-    }
+    .search-input { width: 100%; padding: 8px 32px 8px 10px; border-radius: 999px; border: 1px solid rgba(148,163,184,0.6); background: rgba(15,23,42,0.55); color: var(--text-inverse); font-size: 12px; }
     .search-input::placeholder { color: rgba(226,232,240,0.7); }
-    .search-clear {
-      position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
-      background: none; border: none; color: rgba(226,232,240,0.6);
-      cursor: pointer; font-size: 14px; display: none; line-height: 1;
-    }
+    .search-clear { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; color: rgba(226,232,240,0.6); cursor: pointer; font-size: 14px; display: none; line-height: 1; }
     .search-clear.visible { display: block; }
     .search-results { display: none; flex-direction: column; gap: 4px; margin-top: 8px; flex: 1; overflow-y: auto; }
     .search-results.visible { display: flex; }
-    .search-result-item {
-      padding: 8px 9px; border-radius: 8px;
-      background: rgba(15,23,42,0.55); border: 1px solid rgba(148,163,184,0.3);
-      cursor: pointer; font-size: 11px; color: var(--text-inverse); transition: background 0.15s;
-    }
+    .search-result-item { padding: 8px 9px; border-radius: 8px; background: rgba(15,23,42,0.55); border: 1px solid rgba(148,163,184,0.3); cursor: pointer; font-size: 11px; color: var(--text-inverse); transition: background 0.15s; }
     .search-result-item:hover { background: rgba(15,23,42,0.85); }
     .search-result-num { font-weight: 700; color: var(--accent-gold); }
     .search-result-epig { font-weight: 500; display: block; margin-top: 2px; }
@@ -87,12 +43,7 @@
     .sidebar-scroll { margin-top: 12px; padding-right: 4px; overflow-y: auto; flex: 1; }
     .tree-group-title { font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em; color: rgba(226,232,240,0.85); margin-bottom: 8px; }
     .title-block { border-radius: 12px; border: 1px solid rgba(148,163,184,0.5); background: rgba(15,23,42,0.65); margin-bottom: 8px; }
-    .title-head {
-      width: 100%; padding: 8px 9px; display: flex;
-      align-items: center; justify-content: space-between;
-      font-size: 12px; text-align: left; cursor: pointer;
-      border: none; background: transparent; color: var(--text-inverse);
-    }
+    .title-head { width: 100%; padding: 8px 9px; display: flex; align-items: center; justify-content: space-between; font-size: 12px; text-align: left; cursor: pointer; border: none; background: transparent; color: var(--text-inverse); }
     .title-head-main { display: flex; flex-direction: column; }
     .title-kicker { font-size: 10px; color: rgba(226,232,240,0.8); text-transform: uppercase; letter-spacing: 0.08em; }
     .title-name { font-size: 12px; font-weight: 600; margin-top: 2px; }
@@ -101,88 +52,75 @@
     .title-block.open .title-chevron { transform: rotate(90deg); }
     .chapter-list { display: none; border-top: 1px solid rgba(148,163,184,0.45); padding: 4px 5px 6px; }
     .title-block.open .chapter-list { display: block; }
-    .chapter-btn {
-      width: 100%; padding: 6px; border-radius: 8px;
-      border: none; background: transparent; color: var(--text-inverse);
-      text-align: left; font-size: 11px; cursor: pointer;
-    }
-    .chapter-btn:hover, .chapter-btn.active { background: rgba(15,23,42,0.9); }
+    .chapter-block { border-radius: 8px; border: 1px solid rgba(148,163,184,0.3); background: rgba(15,23,42,0.45); margin-bottom: 5px; }
+    .chapter-head { width: 100%; padding: 6px 8px; display: flex; align-items: center; justify-content: space-between; font-size: 11px; text-align: left; cursor: pointer; border: none; background: transparent; color: var(--text-inverse); }
+    .chapter-head-main { display: flex; flex-direction: column; }
     .chapter-name { font-weight: 500; display: block; }
     .chapter-range { font-size: 10px; color: rgba(226,232,240,0.7); display: block; }
-
-    /* ── Hamburger ── */
-    .hamburger {
-      display: none; background: none;
-      border: 1px solid var(--border-soft); border-radius: 8px;
-      padding: 5px 8px; font-size: 18px; cursor: pointer;
-      color: var(--text-main); line-height: 1; flex-shrink: 0;
-    }
-
-    /* ── Header ── */
-    .header {
-      grid-column: 2; grid-row: 1;
-      padding: 10px 18px;
-      border-bottom: 1px solid var(--border-soft);
-      background: rgba(247,243,234,0.94);
-      display: flex; align-items: center;
-      justify-content: space-between; gap: 12px; min-width: 0;
-    }
+    .chapter-chevron { font-size: 10px; color: rgba(226,232,240,0.6); transition: transform 0.15s ease; }
+    .chapter-block.open .chapter-chevron { transform: rotate(90deg); }
+    .art-group-list { display: none; border-top: 1px solid rgba(148,163,184,0.3); padding: 3px 4px 4px; }
+    .chapter-block.open .art-group-list { display: block; }
+    .art-group-btn { width: 100%; padding: 5px 7px; border-radius: 6px; border: none; background: transparent; color: var(--text-inverse); text-align: left; font-size: 11px; cursor: pointer; display: flex; flex-direction: column; gap: 1px; }
+    .art-group-btn:hover, .art-group-btn.active { background: rgba(15,23,42,0.9); }
+    .art-group-nums { font-weight: 700; color: var(--accent-gold); font-size: 11px; }
+    .art-group-epigs { font-size: 10px; color: rgba(226,232,240,0.7); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 220px; }
+    .hamburger { display: none; background: none; border: 1px solid var(--border-soft); border-radius: 8px; padding: 5px 8px; font-size: 18px; cursor: pointer; color: var(--text-main); line-height: 1; flex-shrink: 0; }
+    .header { grid-column: 2; grid-row: 1; padding: 10px 18px; border-bottom: 1px solid var(--border-soft); background: rgba(247,243,234,0.94); display: flex; align-items: center; justify-content: space-between; gap: 12px; min-width: 0; }
     .breadcrumbs { font-size: 11px; color: var(--text-muted); min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
     .breadcrumbs a { color: var(--accent-blue); font-weight: 600; text-decoration: none; }
     .breadcrumbs a:hover { text-decoration: underline; }
-    .breadcrumbs span { color: var(--accent-blue); font-weight: 600; }
     .header-actions { display: flex; gap: 6px; align-items: center; flex-shrink: 0; flex-wrap: wrap; }
-    .header-btn {
-      font-size: 11px; padding: 6px 10px; border-radius: 999px;
-      border: 1px solid var(--border-soft); background: var(--bg-panel);
-      color: var(--text-muted); cursor: pointer; white-space: nowrap;
-      transition: background 0.15s, border-color 0.15s;
-    }
+    .header-btn { font-size: 11px; padding: 6px 10px; border-radius: 999px; border: 1px solid var(--border-soft); background: var(--bg-panel); color: var(--text-muted); cursor: pointer; white-space: nowrap; transition: background 0.15s, border-color 0.15s; }
     .header-btn:hover { background: var(--accent-gold-soft); border-color: var(--accent-gold); color: #4b3410; }
+    .header-btn.active-tool { background: var(--accent-gold); border-color: #a07c10; color: #1a2d45; font-weight: 600; }
     .header-btn.pwa-btn { display: none; }
     .header-btn.pwa-btn.visible { display: inline-block; }
-
-    /* ── Tags Panel ── */
-    .tags-overlay {
-      display: none; position: fixed; inset: 0; z-index: 200;
-      background: rgba(15,23,42,0.45); backdrop-filter: blur(2px);
-      align-items: flex-start; justify-content: flex-end;
-    }
+    .copy-menu-wrap { position: relative; }
+    .copy-menu { display: none; position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-panel); border: 1px solid var(--border-soft); border-radius: 10px; box-shadow: var(--shadow-md); min-width: 230px; max-width: 300px; z-index: 60; padding: 6px; }
+    .copy-menu.open { display: block; }
+    .copy-menu-item { width: 100%; text-align: left; padding: 8px 10px; border-radius: 8px; border: none; background: transparent; cursor: pointer; display: flex; flex-direction: column; gap: 2px; }
+    .copy-menu-item:hover, .copy-menu-item:focus-visible { background: var(--accent-gold-soft); outline: none; }
+    .copy-menu-item-num { font-weight: 700; color: var(--accent-blue); font-size: 11px; }
+    .copy-menu-item-epig { font-size: 11px; color: var(--text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .copy-menu-empty { font-size: 11px; color: var(--text-muted); padding: 10px; text-align: center; }
+    .reader-card.card-copy-flash { animation: copyFlash 1.4s ease; }
+    @keyframes copyFlash { 0% { box-shadow: 0 0 0 3px rgba(201,162,39,0.85), var(--shadow-md); } 100% { box-shadow: var(--shadow-md); } }
+    .marcadores-overlay { display: none; position: fixed; inset: 0; z-index: 200; background: rgba(15,23,42,0.45); backdrop-filter: blur(2px); align-items: flex-start; justify-content: flex-end; }
+    .marcadores-overlay.open { display: flex; }
+    .marcadores-panel { margin: 56px 18px 0 0; background: var(--bg-panel); border-radius: var(--radius-lg); border: 1px solid var(--border-soft); box-shadow: var(--shadow-md); padding: 16px 18px 18px; min-width: 280px; max-width: 360px; max-height: calc(100vh - 80px); overflow-y: auto; }
+    .marcadores-panel-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+    .marcadores-panel-title { font-size: 13px; font-weight: 700; color: var(--accent-blue); }
+    .marcadores-close { background: none; border: none; font-size: 18px; color: var(--text-muted); cursor: pointer; line-height: 1; }
+    .marcadores-empty { font-size: 12px; color: var(--text-muted); padding: 8px 0; }
+    .marcadores-list { display: flex; flex-direction: column; gap: 6px; }
+    .marcador-item { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 8px 10px; border-radius: 8px; background: var(--bg); border: 1px solid var(--border-soft); cursor: pointer; transition: background 0.15s; }
+    .marcador-item:hover { background: var(--accent-gold-soft); }
+    .marcador-info { flex: 1; min-width: 0; }
+    .marcador-num { font-size: 11px; font-weight: 700; color: var(--accent-blue); }
+    .marcador-epig { font-size: 11px; color: var(--text-main); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .marcador-del { background: none; border: none; font-size: 14px; color: var(--text-muted); cursor: pointer; flex-shrink: 0; padding: 2px 4px; border-radius: 4px; transition: color 0.15s; }
+    .marcador-del:hover { color: #c0392b; }
+    .tags-overlay { display: none; position: fixed; inset: 0; z-index: 200; background: rgba(15,23,42,0.45); backdrop-filter: blur(2px); align-items: flex-start; justify-content: flex-end; }
     .tags-overlay.open { display: flex; }
-    .tags-panel {
-      margin: 56px 18px 0 0;
-      background: var(--bg-panel); border-radius: var(--radius-lg);
-      border: 1px solid var(--border-soft); box-shadow: var(--shadow-md);
-      padding: 16px 18px 18px; min-width: 260px; max-width: 340px;
-      max-height: calc(100vh - 80px); overflow-y: auto;
-    }
+    .tags-panel { margin: 56px 18px 0 0; background: var(--bg-panel); border-radius: var(--radius-lg); border: 1px solid var(--border-soft); box-shadow: var(--shadow-md); padding: 16px 18px 18px; min-width: 260px; max-width: 340px; max-height: calc(100vh - 80px); overflow-y: auto; }
     .tags-panel-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
     .tags-panel-title { font-size: 13px; font-weight: 700; color: var(--accent-blue); }
     .tags-close { background: none; border: none; font-size: 18px; color: var(--text-muted); cursor: pointer; line-height: 1; }
     .tags-empty { font-size: 12px; color: var(--text-muted); padding: 8px 0; }
     .tags-list { display: flex; flex-wrap: wrap; gap: 7px; }
-    .tag-chip {
-      font-size: 11px; padding: 4px 11px; border-radius: 999px;
-      background: var(--accent-gold-soft); border: 1px solid var(--accent-gold);
-      color: #4b3410; cursor: pointer; transition: background 0.15s;
-    }
+    .tag-chip { font-size: 11px; padding: 4px 11px; border-radius: 999px; background: var(--accent-gold-soft); border: 1px solid var(--accent-gold); color: #4b3410; cursor: pointer; transition: background 0.15s; }
     .tag-chip:hover { background: var(--accent-gold); color: #fff; }
     .tags-art-title { font-size: 11px; color: var(--text-muted); margin-bottom: 10px; font-style: italic; }
-
-    /* ── Main / Reader ── */
-    .main {
-      grid-column: 2; grid-row: 2;
-      padding: 16px 18px; overflow-y: auto;
-      background: radial-gradient(circle at top left, rgba(201,162,39,0.12), transparent 60%), var(--bg);
-    }
-    .reader {
-      max-width: 860px; margin: 0 auto;
-      background: var(--bg-panel);
-      border-radius: var(--radius-lg);
-      border: 1px solid var(--border-soft);
-      box-shadow: var(--shadow-md);
-      padding: 18px 20px 20px;
-    }
+    .main { grid-column: 2; grid-row: 2; padding: 16px 18px; overflow-y: auto; background: radial-gradient(circle at top left, rgba(201,162,39,0.12), transparent 60%), var(--bg); }
+    .top-pager { position: sticky; top: 0; z-index: 5; display: flex; justify-content: center; gap: 10px; max-width: 860px; margin: 0 auto 14px; padding: 8px; background: rgba(247,243,234,0.96); backdrop-filter: blur(4px); border-radius: 999px; border: 1px solid var(--border-soft); box-shadow: var(--shadow-md); }
+    .top-pager button { font-size: 12px; padding: 6px 14px; border-radius: 999px; border: 1px solid var(--border-soft); background: var(--bg-panel); color: var(--text-main); cursor: pointer; transition: background 0.15s, border-color 0.15s; }
+    .top-pager button:hover:not(:disabled) { background: var(--accent-gold-soft); border-color: var(--accent-gold); }
+    .top-pager button:disabled { opacity: 0.35; cursor: default; }
+    .reader-group { max-width: 860px; margin: 0 auto; display: flex; flex-direction: column; gap: 14px; }
+    .reader-card { background: var(--bg-panel); border-radius: var(--radius-lg); border: 1px solid var(--border-soft); box-shadow: var(--shadow-md); padding: 18px 20px 20px; }
+    .reader-card.card-primary { border-left: 4px solid var(--accent-gold); }
+    .reader-card.card-secondary { opacity: .92; }
     .article-header { border-bottom: 1px solid #e5e7eb; padding-bottom: 10px; margin-bottom: 10px; }
     .article-number { font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent-blue); font-weight: 600; }
     .article-title { font-size: 20px; margin-top: 4px; color: var(--accent-blue); letter-spacing: -0.01em; }
@@ -191,51 +129,20 @@
     .article-body p { margin-bottom: 8px; }
     .article-body ol { margin: 6px 0 8px 18px; }
     .article-body li { margin-bottom: 4px; }
-    .article-body p.tts-reading {
-      background: rgba(201,162,39,0.18);
-      border-left: 3px solid var(--accent-gold);
-      padding-left: 8px; border-radius: 4px; transition: background 0.3s;
-    }
-    .article-empty {
-      display: flex; flex-direction: column; align-items: center;
-      gap: 8px; padding: 24px 0; color: var(--text-muted); font-size: 13px; text-align: center;
-    }
+    .article-body p.tts-reading { background: rgba(201,162,39,0.18); border-left: 3px solid var(--accent-gold); padding-left: 8px; border-radius: 4px; transition: background 0.3s; }
+    .text-highlight { background: rgba(255,220,0,0.5); border-radius: 2px; cursor: pointer; }
+    .text-highlight:hover { background: rgba(255,180,0,0.7); }
+    .article-empty { display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 24px 0; color: var(--text-muted); font-size: 13px; text-align: center; }
     .article-empty-icon { font-size: 32px; opacity: 0.4; }
     .article-empty p { max-width: 320px; line-height: 1.6; }
     .loading-state { display: flex; align-items: center; gap: 10px; padding: 40px 20px; color: var(--text-muted); font-size: 13px; }
     .spinner { width: 18px; height: 18px; border: 2px solid var(--border-soft); border-top-color: var(--accent-blue); border-radius: 50%; animation: spin 0.7s linear infinite; }
     @keyframes spin { to { transform: rotate(360deg); } }
-    .article-footer {
-      border-top: 1px solid #e5e7eb; margin-top: 10px; padding-top: 8px;
-      display: flex; justify-content: space-between; align-items: center;
-      flex-wrap: wrap; gap: 8px; font-size: 11px; color: var(--text-muted);
-    }
-    .pager { display: flex; gap: 6px; }
-    .pager button {
-      font-size: 11px; padding: 4px 9px; border-radius: 999px;
-      border: 1px solid var(--border-soft); background: #f9fafb;
-      cursor: pointer; transition: background 0.15s, border-color 0.15s;
-    }
-    .pager button:hover:not(:disabled) { background: var(--accent-gold-soft); border-color: var(--accent-gold); }
-    .pager button:disabled { opacity: 0.35; cursor: default; }
-
-    /* ── Audio Player ── */
-    .audio-player {
-      grid-column: 2; grid-row: 3;
-      background: linear-gradient(135deg, #1a2d45, #243650);
-      border-top: 1px solid rgba(148,163,184,0.3);
-      padding: 10px 18px;
-      display: flex; flex-direction: column; gap: 7px;
-      box-shadow: 0 -4px 16px rgba(15,23,42,0.18);
-    }
+    .article-footer { border-top: 1px solid #e5e7eb; margin-top: 10px; padding-top: 8px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; font-size: 11px; color: var(--text-muted); }
+    .audio-player { grid-column: 2; grid-row: 3; background: linear-gradient(135deg, #1a2d45, #243650); border-top: 1px solid rgba(148,163,184,0.3); padding: 10px 18px; display: flex; flex-direction: column; gap: 7px; box-shadow: 0 -4px 16px rgba(15,23,42,0.18); }
     .player-top { display: flex; align-items: center; gap: 10px; min-width: 0; }
     .player-controls { display: flex; gap: 4px; align-items: center; flex-shrink: 0; flex-wrap: wrap; }
-    .player-btn {
-      width: 32px; height: 32px; border-radius: 50%; border: none;
-      background: rgba(255,255,255,0.1); color: #f7f3ea; font-size: 14px;
-      cursor: pointer; display: flex; align-items: center; justify-content: center;
-      transition: background 0.15s, transform 0.1s; flex-shrink: 0;
-    }
+    .player-btn { width: 32px; height: 32px; border-radius: 50%; border: none; background: rgba(255,255,255,0.1); color: #f7f3ea; font-size: 14px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.15s, transform 0.1s; flex-shrink: 0; }
     .player-btn:hover { background: rgba(255,255,255,0.2); }
     .player-btn:active { transform: scale(0.92); }
     .player-btn.play-btn { width: 40px; height: 40px; font-size: 17px; background: var(--accent-gold); color: #1a2d45; }
@@ -254,26 +161,22 @@
     .player-speed::-webkit-slider-thumb { -webkit-appearance: none; width: 12px; height: 12px; border-radius: 50%; background: var(--accent-gold); cursor: pointer; }
     .player-speed-val { font-size: 10px; color: var(--accent-gold); min-width: 26px; text-align: right; }
     .player-voice-wrap { display: flex; align-items: center; gap: 4px; flex-shrink: 0; }
-    .player-voice-label { font-size: 10px; color: rgba(247,243,234,0.55); }
+    .player-voice-label { font-size: 10px; color: rgba(247,243,184,0.55); }
     .player-voice { font-size: 10px; padding: 2px 5px; border-radius: 6px; border: 1px solid rgba(148,163,184,0.35); background: rgba(15,23,42,0.5); color: #f7f3ea; cursor: pointer; max-width: 130px; }
-
-    /* ── Print ── */
     @media print {
       body { display: block !important; height: auto !important; overflow: visible !important; background: #fff !important; }
-      .sidebar, .header, .audio-player, .tags-overlay, .article-footer .pager { display: none !important; }
+      .sidebar, .header, .audio-player, .tags-overlay, .marcadores-overlay, .top-pager { display: none !important; }
       .main { padding: 0 !important; overflow: visible !important; }
-      .reader { box-shadow: none !important; border: none !important; border-radius: 0 !important; max-width: 100% !important; padding: 0 !important; }
+      .reader-group { max-width: 100% !important; gap: 20px; }
+      .reader-card { box-shadow: none !important; border: 1px solid #ccc !important; border-radius: 0 !important; padding: 0 !important; }
       .print-header { display: flex !important; align-items: center; gap: 14px; border-bottom: 2px solid #1f3147; padding-bottom: 10px; margin-bottom: 16px; }
       .print-logo { width: 120px; height: auto; }
       .print-org { font-size: 11px; color: #1f3147; line-height: 1.5; }
       .print-org strong { font-size: 13px; display: block; }
       .article-title { font-size: 18px !important; }
       .article-body { font-size: 12px !important; line-height: 1.7 !important; }
-      .article-footer { margin-top: 20px !important; }
     }
     .print-header { display: none; }
-
-    /* ── Responsive ── */
     @media (max-width: 900px) {
       body { display: flex; flex-direction: column; height: auto; min-height: 100vh; overflow-x: hidden; overflow-y: auto; }
       .sidebar { order: 2; grid-row: unset; grid-column: unset; width: 100%; border-right: none; border-top: 1px solid rgba(148,163,184,0.4); max-height: 0; padding: 0 18px; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s ease; }
@@ -285,16 +188,9 @@
       .audio-player { order: 4; grid-row: unset; grid-column: unset; width: 100%; position: fixed; bottom: 0; left: 0; right: 0; z-index: 100; padding: 8px 12px; }
       .hamburger { display: inline-flex; align-items: center; }
       .sidebar-logo { max-width: 160px; }
-      .player-top { flex-wrap: wrap; gap: 6px; }
-      .player-controls { gap: 4px; }
-      .player-btn { width: 36px; height: 36px; font-size: 15px; }
-      .player-btn.play-btn { width: 42px; height: 42px; font-size: 18px; }
-      .player-info { min-width: 120px; }
-      .player-voice-wrap { display: none; }
-      .player-bottom { gap: 8px; }
-      .reader { border-radius: 10px; padding: 14px 14px 16px; }
+      .reader-card { border-radius: 10px; padding: 14px 14px 16px; }
       .article-title { font-size: 17px; }
-      .tags-panel { margin: 56px 8px 0 8px; min-width: unset; max-width: calc(100vw - 16px); }
+      .tags-panel, .marcadores-panel { margin: 56px 8px 0 8px; min-width: unset; max-width: calc(100vw - 16px); }
     }
     @media (max-width: 480px) {
       .player-controls { justify-content: center; width: 100%; }
@@ -304,19 +200,16 @@
     }
   </style>
 </head>
-<body>
-
-  <!-- ── SIDEBAR ── -->
-  <aside class="sidebar" id="sidebar" aria-label="Índice del Código Procesal Penal">
+<body data-json="codigo_procesalpenal_completo.json">
+  <aside class="sidebar" id="sidebar" aria-label="Índice del Código">
     <header class="sidebar-header">
-      <img class="sidebar-logo" src="../../logo.png" alt="LegalHub Paraguay" onerror="this.style.display='none'" />
+      <a class="sidebar-logo-link" href="../../index.html" title="Ir al Hub de Códigos"><img class="sidebar-logo" src="../../logo.png" alt="JurisParaguay" onerror="this.style.display='none'" /></a>
       <a class="back-link" href="../../index.html">&#8592; Volver al Hub de Códigos</a>
-      <div class="app-title">Código Procesal Penal</div>
-      <div class="app-subtitle">Ley N° 1286/1998 · República del Paraguay</div>
+      <div class="app-title" id="appTitle">Cargando…</div>
+      <div class="app-subtitle" id="appSubtitle"></div>
       <div class="search-box">
-        <input class="search-input" type="search" id="searchInput"
-               placeholder="Buscar por artículo o palabra clave…" autocomplete="off" />
-        <button class="search-clear" id="searchClear" type="button" title="Limpiar búsqueda">✕</button>
+        <input class="search-input" type="search" id="searchInput" placeholder="Buscar por artículo o palabra clave…" autocomplete="off" />
+        <button class="search-clear" id="searchClear" type="button" title="Limpiar">✕</button>
       </div>
     </header>
     <div class="search-results" id="searchResults" aria-live="polite"></div>
@@ -326,65 +219,64 @@
     </div>
   </aside>
 
-  <!-- ── TAGS OVERLAY ── -->
+  <div class="marcadores-overlay" id="marcadoresOverlay">
+    <div class="marcadores-panel" id="marcadoresPanel">
+      <div class="marcadores-panel-header">
+        <span class="marcadores-panel-title">🔖 Marcadores</span>
+        <button class="marcadores-close" id="marcadoresClose" type="button">✕</button>
+      </div>
+      <div class="marcadores-list" id="marcadoresList"></div>
+    </div>
+  </div>
+
   <div class="tags-overlay" id="tagsOverlay">
     <div class="tags-panel" id="tagsPanel">
-      <div class="tags-panel-header">
-        <span class="tags-panel-title">🏷️ Palabras clave</span>
-        <button class="tags-close" id="tagsClose" type="button">✕</button>
-      </div>
+      <div class="tags-panel-header"><span class="tags-panel-title">🏷️ Palabras clave</span><button class="tags-close" id="tagsClose" type="button">✕</button></div>
       <div class="tags-art-title" id="tagsArtTitle"></div>
       <div class="tags-list" id="tagsList"></div>
     </div>
   </div>
 
-  <!-- ── HEADER ── -->
   <header class="header">
     <div style="display:flex;align-items:center;gap:10px;min-width:0;flex:1;">
       <button class="hamburger" id="hamburger" type="button" aria-label="Mostrar/ocultar índice">☰</button>
-      <div class="breadcrumbs" id="breadcrumbs">
-        <a href="../../index.html">🏠 Inicio</a> ›
-        <span id="breadcrumbArticulo">Seleccioná un artículo del índice</span>
-      </div>
+      <div class="breadcrumbs" id="breadcrumbs"><a href="../../index.html">🏠 Inicio</a> › <span id="breadcrumbArticulo">Seleccioná un artículo del índice</span></div>
     </div>
     <div class="header-actions">
-      <button class="header-btn" id="btnTags" type="button" title="Ver palabras clave del artículo">🏷️ Tags</button>
-      <button class="header-btn" id="btnPDF" type="button" title="Exportar artículo como PDF">📄 PDF</button>
-      <button class="header-btn pwa-btn" id="btnInstall" type="button" title="Instalar app en tu dispositivo">📱 Instalar</button>
-      <button class="header-btn" id="btnCopyText" type="button">Copiar texto</button>
+      <button class="header-btn" id="btnMarcadores" type="button">🔖 Marcadores</button>
+      <button class="header-btn" id="btnResaltador" type="button">🖊️ Resaltador</button>
+      <button class="header-btn" id="btnTags" type="button">🏷️ Tags</button>
+      <button class="header-btn" id="btnPDF" type="button">📄 PDF</button>
+      <button class="header-btn pwa-btn" id="btnInstall" type="button">📱 Instalar</button>
+      <div class="copy-menu-wrap">
+        <button class="header-btn" id="btnCopyText" type="button" aria-haspopup="true" aria-expanded="false">Copiar texto ▾</button>
+        <div class="copy-menu" id="copyMenu" role="menu"></div>
+      </div>
     </div>
   </header>
 
-  <!-- ── MAIN / READER ── -->
-  <main class="main">
-    <section class="reader" aria-label="Artículo seleccionado">
-      <div class="print-header">
-        <img class="print-logo" src="../../logo.png" alt="LegalHub" onerror="this.style.display='none'" />
-        <div class="print-org">
-          <strong>Código Procesal Penal del Paraguay</strong>
-          Ley N° 1286/1998 · República del Paraguay<br>
-          Fuente: CSJ – IIJ, edición digital · LegalHub 2026
+  <main class="main" id="mainArea">
+    <div class="top-pager" id="topPager">
+      <button id="btnPrev" type="button" disabled>← Art. anterior</button>
+      <button id="btnNext" type="button" disabled>Art. siguiente →</button>
+    </div>
+    <div class="reader-group" id="readerGroup">
+      <div class="reader-card card-primary">
+        <div class="print-header">
+          <img class="print-logo" src="../../logo.png" alt="JurisParaguay" onerror="this.style.display='none'" />
+          <div class="print-org"><strong id="printOrgName">JurisParaguay</strong><span id="printOrgLaw"></span><br>Fuente: CSJ – IIJ, edición digital · JurisParaguay 2026</div>
         </div>
+        <header class="article-header">
+          <div class="article-number">—</div>
+          <h1 class="article-title" id="mainTitle">Cargando código…</h1>
+          <p class="article-subtitle">Seleccioná un capítulo del índice lateral para comenzar.</p>
+        </header>
+        <div class="article-body"><div class="loading-state"><div class="spinner"></div> Cargando datos…</div></div>
+        <footer class="article-footer"><div>Fuente: CSJ – IIJ, edición digital · JurisParaguay 2026</div></footer>
       </div>
-      <header class="article-header">
-        <div class="article-number" id="articleNumber">—</div>
-        <h1 class="article-title" id="articleTitle">Código Procesal Penal del Paraguay</h1>
-        <p class="article-subtitle" id="articleMeta">Seleccioná un capítulo del índice lateral para comenzar.</p>
-      </header>
-      <div class="article-body" id="articleBody">
-        <div class="loading-state"><div class="spinner"></div> Cargando datos del Código Procesal Penal…</div>
-      </div>
-      <footer class="article-footer">
-        <div id="articleSource">Fuente: CSJ - IIJ, edición digital · LegalHub 2026</div>
-        <div class="pager">
-          <button id="btnPrev" type="button" disabled>← Art. anterior</button>
-          <button id="btnNext" type="button" disabled>Art. siguiente →</button>
-        </div>
-      </footer>
-    </section>
+    </div>
   </main>
 
-  <!-- ── AUDIO PLAYER ── -->
   <div class="audio-player" id="audioPlayer" aria-label="Reproductor de lectura">
     <div class="player-top">
       <div class="player-controls">
@@ -402,9 +294,7 @@
       <div class="player-counter" id="playerCounter"></div>
     </div>
     <div class="player-bottom">
-      <div class="player-progress">
-        <div class="player-progress-fill" id="playerProgressFill"></div>
-      </div>
+      <div class="player-progress"><div class="player-progress-fill" id="playerProgressFill"></div></div>
       <div class="player-speed-wrap">
         <span class="player-speed-label">Vel.</span>
         <input class="player-speed" type="range" id="playerSpeed" min="0.5" max="2" step="0.1" value="1" />
@@ -418,10 +308,13 @@
   </div>
 
   <script>
+    const JSON_FILE = document.body.dataset.json || 'codigo_completo.json';
+    const jsonUrl   = new URL(JSON_FILE, window.location.href).href;
+    const CARDS_PER_PAGE = 3;
     let DATA = null, FLAT = [], currentIdx = 0;
     let ttsPlaying = false, ttsPaused = false, ttsStartIdx = 0, ttsReadIdx = 0;
-    let voices = [];
-    let deferredInstallPrompt = null;
+    let voices = [], deferredInstallPrompt = null;
+    let resaltadorActivo = false;
 
     const sidebar            = document.getElementById('sidebar');
     const hamburger          = document.getElementById('hamburger');
@@ -430,16 +323,19 @@
     const searchClear        = document.getElementById('searchClear');
     const searchResults      = document.getElementById('searchResults');
     const breadcrumbArticulo = document.getElementById('breadcrumbArticulo');
-    const articleNumber      = document.getElementById('articleNumber');
-    const articleTitle       = document.getElementById('articleTitle');
-    const articleMeta        = document.getElementById('articleMeta');
-    const articleBody        = document.getElementById('articleBody');
-    const btnPrev            = document.getElementById('btnPrev');
-    const btnNext            = document.getElementById('btnNext');
+    const readerGroup        = document.getElementById('readerGroup');
     const btnCopyText        = document.getElementById('btnCopyText');
+    const copyMenu           = document.getElementById('copyMenu');
     const btnTags            = document.getElementById('btnTags');
     const btnPDF             = document.getElementById('btnPDF');
     const btnInstall         = document.getElementById('btnInstall');
+    const btnPrev            = document.getElementById('btnPrev');
+    const btnNext            = document.getElementById('btnNext');
+    const btnMarcadores      = document.getElementById('btnMarcadores');
+    const btnResaltador      = document.getElementById('btnResaltador');
+    const marcadoresOverlay  = document.getElementById('marcadoresOverlay');
+    const marcadoresList     = document.getElementById('marcadoresList');
+    const marcadoresClose    = document.getElementById('marcadoresClose');
     const tagsOverlay        = document.getElementById('tagsOverlay');
     const tagsList           = document.getElementById('tagsList');
     const tagsArtTitle       = document.getElementById('tagsArtTitle');
@@ -458,129 +354,289 @@
     const playerSpeedVal     = document.getElementById('playerSpeedVal');
     const playerVoice        = document.getElementById('playerVoice');
 
-    // ─── PWA ─────────────────────────────────────────────────
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('sw.js').catch(() => {});
-    }
-    window.addEventListener('beforeinstallprompt', e => {
-      e.preventDefault(); deferredInstallPrompt = e; btnInstall.classList.add('visible');
-    });
-    window.addEventListener('appinstalled', () => {
-      btnInstall.classList.remove('visible'); deferredInstallPrompt = null;
-    });
-    btnInstall.addEventListener('click', async () => {
-      if (!deferredInstallPrompt) return;
-      deferredInstallPrompt.prompt();
-      const { outcome } = await deferredInstallPrompt.userChoice;
-      if (outcome === 'accepted') btnInstall.classList.remove('visible');
-      deferredInstallPrompt = null;
-    });
-
+    if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});
+    window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); deferredInstallPrompt = e; btnInstall.classList.add('visible'); });
+    window.addEventListener('appinstalled', () => { btnInstall.classList.remove('visible'); deferredInstallPrompt = null; });
+    btnInstall.addEventListener('click', async () => { if (!deferredInstallPrompt) return; deferredInstallPrompt.prompt(); const { outcome } = await deferredInstallPrompt.userChoice; if (outcome === 'accepted') btnInstall.classList.remove('visible'); deferredInstallPrompt = null; });
     btnPDF.addEventListener('click', () => window.print());
-
-    btnTags.addEventListener('click', () => openTagsPanel());
+    btnTags.addEventListener('click', openTagsPanel);
+    btnPrev.addEventListener('click', () => showArticleByIdx(currentIdx - CARDS_PER_PAGE));
+    btnNext.addEventListener('click', () => showArticleByIdx(currentIdx + CARDS_PER_PAGE));
     tagsClose.addEventListener('click', () => tagsOverlay.classList.remove('open'));
     tagsOverlay.addEventListener('click', e => { if (e.target === tagsOverlay) tagsOverlay.classList.remove('open'); });
+    hamburger.addEventListener('click', () => sidebar.classList.toggle('open'));
+    marcadoresClose.addEventListener('click', () => marcadoresOverlay.classList.remove('open'));
+    marcadoresOverlay.addEventListener('click', e => { if (e.target === marcadoresOverlay) marcadoresOverlay.classList.remove('open'); });
 
+    function marcadoresKey() { return 'marcadores_' + (DATA && DATA.ley ? DATA.ley : window.location.pathname); }
+    function getMarcadores() { try { return JSON.parse(localStorage.getItem(marcadoresKey()) || '[]'); } catch(e) { return []; } }
+    function saveMarcadores(arr) { try { localStorage.setItem(marcadoresKey(), JSON.stringify(arr)); } catch(e) {} }
+    function isMarked(artNum) { return getMarcadores().some(m => m.num === artNum); }
+    function toggleMarcador(artNum) {
+      const arr = getMarcadores();
+      const idx = arr.findIndex(m => m.num === artNum);
+      if (idx === -1) {
+        if (!FLAT.length) return;
+        const entry = FLAT.find(e => e.articulo.numero === artNum);
+        if (!entry) return;
+        arr.push({ num: artNum, epig: entry.articulo.epigrafe || '' });
+      } else { arr.splice(idx, 1); }
+      saveMarcadores(arr);
+      updateMarcadorBtn(artNum);
+    }
+    function updateMarcadorBtn(artNum) {
+      const footers = readerGroup.querySelectorAll('.article-footer');
+      footers.forEach(footer => {
+        const card = footer.closest('[data-art-num]');
+        if (!card) return;
+        const num = parseInt(card.dataset.artNum, 10);
+        if (num !== artNum) return;
+        const btn = footer.querySelector('.btn-marcar');
+        if (btn) btn.textContent = isMarked(artNum) ? '🔖 Guardado' : '🔖 Marcar';
+      });
+    }
+    function renderMarcadoresPanel() {
+      const arr = getMarcadores();
+      marcadoresList.innerHTML = '';
+      if (!arr.length) { marcadoresList.innerHTML = '<div class="marcadores-empty">Aún no guardaste ningún artículo.<br><small>Usá el botón 🔖 Marcar al pie de cada artículo.</small></div>'; return; }
+      arr.forEach(m => {
+        const item = document.createElement('div'); item.className = 'marcador-item';
+        const info = document.createElement('div'); info.className = 'marcador-info';
+        info.innerHTML = `<div class="marcador-num">Art. ${m.num}</div><div class="marcador-epig">${m.epig || '(sin epígrafe)'}</div>`;
+        info.addEventListener('click', () => {
+          const found = FLAT.findIndex(e => e.articulo.numero === m.num);
+          if (found !== -1) { showArticleByIdx(found); marcadoresOverlay.classList.remove('open'); }
+        });
+        const del = document.createElement('button'); del.className = 'marcador-del'; del.title = 'Quitar marcador'; del.textContent = '✕';
+        del.addEventListener('click', e => { e.stopPropagation(); toggleMarcador(m.num); renderMarcadoresPanel(); });
+        item.appendChild(info); item.appendChild(del);
+        marcadoresList.appendChild(item);
+      });
+    }
+    btnMarcadores.addEventListener('click', () => { renderMarcadoresPanel(); marcadoresOverlay.classList.add('open'); });
+
+    function resaltadoresKey() { return 'resaltados_' + (DATA && DATA.ley ? DATA.ley : window.location.pathname); }
+    function getResaltados() { try { return JSON.parse(localStorage.getItem(resaltadoresKey()) || '{}'); } catch(e) { return {}; } }
+    function saveResaltados(obj) { try { localStorage.setItem(resaltadoresKey(), JSON.stringify(obj)); } catch(e) {} }
+    function applyResaltados(artNum, bodyEl) {
+      const all = getResaltados();
+      const items = all[artNum] || [];
+      if (!items.length) return;
+      const paragraphs = Array.from(bodyEl.querySelectorAll('p'));
+      items.forEach(item => {
+        const isLegacy = typeof item === 'string';
+        const txt = isLegacy ? item : item.text;
+        if (!txt) return;
+        const re = new RegExp(txt.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'), 'g');
+        if (!isLegacy && paragraphs[item.pIndex]) {
+          const p = paragraphs[item.pIndex];
+          if (p.textContent.includes(txt)) {
+            p.innerHTML = p.innerHTML.replace(re, `<mark class="text-highlight" data-hl="${encodeURIComponent(txt)}">${txt}</mark>`);
+          }
+        } else {
+          paragraphs.forEach(p => {
+            if (!p.textContent.includes(txt)) return;
+            p.innerHTML = p.innerHTML.replace(re, `<mark class="text-highlight" data-hl="${encodeURIComponent(txt)}">${txt}</mark>`);
+          });
+        }
+      });
+      bodyEl.querySelectorAll('.text-highlight').forEach(el => {
+        el.addEventListener('click', e => {
+          e.stopPropagation();
+          const t = decodeURIComponent(el.dataset.hl);
+          const all2 = getResaltados();
+          if (all2[artNum]) {
+            all2[artNum] = all2[artNum].filter(x => (typeof x === 'string' ? x !== t : x.text !== t));
+            if (!all2[artNum].length) delete all2[artNum];
+          }
+          saveResaltados(all2);
+          reRenderBody(artNum);
+        });
+      });
+    }
+    function reRenderBody(artNum) {
+      const card = readerGroup.querySelector(`[data-art-num="${artNum}"]`);
+      if (!card) return;
+      const entry = FLAT.find(e => e.articulo.numero === artNum);
+      if (!entry) return;
+      const bodyEl = card.querySelector('.article-body');
+      if (!bodyEl) return;
+      const textos = entry.articulo.texto || [];
+      bodyEl.innerHTML = textos.length ? textos.map(p => `<p>${p}</p>`).join('') : `<div class="article-empty"><div class="article-empty-icon">📄</div><p>El texto de este artículo aún no ha sido cargado en el JSON.</p></div>`;
+      applyResaltados(artNum, bodyEl);
+    }
+    btnResaltador.addEventListener('click', () => {
+      resaltadorActivo = !resaltadorActivo;
+      btnResaltador.classList.toggle('active-tool', resaltadorActivo);
+      btnResaltador.textContent = resaltadorActivo ? '🖊️ Resaltando…' : '🖊️ Resaltador';
+      document.body.style.cursor = resaltadorActivo ? 'text' : '';
+    });
+    document.addEventListener('mouseup', () => {
+      if (!resaltadorActivo) return;
+      const sel = window.getSelection();
+      if (!sel || sel.isCollapsed || sel.rangeCount === 0) return;
+      const range = sel.getRangeAt(0);
+      const startEl = range.startContainer.nodeType === 1 ? range.startContainer : range.startContainer.parentElement;
+      const card = startEl ? startEl.closest('[data-art-num]') : null;
+      if (!card) { sel.removeAllRanges(); return; }
+      const artNum = parseInt(card.dataset.artNum, 10);
+      const bodyEl = card.querySelector('.article-body');
+      if (!bodyEl) { sel.removeAllRanges(); return; }
+      const paragraphs = Array.from(bodyEl.querySelectorAll('p'));
+      const nuevos = [];
+      paragraphs.forEach((p, pIndex) => {
+        if (!range.intersectsNode(p)) return;
+        const pRange = document.createRange();
+        pRange.selectNodeContents(p);
+        if (range.compareBoundaryPoints(Range.START_TO_START, pRange) > 0) pRange.setStart(range.startContainer, range.startOffset);
+        if (range.compareBoundaryPoints(Range.END_TO_END, pRange) < 0) pRange.setEnd(range.endContainer, range.endOffset);
+        const txt = pRange.toString().trim();
+        if (txt && txt.length >= 2) nuevos.push({ pIndex, text: txt });
+      });
+      sel.removeAllRanges();
+      if (!nuevos.length) return;
+      const all = getResaltados();
+      if (!all[artNum]) all[artNum] = [];
+      nuevos.forEach(n => {
+        const yaExiste = all[artNum].some(x => typeof x !== 'string' && x.pIndex === n.pIndex && x.text === n.text);
+        if (!yaExiste) all[artNum].push(n);
+      });
+      saveResaltados(all);
+      reRenderBody(artNum);
+    });
+
+    function codeFullTitle() { return DATA && DATA.codigo ? DATA.codigo + (DATA.pais ? ` del ${DATA.pais}` : ' del Paraguay') : 'Código — JurisParaguay'; }
+    function codeSubtitle()  { return DATA && DATA.ley ? `Ley N° ${DATA.ley} · República del ${DATA.pais || 'Paraguay'}` : 'República del Paraguay'; }
+    function applyMeta() {
+      if (!DATA) return;
+      document.title = `${DATA.codigo || 'Código'} — JurisParaguay`;
+      const g = id => document.getElementById(id);
+      if (g('appTitle'))    g('appTitle').textContent    = DATA.codigo || codeFullTitle();
+      if (g('appSubtitle')) g('appSubtitle').textContent = codeSubtitle();
+      if (g('printOrgName'))g('printOrgName').textContent= codeFullTitle();
+      if (g('printOrgLaw')) g('printOrgLaw').textContent = codeSubtitle();
+      if (g('mainTitle'))   g('mainTitle').textContent   = codeFullTitle();
+      document.querySelector('aside[aria-label]')?.setAttribute('aria-label', `Índice — ${DATA.codigo || codeFullTitle()}`);
+    }
     function openTagsPanel() {
       if (!FLAT.length) return;
       const { articulo } = FLAT[currentIdx];
       const tags = articulo.palabrasClave || [];
       tagsArtTitle.textContent = `Art. ${articulo.numero}${articulo.epigrafe ? ' — ' + articulo.epigrafe : ''}`;
       tagsList.innerHTML = '';
-      if (!tags.length) {
-        tagsList.innerHTML = '<span class="tags-empty">Este artículo no tiene palabras clave registradas.</span>';
-      } else {
-        tags.forEach(tag => {
-          const chip = document.createElement('button');
-          chip.className = 'tag-chip'; chip.textContent = tag;
-          chip.addEventListener('click', () => {
-            tagsOverlay.classList.remove('open');
-            searchInput.value = tag; searchClear.classList.add('visible');
-            runSearch(tag);
-            if (window.innerWidth <= 900) sidebar.classList.add('open');
-          });
-          tagsList.appendChild(chip);
-        });
-      }
+      if (!tags.length) { tagsList.innerHTML = '<span class="tags-empty">Sin palabras clave.</span>'; }
+      else tags.forEach(tag => { const chip = document.createElement('button'); chip.className = 'tag-chip'; chip.textContent = tag; chip.addEventListener('click', () => { tagsOverlay.classList.remove('open'); searchInput.value = tag; searchClear.classList.add('visible'); runSearch(tag); if (window.innerWidth <= 900) sidebar.classList.add('open'); }); tagsList.appendChild(chip); });
       tagsOverlay.classList.add('open');
     }
-
-    hamburger.addEventListener('click', () => sidebar.classList.toggle('open'));
-
-    function normalize(str) {
-      return (str || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    function normalize(s) { return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,''); }
+    function highlight(s, q) { if (!q) return s; return s.replace(new RegExp(`(${q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')})`, 'gi'), '<mark class="search-highlight">$1</mark>'); }
+    function humanize(key) { const small=new Set(['y','de','del','la','los','las','en','el','a']); return key.split('_').map((w,i)=>{ const lw=w.toLowerCase(); return (i>0&&small.has(lw))?lw:lw.charAt(0).toUpperCase()+lw.slice(1); }).join(' '); }
+    function deepExtractArticulos(node, ctx, out) {
+      if (!node || typeof node !== 'object') return;
+      if ('numero' in node && (node.texto || node.epigrafe !== undefined)) { out.push({...ctx, articulo: node}); return; }
+      const LIBRO_KEYS=['libros','libro'], TITULO_KEYS=['titulos','titulo','partes','parte','secciones','seccion','libros_internos'], CAP_KEYS=['capitulos','capitulo','subcapitulos','subcapitulo'], ART_KEYS=['articulos','articulo','arts','items','artículos'];
+      let handled=false;
+      for (const k of LIBRO_KEYS)  { if (Array.isArray(node[k])&&node[k].length) { node[k].forEach((l,li)=>deepExtractArticulos(l,{libro:{id:l.id||`libro-${li}`,nombre:l.nombre||`Libro ${li+1}`,numero:l.numero||(li+1)},titulo:ctx.titulo,capitulo:ctx.capitulo},out)); handled=true; } }
+      if (handled) return;
+      for (const k of TITULO_KEYS) { if (Array.isArray(node[k])&&node[k].length) { node[k].forEach((t,ti)=>deepExtractArticulos(t,{libro:ctx.libro,titulo:{id:t.id||`${ctx.libro&&ctx.libro.id||'l'}-t${ti}`,nombre:t.nombre||`Título ${ti+1}`,numero:t.numero||(ti+1)},capitulo:ctx.capitulo},out)); handled=true; } }
+      if (handled) return;
+      for (const k of CAP_KEYS)    { if (Array.isArray(node[k])&&node[k].length) { node[k].forEach((c,ci)=>deepExtractArticulos(c,{libro:ctx.libro,titulo:ctx.titulo,capitulo:{id:c.id||`${ctx.titulo&&ctx.titulo.id||'t'}-c${ci}`,nombre:c.nombre||`Capítulo ${ci+1}`,numero:c.numero||(ci+1)}},out)); handled=true; } }
+      if (handled) return;
+      for (const k of ART_KEYS)    { if (Array.isArray(node[k])&&node[k].length) { node[k].forEach(a=>{ if(a&&'numero'in a) out.push({...ctx,articulo:a}); else deepExtractArticulos(a,ctx,out); }); handled=true; } }
+      if (handled) return;
+      for (const k of Object.keys(node)) { if (Array.isArray(node[k])) node[k].forEach(child=>deepExtractArticulos(child,ctx,out)); }
     }
-    function highlight(str, query) {
-      if (!query) return str;
-      const re = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
-      return str.replace(re, '<mark class="search-highlight">$1</mark>');
-    }
-
-    /**
-     * buildFlat: recorre libros → titulos → capitulos (y secciones si existen) → articulos
-     * Soporta la estructura del CPP que en algunos capítulos tiene sub-secciones.
-     */
+    function computeRango(arts,fb) { if(!arts||!arts.length) return fb||''; const nums=arts.map(a=>a.numero).filter(n=>typeof n==='number'); if(!nums.length) return fb||''; const mn=Math.min(...nums),mx=Math.max(...nums); return mn===mx?`${mn}`:`${mn}-${mx}`; }
     function buildFlat(data) {
-      const flat = [];
-      (data.libros || []).forEach(libro =>
-        (libro.titulos || []).forEach(titulo =>
-          (titulo.capitulos || []).forEach(capitulo => {
-            // Capítulos con secciones anidadas
-            if (capitulo.secciones && capitulo.secciones.length) {
-              capitulo.secciones.forEach(seccion =>
-                (seccion.articulos || []).forEach(articulo =>
-                  flat.push({ libro, titulo, capitulo, seccion, articulo })
-                )
-              );
-            } else {
-              (capitulo.articulos || []).forEach(articulo =>
-                flat.push({ libro, titulo, capitulo, seccion: null, articulo })
-              );
+      const raw=[], libroRoot={id:'libro-1',nombre:data.codigo||'Código',numero:1};
+      deepExtractArticulos(data,{libro:libroRoot,titulo:{id:'titulo-1',nombre:'General',numero:1},capitulo:{id:'cap-1',nombre:'General',numero:1}},raw);
+      const KNOWN=new Set(['codigo','ley','pais','fecha','titulos','libros','titulo','libro','capitulos','capitulo','articulos','articulo']);
+      Object.keys(data).forEach(key=>{ if(KNOWN.has(key)) return; const val=data[key]; if(Array.isArray(val)&&val.length&&val.every(a=>a&&typeof a==='object'&&'numero'in a)){ const nombre=humanize(key); val.forEach(art=>raw.push({libro:libroRoot,titulo:{id:`extra-${key}`,nombre,numero:null,kicker:'Sección'},capitulo:{id:`extra-${key}-c1`,nombre,numero:1},articulo:art})); } });
+      raw.sort((a,b)=>(a.articulo.numero||0)-(b.articulo.numero||0));
+      const seen=new Set(); return raw.filter(e=>{ const n=e.articulo.numero; if(seen.has(n)) return false; seen.add(n); return true; });
+    }
+    function buildCard(entry, isPrimary) {
+      const {titulo,capitulo,articulo}=entry;
+      const textos=articulo.texto||[];
+      const card=document.createElement('article');
+      card.className='reader-card '+(isPrimary?'card-primary':'card-secondary');
+      card.dataset.artNum=articulo.numero;
+      const bodyHtml=textos.length?textos.map(p=>`<p>${p}</p>`).join(''):`<div class="article-empty"><div class="article-empty-icon">📄</div><p>El texto de este artículo aún no ha sido cargado en el JSON.</p></div>`;
+      const marcarLabel = isMarked(articulo.numero) ? '🔖 Guardado' : '🔖 Marcar';
+      card.innerHTML=`${isPrimary?`<div class="print-header"><img class="print-logo" src="../../logo.png" alt="JurisParaguay" onerror="this.style.display='none'"/><div class="print-org"><strong>${codeFullTitle()}</strong><br>${codeSubtitle()}<br>Fuente: CSJ – IIJ · JurisParaguay 2026</div></div>`:''}<header class="article-header"><div class="article-number">Artículo ${articulo.numero}</div><h2 class="article-title">${articulo.epigrafe||`Artículo ${articulo.numero}`}</h2><p class="article-subtitle">${titulo.nombre} · Capítulo ${capitulo.numero} — ${capitulo.nombre}</p></header><div class="article-body">${bodyHtml}</div><footer class="article-footer"><div>Fuente: CSJ – IIJ · JurisParaguay 2026</div><button class="header-btn btn-marcar" type="button" style="font-size:11px;padding:4px 10px;">${marcarLabel}</button></footer>`;
+      card.querySelector('.btn-marcar').addEventListener('click', () => { toggleMarcador(articulo.numero); });
+      applyResaltados(articulo.numero, card.querySelector('.article-body'));
+      return card;
+    }
+    function closeCopyMenu() { copyMenu.classList.remove('open'); btnCopyText.setAttribute('aria-expanded','false'); }
+    function renderCards(startIdx) { closeCopyMenu(); readerGroup.innerHTML=''; for(let i=0;i<CARDS_PER_PAGE;i++){ const idx=startIdx+i; if(idx>=FLAT.length) break; readerGroup.appendChild(buildCard(FLAT[idx],i===0)); } btnPrev.disabled=startIdx===0; btnNext.disabled=startIdx+CARDS_PER_PAGE>=FLAT.length; }
+    function renderSidebar() {
+      sidebarTree.innerHTML='';
+      const GRUPO=3, libros=new Map();
+      FLAT.forEach(entry=>{ const {libro,titulo,capitulo}=entry; if(!libros.has(libro.id)) libros.set(libro.id,{meta:libro,titulos:new Map()}); const titMap=libros.get(libro.id).titulos; if(!titMap.has(titulo.id)) titMap.set(titulo.id,{meta:titulo,caps:new Map()}); const capMap=titMap.get(titulo.id).caps; if(!capMap.has(capitulo.id)) capMap.set(capitulo.id,{meta:capitulo,entries:[]}); capMap.get(capitulo.id).entries.push(entry); });
+      libros.forEach(({meta:libro,titulos})=>{
+        const gt=document.createElement('div'); gt.className='tree-group-title'; gt.textContent=libro.nombre; sidebarTree.appendChild(gt);
+        titulos.forEach(({meta:titulo,caps})=>{
+          const allArts=[]; caps.forEach(({entries})=>allArts.push(...entries.map(e=>e.articulo))); if(!allArts.length) return;
+          const block=document.createElement('section'); block.className='title-block';
+          const head=document.createElement('button'); head.className='title-head'; head.type='button'; head.setAttribute('aria-expanded','false');
+          head.innerHTML=`<div class="title-head-main"><span class="title-kicker">${titulo.kicker||`Título ${titulo.numero}`}</span><span class="title-name">${titulo.nombre}</span><span class="title-range">Arts. ${computeRango(allArts,'')}</span></div><span class="title-chevron">›</span>`;
+          head.addEventListener('click',()=>{ const open=block.classList.toggle('open'); head.setAttribute('aria-expanded',String(open)); });
+          block.appendChild(head);
+          const chList=document.createElement('div'); chList.className='chapter-list';
+          caps.forEach(({meta:cap,entries})=>{
+            const capBlock=document.createElement('div'); capBlock.className='chapter-block';
+            const capHead=document.createElement('button'); capHead.className='chapter-head'; capHead.type='button'; capHead.setAttribute('aria-expanded','false');
+            capHead.innerHTML=`<div class="chapter-head-main"><span class="chapter-name">Cap. ${cap.numero} — ${cap.nombre}</span><span class="chapter-range">Arts. ${computeRango(entries.map(e=>e.articulo),'')}</span></div><span class="chapter-chevron">›</span>`;
+            capHead.addEventListener('click',()=>{ const open=capBlock.classList.toggle('open'); capHead.setAttribute('aria-expanded',String(open)); });
+            capBlock.appendChild(capHead);
+            const artGroupList=document.createElement('div'); artGroupList.className='art-group-list';
+            for(let i=0;i<entries.length;i+=GRUPO){
+              const slice=entries.slice(i,i+GRUPO), firstEntry=slice[0];
+              const flatIdx=FLAT.findIndex(e=>e.articulo.numero===firstEntry.articulo.numero&&e.capitulo.id===cap.id);
+              const nums=slice.map(e=>e.articulo.numero);
+              const numsLabel=nums.length===1?`Art. ${nums[0]}`:`Arts. ${nums[0]}–${nums[nums.length-1]}`;
+              const epigs=slice.map(e=>e.articulo.epigrafe||`Art. ${e.articulo.numero}`).join(' · ');
+              const btn=document.createElement('button'); btn.className='art-group-btn'; btn.type='button'; btn.dataset.firstIdx=flatIdx;
+              btn.innerHTML=`<span class="art-group-nums">${numsLabel}</span><span class="art-group-epigs">${epigs}</span>`;
+              btn.addEventListener('click',()=>{ setActiveGroupBtn(btn); if(flatIdx!==-1) showArticleByIdx(flatIdx); if(window.innerWidth<=900) sidebar.classList.remove('open'); });
+              artGroupList.appendChild(btn);
             }
-          })
-        )
-      );
-      return flat;
+            capBlock.appendChild(artGroupList); chList.appendChild(capBlock);
+          });
+          block.appendChild(chList); sidebarTree.appendChild(block);
+        });
+      });
     }
-
-    function getHashArtNum() {
-      const h = window.location.hash.replace('#art-', '').trim();
-      return h ? parseInt(h, 10) : null;
+    function setActiveGroupBtn(btn) { document.querySelectorAll('.art-group-btn').forEach(b=>b.classList.remove('active')); if(btn) btn.classList.add('active'); }
+    function syncActiveGroupBtn(idx) {
+      document.querySelectorAll('.art-group-btn').forEach(btn=>{
+        const fi=parseInt(btn.dataset.firstIdx,10); if(isNaN(fi)) return;
+        const covers=idx>=fi&&idx<=Math.min(fi+CARDS_PER_PAGE-1,FLAT.length-1);
+        btn.classList.toggle('active',covers);
+        if(covers){ btn.closest('.chapter-block')?.classList.add('open'); btn.closest('.title-block')?.classList.add('open'); btn.scrollIntoView({block:'nearest',behavior:'smooth'}); }
+      });
     }
-    function setHashFromIdx(idx) {
-      if (!FLAT.length) return;
-      history.replaceState(null, '', '#art-' + FLAT[idx].articulo.numero);
-    }
-    function savePosition(idx) { try { localStorage.setItem('cpp_lastIdx', idx); } catch(e) {} }
-    function loadPosition() { try { return parseInt(localStorage.getItem('cpp_lastIdx'), 10) || 0; } catch(e) { return 0; } }
-
-    const jsonUrl = new URL('codigo_procesalpenal_completo.json', window.location.href).href;
-
+    function getHashArtNum() { const h=window.location.hash.replace('#art-','').trim(); return h?parseInt(h,10):null; }
+    function setHashFromIdx(idx) { if(!FLAT.length) return; history.replaceState(null,'','#art-'+FLAT[idx].articulo.numero); }
+    function storageKey() { return 'lastIdx_'+(DATA&&DATA.ley?DATA.ley:window.location.pathname); }
+    function savePosition(idx) { try{localStorage.setItem(storageKey(),idx);}catch(e){} }
+    function loadPosition()    { try{return parseInt(localStorage.getItem(storageKey()),10)||0;}catch(e){return 0;} }
     async function loadData() {
       try {
-        const res = await fetch(jsonUrl, { cache: 'no-store' });
-        if (!res.ok) throw new Error('HTTP ' + res.status);
-        DATA = await res.json();
-        if (!DATA || !Array.isArray(DATA.libros)) throw new Error('Estructura JSON inválida.');
-        FLAT = buildFlat(DATA);
-        renderSidebar();
-        initVoices();
-        const hashNum = getHashArtNum();
-        let startIdx = loadPosition();
-        if (hashNum !== null) {
-          const found = FLAT.findIndex(e => e.articulo.numero === hashNum);
-          if (found !== -1) startIdx = found;
-        }
-        startIdx = Math.max(0, Math.min(startIdx, FLAT.length - 1));
-        showArticleByIdx(startIdx);
-        updatePlayerControls();
-      } catch (err) {
-        sidebarTree.innerHTML = `<div class="search-empty">⚠️ Error al cargar el JSON.<br><small>${err.message}</small></div>`;
-        articleBody.innerHTML = `<div class="article-empty"><div class="article-empty-icon">⚠️</div><p>No se pudo cargar <code>codigo_procesalpenal_completo.json</code>.</p></div>`;
+        const res=await fetch(jsonUrl,{cache:'no-store'}); if(!res.ok) throw new Error('HTTP '+res.status);
+        DATA=await res.json(); if(!DATA||typeof DATA!=='object') throw new Error('JSON inválido.');
+        applyMeta(); FLAT=buildFlat(DATA); if(!FLAT.length) throw new Error('No se encontraron artículos en el JSON.');
+        renderSidebar(); initVoices();
+        const hashNum=getHashArtNum(); let startIdx=loadPosition();
+        if(hashNum!==null){ const found=FLAT.findIndex(e=>e.articulo.numero===hashNum); if(found!==-1) startIdx=found; }
+        startIdx=Math.max(0,Math.min(startIdx,FLAT.length-1));
+        showArticleByIdx(startIdx); updatePlayerControls();
+      } catch(err) {
+        readerGroup.innerHTML=`<div class="reader-card card-primary"><div class="article-empty"><div class="article-empty-icon">⚠️</div><p>No se pudo cargar <code>${JSON_FILE}</code>.<br><small>${err.message}</small></p></div></div>`;
+        sidebarTree.innerHTML=`<div class="search-empty">⚠️ Error al cargar el JSON.<br><small>${err.message}</small></div>`;
       }
     }
-
     function initVoices() {
       function populate() {
         voices = speechSynthesis.getVoices().filter(v => v.lang.startsWith('es'));
@@ -599,249 +655,76 @@
       if (speechSynthesis.onvoiceschanged !== undefined) speechSynthesis.onvoiceschanged = populate;
       populate();
     }
-    function getSelectedVoice() { return voices[parseInt(playerVoice.value, 10)] || null; }
-    playerSpeed.addEventListener('input', () => {
-      playerSpeedVal.textContent = parseFloat(playerSpeed.value).toFixed(1) + '×';
-    });
-
-    function renderSidebar() {
-      sidebarTree.innerHTML = '';
-      DATA.libros.forEach(libro => {
-        const groupTitle = document.createElement('div');
-        groupTitle.className = 'tree-group-title';
-        groupTitle.textContent = `Libro ${libro.numero} — ${libro.nombre}`;
-        sidebarTree.appendChild(groupTitle);
-        libro.titulos.forEach(titulo => {
-          const block = document.createElement('section');
-          block.className = 'title-block';
-          const head = document.createElement('button');
-          head.className = 'title-head'; head.type = 'button';
-          head.innerHTML = `<div class="title-head-main"><span class="title-kicker">Título ${titulo.numero}</span><span class="title-name">${titulo.nombre}</span><span class="title-range">Arts. ${titulo.rangoArticulos}</span></div><span class="title-chevron">›</span>`;
-          head.addEventListener('click', () => block.classList.toggle('open'));
-          block.appendChild(head);
-          const chList = document.createElement('div');
-          chList.className = 'chapter-list';
-          titulo.capitulos.forEach(cap => {
-            const btn = document.createElement('button');
-            btn.className = 'chapter-btn'; btn.type = 'button'; btn.dataset.capId = cap.id;
-            btn.innerHTML = `<span class="chapter-name">Cap. ${cap.numero} — ${cap.nombre}</span><span class="chapter-range">Arts. ${cap.rangoArticulos}</span>`;
-            btn.addEventListener('click', () => {
-              setActiveChapterBtn(btn);
-              const flatIdx = FLAT.findIndex(e => e.capitulo.id === cap.id);
-              if (flatIdx !== -1) showArticleByIdx(flatIdx);
-              if (window.innerWidth <= 900) sidebar.classList.remove('open');
-            });
-            chList.appendChild(btn);
-          });
-          block.appendChild(chList);
-          sidebarTree.appendChild(block);
+    function getSelectedVoice() { return voices[parseInt(playerVoice.value,10)]||null; }
+    playerSpeed.addEventListener('input',()=>{ playerSpeedVal.textContent=parseFloat(playerSpeed.value).toFixed(1)+'×'; });
+    function showArticleByIdx(idx,fromPlayer) {
+      if(!FLAT.length) return;
+      idx=Math.max(0,Math.min(idx,FLAT.length-1)); currentIdx=idx; savePosition(idx);
+      const {articulo}=FLAT[idx]; setHashFromIdx(idx);
+      breadcrumbArticulo.textContent=`Art. ${articulo.numero}${articulo.epigrafe?' — '+articulo.epigrafe:''}`;
+      renderCards(idx); if(!fromPlayer) syncActiveGroupBtn(idx);
+    }
+    window.addEventListener('hashchange',()=>{ const hashNum=getHashArtNum(); if(hashNum!==null&&FLAT.length){ const found=FLAT.findIndex(e=>e.articulo.numero===hashNum); if(found!==-1&&found!==currentIdx) showArticleByIdx(found); } });
+    btnCopyText.addEventListener('click', e => {
+      e.stopPropagation();
+      const isOpen = copyMenu.classList.contains('open');
+      closeCopyMenu();
+      if (isOpen) return;
+      if (!FLAT.length) return;
+      copyMenu.innerHTML = '';
+      const start = currentIdx, end = Math.min(currentIdx + CARDS_PER_PAGE, FLAT.length);
+      if (start >= end) { copyMenu.innerHTML = '<div class="copy-menu-empty">No hay artículos visibles.</div>'; copyMenu.classList.add('open'); btnCopyText.setAttribute('aria-expanded','true'); return; }
+      for (let i = start; i < end; i++) {
+        const {articulo} = FLAT[i];
+        const btn = document.createElement('button'); btn.className = 'copy-menu-item'; btn.type = 'button';
+        btn.innerHTML = `<span class="copy-menu-item-num">Art. ${articulo.numero}</span><span class="copy-menu-item-epig">${articulo.epigrafe || '(sin epígrafe)'}</span>`;
+        btn.addEventListener('click', () => {
+          const txt = [`Artículo ${articulo.numero}${articulo.epigrafe?' — '+articulo.epigrafe:''}`,'',...(articulo.texto||['(texto no disponible)'])].join('\n');
+          navigator.clipboard.writeText(txt).then(() => {
+            const card = readerGroup.querySelector(`[data-art-num="${articulo.numero}"]`);
+            if (card) { card.classList.remove('card-copy-flash'); void card.offsetWidth; card.classList.add('card-copy-flash'); }
+            closeCopyMenu();
+          }).catch(() => alert('No se pudo copiar al portapapeles.'));
         });
-      });
-    }
-
-    function setActiveChapterBtn(activeBtn) {
-      document.querySelectorAll('.chapter-btn').forEach(b => b.classList.remove('active'));
-      if (activeBtn) activeBtn.classList.add('active');
-    }
-
-    function showArticleByIdx(idx, fromPlayer) {
-      if (!FLAT.length) return;
-      idx = Math.max(0, Math.min(idx, FLAT.length - 1));
-      currentIdx = idx;
-      savePosition(idx);
-      const { libro, titulo, capitulo, seccion, articulo } = FLAT[idx];
-      setHashFromIdx(idx);
-      breadcrumbArticulo.textContent = `Art. ${articulo.numero}${articulo.epigrafe ? ' — ' + articulo.epigrafe : ''}`;
-      articleNumber.textContent = `Artículo ${articulo.numero}`;
-      articleTitle.textContent  = articulo.epigrafe || `Artículo ${articulo.numero}`;
-      let metaStr = `Libro ${libro.numero} · Tít. ${titulo.numero} — ${titulo.nombre} · Cap. ${capitulo.numero} — ${capitulo.nombre}`;
-      if (seccion) metaStr += ` · Secc. ${seccion.numero} — ${seccion.nombre}`;
-      articleMeta.textContent = metaStr;
-      const textos = articulo.texto || [];
-      if (!textos.length) {
-        articleBody.innerHTML = `<div class="article-empty"><div class="article-empty-icon">📄</div><p>El texto de este artículo aún no ha sido cargado en el JSON.</p></div>`;
-      } else {
-        articleBody.innerHTML = textos.map(p => `<p>${p}</p>`).join('');
+        copyMenu.appendChild(btn);
       }
-      btnPrev.disabled = idx === 0;
-      btnNext.disabled = idx === FLAT.length - 1;
-      const capBtn = document.querySelector(`.chapter-btn[data-cap-id="${capitulo.id}"]`);
-      setActiveChapterBtn(capBtn);
-      if (capBtn) {
-        const block = capBtn.closest('.title-block');
-        if (block) block.classList.add('open');
-        if (!fromPlayer) capBtn.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
-      }
-    }
-
-    btnPrev.addEventListener('click', () => showArticleByIdx(currentIdx - 1));
-    btnNext.addEventListener('click', () => showArticleByIdx(currentIdx + 1));
-    window.addEventListener('hashchange', () => {
-      const hashNum = getHashArtNum();
-      if (hashNum !== null && FLAT.length) {
-        const found = FLAT.findIndex(e => e.articulo.numero === hashNum);
-        if (found !== -1 && found !== currentIdx) showArticleByIdx(found);
-      }
+      copyMenu.classList.add('open'); btnCopyText.setAttribute('aria-expanded','true');
     });
-
-    function copyCurrentArticle() {
-      if (!FLAT.length) return;
-      const { articulo } = FLAT[currentIdx];
-      const txt = [`Artículo ${articulo.numero}${articulo.epigrafe ? ' — ' + articulo.epigrafe : ''}`, '', ...(articulo.texto || ['(texto no disponible)'])].join('\n');
-      navigator.clipboard.writeText(txt).then(() => {
-        btnCopyText.textContent = '✅ Copiado';
-        setTimeout(() => { btnCopyText.textContent = 'Copiar texto'; }, 2000);
-      }).catch(() => alert('No se pudo copiar al portapapeles.'));
-    }
-    btnCopyText.addEventListener('click', copyCurrentArticle);
-
-    let searchDebounce = null;
-    searchInput.addEventListener('input', () => {
-      const q = searchInput.value.trim();
-      searchClear.classList.toggle('visible', q.length > 0);
-      clearTimeout(searchDebounce);
-      searchDebounce = setTimeout(() => runSearch(q), 200);
-    });
-    searchClear.addEventListener('click', () => {
-      searchInput.value = ''; searchClear.classList.remove('visible');
-      hideSearchResults(); searchInput.focus();
-    });
-    function runSearch(rawQuery) {
-      if (!rawQuery || !FLAT.length) { hideSearchResults(); return; }
-      const q = normalize(rawQuery);
-      const isNumeric = /^\d+$/.test(rawQuery.trim());
-      const matches = FLAT.filter(({ articulo }) => {
-        if (isNumeric) return String(articulo.numero) === rawQuery.trim();
-        return normalize(articulo.epigrafe).includes(q) ||
-               (articulo.texto || []).some(t => normalize(t).includes(q)) ||
-               (articulo.palabrasClave || []).some(p => normalize(p).includes(q));
-      });
-      showSearchResults(matches, rawQuery);
-    }
-    function showSearchResults(matches, rawQuery) {
-      sidebarTree.style.display = 'none';
-      searchResults.classList.add('visible');
-      searchResults.innerHTML = '';
-      if (!matches.length) {
-        searchResults.innerHTML = `<div class="search-empty">Sin resultados para "<strong>${rawQuery}</strong>"</div>`;
-        return;
-      }
-      const count = document.createElement('div');
-      count.className = 'search-count';
-      count.textContent = `${matches.length} resultado${matches.length !== 1 ? 's' : ''}`;
-      searchResults.appendChild(count);
-      matches.forEach(({ articulo, titulo, capitulo }) => {
-        const flatIdx = FLAT.findIndex(e => e.articulo.numero === articulo.numero && e.capitulo.id === capitulo.id);
-        const item = document.createElement('div');
-        item.className = 'search-result-item';
-        item.setAttribute('role', 'button'); item.setAttribute('tabindex', '0');
-        const q = normalize(rawQuery);
-        const matchedParr = (articulo.texto || []).find(t => normalize(t).includes(q));
-        let snippet = '';
-        if (matchedParr) {
-          const start = Math.max(0, normalize(matchedParr).indexOf(q) - 40);
-          snippet = (start > 0 ? '…' : '') + matchedParr.slice(start, start + 100) + (matchedParr.length > start + 100 ? '…' : '');
-        }
-        item.innerHTML = `<span class="search-result-num">Art. ${articulo.numero}</span><span class="search-result-epig">${highlight(articulo.epigrafe || '(sin epígrafe)', rawQuery)}</span><span class="search-result-ctx">${highlight(snippet, rawQuery) || `Tít. ${titulo.numero} · Cap. ${capitulo.numero}`}</span>`;
-        const go = () => {
-          showArticleByIdx(flatIdx);
-          searchInput.value = ''; searchClear.classList.remove('visible');
-          hideSearchResults();
-          if (window.innerWidth <= 900) sidebar.classList.remove('open');
-        };
-        item.addEventListener('click', go);
-        item.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') go(); });
-        searchResults.appendChild(item);
-      });
-    }
-    function hideSearchResults() {
-      searchResults.classList.remove('visible');
-      searchResults.innerHTML = '';
-      sidebarTree.style.display = '';
-    }
-
-    function speakArticle(idx) {
-      if (!window.speechSynthesis) return;
-      speechSynthesis.cancel();
-      if (idx >= FLAT.length) { ttsStop(); return; }
-      ttsReadIdx = idx;
-      const { articulo } = FLAT[idx];
-      const textos = articulo.texto || [];
-      showArticleByIdx(idx, true);
-      const pEls = articleBody.querySelectorAll('p');
-      pEls.forEach(p => p.classList.remove('tts-reading'));
-      if (pEls.length) pEls[0].classList.add('tts-reading');
+    document.addEventListener('click', e => { if (!btnCopyText.contains(e.target) && !copyMenu.contains(e.target)) closeCopyMenu(); });
+    let searchDebounce=null;
+    searchInput.addEventListener('input',()=>{ const q=searchInput.value.trim(); searchClear.classList.toggle('visible',q.length>0); clearTimeout(searchDebounce); searchDebounce=setTimeout(()=>runSearch(q),200); });
+    searchClear.addEventListener('click',()=>{ searchInput.value=''; searchClear.classList.remove('visible'); hideSearchResults(); searchInput.focus(); });
+    function runSearch(rawQuery){ if(!rawQuery||!FLAT.length){ hideSearchResults(); return; } const q=normalize(rawQuery), isNumeric=/^\d+$/.test(rawQuery.trim()); const matches=FLAT.filter(({articulo})=>{ if(isNumeric) return String(articulo.numero)===rawQuery.trim(); return normalize(articulo.epigrafe).includes(q)||(articulo.texto||[]).some(t=>normalize(t).includes(q))||(articulo.palabrasClave||[]).some(p=>normalize(p).includes(q)); }); showSearchResults(matches,rawQuery); }
+    function showSearchResults(matches,rawQuery){ sidebarTree.style.display='none'; searchResults.classList.add('visible'); searchResults.innerHTML=''; if(!matches.length){ searchResults.innerHTML=`<div class="search-empty">Sin resultados para "<strong>${rawQuery}</strong>"</div>`; return; } const count=document.createElement('div'); count.className='search-count'; count.textContent=`${matches.length} resultado${matches.length!==1?'s':''}`; searchResults.appendChild(count); matches.forEach(({articulo,titulo,capitulo})=>{ const flatIdx=FLAT.findIndex(e=>e.articulo.numero===articulo.numero&&e.capitulo.id===capitulo.id); const item=document.createElement('div'); item.className='search-result-item'; item.setAttribute('role','button'); item.setAttribute('tabindex','0'); const q=normalize(rawQuery), matchedParr=(articulo.texto||[]).find(t=>normalize(t).includes(q)); let snippet=''; if(matchedParr){ const start=Math.max(0,normalize(matchedParr).indexOf(q)-40); snippet=(start>0?'…':'')+matchedParr.slice(start,start+100)+(matchedParr.length>start+100?'…':''); } item.innerHTML=`<span class="search-result-num">Art. ${articulo.numero}</span><span class="search-result-epig">${highlight(articulo.epigrafe||'(sin epígrafe)',rawQuery)}</span><span class="search-result-ctx">${highlight(snippet,rawQuery)||`${titulo.nombre} · Cap. ${capitulo.numero}`}</span>`; const go=()=>{ showArticleByIdx(flatIdx); searchInput.value=''; searchClear.classList.remove('visible'); hideSearchResults(); if(window.innerWidth<=900) sidebar.classList.remove('open'); }; item.addEventListener('click',go); item.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' ')go();}); searchResults.appendChild(item); }); }
+    function hideSearchResults(){ searchResults.classList.remove('visible'); searchResults.innerHTML=''; sidebarTree.style.display=''; }
+    function speakArticle(idx){
+      if(!window.speechSynthesis) return; speechSynthesis.cancel();
+      if(idx>=FLAT.length){ ttsStop(); return; }
+      ttsReadIdx=idx; const {articulo}=FLAT[idx]; showArticleByIdx(idx,true);
+      document.querySelectorAll('.reader-card.card-primary .article-body p').forEach((p,i)=>{ p.classList.remove('tts-reading'); if(i===0) p.classList.add('tts-reading'); });
       updatePlayerInfo(idx);
-      if (!textos.length) { setTimeout(() => { if (ttsPlaying) speakArticle(idx + 1); }, 300); return; }
-      const heading = articulo.epigrafe
-        ? `Artículo número ${articulo.numero}. ${articulo.epigrafe}.`
-        : `Artículo número ${articulo.numero}.`;
-      const utt = new SpeechSynthesisUtterance(heading + ' ' + textos.join(' '));
-      utt.rate = parseFloat(playerSpeed.value); utt.pitch = 1;
-      const voice = getSelectedVoice();
-      if (voice) utt.voice = voice; else utt.lang = 'es';
-      utt.onend = () => { if (ttsPlaying) speakArticle(idx + 1); };
-      utt.onerror = e => { if (e.error === 'interrupted' || e.error === 'canceled') return; if (ttsPlaying) speakArticle(idx + 1); };
+      const textos=articulo.texto||[];
+      if(!textos.length){ setTimeout(()=>{ if(ttsPlaying) speakArticle(idx+1); },300); return; }
+      const heading=articulo.epigrafe?`Artículo número ${articulo.numero}. ${articulo.epigrafe}.`:`Artículo número ${articulo.numero}.`;
+      const utt=new SpeechSynthesisUtterance(heading+' '+textos.join(' '));
+      utt.rate=parseFloat(playerSpeed.value); utt.pitch=1;
+      const voice=getSelectedVoice(); if(voice) utt.voice=voice; else utt.lang='es';
+      utt.onend=()=>{ if(ttsPlaying) speakArticle(idx+1); };
+      utt.onerror=e=>{ if(e.error==='interrupted'||e.error==='canceled') return; if(ttsPlaying) speakArticle(idx+1); };
       speechSynthesis.speak(utt);
     }
-    function ttsPlay(startFromIdx) {
-      if (!window.speechSynthesis) { alert('Tu navegador no soporta Text-to-Speech.'); return; }
-      ttsPlaying = true; ttsPaused = false;
-      ttsStartIdx = startFromIdx !== undefined ? startFromIdx : currentIdx;
-      playerPlay.textContent = '⏸'; playerPlay.title = 'Pausar';
-      playerStop.disabled = false; playerPrev.disabled = false;
-      playerNext.disabled = false; playerSkipBack.disabled = false; playerSkipFwd.disabled = false;
-      speakArticle(ttsStartIdx);
-    }
-    function ttsPause() {
-      if (speechSynthesis.speaking && !speechSynthesis.paused) {
-        speechSynthesis.pause(); ttsPaused = true;
-        playerPlay.textContent = '▶'; playerPlay.title = 'Reanudar';
-      }
-    }
-    function ttsResume() {
-      if (speechSynthesis.paused) {
-        speechSynthesis.resume(); ttsPaused = false;
-        playerPlay.textContent = '⏸'; playerPlay.title = 'Pausar';
-      }
-    }
-    function ttsStop() {
-      speechSynthesis.cancel();
-      ttsPlaying = false; ttsPaused = false;
-      playerPlay.textContent = '▶'; playerPlay.title = 'Reproducir';
-      playerStop.disabled = true; playerPrev.disabled = true;
-      playerNext.disabled = true; playerSkipBack.disabled = true; playerSkipFwd.disabled = true;
-      playerProgressFill.style.width = '0%';
-      playerTitle.textContent = 'Sin reproducción activa';
-      playerSubtitle.textContent = 'Presioná ▶ para comenzar';
-      playerCounter.textContent = '';
-      document.querySelectorAll('.tts-reading').forEach(p => p.classList.remove('tts-reading'));
-    }
-    function updatePlayerInfo(idx) {
-      if (!FLAT.length) return;
-      const { articulo, titulo, capitulo } = FLAT[idx];
-      playerTitle.textContent = `Art. ${articulo.numero}${articulo.epigrafe ? ' — ' + articulo.epigrafe : ''}`;
-      playerSubtitle.textContent = `Tít. ${titulo.numero} · Cap. ${capitulo.numero} — ${capitulo.nombre}`;
-      playerCounter.textContent = `${idx + 1} / ${FLAT.length}`;
-      playerProgressFill.style.width = (FLAT.length > 1 ? (idx / (FLAT.length - 1)) * 100 : 100).toFixed(1) + '%';
-    }
-    function updatePlayerControls() {
-      const a = ttsPlaying;
-      playerStop.disabled = !a; playerPrev.disabled = !a;
-      playerNext.disabled = !a; playerSkipBack.disabled = !a; playerSkipFwd.disabled = !a;
-    }
-    playerPlay.addEventListener('click', () => {
-      if (!window.speechSynthesis) { alert('Tu navegador no soporta Text-to-Speech.'); return; }
-      if (!ttsPlaying) ttsPlay(currentIdx);
-      else if (ttsPaused) ttsResume();
-      else ttsPause();
-    });
-    playerStop.addEventListener('click', ttsStop);
-    playerPrev.addEventListener('click', () => { if (ttsPlaying) speakArticle(Math.max(0, ttsReadIdx - 1)); });
-    playerNext.addEventListener('click', () => { if (ttsPlaying) speakArticle(Math.min(FLAT.length - 1, ttsReadIdx + 1)); });
-    playerSkipBack.addEventListener('click', () => { if (ttsPlaying) speakArticle(Math.max(0, ttsReadIdx - 5)); });
-    playerSkipFwd.addEventListener('click', () => { if (ttsPlaying) speakArticle(Math.min(FLAT.length - 1, ttsReadIdx + 5)); });
-
+    function ttsPlay(startFromIdx){ if(!window.speechSynthesis){ alert('Tu navegador no soporta Text-to-Speech.'); return; } ttsPlaying=true; ttsPaused=false; ttsStartIdx=startFromIdx!==undefined?startFromIdx:currentIdx; playerPlay.textContent='⏸'; playerPlay.title='Pausar'; playerStop.disabled=false; playerPrev.disabled=false; playerNext.disabled=false; playerSkipBack.disabled=false; playerSkipFwd.disabled=false; speakArticle(ttsStartIdx); }
+    function ttsPause(){ if(speechSynthesis.speaking&&!speechSynthesis.paused){ speechSynthesis.pause(); ttsPaused=true; playerPlay.textContent='▶'; playerPlay.title='Reanudar'; } }
+    function ttsResume(){ if(speechSynthesis.paused){ speechSynthesis.resume(); ttsPaused=false; playerPlay.textContent='⏸'; playerPlay.title='Pausar'; } }
+    function ttsStop(){ speechSynthesis.cancel(); ttsPlaying=false; ttsPaused=false; playerPlay.textContent='▶'; playerPlay.title='Reproducir'; playerStop.disabled=true; playerPrev.disabled=true; playerNext.disabled=true; playerSkipBack.disabled=true; playerSkipFwd.disabled=true; playerProgressFill.style.width='0%'; playerTitle.textContent='Sin reproducción activa'; playerSubtitle.textContent='Presioná ▶ para comenzar'; playerCounter.textContent=''; document.querySelectorAll('.tts-reading').forEach(p=>p.classList.remove('tts-reading')); }
+    function updatePlayerInfo(idx){ if(!FLAT.length) return; const {articulo,titulo,capitulo}=FLAT[idx]; playerTitle.textContent=`Art. ${articulo.numero}${articulo.epigrafe?' — '+articulo.epigrafe:''}`; playerSubtitle.textContent=`${titulo.nombre} · Cap. ${capitulo.numero} — ${capitulo.nombre}`; playerCounter.textContent=`${idx+1} / ${FLAT.length}`; playerProgressFill.style.width=(FLAT.length>1?(idx/(FLAT.length-1))*100:100).toFixed(1)+'%'; }
+    function updatePlayerControls(){ const a=ttsPlaying; playerStop.disabled=!a; playerPrev.disabled=!a; playerNext.disabled=!a; playerSkipBack.disabled=!a; playerSkipFwd.disabled=!a; }
+    playerPlay.addEventListener('click',()=>{ if(!window.speechSynthesis){ alert('Tu navegador no soporta Text-to-Speech.'); return; } if(!ttsPlaying) ttsPlay(currentIdx); else if(ttsPaused) ttsResume(); else ttsPause(); });
+    playerStop.addEventListener('click',ttsStop);
+    playerPrev.addEventListener('click',()=>{ if(ttsPlaying) speakArticle(Math.max(0,ttsReadIdx-1)); });
+    playerNext.addEventListener('click',()=>{ if(ttsPlaying) speakArticle(Math.min(FLAT.length-1,ttsReadIdx+1)); });
+    playerSkipBack.addEventListener('click',()=>{ if(ttsPlaying) speakArticle(Math.max(0,ttsReadIdx-5)); });
+    playerSkipFwd.addEventListener('click',()=>{ if(ttsPlaying) speakArticle(Math.min(FLAT.length-1,ttsReadIdx+5)); });
     loadData();
   </script>
 </body>
