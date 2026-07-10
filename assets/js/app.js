@@ -50,9 +50,7 @@ function highlight(str, query) {
 }
 
 /* ─── deepExtractArticulos ───────────────────────────────────
-   Misma lógica que usan los index.html individuales.
    Maneja: titulos[] → capitulos[] → articulos[]
-   y cualquier variante de claves (libros, partes, secciones…)
    ─────────────────────────────────────────────────────────── */
 const _LIBRO_KEYS  = ['libros','libro'];
 const _TITULO_KEYS = ['titulos','titulo','partes','parte','secciones','seccion','libros_internos'];
@@ -61,25 +59,19 @@ const _ART_KEYS    = ['articulos','articulo','arts','items','artículos'];
 
 function deepExtractArticulos(node, out) {
   if (!node || typeof node !== 'object') return;
-
-  // Nodo hoja: es un artículo
   if ('numero' in node && (node.texto !== undefined || node.epigrafe !== undefined)) {
     out.push(node);
     return;
   }
-
-  // Intentar claves conocidas en orden de jerarquía
   for (const k of [..._LIBRO_KEYS, ..._TITULO_KEYS, ..._CAP_KEYS, ..._ART_KEYS]) {
     if (Array.isArray(node[k]) && node[k].length) {
       node[k].forEach(child => deepExtractArticulos(child, out));
       return;
     }
   }
-
-  // Fallback: recorrer todas las claves
   for (const key of Object.keys(node)) {
     const val = node[key];
-    if (Array.isArray(val))              val.forEach(child => deepExtractArticulos(child, out));
+    if (Array.isArray(val))                  val.forEach(child => deepExtractArticulos(child, out));
     else if (val && typeof val === 'object') deepExtractArticulos(val, out);
   }
 }
@@ -169,7 +161,7 @@ async function cargarIndiceGlobal() {
       if (!res.ok) throw new Error(`HTTP ${res.status} — ${url}`);
       const data = await res.json();
       const arts = [];
-      deepExtractArticulos(data, arts);   // ← usa deepExtractArticulos
+      deepExtractArticulos(data, arts);
       cargaProgreso.listos++;
       actualizarBarraProgreso();
       return { cod, arts };
@@ -212,6 +204,16 @@ async function cargarIndiceGlobal() {
       : `⚠️ Índice vacío — ${errores} errores de carga`,
     total > 0 ? 'ok' : 'error'
   );
+
+  // FIX race condition: si el usuario ya tenía algo escrito mientras cargaba,
+  // re-ejecutar la búsqueda completa con el valor actual del input.
+  const inputEl = document.getElementById('searchInput');
+  const qActual = inputEl ? inputEl.value.trim() : '';
+  if (qActual && total > 0) {
+    ocultarResultadosGlobales();
+    buscarMetadatos(qActual);
+    buscarArticulos(qActual);
+  }
 }
 
 /* ─── Render categorías ──────────────────────────────────── */
@@ -306,14 +308,10 @@ function buscarMetadatos(q) {
 async function buscarArticulos(q) {
   const qn = normalize(q);
 
+  // Si el índice todavía no cargó, avisar y esperar —
+  // pero NO re-buscar desde aquí: cargarIndiceGlobal() lo hará al terminar.
   if (INDICE_GLOBAL.length === 0) {
-    mostrarEstadoBusqueda('⏳ Cargando artículos… esperá un momento y volvé a buscar.');
-    await indiceListoPromise;
-    ocultarResultadosGlobales();
-  }
-
-  if (INDICE_GLOBAL.length === 0) {
-    mostrarEstadoBusqueda('⚠️ No se pudieron cargar los artículos. Recargá la página y revisá la consola (F12).');
+    mostrarEstadoBusqueda('⏳ Cargando artículos… los resultados aparecerán automáticamente.');
     return;
   }
 
