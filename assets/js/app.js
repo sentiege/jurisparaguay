@@ -2,7 +2,14 @@
    JurisParaguay — Lógica Principal
    ============================================= */
 
-// URL base absoluta del repo en GitHub Pages (sin trailing slash)
+// Registrar SW raiz
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/jurisparaguay/sw.js', { scope: '/jurisparaguay/' })
+    .then(() => console.log('📦 SW raiz registrado'))
+    .catch(e => console.warn('SW no registrado:', e));
+}
+
+// URL base absoluta — hardcodeada para GitHub Pages
 const BASE_URL = 'https://sentiege.github.io/jurisparaguay';
 
 const JSON_CODIGOS = [
@@ -43,7 +50,7 @@ function highlight(str, query) {
   return escaped.replace(re, '<mark>$1</mark>');
 }
 
-/* ─── Extracción recursiva de artículos ──────────────────── */
+/* ─── Extracción recursiva ─────────────────────────────────── */
 function extractArticulos(node, out) {
   if (!node || typeof node !== 'object') return;
   if ('numero' in node && (node.texto !== undefined || node.epigrafe !== undefined)) {
@@ -106,15 +113,38 @@ function actualizarBarraProgreso() {
   }
 }
 
+/* ─── Diagnóstico visible en pantalla ─────────────────────── */
+function mostrarDiag(msg, tipo = 'info') {
+  let diag = document.getElementById('jp-diag');
+  if (!diag) {
+    diag = document.createElement('div');
+    diag.id = 'jp-diag';
+    diag.style.cssText = 'position:fixed;bottom:1rem;right:1rem;z-index:9999;max-width:360px;font-size:.78rem;font-family:monospace;display:flex;flex-direction:column;gap:.3rem;';
+    document.body.appendChild(diag);
+  }
+  const line = document.createElement('div');
+  const bg = tipo === 'ok' ? '#1a5c3a' : tipo === 'error' ? '#7b1d1d' : '#1a3a5c';
+  line.style.cssText = `background:${bg};color:#fff;padding:.35rem .65rem;border-radius:6px;box-shadow:0 2px 8px rgba(0,0,0,.3);`;
+  line.textContent = msg;
+  diag.appendChild(line);
+  setTimeout(() => line.remove(), 8000);
+}
+
 /* ─── Carga e indexado ───────────────────────────────────── */
 async function cargarIndiceGlobal() {
   mostrarBarraProgreso();
+  mostrarDiag(`🔄 Iniciando carga de ${JSON_CODIGOS.length} JSONs…`);
   cargaProgreso = { total: JSON_CODIGOS.length, listos: 0, fallidos: [] };
 
   const resultados = await Promise.allSettled(
     JSON_CODIGOS.map(async (cod) => {
       const url = `${BASE_URL}/${cod.path}`;
-      const res = await fetch(url);
+      let res;
+      try {
+        res = await fetch(url);
+      } catch(netErr) {
+        throw new Error(`Red: ${netErr.message} — ${url}`);
+      }
       if (!res.ok) throw new Error(`HTTP ${res.status} — ${url}`);
       const data = await res.json();
       const arts = [];
@@ -128,8 +158,10 @@ async function cargarIndiceGlobal() {
   INDICE_GLOBAL = [];
   resultados.forEach(r => {
     if (r.status !== 'fulfilled') {
-      cargaProgreso.fallidos.push(r.reason?.message || 'Error');
-      console.error('⚠️ JSON fallido:', r.reason?.message);
+      const msg = r.reason?.message || 'Error desconocido';
+      cargaProgreso.fallidos.push(msg);
+      console.error('⚠️ JSON fallido:', msg);
+      mostrarDiag(`❌ ${msg}`, 'error');
       return;
     }
     const { cod, arts } = r.value;
@@ -150,11 +182,15 @@ async function cargarIndiceGlobal() {
   actualizarBarraProgreso();
   indiceListoResolve();
 
-  // Debug visible en consola y en pantalla
-  const total = INDICE_GLOBAL.length;
+  const total   = INDICE_GLOBAL.length;
   const errores = cargaProgreso.fallidos.length;
-  console.log(`✅ Índice listo: ${total} artículos | ${errores} errores`);
-  if (errores) console.warn('Errores:', cargaProgreso.fallidos);
+  console.log(`✅ Índice: ${total} arts | ${errores} errores`);
+  mostrarDiag(
+    total > 0
+      ? `✅ Índice listo: ${total} artículos (${errores} errores)`
+      : `⚠️ Índice vacío — ${errores} errores de carga`,
+    total > 0 ? 'ok' : 'error'
+  );
 }
 
 /* ─── Render categorías ──────────────────────────────────── */
@@ -194,13 +230,15 @@ function renderCategorias(cats) {
 /* ─── INIT ───────────────────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', () => {
   renderCategorias(CATEGORIAS);
-  cargarIndiceGlobal().catch(err => console.error('Error cargando índice:', err));
+  cargarIndiceGlobal().catch(err => {
+    console.error('Error cargando índice:', err);
+    mostrarDiag(`❌ Error fatal: ${err.message}`, 'error');
+  });
 
   const input = document.getElementById('searchInput');
   if (!input) return;
 
   let debounceTimer = null;
-
   input.addEventListener('input', () => {
     clearTimeout(debounceTimer);
     const q = input.value.trim();
@@ -254,7 +292,7 @@ async function buscarArticulos(q) {
   }
 
   if (INDICE_GLOBAL.length === 0) {
-    mostrarEstadoBusqueda('⚠️ No se pudieron cargar los artículos. Recargá la página.');
+    mostrarEstadoBusqueda('⚠️ No se pudieron cargar los artículos. Recargá la página y revisá la consola (F12).');
     return;
   }
 
@@ -287,7 +325,6 @@ const PREVIEW_POR_GRUPO = 5;
 function mostrarResultadosGlobales(matches, rawQuery) {
   ocultarResultadosGlobales();
   const qn = normalize(rawQuery);
-
   const resumen = {}, orden = [];
   matches.forEach(m => {
     if (!resumen[m.codigoId]) {
@@ -301,7 +338,6 @@ function mostrarResultadosGlobales(matches, rawQuery) {
   const container = document.createElement('div');
   container.id = 'resultados-globales';
 
-  // Encabezado
   const header = document.createElement('div');
   header.className = 'jp-resultados-header';
   header.innerHTML = `
@@ -321,13 +357,11 @@ function mostrarResultadosGlobales(matches, rawQuery) {
   `;
   container.appendChild(header);
 
-  // Grupos por código
   orden.forEach(id => {
     const grupo = resumen[id];
     const section = document.createElement('div');
     section.className = 'jp-grupo';
     section.id = `jp-grupo-${id}`;
-
     section.innerHTML = `
       <div class="jp-grupo__header">
         <span class="jp-grupo__nombre">${escapeHtml(grupo.nombre)}</span>
@@ -337,7 +371,6 @@ function mostrarResultadosGlobales(matches, rawQuery) {
         </span>
       </div>
     `;
-
     const lista = document.createElement('div');
     lista.className = 'jp-art-lista';
     renderArts(lista, grupo.arts, qn, rawQuery, 0, PREVIEW_POR_GRUPO);
@@ -360,7 +393,6 @@ function mostrarResultadosGlobales(matches, rawQuery) {
       });
       section.appendChild(verMas);
     }
-
     container.appendChild(section);
   });
 
