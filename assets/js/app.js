@@ -48,9 +48,6 @@ function highlight(str, query) {
 }
 
 /* ─── deepExtractArticulos ───────────────────────────────── */
-// FIX #1: eliminado `return` prematuro — se recorren TODAS las claves
-// conocidas sin cortarse al encontrar la primera, y el nodo hoja no
-// hace `return` para permitir sub-artículos anidados.
 const _LIBRO_KEYS  = ['libros','libro'];
 const _TITULO_KEYS = ['titulos','titulo','partes','parte','secciones','seccion','libros_internos'];
 const _CAP_KEYS    = ['capitulos','capitulo','subcapitulos','subcapitulo'];
@@ -60,13 +57,10 @@ const _ALL_KNOWN_KEYS = [..._LIBRO_KEYS, ..._TITULO_KEYS, ..._CAP_KEYS, ..._ART_
 function deepExtractArticulos(node, out) {
   if (!node || typeof node !== 'object') return;
 
-  // Nodo hoja: es un artículo — lo agregamos pero NO hacemos return
-  // (podría tener sub-artículos anidados en algunas estructuras)
   if ('numero' in node && (node.texto !== undefined || node.epigrafe !== undefined)) {
     out.push(node);
   }
 
-  // Recorrer TODAS las claves conocidas (sin return temprano)
   const visitados = new Set();
   for (const k of _ALL_KNOWN_KEYS) {
     if (Array.isArray(node[k]) && node[k].length) {
@@ -75,7 +69,6 @@ function deepExtractArticulos(node, out) {
     }
   }
 
-  // Fallback genérico: claves no reconocidas
   for (const key of Object.keys(node)) {
     if (visitados.has(key)) continue;
     const val = node[key];
@@ -179,8 +172,6 @@ async function cargarIndiceGlobal() {
       const data = await res.json();
       const arts = [];
       deepExtractArticulos(data, arts);
-      // FIX #2: incrementar DESPUÉS de extraer, para que el contador
-      // refleje códigos realmente indexados y no solo descargados.
       cargaProgreso.listos++;
       actualizarBarraProgreso();
       console.log(`📄 ${cod.nombre}: ${arts.length} artículos extraídos`);
@@ -225,8 +216,6 @@ async function cargarIndiceGlobal() {
     total > 0 ? 'ok' : 'error'
   );
 
-  // Relanzar búsqueda si el usuario ya había escrito algo (input) o
-  // había pulsado el botón antes de que el índice estuviera listo (FIX #3: _pendingSearch)
   const inputEl = document.getElementById('searchInput');
   const qActual = inputEl ? (inputEl.value.trim() || inputEl._pendingSearch || '') : '';
   if (qActual) {
@@ -312,8 +301,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* ─── Búsqueda desde botón ───────────────────────────────── */
-// FIX #3: si el índice aún no cargó, guardar la query en _pendingSearch
-// para relanzarla automáticamente al finalizar cargarIndiceGlobal().
 async function buscar() {
   const inputEl = document.getElementById('searchInput');
   const q = (inputEl?.value || '').trim();
@@ -342,6 +329,9 @@ function buscarMetadatos(q) {
 }
 
 /* ─── Búsqueda artículos ─────────────────────────────────── */
+// FIX DEFINITIVO: se incluye cualquier artículo donde qn aparece en
+// epigrafe, palabrasClave O en cualquier párrafo de texto[].
+// calcScore se usa SOLO para ordenar, nunca para filtrar (score > 0 eliminado).
 function buscarArticulos(q) {
   const qn = normalize(q);
 
@@ -351,8 +341,13 @@ function buscarArticulos(q) {
   }
 
   const matches = INDICE_GLOBAL
+    .filter(art => {
+      if (normalize(art.epigrafe).includes(qn)) return true;
+      if ((art.palabrasClave || []).some(k => normalize(k).includes(qn))) return true;
+      if ((art.texto || []).some(t => normalize(t).includes(qn))) return true;
+      return false;
+    })
     .map(art => ({ art, score: calcScore(art, qn) }))
-    .filter(({ score }) => score > 0)
     .sort((a, b) => b.score - a.score)
     .map(({ art }) => art);
 
@@ -365,7 +360,7 @@ function buscarArticulos(q) {
 }
 
 /* ─── Render resultados ──────────────────────────────────── */
-const PREVIEW_POR_GRUPO = 5;
+const PREVIEW_POR_GRUPO = 20;
 
 function mostrarResultadosGlobales(matches, rawQuery) {
   const c = getResultadosContainer();
