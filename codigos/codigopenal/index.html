@@ -345,7 +345,7 @@
     function deepExtractArticulos(node, ctx, out) {
       if (!node || typeof node !== 'object') return;
       if ('numero' in node && (node.texto || node.epigrafe !== undefined)) { out.push({...ctx, articulo: node}); return; }
-      const LIBRO_KEYS=['libros','libro'], TITULO_KEYS=['titulos','titulo','partes','parte','secciones','seccion','libros_internos'], CAP_KEYS=['capitulos','capitulo','subcapitulos','subcapitulo'], ART_KEYS=['articulos','articulo','arts','items','art\u00edculos'];
+      const LIBRO_KEYS=['libros','libro'], TITULO_KEYS=['titulos','titulo','partes','parte','secciones','seccion','libros_internos'], CAP_KEYS=['capitulos','capitulo','subcapitulos','subcapitulo'], ART_KEYS=['articulos','articulo','arts','items','artículos'];
       let handled=false;
       for (const k of LIBRO_KEYS)  { if (Array.isArray(node[k])&&node[k].length) { node[k].forEach((l,li)=>deepExtractArticulos(l,{libro:{id:l.id||`libro-${li}`,nombre:l.nombre||`Libro ${li+1}`,numero:l.numero||(li+1)},titulo:ctx.titulo,capitulo:ctx.capitulo},out)); handled=true; } }
       if (handled) return;
@@ -433,6 +433,10 @@
       try {
         const res=await fetch(jsonUrl,{cache:'no-store'}); if(!res.ok) throw new Error('HTTP '+res.status);
         DATA=await res.json(); if(!DATA||typeof DATA!=='object') throw new Error('JSON inválido.');
+        // Inyectar metadatos si el JSON no los tiene
+        if (!DATA.codigo) DATA.codigo = 'Código Penal';
+        if (!DATA.ley)    DATA.ley    = '1160/97';
+        if (!DATA.pais)   DATA.pais   = 'Paraguay';
         applyMeta(); FLAT=buildFlat(DATA); if(!FLAT.length) throw new Error('No se encontraron artículos en el JSON.');
         renderSidebar(); initVoices();
         const hashNum=getHashArtNum(); let startIdx=loadPosition();
