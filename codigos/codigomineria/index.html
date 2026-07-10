@@ -113,6 +113,10 @@
     .tag-chip:hover { background: var(--accent-gold); color: #fff; }
     .tags-art-title { font-size: 11px; color: var(--text-muted); margin-bottom: 10px; font-style: italic; }
     .main { grid-column: 2; grid-row: 2; padding: 16px 18px; overflow-y: auto; background: radial-gradient(circle at top left, rgba(201,162,39,0.12), transparent 60%), var(--bg); }
+    .top-pager { position: sticky; top: 0; z-index: 5; display: flex; justify-content: center; gap: 10px; max-width: 860px; margin: 0 auto 14px; padding: 8px; background: rgba(247,243,234,0.96); backdrop-filter: blur(4px); border-radius: 999px; border: 1px solid var(--border-soft); box-shadow: var(--shadow-md); }
+    .top-pager button { font-size: 12px; padding: 6px 14px; border-radius: 999px; border: 1px solid var(--border-soft); background: var(--bg-panel); color: var(--text-main); cursor: pointer; transition: background 0.15s, border-color 0.15s; }
+    .top-pager button:hover:not(:disabled) { background: var(--accent-gold-soft); border-color: var(--accent-gold); }
+    .top-pager button:disabled { opacity: 0.35; cursor: default; }
     .reader-group { max-width: 860px; margin: 0 auto; display: flex; flex-direction: column; gap: 14px; }
     .reader-card { background: var(--bg-panel); border-radius: var(--radius-lg); border: 1px solid var(--border-soft); box-shadow: var(--shadow-md); padding: 18px 20px 20px; }
     .reader-card.card-primary { border-left: 4px solid var(--accent-gold); }
@@ -163,7 +167,7 @@
     .player-voice { font-size: 10px; padding: 2px 5px; border-radius: 6px; border: 1px solid rgba(148,163,184,0.35); background: rgba(15,23,42,0.5); color: #f7f3ea; cursor: pointer; max-width: 130px; }
     @media print {
       body { display: block !important; height: auto !important; overflow: visible !important; background: #fff !important; }
-      .sidebar, .header, .audio-player, .tags-overlay, .article-footer .pager { display: none !important; }
+      .sidebar, .header, .audio-player, .tags-overlay, .top-pager { display: none !important; }
       .main { padding: 0 !important; overflow: visible !important; }
       .reader-group { max-width: 100% !important; gap: 20px; }
       .reader-card { box-shadow: none !important; border: 1px solid #ccc !important; border-radius: 0 !important; padding: 0 !important; }
@@ -249,6 +253,10 @@
   </header>
 
   <main class="main" id="mainArea">
+    <div class="top-pager" id="topPager">
+      <button id="btnPrev" type="button" disabled>← Art. anterior</button>
+      <button id="btnNext" type="button" disabled>Art. siguiente →</button>
+    </div>
     <div class="reader-group" id="readerGroup">
       <div class="reader-card card-primary">
         <div class="print-header">
@@ -269,10 +277,6 @@
         </div>
         <footer class="article-footer">
           <div>Fuente: CSJ – IIJ, edición digital · JurisParaguay 2026</div>
-          <div class="pager">
-            <button id="btnPrev" type="button" disabled>← Art. anterior</button>
-            <button id="btnNext" type="button" disabled>Art. siguiente →</button>
-          </div>
         </footer>
       </div>
     </div>
@@ -326,6 +330,8 @@
     const btnTags      = document.getElementById('btnTags');
     const btnPDF       = document.getElementById('btnPDF');
     const btnInstall   = document.getElementById('btnInstall');
+    const btnPrev      = document.getElementById('btnPrev');
+    const btnNext      = document.getElementById('btnNext');
     const tagsOverlay  = document.getElementById('tagsOverlay');
     const tagsList     = document.getElementById('tagsList');
     const tagsArtTitle = document.getElementById('tagsArtTitle');
@@ -357,6 +363,8 @@
 
     btnPDF.addEventListener('click', () => window.print());
     btnTags.addEventListener('click', openTagsPanel);
+    btnPrev.addEventListener('click', () => showArticleByIdx(currentIdx - CARDS_PER_PAGE));
+    btnNext.addEventListener('click', () => showArticleByIdx(currentIdx + CARDS_PER_PAGE));
     tagsClose.addEventListener('click', () => tagsOverlay.classList.remove('open'));
     tagsOverlay.addEventListener('click', e => { if (e.target === tagsOverlay) tagsOverlay.classList.remove('open'); });
 
@@ -507,10 +515,6 @@
         <div class="article-body">${bodyHtml}</div>
         <footer class="article-footer">
           <div>Fuente: CSJ – IIJ, edición digital · JurisParaguay 2026</div>
-          ${ isPrimary ? `<div class="pager">
-            <button id="btnPrev" type="button" disabled>← Art. anterior</button>
-            <button id="btnNext" type="button" disabled>Art. siguiente →</button>
-          </div>` : '' }
         </footer>`;
       return card;
     }
@@ -522,10 +526,8 @@
         if (idx >= FLAT.length) break;
         readerGroup.appendChild(buildCard(FLAT[idx], i === 0));
       }
-      const bPrev = document.getElementById('btnPrev');
-      const bNext = document.getElementById('btnNext');
-      if (bPrev) { bPrev.disabled = startIdx === 0; bPrev.addEventListener('click', () => showArticleByIdx(currentIdx - CARDS_PER_PAGE)); }
-      if (bNext) { bNext.disabled = startIdx + CARDS_PER_PAGE >= FLAT.length; bNext.addEventListener('click', () => showArticleByIdx(currentIdx + CARDS_PER_PAGE)); }
+      btnPrev.disabled = startIdx === 0;
+      btnNext.disabled = startIdx + CARDS_PER_PAGE >= FLAT.length;
     }
 
     function renderSidebar() {
