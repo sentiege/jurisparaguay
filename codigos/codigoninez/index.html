@@ -73,8 +73,26 @@
     .header-actions { display: flex; gap: 6px; align-items: center; flex-shrink: 0; flex-wrap: wrap; }
     .header-btn { font-size: 11px; padding: 6px 10px; border-radius: 999px; border: 1px solid var(--border-soft); background: var(--bg-panel); color: var(--text-muted); cursor: pointer; white-space: nowrap; transition: background 0.15s, border-color 0.15s; }
     .header-btn:hover { background: var(--accent-gold-soft); border-color: var(--accent-gold); color: #4b3410; }
+    .header-btn.active-tool { background: var(--accent-gold); border-color: #a07c10; color: #1a2d45; font-weight: 600; }
     .header-btn.pwa-btn { display: none; }
     .header-btn.pwa-btn.visible { display: inline-block; }
+    /* ── Marcadores overlay ── */
+    .marcadores-overlay { display: none; position: fixed; inset: 0; z-index: 200; background: rgba(15,23,42,0.45); backdrop-filter: blur(2px); align-items: flex-start; justify-content: flex-end; }
+    .marcadores-overlay.open { display: flex; }
+    .marcadores-panel { margin: 56px 18px 0 0; background: var(--bg-panel); border-radius: var(--radius-lg); border: 1px solid var(--border-soft); box-shadow: var(--shadow-md); padding: 16px 18px 18px; min-width: 280px; max-width: 360px; max-height: calc(100vh - 80px); overflow-y: auto; }
+    .marcadores-panel-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+    .marcadores-panel-title { font-size: 13px; font-weight: 700; color: var(--accent-blue); }
+    .marcadores-close { background: none; border: none; font-size: 18px; color: var(--text-muted); cursor: pointer; line-height: 1; }
+    .marcadores-empty { font-size: 12px; color: var(--text-muted); padding: 8px 0; }
+    .marcadores-list { display: flex; flex-direction: column; gap: 6px; }
+    .marcador-item { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 8px 10px; border-radius: 8px; background: var(--bg); border: 1px solid var(--border-soft); cursor: pointer; transition: background 0.15s; }
+    .marcador-item:hover { background: var(--accent-gold-soft); }
+    .marcador-info { flex: 1; min-width: 0; }
+    .marcador-num { font-size: 11px; font-weight: 700; color: var(--accent-blue); }
+    .marcador-epig { font-size: 11px; color: var(--text-main); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .marcador-del { background: none; border: none; font-size: 14px; color: var(--text-muted); cursor: pointer; flex-shrink: 0; padding: 2px 4px; border-radius: 4px; transition: color 0.15s; }
+    .marcador-del:hover { color: #c0392b; }
+    /* ── Tags overlay ── */
     .tags-overlay { display: none; position: fixed; inset: 0; z-index: 200; background: rgba(15,23,42,0.45); backdrop-filter: blur(2px); align-items: flex-start; justify-content: flex-end; }
     .tags-overlay.open { display: flex; }
     .tags-panel { margin: 56px 18px 0 0; background: var(--bg-panel); border-radius: var(--radius-lg); border: 1px solid var(--border-soft); box-shadow: var(--shadow-md); padding: 16px 18px 18px; min-width: 260px; max-width: 340px; max-height: calc(100vh - 80px); overflow-y: auto; }
@@ -86,6 +104,7 @@
     .tag-chip { font-size: 11px; padding: 4px 11px; border-radius: 999px; background: var(--accent-gold-soft); border: 1px solid var(--accent-gold); color: #4b3410; cursor: pointer; transition: background 0.15s; }
     .tag-chip:hover { background: var(--accent-gold); color: #fff; }
     .tags-art-title { font-size: 11px; color: var(--text-muted); margin-bottom: 10px; font-style: italic; }
+    /* ── Main ── */
     .main { grid-column: 2; grid-row: 2; padding: 16px 18px; overflow-y: auto; background: radial-gradient(circle at top left, rgba(201,162,39,0.12), transparent 60%), var(--bg); }
     .top-pager { position: sticky; top: 0; z-index: 5; display: flex; justify-content: center; gap: 10px; max-width: 860px; margin: 0 auto 14px; padding: 8px; background: rgba(247,243,234,0.96); backdrop-filter: blur(4px); border-radius: 999px; border: 1px solid var(--border-soft); box-shadow: var(--shadow-md); }
     .top-pager button { font-size: 12px; padding: 6px 14px; border-radius: 999px; border: 1px solid var(--border-soft); background: var(--bg-panel); color: var(--text-main); cursor: pointer; transition: background 0.15s, border-color 0.15s; }
@@ -104,6 +123,9 @@
     .article-body ol { margin: 6px 0 8px 18px; }
     .article-body li { margin-bottom: 4px; }
     .article-body p.tts-reading { background: rgba(201,162,39,0.18); border-left: 3px solid var(--accent-gold); padding-left: 8px; border-radius: 4px; transition: background 0.3s; }
+    /* Resaltado de texto */
+    .text-highlight { background: rgba(255,220,0,0.5); border-radius: 2px; cursor: pointer; }
+    .text-highlight:hover { background: rgba(255,180,0,0.7); }
     .article-empty { display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 24px 0; color: var(--text-muted); font-size: 13px; text-align: center; }
     .article-empty-icon { font-size: 32px; opacity: 0.4; }
     .article-empty p { max-width: 320px; line-height: 1.6; }
@@ -111,6 +133,7 @@
     .spinner { width: 18px; height: 18px; border: 2px solid var(--border-soft); border-top-color: var(--accent-blue); border-radius: 50%; animation: spin 0.7s linear infinite; }
     @keyframes spin { to { transform: rotate(360deg); } }
     .article-footer { border-top: 1px solid #e5e7eb; margin-top: 10px; padding-top: 8px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; font-size: 11px; color: var(--text-muted); }
+    /* ── Audio player ── */
     .audio-player { grid-column: 2; grid-row: 3; background: linear-gradient(135deg, #1a2d45, #243650); border-top: 1px solid rgba(148,163,184,0.3); padding: 10px 18px; display: flex; flex-direction: column; gap: 7px; box-shadow: 0 -4px 16px rgba(15,23,42,0.18); }
     .player-top { display: flex; align-items: center; gap: 10px; min-width: 0; }
     .player-controls { display: flex; gap: 4px; align-items: center; flex-shrink: 0; flex-wrap: wrap; }
@@ -137,7 +160,7 @@
     .player-voice { font-size: 10px; padding: 2px 5px; border-radius: 6px; border: 1px solid rgba(148,163,184,0.35); background: rgba(15,23,42,0.5); color: #f7f3ea; cursor: pointer; max-width: 130px; }
     @media print {
       body { display: block !important; height: auto !important; overflow: visible !important; background: #fff !important; }
-      .sidebar, .header, .audio-player, .tags-overlay, .top-pager { display: none !important; }
+      .sidebar, .header, .audio-player, .tags-overlay, .marcadores-overlay, .top-pager { display: none !important; }
       .main { padding: 0 !important; overflow: visible !important; }
       .reader-group { max-width: 100% !important; gap: 20px; }
       .reader-card { box-shadow: none !important; border: 1px solid #ccc !important; border-radius: 0 !important; padding: 0 !important; }
@@ -162,7 +185,7 @@
       .sidebar-logo { max-width: 160px; }
       .reader-card { border-radius: 10px; padding: 14px 14px 16px; }
       .article-title { font-size: 17px; }
-      .tags-panel { margin: 56px 8px 0 8px; min-width: unset; max-width: calc(100vw - 16px); }
+      .tags-panel, .marcadores-panel { margin: 56px 8px 0 8px; min-width: unset; max-width: calc(100vw - 16px); }
     }
     @media (max-width: 480px) {
       .player-controls { justify-content: center; width: 100%; }
@@ -191,6 +214,18 @@
     </div>
   </aside>
 
+  <!-- Marcadores overlay -->
+  <div class="marcadores-overlay" id="marcadoresOverlay">
+    <div class="marcadores-panel" id="marcadoresPanel">
+      <div class="marcadores-panel-header">
+        <span class="marcadores-panel-title">🔖 Marcadores</span>
+        <button class="marcadores-close" id="marcadoresClose" type="button">✕</button>
+      </div>
+      <div class="marcadores-list" id="marcadoresList"></div>
+    </div>
+  </div>
+
+  <!-- Tags overlay -->
   <div class="tags-overlay" id="tagsOverlay">
     <div class="tags-panel" id="tagsPanel">
       <div class="tags-panel-header"><span class="tags-panel-title">🏷️ Palabras clave</span><button class="tags-close" id="tagsClose" type="button">✕</button></div>
@@ -205,6 +240,8 @@
       <div class="breadcrumbs" id="breadcrumbs"><a href="../../index.html">🏠 Inicio</a> › <span id="breadcrumbArticulo">Seleccioná un artículo del índice</span></div>
     </div>
     <div class="header-actions">
+      <button class="header-btn" id="btnMarcadores" type="button">🔖 Marcadores</button>
+      <button class="header-btn" id="btnResaltador" type="button">🖊️ Resaltador</button>
       <button class="header-btn" id="btnTags" type="button">🏷️ Tags</button>
       <button class="header-btn" id="btnPDF" type="button">📄 PDF</button>
       <button class="header-btn pwa-btn" id="btnInstall" type="button">📱 Instalar</button>
@@ -271,6 +308,7 @@
     let DATA = null, FLAT = [], currentIdx = 0;
     let ttsPlaying = false, ttsPaused = false, ttsStartIdx = 0, ttsReadIdx = 0;
     let voices = [], deferredInstallPrompt = null;
+    let resaltadorActivo = false;
 
     const sidebar            = document.getElementById('sidebar');
     const hamburger          = document.getElementById('hamburger');
@@ -286,6 +324,11 @@
     const btnInstall         = document.getElementById('btnInstall');
     const btnPrev            = document.getElementById('btnPrev');
     const btnNext            = document.getElementById('btnNext');
+    const btnMarcadores      = document.getElementById('btnMarcadores');
+    const btnResaltador      = document.getElementById('btnResaltador');
+    const marcadoresOverlay  = document.getElementById('marcadoresOverlay');
+    const marcadoresList     = document.getElementById('marcadoresList');
+    const marcadoresClose    = document.getElementById('marcadoresClose');
     const tagsOverlay        = document.getElementById('tagsOverlay');
     const tagsList           = document.getElementById('tagsList');
     const tagsArtTitle       = document.getElementById('tagsArtTitle');
@@ -315,7 +358,125 @@
     tagsClose.addEventListener('click', () => tagsOverlay.classList.remove('open'));
     tagsOverlay.addEventListener('click', e => { if (e.target === tagsOverlay) tagsOverlay.classList.remove('open'); });
     hamburger.addEventListener('click', () => sidebar.classList.toggle('open'));
+    marcadoresClose.addEventListener('click', () => marcadoresOverlay.classList.remove('open'));
+    marcadoresOverlay.addEventListener('click', e => { if (e.target === marcadoresOverlay) marcadoresOverlay.classList.remove('open'); });
 
+    // ═══════════════════════════════════════
+    // MARCADORES
+    // ═══════════════════════════════════════
+    function marcadoresKey() { return 'marcadores_' + (DATA && DATA.ley ? DATA.ley : window.location.pathname); }
+    function getMarcadores() { try { return JSON.parse(localStorage.getItem(marcadoresKey()) || '[]'); } catch(e) { return []; } }
+    function saveMarcadores(arr) { try { localStorage.setItem(marcadoresKey(), JSON.stringify(arr)); } catch(e) {} }
+    function isMarked(artNum) { return getMarcadores().some(m => m.num === artNum); }
+    function toggleMarcador(artNum) {
+      const arr = getMarcadores();
+      const idx = arr.findIndex(m => m.num === artNum);
+      if (idx === -1) {
+        if (!FLAT.length) return;
+        const entry = FLAT.find(e => e.articulo.numero === artNum);
+        if (!entry) return;
+        arr.push({ num: artNum, epig: entry.articulo.epigrafe || '' });
+      } else { arr.splice(idx, 1); }
+      saveMarcadores(arr);
+      updateMarcadorBtn(artNum);
+    }
+    function updateMarcadorBtn(artNum) {
+      const footers = readerGroup.querySelectorAll('.article-footer');
+      footers.forEach(footer => {
+        const card = footer.closest('[data-art-num]');
+        if (!card) return;
+        const num = parseInt(card.dataset.artNum, 10);
+        if (num !== artNum) return;
+        const btn = footer.querySelector('.btn-marcar');
+        if (btn) btn.textContent = isMarked(artNum) ? '🔖 Guardado' : '🔖 Marcar';
+      });
+    }
+    function renderMarcadoresPanel() {
+      const arr = getMarcadores();
+      marcadoresList.innerHTML = '';
+      if (!arr.length) { marcadoresList.innerHTML = '<div class="marcadores-empty">Aún no guardaste ningún artículo.<br><small>Usá el botón 🔖 Marcar al pie de cada artículo.</small></div>'; return; }
+      arr.forEach(m => {
+        const item = document.createElement('div'); item.className = 'marcador-item';
+        const info = document.createElement('div'); info.className = 'marcador-info';
+        info.innerHTML = `<div class="marcador-num">Art. ${m.num}</div><div class="marcador-epig">${m.epig || '(sin epígrafe)'}</div>`;
+        info.addEventListener('click', () => {
+          const found = FLAT.findIndex(e => e.articulo.numero === m.num);
+          if (found !== -1) { showArticleByIdx(found); marcadoresOverlay.classList.remove('open'); }
+        });
+        const del = document.createElement('button'); del.className = 'marcador-del'; del.title = 'Quitar marcador'; del.textContent = '✕';
+        del.addEventListener('click', e => { e.stopPropagation(); toggleMarcador(m.num); renderMarcadoresPanel(); });
+        item.appendChild(info); item.appendChild(del);
+        marcadoresList.appendChild(item);
+      });
+    }
+    btnMarcadores.addEventListener('click', () => { renderMarcadoresPanel(); marcadoresOverlay.classList.add('open'); });
+
+    // ═══════════════════════════════════════
+    // RESALTADOR
+    // ═══════════════════════════════════════
+    function resaltadoresKey() { return 'resaltados_' + (DATA && DATA.ley ? DATA.ley : window.location.pathname); }
+    function getResaltados() { try { return JSON.parse(localStorage.getItem(resaltadoresKey()) || '{}'); } catch(e) { return {}; } }
+    function saveResaltados(obj) { try { localStorage.setItem(resaltadoresKey(), JSON.stringify(obj)); } catch(e) {} }
+    function applyResaltados(artNum, bodyEl) {
+      const all = getResaltados();
+      const textos = all[artNum] || [];
+      if (!textos.length) return;
+      textos.forEach(txt => {
+        bodyEl.querySelectorAll('p').forEach(p => {
+          if (!p.textContent.includes(txt)) return;
+          const re = new RegExp(txt.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'), 'g');
+          p.innerHTML = p.innerHTML.replace(re, `<mark class="text-highlight" data-hl="${encodeURIComponent(txt)}">${txt}</mark>`);
+        });
+      });
+      // click en resaltado para quitarlo
+      bodyEl.querySelectorAll('.text-highlight').forEach(el => {
+        el.addEventListener('click', e => {
+          e.stopPropagation();
+          const t = decodeURIComponent(el.dataset.hl);
+          const all2 = getResaltados();
+          if (all2[artNum]) { all2[artNum] = all2[artNum].filter(x => x !== t); if (!all2[artNum].length) delete all2[artNum]; }
+          saveResaltados(all2);
+          reRenderBody(artNum);
+        });
+      });
+    }
+    function reRenderBody(artNum) {
+      const card = readerGroup.querySelector(`[data-art-num="${artNum}"]`);
+      if (!card) return;
+      const entry = FLAT.find(e => e.articulo.numero === artNum);
+      if (!entry) return;
+      const bodyEl = card.querySelector('.article-body');
+      if (!bodyEl) return;
+      const textos = entry.articulo.texto || [];
+      bodyEl.innerHTML = textos.length ? textos.map(p => `<p>${p}</p>`).join('') : `<div class="article-empty"><div class="article-empty-icon">📄</div><p>El texto de este artículo aún no ha sido cargado en el JSON.</p></div>`;
+      applyResaltados(artNum, bodyEl);
+    }
+    btnResaltador.addEventListener('click', () => {
+      resaltadorActivo = !resaltadorActivo;
+      btnResaltador.classList.toggle('active-tool', resaltadorActivo);
+      btnResaltador.textContent = resaltadorActivo ? '🖊️ Resaltando…' : '🖊️ Resaltador';
+      document.body.style.cursor = resaltadorActivo ? 'text' : '';
+    });
+    document.addEventListener('mouseup', () => {
+      if (!resaltadorActivo) return;
+      const sel = window.getSelection();
+      if (!sel || sel.isCollapsed) return;
+      const txt = sel.toString().trim();
+      if (!txt || txt.length < 2) return;
+      // determinar artículo activo
+      const artNum = FLAT.length ? FLAT[currentIdx].articulo.numero : null;
+      if (!artNum) return;
+      const all = getResaltados();
+      if (!all[artNum]) all[artNum] = [];
+      if (!all[artNum].includes(txt)) all[artNum].push(txt);
+      saveResaltados(all);
+      sel.removeAllRanges();
+      reRenderBody(artNum);
+    });
+
+    // ═══════════════════════════════════════
+    // META
+    // ═══════════════════════════════════════
     function codeFullTitle() { return DATA && DATA.codigo ? DATA.codigo + (DATA.pais ? ` del ${DATA.pais}` : ' del Paraguay') : 'Código — JurisParaguay'; }
     function codeSubtitle()  { return DATA && DATA.ley ? `Ley N° ${DATA.ley} · República del ${DATA.pais || 'Paraguay'}` : 'República del Paraguay'; }
     function applyMeta() {
@@ -373,7 +534,12 @@
       card.className='reader-card '+(isPrimary?'card-primary':'card-secondary');
       card.dataset.artNum=articulo.numero;
       const bodyHtml=textos.length?textos.map(p=>`<p>${p}</p>`).join(''):`<div class="article-empty"><div class="article-empty-icon">📄</div><p>El texto de este artículo aún no ha sido cargado en el JSON.</p></div>`;
-      card.innerHTML=`${isPrimary?`<div class="print-header"><img class="print-logo" src="../../logo.png" alt="JurisParaguay" onerror="this.style.display='none'"/><div class="print-org"><strong>${codeFullTitle()}</strong><br>${codeSubtitle()}<br>Fuente: CSJ – IIJ · JurisParaguay 2026</div></div>`:''}<header class="article-header"><div class="article-number">Artículo ${articulo.numero}</div><h2 class="article-title">${articulo.epigrafe||`Artículo ${articulo.numero}`}</h2><p class="article-subtitle">${titulo.nombre} · Capítulo ${capitulo.numero} — ${capitulo.nombre}</p></header><div class="article-body">${bodyHtml}</div><footer class="article-footer"><div>Fuente: CSJ – IIJ · JurisParaguay 2026</div></footer>`;
+      const marcarLabel = isMarked(articulo.numero) ? '🔖 Guardado' : '🔖 Marcar';
+      card.innerHTML=`${isPrimary?`<div class="print-header"><img class="print-logo" src="../../logo.png" alt="JurisParaguay" onerror="this.style.display='none'"/><div class="print-org"><strong>${codeFullTitle()}</strong><br>${codeSubtitle()}<br>Fuente: CSJ – IIJ · JurisParaguay 2026</div></div>`:''}<header class="article-header"><div class="article-number">Artículo ${articulo.numero}</div><h2 class="article-title">${articulo.epigrafe||`Artículo ${articulo.numero}`}</h2><p class="article-subtitle">${titulo.nombre} · Capítulo ${capitulo.numero} — ${capitulo.nombre}</p></header><div class="article-body">${bodyHtml}</div><footer class="article-footer"><div>Fuente: CSJ – IIJ · JurisParaguay 2026</div><button class="header-btn btn-marcar" type="button" style="font-size:11px;padding:4px 10px;">${marcarLabel}</button></footer>`;
+      // bind marcar button
+      card.querySelector('.btn-marcar').addEventListener('click', () => { toggleMarcador(articulo.numero); });
+      // apply saved highlights
+      applyResaltados(articulo.numero, card.querySelector('.article-body'));
       return card;
     }
     function renderCards(startIdx) { readerGroup.innerHTML=''; for(let i=0;i<CARDS_PER_PAGE;i++){ const idx=startIdx+i; if(idx>=FLAT.length) break; readerGroup.appendChild(buildCard(FLAT[idx],i===0)); } btnPrev.disabled=startIdx===0; btnNext.disabled=startIdx+CARDS_PER_PAGE>=FLAT.length; }
@@ -433,7 +599,6 @@
       try {
         const res=await fetch(jsonUrl,{cache:'no-store'}); if(!res.ok) throw new Error('HTTP '+res.status);
         DATA=await res.json(); if(!DATA||typeof DATA!=='object') throw new Error('JSON inválido.');
-        // Inyectar metadatos si el JSON no los tiene (ej: codigo_ninez_completo.json)
         if (!DATA.codigo) DATA.codigo = 'Código de la Niñez y la Adolescencia';
         if (!DATA.ley)    DATA.ley    = '1680/01';
         if (!DATA.pais)   DATA.pais   = 'Paraguay';
