@@ -76,6 +76,17 @@
     .header-btn.active-tool { background: var(--accent-gold); border-color: #a07c10; color: #1a2d45; font-weight: 600; }
     .header-btn.pwa-btn { display: none; }
     .header-btn.pwa-btn.visible { display: inline-block; }
+    /* ── Menú de copiar texto ── */
+    .copy-menu-wrap { position: relative; }
+    .copy-menu { display: none; position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-panel); border: 1px solid var(--border-soft); border-radius: 10px; box-shadow: var(--shadow-md); min-width: 230px; max-width: 300px; z-index: 60; padding: 6px; }
+    .copy-menu.open { display: block; }
+    .copy-menu-item { width: 100%; text-align: left; padding: 8px 10px; border-radius: 8px; border: none; background: transparent; cursor: pointer; display: flex; flex-direction: column; gap: 2px; }
+    .copy-menu-item:hover, .copy-menu-item:focus-visible { background: var(--accent-gold-soft); outline: none; }
+    .copy-menu-item-num { font-weight: 700; color: var(--accent-blue); font-size: 11px; }
+    .copy-menu-item-epig { font-size: 11px; color: var(--text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .copy-menu-empty { font-size: 11px; color: var(--text-muted); padding: 10px; text-align: center; }
+    .reader-card.card-copy-flash { animation: copyFlash 1.4s ease; }
+    @keyframes copyFlash { 0% { box-shadow: 0 0 0 3px rgba(201,162,39,0.85), var(--shadow-md); } 100% { box-shadow: var(--shadow-md); } }
     /* ── Marcadores overlay ── */
     .marcadores-overlay { display: none; position: fixed; inset: 0; z-index: 200; background: rgba(15,23,42,0.45); backdrop-filter: blur(2px); align-items: flex-start; justify-content: flex-end; }
     .marcadores-overlay.open { display: flex; }
@@ -245,7 +256,10 @@
       <button class="header-btn" id="btnTags" type="button">🏷️ Tags</button>
       <button class="header-btn" id="btnPDF" type="button">📄 PDF</button>
       <button class="header-btn pwa-btn" id="btnInstall" type="button">📱 Instalar</button>
-      <button class="header-btn" id="btnCopyText" type="button">Copiar texto</button>
+      <div class="copy-menu-wrap">
+        <button class="header-btn" id="btnCopyText" type="button" aria-haspopup="true" aria-expanded="false">Copiar texto ▾</button>
+        <div class="copy-menu" id="copyMenu" role="menu"></div>
+      </div>
     </div>
   </header>
 
@@ -319,6 +333,7 @@
     const breadcrumbArticulo = document.getElementById('breadcrumbArticulo');
     const readerGroup        = document.getElementById('readerGroup');
     const btnCopyText        = document.getElementById('btnCopyText');
+    const copyMenu           = document.getElementById('copyMenu');
     const btnTags            = document.getElementById('btnTags');
     const btnPDF             = document.getElementById('btnPDF');
     const btnInstall         = document.getElementById('btnInstall');
@@ -419,14 +434,27 @@
     function saveResaltados(obj) { try { localStorage.setItem(resaltadoresKey(), JSON.stringify(obj)); } catch(e) {} }
     function applyResaltados(artNum, bodyEl) {
       const all = getResaltados();
-      const textos = all[artNum] || [];
-      if (!textos.length) return;
-      textos.forEach(txt => {
-        bodyEl.querySelectorAll('p').forEach(p => {
-          if (!p.textContent.includes(txt)) return;
-          const re = new RegExp(txt.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'), 'g');
-          p.innerHTML = p.innerHTML.replace(re, `<mark class="text-highlight" data-hl="${encodeURIComponent(txt)}">${txt}</mark>`);
-        });
+      const items = all[artNum] || [];
+      if (!items.length) return;
+      const paragraphs = Array.from(bodyEl.querySelectorAll('p'));
+      items.forEach(item => {
+        // compatibilidad con formato antiguo (string suelto sin índice de párrafo)
+        const isLegacy = typeof item === 'string';
+        const txt = isLegacy ? item : item.text;
+        if (!txt) return;
+        const re = new RegExp(txt.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'), 'g');
+        if (!isLegacy && paragraphs[item.pIndex]) {
+          const p = paragraphs[item.pIndex];
+          if (p.textContent.includes(txt)) {
+            p.innerHTML = p.innerHTML.replace(re, `<mark class="text-highlight" data-hl="${encodeURIComponent(txt)}">${txt}</mark>`);
+          }
+        } else {
+          // legacy: buscar en todos los párrafos
+          paragraphs.forEach(p => {
+            if (!p.textContent.includes(txt)) return;
+            p.innerHTML = p.innerHTML.replace(re, `<mark class="text-highlight" data-hl="${encodeURIComponent(txt)}">${txt}</mark>`);
+          });
+        }
       });
       // click en resaltado para quitarlo
       bodyEl.querySelectorAll('.text-highlight').forEach(el => {
@@ -434,7 +462,10 @@
           e.stopPropagation();
           const t = decodeURIComponent(el.dataset.hl);
           const all2 = getResaltados();
-          if (all2[artNum]) { all2[artNum] = all2[artNum].filter(x => x !== t); if (!all2[artNum].length) delete all2[artNum]; }
+          if (all2[artNum]) {
+            all2[artNum] = all2[artNum].filter(x => (typeof x === 'string' ? x !== t : x.text !== t));
+            if (!all2[artNum].length) delete all2[artNum];
+          }
           saveResaltados(all2);
           reRenderBody(artNum);
         });
@@ -460,17 +491,36 @@
     document.addEventListener('mouseup', () => {
       if (!resaltadorActivo) return;
       const sel = window.getSelection();
-      if (!sel || sel.isCollapsed) return;
-      const txt = sel.toString().trim();
-      if (!txt || txt.length < 2) return;
-      // determinar artículo activo
-      const artNum = FLAT.length ? FLAT[currentIdx].articulo.numero : null;
-      if (!artNum) return;
+      if (!sel || sel.isCollapsed || sel.rangeCount === 0) return;
+      const range = sel.getRangeAt(0);
+      // determinar en qué tarjeta (artículo) se hizo la selección, sin asumir que es la activa
+      const startEl = range.startContainer.nodeType === 1 ? range.startContainer : range.startContainer.parentElement;
+      const card = startEl ? startEl.closest('[data-art-num]') : null;
+      if (!card) { sel.removeAllRanges(); return; }
+      const artNum = parseInt(card.dataset.artNum, 10);
+      const bodyEl = card.querySelector('.article-body');
+      if (!bodyEl) { sel.removeAllRanges(); return; }
+      const paragraphs = Array.from(bodyEl.querySelectorAll('p'));
+      const nuevos = [];
+      paragraphs.forEach((p, pIndex) => {
+        if (!range.intersectsNode(p)) return;
+        // recortar la selección a lo que corresponde a este párrafo puntual
+        const pRange = document.createRange();
+        pRange.selectNodeContents(p);
+        if (range.compareBoundaryPoints(Range.START_TO_START, pRange) > 0) pRange.setStart(range.startContainer, range.startOffset);
+        if (range.compareBoundaryPoints(Range.END_TO_END, pRange) < 0) pRange.setEnd(range.endContainer, range.endOffset);
+        const txt = pRange.toString().trim();
+        if (txt && txt.length >= 2) nuevos.push({ pIndex, text: txt });
+      });
+      sel.removeAllRanges();
+      if (!nuevos.length) return;
       const all = getResaltados();
       if (!all[artNum]) all[artNum] = [];
-      if (!all[artNum].includes(txt)) all[artNum].push(txt);
+      nuevos.forEach(n => {
+        const yaExiste = all[artNum].some(x => typeof x !== 'string' && x.pIndex === n.pIndex && x.text === n.text);
+        if (!yaExiste) all[artNum].push(n);
+      });
       saveResaltados(all);
-      sel.removeAllRanges();
       reRenderBody(artNum);
     });
 
@@ -542,7 +592,7 @@
       applyResaltados(articulo.numero, card.querySelector('.article-body'));
       return card;
     }
-    function renderCards(startIdx) { readerGroup.innerHTML=''; for(let i=0;i<CARDS_PER_PAGE;i++){ const idx=startIdx+i; if(idx>=FLAT.length) break; readerGroup.appendChild(buildCard(FLAT[idx],i===0)); } btnPrev.disabled=startIdx===0; btnNext.disabled=startIdx+CARDS_PER_PAGE>=FLAT.length; }
+    function renderCards(startIdx) { closeCopyMenu(); readerGroup.innerHTML=''; for(let i=0;i<CARDS_PER_PAGE;i++){ const idx=startIdx+i; if(idx>=FLAT.length) break; readerGroup.appendChild(buildCard(FLAT[idx],i===0)); } btnPrev.disabled=startIdx===0; btnNext.disabled=startIdx+CARDS_PER_PAGE>=FLAT.length; }
     function renderSidebar() {
       sidebarTree.innerHTML='';
       const GRUPO=3, libros=new Map();
@@ -628,7 +678,47 @@
       renderCards(idx); if(!fromPlayer) syncActiveGroupBtn(idx);
     }
     window.addEventListener('hashchange',()=>{ const hashNum=getHashArtNum(); if(hashNum!==null&&FLAT.length){ const found=FLAT.findIndex(e=>e.articulo.numero===hashNum); if(found!==-1&&found!==currentIdx) showArticleByIdx(found); } });
-    btnCopyText.addEventListener('click',()=>{ if(!FLAT.length) return; const {articulo}=FLAT[currentIdx]; const txt=[`Artículo ${articulo.numero}${articulo.epigrafe?' — '+articulo.epigrafe:''}`,'',...(articulo.texto||['(texto no disponible)'])].join('\n'); navigator.clipboard.writeText(txt).then(()=>{ btnCopyText.textContent='✅ Copiado'; setTimeout(()=>{btnCopyText.textContent='Copiar texto';},2000); }).catch(()=>alert('No se pudo copiar.')); });
+    function closeCopyMenu() { copyMenu.classList.remove('open'); btnCopyText.setAttribute('aria-expanded','false'); }
+    function openCopyMenu() {
+      copyMenu.innerHTML = '';
+      const cards = Array.from(readerGroup.querySelectorAll('[data-art-num]'));
+      if (!cards.length) { copyMenu.innerHTML = '<div class="copy-menu-empty">No hay artículos cargados.</div>'; }
+      else {
+        cards.forEach(card => {
+          const artNum = parseInt(card.dataset.artNum, 10);
+          const entry = FLAT.find(e => e.articulo.numero === artNum);
+          if (!entry) return;
+          const { articulo } = entry;
+          const item = document.createElement('button');
+          item.type = 'button'; item.className = 'copy-menu-item'; item.setAttribute('role','menuitem');
+          item.innerHTML = `<span class="copy-menu-item-num">Art. ${articulo.numero}</span><span class="copy-menu-item-epig">${articulo.epigrafe || '(sin epígrafe)'}</span>`;
+          item.addEventListener('click', () => {
+            const txt = [`Artículo ${articulo.numero}${articulo.epigrafe ? ' — ' + articulo.epigrafe : ''}`, '', ...(articulo.texto || ['(texto no disponible)'])].join('\n');
+            navigator.clipboard.writeText(txt).then(() => {
+              btnCopyText.textContent = '✅ Copiado';
+              setTimeout(() => { btnCopyText.textContent = 'Copiar texto ▾'; }, 2000);
+            }).catch(() => alert('No se pudo copiar.'));
+            // destacar visualmente la tarjeta copiada
+            readerGroup.querySelectorAll('.reader-card').forEach(c => c.classList.remove('card-copy-flash'));
+            void card.offsetWidth; // reinicia la animación si se repite
+            card.classList.add('card-copy-flash');
+            card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            setTimeout(() => card.classList.remove('card-copy-flash'), 1500);
+            closeCopyMenu();
+          });
+          copyMenu.appendChild(item);
+        });
+      }
+      copyMenu.classList.add('open');
+      btnCopyText.setAttribute('aria-expanded','true');
+    }
+    btnCopyText.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (!FLAT.length) return;
+      if (copyMenu.classList.contains('open')) closeCopyMenu(); else openCopyMenu();
+    });
+    document.addEventListener('click', (e) => { if (!copyMenu.contains(e.target) && e.target !== btnCopyText) closeCopyMenu(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeCopyMenu(); });
     let searchDebounce=null;
     searchInput.addEventListener('input',()=>{ const q=searchInput.value.trim(); searchClear.classList.toggle('visible',q.length>0); clearTimeout(searchDebounce); searchDebounce=setTimeout(()=>runSearch(q),200); });
     searchClear.addEventListener('click',()=>{ searchInput.value=''; searchClear.classList.remove('visible'); hideSearchResults(); searchInput.focus(); });
