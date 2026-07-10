@@ -1,0 +1,77 @@
+name: Actualizar Leyes desde API SILpy
+
+on:
+  schedule:
+    - cron: '0 6 * * *'   # Cada día a las 06:00 UTC (03:00 PY)
+  workflow_dispatch:        # Ejecución manual desde GitHub Actions
+
+jobs:
+  fetch-leyes:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repositorio
+        uses: actions/checkout@v4
+
+      - name: Crear directorio data/
+        run: mkdir -p data
+
+      - name: Descargar leyes 2023
+        run: |
+          curl -sf "https://datos.congreso.gov.py/opendata/api/data/ley/2023" \
+            -o data/leyes_2023.json || echo '[]' > data/leyes_2023.json
+
+      - name: Descargar leyes 2024
+        run: |
+          curl -sf "https://datos.congreso.gov.py/opendata/api/data/ley/2024" \
+            -o data/leyes_2024.json || echo '[]' > data/leyes_2024.json
+
+      - name: Descargar leyes 2025
+        run: |
+          curl -sf "https://datos.congreso.gov.py/opendata/api/data/ley/2025" \
+            -o data/leyes_2025.json || echo '[]' > data/leyes_2025.json
+
+      - name: Descargar leyes 2026
+        run: |
+          curl -sf "https://datos.congreso.gov.py/opendata/api/data/ley/2026" \
+            -o data/leyes_2026.json || echo '[]' > data/leyes_2026.json
+
+      - name: Combinar todos los años en leyes.json
+        run: |
+          python3 - <<'EOF'
+          import json, os, glob
+
+          todos = []
+          for f in sorted(glob.glob('data/leyes_*.json')):
+              with open(f) as fp:
+                  try:
+                      data = json.load(fp)
+                      if isinstance(data, list):
+                          todos.extend(data)
+                  except:
+                      pass
+
+          # Ordenar por numeroLey descendente (más recientes primero)
+          def sort_key(x):
+              try:
+                  return int(x.get('numeroLey', 0))
+              except:
+                  return 0
+
+          todos.sort(key=sort_key, reverse=True)
+
+          with open('data/leyes.json', 'w', encoding='utf-8') as out:
+              json.dump(todos, out, ensure_ascii=False, indent=2)
+
+          print(f'Total leyes combinadas: {len(todos)}')
+          EOF
+
+      - name: Commit y push si hay cambios
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/
+          git diff --staged --quiet || git commit -m "chore: actualizar leyes desde API SILpy [$(date '+%Y-%m-%d')]"
+          git push

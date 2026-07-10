@@ -1,0 +1,232 @@
+/* ─── Sección Leyes del Congreso ─────────────────────────────────────────── */
+
+#seccion-leyes {
+  padding: 3rem 0 4rem;
+}
+
+.leyes__titulo {
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  color: var(--clr-primary, #1a3a5c);
+  margin-bottom: .3rem;
+  font-weight: 700;
+}
+
+.leyes__subtitulo {
+  font-size: .95rem;
+  color: #666;
+  margin-bottom: 1.8rem;
+}
+
+.leyes__subtitulo a {
+  color: var(--clr-primary, #1a3a5c);
+  text-decoration: underline dotted;
+}
+
+/* Barra de filtros */
+.leyes-filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+  align-items: center;
+  margin-bottom: 1.4rem;
+  background: #f4f6fa;
+  border: 1px solid #dce3ef;
+  border-radius: 10px;
+  padding: .9rem 1.1rem;
+}
+
+.leyes-filtros input[type="search"],
+.leyes-filtros select {
+  padding: .5rem .8rem;
+  border: 1px solid #c5cfe0;
+  border-radius: 6px;
+  font-size: .93rem;
+  background: #fff;
+  color: #222;
+  flex: 1;
+  min-width: 160px;
+}
+
+.leyes-filtros button {
+  padding: .5rem 1.1rem;
+  background: var(--clr-primary, #1a3a5c);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: .93rem;
+  cursor: pointer;
+  transition: background .18s;
+}
+
+.leyes-filtros button:hover {
+  background: var(--clr-primary-light, #2a5298);
+}
+
+.leyes-contador {
+  font-size: .88rem;
+  color: #888;
+  margin-bottom: 1rem;
+}
+
+/* Grid de tarjetas */
+.leyes-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.2rem;
+}
+
+/* Tarjeta individual */
+.ley-card {
+  background: #fff;
+  border: 1px solid #dce3ef;
+  border-radius: 12px;
+  padding: 1.2rem 1.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: .7rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,.05);
+  transition: box-shadow .2s, transform .2s;
+}
+
+.ley-card:hover {
+  box-shadow: 0 6px 20px rgba(26,58,92,.13);
+  transform: translateY(-2px);
+}
+
+.ley-card__header {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  flex-wrap: wrap;
+}
+
+.ley-card__numero {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--clr-primary, #1a3a5c);
+}
+
+.ley-badge {
+  font-size: .72rem;
+  padding: .15rem .55rem;
+  border-radius: 20px;
+  font-weight: 600;
+  background: #e8f0fe;
+  color: #2a5298;
+}
+
+.ley-badge--auto {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.ley-card__titulo {
+  font-size: .95rem;
+  font-weight: 600;
+  color: #222;
+  line-height: 1.45;
+  margin: 0;
+  /* Limitar a 3 líneas */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.ley-card__meta {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: .83rem;
+  color: #555;
+  display: flex;
+  flex-direction: column;
+  gap: .2rem;
+}
+
+.ley-card__meta span {
+  font-weight: 600;
+  color: #444;
+}
+
+.ley-card__actions {
+  display: flex;
+  gap: .6rem;
+  flex-wrap: wrap;
+  margin-top: auto;
+  padding-top: .4rem;
+}
+
+.ley-btn {
+  padding: .4rem .9rem;
+  border-radius: 6px;
+  font-size: .83rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background .18s, color .18s;
+  cursor: pointer;
+}
+
+.ley-btn--primary {
+  background: var(--clr-primary, #1a3a5c);
+  color: #fff;
+}
+
+.ley-btn--primary:hover {
+  background: var(--clr-primary-light, #2a5298);
+}
+
+.ley-btn--secondary {
+  background: #f0f4fb;
+  color: var(--clr-primary, #1a3a5c);
+  border: 1px solid #c5cfe0;
+}
+
+.ley-btn--secondary:hover {
+  background: #dce3ef;
+}
+
+/* Paginación */
+.leyes-pag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  font-size: .93rem;
+}
+
+.leyes-pag button {
+  padding: .45rem 1.1rem;
+  background: var(--clr-primary, #1a3a5c);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: .9rem;
+  transition: background .18s;
+}
+
+.leyes-pag button:hover {
+  background: var(--clr-primary-light, #2a5298);
+}
+
+.leyes-pag span { color: #555; }
+
+.leyes-estado, .leyes-vacio {
+  text-align: center;
+  color: #888;
+  padding: 2rem;
+  font-size: .95rem;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .leyes-filtros {
+    flex-direction: column;
+  }
+  .leyes-filtros input,
+  .leyes-filtros select {
+    min-width: 100%;
+  }
+}
