@@ -1,0 +1,1414 @@
+{
+  "id": "ley-1-92",
+  "nombre": "Ley N° 1/92 – De la Reforma Parcial del Código Civil",
+  "ley": "Ley N° 1/92",
+  "vigente": true,
+  "promulgacion": "15/07/1992",
+  "capitulos": [
+    {
+      "numero": "Preliminar",
+      "titulo": "Parte Preliminar",
+      "articulos": [
+        {
+          "numero": "1",
+          "epigrafe": "Igualdad de capacidad civil",
+          "texto": [
+            "La mujer y el varón tienen igual capacidad de goce y de ejercicio de los derechos civiles, cualquiera sea su estado civil."
+          ],
+          "palabrasClave": [
+            "igualdad",
+            "capacidad de goce",
+            "capacidad de ejercicio",
+            "derechos civiles",
+            "mujer",
+            "varón",
+            "estado civil"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "I",
+      "titulo": "De los Derechos Personales en las Relaciones de Familia del Matrimonio – Disposiciones Generales",
+      "articulos": [
+        {
+          "numero": "2",
+          "epigrafe": "Principios fundamentales de la familia",
+          "texto": [
+            "La unidad de la familia, el bienestar y protección de los hijos menores y la igualdad de los cónyuges son principios fundamentales para la aplicación e interpretación de la presente ley. Dichos principios son de orden público y no podrán ser modificados por convenciones particulares, excepto cuando la ley lo autorice expresamente."
+          ],
+          "palabrasClave": [
+            "unidad de la familia",
+            "bienestar de los hijos",
+            "protección de los hijos menores",
+            "igualdad de los cónyuges",
+            "orden público"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "II",
+      "titulo": "Esponsales",
+      "articulos": [
+        {
+          "numero": "3",
+          "epigrafe": "Promesa de matrimonio",
+          "texto": [
+            "La promesa recíproca de futuro matrimonio no produce obligación legal de contraerlo. Tampoco obliga a cumplir la prestación que hubiere sido estipulada para el caso de inejecución de dicha promesa."
+          ],
+          "palabrasClave": [
+            "promesa de matrimonio",
+            "esponsales",
+            "no obligación legal"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "III",
+      "titulo": "Matrimonio",
+      "articulos": [
+        {
+          "numero": "4",
+          "epigrafe": "Definición de matrimonio",
+          "texto": [
+            "El matrimonio es la unión voluntariamente concertada entre un varón y una mujer legalmente aptos para ello, formalizada conforme a la ley, con el objeto de hacer vida en común."
+          ],
+          "palabrasClave": [
+            "matrimonio",
+            "unión voluntaria",
+            "varón",
+            "mujer",
+            "vida en común"
+          ]
+        },
+        {
+          "numero": "5",
+          "epigrafe": "Consentimiento matrimonial",
+          "texto": [
+            "No habrá matrimonio sin consentimiento libremente expresado. La condición, modo o término del consentimiento se tendrán por no puestos."
+          ],
+          "palabrasClave": [
+            "consentimiento matrimonial",
+            "libre expresión",
+            "condición",
+            "modo",
+            "término"
+          ]
+        },
+        {
+          "numero": "6",
+          "epigrafe": "Deberes y derechos iguales de los cónyuges",
+          "texto": [
+            "El marido y la mujer tienen en el hogar deberes, derechos y responsabilidades iguales, independientemente de su aporte económico al sostenimiento del hogar común. Se deben recíprocamente respeto, consideración, fidelidad y asistencia."
+          ],
+          "palabrasClave": [
+            "deberes iguales",
+            "derechos iguales",
+            "responsabilidades iguales",
+            "respeto",
+            "consideración",
+            "fidelidad",
+            "asistencia"
+          ]
+        },
+        {
+          "numero": "7",
+          "epigrafe": "Libertad de trabajo de los cónyuges",
+          "texto": [
+            "Cada cónyuge puede ejercer cualquier profesión o industria lícitas y efectuar trabajos fuera de la casa o constituir sociedades para fines lícitos."
+          ],
+          "palabrasClave": [
+            "profesión",
+            "industria lícita",
+            "trabajo fuera de la casa",
+            "sociedades"
+          ]
+        },
+        {
+          "numero": "8",
+          "epigrafe": "Contribución económica al hogar",
+          "texto": [
+            "Los cónyuges contribuirán económicamente al sostenimiento del hogar y a solventar las necesidades de alimentación y educación de los hijos comunes, y de las uniones anteriores que viviesen con ellos. Esta contribución será proporcional a sus respectivos ingresos, beneficios o rentas. Si uno de ellos se encontrase imposibilitado de trabajar y careciese de rentas propias, el otro deberá hacerse cargo de todos los gastos expresados."
+          ],
+          "palabrasClave": [
+            "contribución económica",
+            "sostenimiento del hogar",
+            "alimentación",
+            "educación de los hijos",
+            "proporcionalidad",
+            "ingresos"
+          ]
+        },
+        {
+          "numero": "9",
+          "epigrafe": "Atención y cuidado del hogar",
+          "texto": [
+            "La atención y cuidado del hogar constituye una función socialmente útil y de responsabilidad común de ambos cónyuges.",
+            "Cuando uno de ellos se dedique con exclusividad a la misma, la obligación de sostener económicamente a la familia recaerá sobre el otro sin perjuicio de la igualdad de sus derechos, y de la colaboración que mutuamente se deben."
+          ],
+          "palabrasClave": [
+            "atención del hogar",
+            "cuidado del hogar",
+            "función social",
+            "responsabilidad común"
+          ]
+        },
+        {
+          "numero": "10",
+          "epigrafe": "Uso del apellido del cónyuge",
+          "texto": [
+            "La mujer casada podrá usar el apellido de su marido a continuación del suyo, pero no implica el cambio de nombre de ella, que es el que consta en la respectiva partida de Registro Civil. La viuda podrá continuar el uso del apellido marital mientras no contraiga nupcias o unión de hecho.",
+            "En caso de disolución, nulidad o separación judicial personal de matrimonio cesará dicho uso.",
+            "El marido tendrá la misma opción de adicionar el apellido de la esposa al suyo propio."
+          ],
+          "palabrasClave": [
+            "apellido marital",
+            "nombre",
+            "registro civil",
+            "viuda",
+            "separación judicial"
+          ]
+        },
+        {
+          "numero": "11",
+          "epigrafe": "No uso del apellido marital",
+          "texto": [
+            "En ningún caso el no uso por parte de la esposa del apellido marital podrá ser considerado como ofensivo por el marido."
+          ],
+          "palabrasClave": [
+            "no uso del apellido marital",
+            "ofensivo"
+          ]
+        },
+        {
+          "numero": "12",
+          "epigrafe": "Apellidos de los hijos matrimoniales",
+          "texto": [
+            "Los hijos matrimoniales llevarán el primer apellido de cada progenitor, y el orden de dichos apellidos será decidido de común acuerdo por los padres. Adoptado un orden para el primer hijo, el mismo será mantenido para todos los demás.",
+            "El reconocido sólo por uno de los progenitores llevará los dos apellidos del que le reconoció. Si ésta a su vez llevase uno solo, podrá duplicar dicho apellido.",
+            "Los hijos, al llegar a la mayoría de edad y hasta los veintiún años, con intervención judicial y por justa causa, tendrán opción por una sola vez, para invertir el orden de los apellidos paternos o para usar sólo uno cualquiera de ellos.",
+            "En todos los casos de cambio o adición de apellidos se estará a lo dispuesto por el Artículo 42 del Código Civil."
+          ],
+          "palabrasClave": [
+            "apellidos de los hijos",
+            "primer apellido de cada progenitor",
+            "orden de apellidos",
+            "reconocido por uno solo",
+            "mayoría de edad",
+            "cambio de apellidos"
+          ]
+        },
+        {
+          "numero": "13",
+          "epigrafe": "Planificación familiar",
+          "texto": [
+            "Los cónyuges decidirán libre y responsablemente el número y espaciamiento de sus hijos y tienen derecho a recibir al respecto orientación científica en instituciones estatales."
+          ],
+          "palabrasClave": [
+            "planificación familiar",
+            "número de hijos",
+            "espaciamiento de hijos",
+            "orientación científica"
+          ]
+        },
+        {
+          "numero": "14",
+          "epigrafe": "Domicilio conyugal",
+          "texto": [
+            "Se considera domicilio conyugal el lugar en que por acuerdo entre los cónyuges éstos hacen vida en común, y en el cual ambos gozan de autoridad propia y consideraciones iguales."
+          ],
+          "palabrasClave": [
+            "domicilio conyugal",
+            "vida en común",
+            "autoridad propia",
+            "consideraciones iguales"
+          ]
+        },
+        {
+          "numero": "15",
+          "epigrafe": "Participación en el gobierno del hogar",
+          "texto": [
+            "Cualquiera sea el régimen patrimonial adoptado, cada cónyuge tiene el deber y el derecho de participar en el gobierno del hogar. A ambos compete igualmente decidir en común las cuestiones referentes a la economía familiar."
+          ],
+          "palabrasClave": [
+            "gobierno del hogar",
+            "economía familiar",
+            "decisión en común"
+          ]
+        },
+        {
+          "numero": "16",
+          "epigrafe": "Asunción de derechos por el otro cónyuge",
+          "texto": [
+            "Si uno de los cónyuges no estuviese en condiciones de ejercer los derechos y funciones anteriormente expresados, los asumirá el otro en las condiciones previstas en esta ley."
+          ],
+          "palabrasClave": [
+            "asunción de derechos",
+            "incapacidad del cónyuge"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "IV",
+      "titulo": "Capacidad para Contraer Matrimonio",
+      "articulos": [
+        {
+          "numero": "17",
+          "epigrafe": "Impedimentos para contraer matrimonio",
+          "texto": [
+            "No pueden contraer matrimonio:",
+            "1) los menores de uno y otro sexo que no hubiere cumplido diez y seis años de edad, excepto dispensa especial para casos excepcionales a partir de la edad de catorce años y a cargo del Juez en lo Tutelar del Menor;",
+            "2) los ligados por vínculo matrimonial subsistente;",
+            "3) los que padezcan de enfermedad crónica contagiosa y transmisible por herencia; excepto matrimonio in extremis o en beneficio de los hijos comunes;",
+            "4) los que padezcan de enfermedad mental crónica que les prive del uso de la razón, aunque fuere en forma transitoria; y",
+            "5) los sordomudos, ciego-sordos y ciego-mudos que no pueden expresar su voluntad de manera indubitable."
+          ],
+          "palabrasClave": [
+            "impedimentos matrimoniales",
+            "edad mínima",
+            "dispensa judicial",
+            "vínculo matrimonial subsistente",
+            "enfermedad contagiosa",
+            "enfermedad mental",
+            "discapacidad"
+          ]
+        },
+        {
+          "numero": "18",
+          "epigrafe": "Prohibiciones de matrimonio entre parientes",
+          "texto": [
+            "No pueden contraer matrimonio entre sí:",
+            "1) los consanguíneos en línea recta matrimonial o extramatrimonial y los colaterales de la misma clase hasta el segundo grado;",
+            "2) los afines en línea recta;",
+            "3) el adoptante y sus descendientes con el adoptado y sus descendientes. El adoptado con el cónyuge del adoptante ni éste con el cónyuge de aquél. Los hijos adoptivos del mismo adoptante entre sí y con los hijos biológicos del adoptante;",
+            "4) el condenado como autor, instigador o cómplice del homicidio doloso, consumado, tentado o frustrado de uno de los cónyuges, respecto del otro cónyuge; y",
+            "5) el raptor con la raptada mientras subsista el rapto o hasta que hayan transcurrido tres meses desde el cese de la retención violenta."
+          ],
+          "palabrasClave": [
+            "prohibiciones matrimoniales",
+            "consanguíneos",
+            "afines",
+            "adopción",
+            "homicidio",
+            "rapto"
+          ]
+        },
+        {
+          "numero": "19",
+          "epigrafe": "Prohibiciones especiales para contraer matrimonio",
+          "texto": [
+            "No se permite el matrimonio.",
+            "1) del tutor o curador con el menor o incapaz hasta que el primero hubiese cesado en sus funciones y fueren aprobadas las cuentas de la tutela; o, en el segundo caso, que el incapaz recupere la capacidad, y asimismo, sean aprobadas las cuentas de la curatela. el que infrinja esta disposición perderá la retribución a que tuviese derecho, sin perjuicio de la responsabilidad que pudiese derivar del mal ejercicio del cargo;",
+            "2) la viuda hasta que no transcurran trescientos días de la muerte de su marido, salvo que antes diera a luz; igual disposición se aplica en caso de nulidad de matrimonio la contraventora perderá como única sanción los bienes que hubiere recibido de su marido a título gratuito; y",
+            "3) el viudo o viuda que no acredite haber hecho inventario judicial, con intervención del Ministerio Pupilar, de los bienes que administre pertenecientes a sus hijos menores; o, en su defecto que preste declaración jurada de que sus hijos no tienen bienes o de que no tiene hijos que estén bajo su patria potestad.",
+            "La infracción a esta norma acarrea la pérdida del usufructo legal sobre los bienes de dichos hijos.",
+            "Esta disposición se aplica a los casos de matrimonios anulados y si se tratare de hijos extramatrimoniales que el padre o la madre tengan bajo su patria potestad."
+          ],
+          "palabrasClave": [
+            "prohibiciones especiales",
+            "tutor",
+            "curador",
+            "viuda",
+            "viudo",
+            "inventario judicial",
+            "usufructo legal"
+          ]
+        },
+        {
+          "numero": "20",
+          "epigrafe": "Consentimiento de los padres para menores",
+          "texto": [
+            "Los menores a partir de los diez y seis años cumplidos y hasta los veinte años necesitan el consentimiento de sus padres o tutor para contraer nupcias. A falta o incapacidad de uno de los padres bastará con el consentimiento del otro. Si ambas fueren incapaces o hubieren perdido la patria potestad decidirá el Juez en lo Tutelar.",
+            "Los hijos extramatrimoniales también menores requieren el consentimiento del padre o madre que le reconoció, o en su caso, de ambos. En defecto de éstos decidirá el Juez."
+          ],
+          "palabrasClave": [
+            "consentimiento paterno",
+            "menores de edad",
+            "patria potestad",
+            "Juez en lo Tutelar"
+          ]
+        },
+        {
+          "numero": "21",
+          "epigrafe": "Efectos del matrimonio sin autorización",
+          "texto": [
+            "Si los menores se casaren sin la necesaria autorización quedarán sometidos al régimen de separación de bienes hasta cumplir la mayoría de edad.",
+            "El Juez fijará la suma que como cuota alimentaria podrá disponer el menor para subvenir a sus necesidades y las del hogar, la que será tomada a sus rentas si las hubiere, en su defecto, del capital.",
+            "Al cumplir la mayoría de edad podrán optar por el régimen de bienes de su preferencia en las condiciones establecidas en el artículo 23 de la presente ley."
+          ],
+          "palabrasClave": [
+            "matrimonio sin autorización",
+            "régimen de separación de bienes",
+            "cuota alimentaria",
+            "mayoría de edad"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "V",
+      "titulo": "Régimen Patrimonial del Matrimonio",
+      "articulos": [
+        {
+          "numero": "22",
+          "epigrafe": "Regímenes patrimoniales reconocidos",
+          "texto": [
+            "Esta ley reconoce regímenes patrimoniales matrimoniales:",
+            "a) la comunidad de gananciales bajo administración conjunta;",
+            "b) el régimen de participación diferida; y",
+            "c) el régimen de separación de bienes."
+          ],
+          "palabrasClave": [
+            "regímenes patrimoniales",
+            "comunidad de gananciales",
+            "participación diferida",
+            "separación de bienes"
+          ]
+        },
+        {
+          "numero": "23",
+          "epigrafe": "Estipulación del régimen patrimonial",
+          "texto": [
+            "El régimen patrimonial del matrimonio podrá ser estipulado por los cónyuges en capitulaciones, que se ajusten a las disposiciones de esta ley."
+          ],
+          "palabrasClave": [
+            "capitulaciones matrimoniales",
+            "estipulación del régimen"
+          ]
+        },
+        {
+          "numero": "24",
+          "epigrafe": "Régimen supletorio",
+          "texto": [
+            "A falta de capitulaciones matrimoniales o si éstas fuesen nulas o anuladas, el régimen patrimonial será el de la comunidad de gananciales bajo administración conjunta."
+          ],
+          "palabrasClave": [
+            "régimen supletorio",
+            "comunidad de gananciales",
+            "administración conjunta"
+          ]
+        },
+        {
+          "numero": "25",
+          "epigrafe": "Información a los contrayentes",
+          "texto": [
+            "El oficial del Registro del Estado Civil informará en cada caso a los futuros contrayentes antes de la celebración del matrimonio, que tienen la opción de elegir el régimen patrimonial que adoptarán, y que en caso de no hacerlos expresamente, el régimen será el de la comunidad de gananciales bajo administración conjunta. En todos los casos en el acta de celebración del matrimonio se consignará si existen o no capitulaciones."
+          ],
+          "palabrasClave": [
+            "información a los contrayentes",
+            "opción de régimen",
+            "acta de matrimonio"
+          ]
+        },
+        {
+          "numero": "26",
+          "epigrafe": "Formalidades de las capitulaciones",
+          "texto": [
+            "Las capitulaciones matrimoniales deberán consignarse en escritura pública y los contrayentes deberán presentar ante el oficial público mencionado copia auténtica de la misma. Dicha circunstancia constará expresamente en el acta de matrimonio respectivo, salvo que efectúen dicha manifestación ante el oficial público, en un acta suscripta por el mismo, los contrayentes y los testigos."
+          ],
+          "palabrasClave": [
+            "capitulaciones",
+            "escritura pública",
+            "copia auténtica",
+            "acta de matrimonio"
+          ]
+        },
+        {
+          "numero": "27",
+          "epigrafe": "Modificaciones de las capitulaciones",
+          "texto": [
+            "Las capitulaciones matrimoniales y sus modificaciones si las hubiere, requieren el consentimiento expreso de ambos contrayentes y para que tengan efecto contra terceros, se requiere su posterior inscripción en la sección respectiva de los Registros Públicos. En caso de modificación, deberá expresarse en la sustituyente la naturaleza y demás circunstancias de la sustituida y dicha modificación deberá homologarse judicialmente."
+          ],
+          "palabrasClave": [
+            "modificación de capitulaciones",
+            "consentimiento expreso",
+            "inscripción",
+            "Registros Públicos",
+            "homologación judicial"
+          ]
+        },
+        {
+          "numero": "28",
+          "epigrafe": "Nulidad de cláusulas capitulares",
+          "texto": [
+            "Son nulas y se tendrán por no escritas las cláusulas de las capitulaciones matrimoniales que afecten el principio de la igualdad entre los esposos en cuanto a la distribución de las utilidades o ganancias y al aporte al pago de las deudas."
+          ],
+          "palabrasClave": [
+            "nulidad de cláusulas",
+            "igualdad entre los esposos",
+            "distribución de utilidades"
+          ]
+        },
+        {
+          "numero": "29",
+          "epigrafe": "Liquidación del régimen",
+          "texto": [
+            "Cuando termine la vigencia del régimen de comunidad de gananciales o del de participación diferida, ya sea por consecuencia de la terminación de la unión matrimonial o del cambio de régimen, deberá procederse a su liquidación."
+          ],
+          "palabrasClave": [
+            "liquidación del régimen",
+            "terminación de la unión",
+            "cambio de régimen"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "VI",
+      "titulo": "Régimen de Comunidad de Gananciales",
+      "articulos": [
+        {
+          "numero": "30",
+          "epigrafe": "Inicio del régimen de comunidad",
+          "texto": [
+            "Si no se hubiere pactado un régimen distinto, este régimen comenzará a partir de la celebración del matrimonio, con la excepción prevista por el artículo 21."
+          ],
+          "palabrasClave": [
+            "inicio de la comunidad",
+            "celebración del matrimonio"
+          ]
+        },
+        {
+          "numero": "31",
+          "epigrafe": "Bienes propios de cada cónyuge",
+          "texto": [
+            "Son bienes propios de cada uno de los cónyuges:",
+            "1) todos los que pertenecen a la mujer o al marido al tiempo de contraer matrimonio;",
+            "2) los que el uno o la otra adquieran durante la unión por herencia, legado, donación u otro título gratuito;",
+            "3) los que adquieran durante la unión a título oneroso si la causa o título de adquisición fuese anterior a la unión;",
+            "4) los adquiridos con dinero propio o en sustitución de un bien propio, siempre que en el momento de la adquisición se haga constar la procedencia del dinero, que la compra es para sí y la cosa a la que sustituye, y el otro cónyuge lo suscriba;",
+            "5) la indemnización por accidentes, o por seguros de enfermedades, daños personales o vida, deduciendo las primas si ellas hubieren sido pagadas con bienes comunes;",
+            "6) los derechos de autor o patentes de invención;",
+            "7) los aumentos materiales que acrecieren un bien propio formando un solo cuerpo con él;",
+            "8) las pensiones, rentas vitalicias y jubilaciones a favor de uno de los cónyuges anteriores al matrimonio;",
+            "9) los efectos personales y recuerdos de familias, ropas, libros e instrumentos de trabajo necesarios para el ejercicio de una profesión;",
+            "10) las indemnizaciones por daños sufridos en un bien propio; y",
+            "11) el aumento del valor de un bien propio por mejoras hechas durante la vigencia de la comunidad y con bienes gananciales, dándose derecho al resarcimiento para el que no fuere titular del bien."
+          ],
+          "palabrasClave": [
+            "bienes propios",
+            "herencia",
+            "legado",
+            "donación",
+            "indemnización",
+            "derechos de autor",
+            "patentes",
+            "pensiones"
+          ]
+        },
+        {
+          "numero": "32",
+          "epigrafe": "Bienes gananciales o comunes",
+          "texto": [
+            "Son bienes gananciales o comunes los obtenidos durante el matrimonio:",
+            "1) por la industria, trabajo, comercio, oficio, o profesión de cualquiera de los cónyuges;",
+            "2) los obtenidos a título oneroso a costa del caudal común, tanto si se hace la adquisición a nombre de ambos cónyuges como de uno solo de ellos;",
+            "3) los frutos naturales y civiles devengados durante la unión y que proceden de los bienes comunes así como de los propios de cada cónyuge;",
+            "4) las empresas y establecimientos fundados durante la vigencia de la comunidad y a costa de los bienes comunes, aunque fueren a nombre de uno solo de los esposos. Si para la fundación de la empresa concurriesen capital propio y capital ganancial, la empresa será ganancial; reconociéndose al titular del aporte propio el derecho al resarcimiento en la proporción de su aporte de capital; y",
+            "5) las ganancias obtenidas por uno de los cónyuges por medio del juego lícito, como lotería o afines, u otra causa que exima de restitución."
+          ],
+          "palabrasClave": [
+            "bienes gananciales",
+            "industria",
+            "trabajo",
+            "comercio",
+            "frutos",
+            "empresas",
+            "lotería"
+          ]
+        },
+        {
+          "numero": "33",
+          "epigrafe": "Valuación de mejoras y aportes",
+          "texto": [
+            "En los casos previstos en el artículo 31, inciso 11) y en el artículo 32, inciso 4) se tendrá en cuenta el valor de las mejoras en el momento de efectuarse la liquidación de la sociedad conyugal."
+          ],
+          "palabrasClave": [
+            "valuación de mejoras",
+            "liquidación de la sociedad conyugal"
+          ]
+        },
+        {
+          "numero": "34",
+          "epigrafe": "Cabezas de ganado",
+          "texto": [
+            "Se reputan gananciales las cabezas de ganados que al disolverse la comunidad excedan al número aportado por uno de los cónyuges con carácter propio."
+          ],
+          "palabrasClave": [
+            "ganado",
+            "excedente"
+          ]
+        },
+        {
+          "numero": "35",
+          "epigrafe": "Bienes dejados a ambos cónyuges",
+          "texto": [
+            "Los bienes dejados a ambos cónyuges por testamento mientras existiere la comunidad serán gananciales, si la liberalidad fuere aceptada por ambos. Su distribución se hará por mitades si no se expresare otra proporción."
+          ],
+          "palabrasClave": [
+            "testamento",
+            "aceptación",
+            "distribución por mitades"
+          ]
+        },
+        {
+          "numero": "36",
+          "epigrafe": "Presunción de ganancialidad",
+          "texto": [
+            "Se presume que son gananciales todos los bienes existentes al terminar la comunidad, salvo prueba en contrario. No valdrá contra los acreedores de la comunidad o de cualquiera de los cónyuges la sola confesión de éstos."
+          ],
+          "palabrasClave": [
+            "presunción de ganancialidad",
+            "prueba en contrario",
+            "acreedores"
+          ]
+        },
+        {
+          "numero": "37",
+          "epigrafe": "Administración de bienes propios",
+          "texto": [
+            "Durante la unión el titular de bienes propios conserva la libre administración y disposición de los mismos."
+          ],
+          "palabrasClave": [
+            "administración de bienes propios",
+            "disposición de bienes propios"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "VII",
+      "titulo": "Representación de la Comunidad Conyugal",
+      "articulos": [
+        {
+          "numero": "38",
+          "epigrafe": "Representación legal de la comunidad",
+          "texto": [
+            "Corresponde a ambos cónyuges conjuntamente la representación legal de la comunidad conyugal. Cualquiera de ellos, sin embargo, puede otorgar poder especial al otro para que ejerza dicha representación, en todo o para circunstancias determinadas."
+          ],
+          "palabrasClave": [
+            "representación legal",
+            "comunidad conyugal",
+            "poder especial"
+          ]
+        },
+        {
+          "numero": "39",
+          "epigrafe": "Asunción de la representación por uno de los cónyuges",
+          "texto": [
+            "Uno de los cónyuges asume la representación de la comunidad:",
+            "1) si el otro está interdicto por resolución judicial;",
+            "2) si el otro se encuentra ausente en lugar remoto o si se ignora su paradero; y",
+            "3) si el otro ha abandonado el hogar rehusándose a reintegrarse al mismo y haya sido acreditado tal circunstancia judicialmente."
+          ],
+          "palabrasClave": [
+            "asunción de representación",
+            "interdicción",
+            "ausencia",
+            "abandono del hogar"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "VIII",
+      "titulo": "Administración de la Comunidad",
+      "articulos": [
+        {
+          "numero": "40",
+          "epigrafe": "Administración de los bienes gananciales",
+          "texto": [
+            "Corresponde a ambos cónyuges conjunta o indistintamente a cada uno de ellos la gestión y administración de los bienes gananciales. Cuando para la realización de un acto de administración de los mismos uno de los cónyuges no pudiera prestar su consentimiento o se negare injustificadamente a hacerlo el otro podrá requerir autorización al Juez, quien la concederá previa justificación de la necesidad del acto."
+          ],
+          "palabrasClave": [
+            "administración de gananciales",
+            "consentimiento",
+            "autorización judicial"
+          ]
+        },
+        {
+          "numero": "41",
+          "epigrafe": "Administración para necesidades ordinarias",
+          "texto": [
+            "Para las necesidades ordinarias del hogar la comunidad puede ser administrada indistintamente por el marido o por la mujer. Si uno de ellos abusa de este derecho, el Juez puede limitárselo a instancias del otro."
+          ],
+          "palabrasClave": [
+            "necesidades ordinarias del hogar",
+            "administración indistinta",
+            "abuso de derecho"
+          ]
+        },
+        {
+          "numero": "42",
+          "epigrafe": "Actos de disposición de gananciales",
+          "texto": [
+            "Los actos de disposición a título oneroso sobre bienes gananciales corresponden a ambos cónyuges conjuntamente; empero cualquiera de ellos puede ejercer tal facultad con poder especial del otro. Para los actos de disposición a título gratuito de los gananciales se requiere bajo pena de nulidad el consentimiento de ambos excepto los pequeños presentes de uso."
+          ],
+          "palabrasClave": [
+            "actos de disposición",
+            "título oneroso",
+            "poder especial",
+            "título gratuito",
+            "nulidad"
+          ]
+        },
+        {
+          "numero": "43",
+          "epigrafe": "Administración provisoria de la comunidad",
+          "texto": [
+            "Uno de los cónyuges asumirá provisoriamente la administración de la comunidad si el otro:",
+            "1) ha sido sometido a interdicción;",
+            "2) ha sido declarado judicialmente ausente;",
+            "3) ha hecho abandono del hogar e invitado a reintegrarse se niega a ello; y",
+            "4) se desconoce su paradero, acreditado judicialmente."
+          ],
+          "palabrasClave": [
+            "administración provisoria",
+            "interdicción",
+            "ausencia",
+            "abandono del hogar"
+          ]
+        },
+        {
+          "numero": "44",
+          "epigrafe": "Prohibición de contratos entre cónyuges",
+          "texto": [
+            "Los cónyuges no pueden celebrar los contratos entre sí respecto a los bienes propios y de la comunidad, pero podrán constituir o integrar las mismas sociedades con limitación de responsabilidad."
+          ],
+          "palabrasClave": [
+            "prohibición de contratos",
+            "sociedades con limitación de responsabilidad"
+          ]
+        },
+        {
+          "numero": "45",
+          "epigrafe": "Gastos urgentes",
+          "texto": [
+            "Cada cónyuge podrá sin autorización del otro realizar gastos urgentes con carácter necesario, aunque sean extraordinarios."
+          ],
+          "palabrasClave": [
+            "gastos urgentes",
+            "necesarios",
+            "extraordinarios"
+          ]
+        },
+        {
+          "numero": "46",
+          "epigrafe": "Información recíproca sobre la comunidad",
+          "texto": [
+            "Los cónyuges se informarán recíproca y periódicamente sobre la situación económica y los rendimientos de la comunidad."
+          ],
+          "palabrasClave": [
+            "información recíproca",
+            "situación económica",
+            "rendimientos"
+          ]
+        },
+        {
+          "numero": "47",
+          "epigrafe": "Lucro excesivo de un cónyuge",
+          "texto": [
+            "Si como consecuencia de un acto de administración o de disposición de bienes comunes, llevado a cabo por uno solo de los cónyuges, hubiere obtenido el mismo un lucro excesivo y ocasionando un perjuicio a la comunidad, será deudora a la misma por el importe del perjuicio causado, aunque el otro no lo impugnase."
+          ],
+          "palabrasClave": [
+            "lucro excesivo",
+            "perjuicio a la comunidad",
+            "deuda"
+          ]
+        },
+        {
+          "numero": "48",
+          "epigrafe": "Responsabilidad del cónyuge administrador",
+          "texto": [
+            "El cónyuge administrador con poder suficiente será responsable ante el otro por los daños y perjuicios que pudieren causarle sus actos culposos o dolosos."
+          ],
+          "palabrasClave": [
+            "responsabilidad",
+            "daños y perjuicios",
+            "actos culposos",
+            "actos dolosos"
+          ]
+        },
+        {
+          "numero": "49",
+          "epigrafe": "Fraude a los derechos del consorte",
+          "texto": [
+            "Cuando el acto constituyere un fraude a los derechos del consorte, el afectado podrá demandar su nulidad, siempre que el tercero adquirente hubiere procedido de mala fe."
+          ],
+          "palabrasClave": [
+            "fraude",
+            "nulidad",
+            "tercero de mala fe"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "IX",
+      "titulo": "Cargas de la Comunidad",
+      "articulos": [
+        {
+          "numero": "50",
+          "epigrafe": "Cargas de la comunidad de gananciales",
+          "texto": [
+            "Son cargas de la comunidad de gananciales:",
+            "1) el sostenimiento de la familia y de los hijos menores comunes, y la alimentación y educación de los hijos menores de uno solo de los cónyuges que convivan en el hogar familiar, si éstos no tuvieren recursos propios;",
+            "2) los alimentos que por ley cualquiera de los cónyuges deba dar a sus ascendientes o descendientes, siempre que no pudiera hacerlos con sus bienes propios;",
+            "3) los gastos de administración de la comunidad;",
+            "4) el importe de lo donado o prometido por ambos cónyuges a sus hijos comunes; y",
+            "5) las mejoras necesarias y los gastos de conservación de los bienes propios y de los gananciales, así como los tributos que afecten a ambas clases de bienes."
+          ],
+          "palabrasClave": [
+            "cargas de la comunidad",
+            "sostenimiento de la familia",
+            "alimentos",
+            "gastos de administración",
+            "mejoras",
+            "tributos"
+          ]
+        },
+        {
+          "numero": "51",
+          "epigrafe": "Responsabilidad de los bienes gananciales",
+          "texto": [
+            "Los bienes gananciales o comunes responderán por las obligaciones contraídas por los dos cónyuges conjuntamente, o por uno de ellos con el consentimiento expreso del otro tanto para atender negocios de la comunidad como para las necesidades del hogar."
+          ],
+          "palabrasClave": [
+            "responsabilidad de bienes gananciales",
+            "obligaciones",
+            "consentimiento expreso"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "X",
+      "titulo": "Disolución y Liquidación de la Comunidad de Gananciales",
+      "articulos": [
+        {
+          "numero": "53",
+          "epigrafe": "Causales de conclusión de la comunidad",
+          "texto": [
+            "La comunidad de gananciales concluye:",
+            "1) como consecuencia del divorcio o de la separación judicial personal, voluntaria o contenciosa;",
+            "2) cuando el matrimonio sea declarado nulo;",
+            "3) cuando se decrete judicialmente la separación de bienes a solicitud de ambos cónyuges;",
+            "4) cuando los cónyuges convengan el cambio de régimen patrimonial en los términos previstos por esta ley; y",
+            "5) por muerte de uno de los cónyuges."
+          ],
+          "palabrasClave": [
+            "conclusión de la comunidad",
+            "divorcio",
+            "separación judicial",
+            "nulidad de matrimonio",
+            "separación de bienes",
+            "cambio de régimen",
+            "muerte"
+          ]
+        },
+        {
+          "numero": "54",
+          "epigrafe": "Separación de bienes solicitada por uno de los cónyuges",
+          "texto": [
+            "La separación de bienes podrá también ser solicitada por uno de los cónyuges:",
+            "1) cuando el otro cónyuge ha sido declarado interdicto, ausente, o en quiebra, o hubiere solicitado concurso de acreedores;",
+            "2) cuando los actos de uno de ellos entrañen peligro, dolo o fraude en detrimento de los derechos del otro; y",
+            "3) por abandono voluntario que el otro hiciere del hogar por más de un año, o si hubiere contraído unión de hecho con tercera persona."
+          ],
+          "palabrasClave": [
+            "separación de bienes solicitada por uno de los cónyuges",
+            "interdicción",
+            "ausencia",
+            "quiebra",
+            "peligro",
+            "dolo",
+            "fraude",
+            "abandono del hogar",
+            "unión de hecho"
+          ]
+        },
+        {
+          "numero": "55",
+          "epigrafe": "Acreedores no comparecientes",
+          "texto": [
+            "Los acreedores que, citados por edicto judicial, no comparezcan dentro del término de la citación, sólo tendrán acción contra los bienes propios del deudor, o contra la parte que le corresponda en la liquidación de la comunidad de gananciales."
+          ],
+          "palabrasClave": [
+            "acreedores",
+            "edicto judicial",
+            "bienes propios",
+            "liquidación"
+          ]
+        },
+        {
+          "numero": "56",
+          "epigrafe": "División de los gananciales",
+          "texto": [
+            "Una vez abonados los créditos reconocidos contra la comunidad, los gananciales se dividirán entre los cónyuges por parte iguales. Las pérdidas que deriven de obligaciones comunes se compartirán en la misma proporción."
+          ],
+          "palabrasClave": [
+            "división de gananciales",
+            "partes iguales",
+            "pérdidas"
+          ]
+        },
+        {
+          "numero": "57",
+          "epigrafe": "Asignación de vivienda familiar y establecimiento comercial",
+          "texto": [
+            "Cuando la comunidad de gananciales se disolviera por muerte de uno de los cónyuges y quedasen menores a cargo del supérstite, éste tendrá derecho a que dentro de su parte de gananciales se le asigne la vivienda familiar, útiles y enseres, compensando la diferencia a su cargo ya sea en dinero efectivo o con otros bienes. El cónyuge que hubiera tenido a su cargo la dirección de un establecimiento comercial o industrial tendrá el mismo derecho sobre éste y en las condiciones del párrafo anterior."
+          ],
+          "palabrasClave": [
+            "vivienda familiar",
+            "útiles y enseres",
+            "establecimiento comercial",
+            "compensación"
+          ]
+        },
+        {
+          "numero": "58",
+          "epigrafe": "Plazo para entregas",
+          "texto": [
+            "En cualquier caso las entregas de dinero efectivo y de bienes muebles o inmuebles se efectuarán a favor de cada parte dentro de los noventa días como máximo."
+          ],
+          "palabrasClave": [
+            "plazo de entregas",
+            "noventa días"
+          ]
+        },
+        {
+          "numero": "59",
+          "epigrafe": "Responsabilidad por actos ilícitos",
+          "texto": [
+            "La responsabilidad de uno de los cónyuges por un acto ilícito en perjuicio de terceros, se paga con parte alícuota de los gananciales o con los bienes propios del culpable."
+          ],
+          "palabrasClave": [
+            "responsabilidad por actos ilícitos",
+            "parte alícuota de gananciales",
+            "bienes propios"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "XI",
+      "titulo": "Régimen de Participación Diferida",
+      "articulos": [
+        {
+          "numero": "60",
+          "epigrafe": "Concepto y extinción del régimen",
+          "texto": [
+            "En este régimen cada cónyuge administra, disfruta y dispone libremente tanto de sus bienes propios como de los gananciales. Pero al producirse la extinción del régimen, que acontece en las mismas circunstancias que en el de la comunidad de gananciales, cada cónyuge adquiere el derecho de participar en las ganancias obtenidas por el otro, durante la vigencia del mismo. Las ganancias, si las hubiere, se distribuirán por mitad entre ambos cónyuges."
+          ],
+          "palabrasClave": [
+            "participación diferida",
+            "extinción del régimen",
+            "participación en ganancias",
+            "distribución por mitades"
+          ]
+        },
+        {
+          "numero": "61",
+          "epigrafe": "Determinación de ganancias",
+          "texto": [
+            "Para determinar las ganancias se atenderá a la diferencia entre el patrimonio inicial y el patrimonio final de cada cónyuge."
+          ],
+          "palabrasClave": [
+            "ganancias",
+            "patrimonio inicial",
+            "patrimonio final"
+          ]
+        },
+        {
+          "numero": "62",
+          "epigrafe": "Patrimonio inicial",
+          "texto": [
+            "El patrimonio inicial está constituido por los bienes y derechos que pertenecen a cada cónyuge al empezar el régimen y por los adquiridos durante el mismo por herencia, legado o donación, deduciéndose las obligaciones que cada uno tuviere."
+          ],
+          "palabrasClave": [
+            "patrimonio inicial",
+            "bienes",
+            "derechos",
+            "herencia",
+            "legado",
+            "donación",
+            "obligaciones"
+          ]
+        },
+        {
+          "numero": "63",
+          "epigrafe": "Determinación del valor del patrimonio inicial",
+          "texto": [
+            "El valor de los bienes que integran el patrimonio inicial se determina considerando el que tuvieren cuando fueron integrados o incorporados al mismo, el que deberá ser actualizado al día en que el régimen cese. Si el pasivo es superior al activo no habrá patrimonio inicial."
+          ],
+          "palabrasClave": [
+            "valor de bienes",
+            "actualización",
+            "pasivo",
+            "activo"
+          ]
+        },
+        {
+          "numero": "64",
+          "epigrafe": "Patrimonio final",
+          "texto": [
+            "El patrimonio final de cada cónyuge estará formado por los bienes y derechos del que sea titular en el momento de la terminación del régimen con deducción de las deudas pendientes."
+          ],
+          "palabrasClave": [
+            "patrimonio final",
+            "bienes",
+            "derechos",
+            "deudas pendientes"
+          ]
+        },
+        {
+          "numero": "65",
+          "epigrafe": "Cálculo del crédito de participación",
+          "texto": [
+            "Si la diferencia entre el patrimonio inicial y el patrimonio final de cada cónyuge fuera positiva, aquel cuyo patrimonio experimente un incremento menor percibirá la mitad de la diferencia entre su propio incremento y el del otro cónyuge."
+          ],
+          "palabrasClave": [
+            "crédito de participación",
+            "incremento patrimonial"
+          ]
+        },
+        {
+          "numero": "66",
+          "epigrafe": "Forma de satisfacción del crédito",
+          "texto": [
+            "El crédito de participación deberá ser satisfecho por la adjudicación de bien o bienes en especie o en dinero efectivo."
+          ],
+          "palabrasClave": [
+            "satisfacción del crédito",
+            "adjudicación de bienes",
+            "dinero efectivo"
+          ]
+        },
+        {
+          "numero": "67",
+          "epigrafe": "Impugnación de enajenaciones fraudulentas",
+          "texto": [
+            "Si el patrimonio de un cónyuge deudor careciere de bienes para hacer efectivo el derecho de participación de acreedor, éste podrá impugnar las enajenaciones que el primero hubiere efectuado en fraude de su derecho de participación."
+          ],
+          "palabrasClave": [
+            "impugnación de enajenaciones",
+            "fraude",
+            "derecho de participación"
+          ]
+        },
+        {
+          "numero": "68",
+          "epigrafe": "Prescripción de la acción de impugnación",
+          "texto": [
+            "Las acciones de impugnación prescriben a los dos años de haberse extinguido el régimen de participación y no procederán, contra los adquirentes a título oneroso que fueren de buena fe, pero darán lugar al resarcimiento a favor del cónyuge perjudicado, a cargo de otro."
+          ],
+          "palabrasClave": [
+            "prescripción",
+            "dos años",
+            "adquirentes de buena fe",
+            "resarcimiento"
+          ]
+        },
+        {
+          "numero": "69",
+          "epigrafe": "Contribución al sostenimiento del hogar",
+          "texto": [
+            "Durante la vigencia de este régimen, ambos cónyuges están obligados a contribuir al sostenimiento del hogar, en las mismas condiciones que en el régimen de comunidad de gananciales y en proporción a sus recursos económicos respectivos."
+          ],
+          "palabrasClave": [
+            "contribución al hogar",
+            "recursos económicos"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "XII",
+      "titulo": "Régimen de Separación de Bienes",
+      "articulos": [
+        {
+          "numero": "70",
+          "epigrafe": "Casos de separación de bienes",
+          "texto": [
+            "Existirá entre los cónyuges régimen de separación de bienes:",
+            "1) cuando así lo hubieran convenido;",
+            "2) cuando en las capitulaciones matrimoniales expresaren que no regirá entre ellos la comunidad de gananciales, pero sin expresar el régimen adoptado;",
+            "3) cuando exista divorcio o separación de cuerpos por vía judicial, sea voluntaria o contenciosa; y",
+            "4) en caso de matrimonio de menores previsto en el artículo 21."
+          ],
+          "palabrasClave": [
+            "separación de bienes",
+            "convenio",
+            "divorcio",
+            "separación judicial",
+            "matrimonio de menores"
+          ]
+        },
+        {
+          "numero": "71",
+          "epigrafe": "Administración y disposición de bienes",
+          "texto": [
+            "En este régimen desde el momento de su constitución le corresponde a cada cónyuge el uso, administración y disposición de sus bienes."
+          ],
+          "palabrasClave": [
+            "uso de bienes",
+            "administración de bienes",
+            "disposición de bienes"
+          ]
+        },
+        {
+          "numero": "72",
+          "epigrafe": "Inscripción en los Registros Públicos",
+          "texto": [
+            "En todos los casos la separación de bienes, para que surta efecto contra terceros, debe estar inscripta en los Registros Públicos."
+          ],
+          "palabrasClave": [
+            "inscripción",
+            "Registros Públicos",
+            "efecto contra terceros"
+          ]
+        },
+        {
+          "numero": "73",
+          "epigrafe": "Obligaciones por necesidades del hogar",
+          "texto": [
+            "Las obligaciones contraídas por uno u otro de los cónyuges para satisfacer necesidades corrientes del hogar obligan a ambos en proporción a sus ingresos."
+          ],
+          "palabrasClave": [
+            "obligaciones",
+            "necesidades del hogar",
+            "proporción de ingresos"
+          ]
+        },
+        {
+          "numero": "74",
+          "epigrafe": "Presunción de bienes en común",
+          "texto": [
+            "Cuando no sea posible probar a cuál de los cónyuges pertenece algún bien o derecho, corresponderá a ambos por mitades."
+          ],
+          "palabrasClave": [
+            "presunción",
+            "bienes en común",
+            "mitades"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "XIII",
+      "titulo": "De los Bienes Reservados",
+      "articulos": [
+        {
+          "numero": "75",
+          "epigrafe": "Bienes de administración reservada",
+          "texto": [
+            "Cualquiera sea el régimen patrimonial matrimonial, son bienes de administración reservada de cada cónyuge:",
+            "1) las cosas destinadas exclusivamente a su uso personal, tales como sus ropas, alhajas, joyas e instrumentos de trabajo;",
+            "2) los adquiridos en ejercicio de un derecho inherente a sus bienes reservados, o por vía de indemnización de daños y perjuicios en ellos, o en virtud de un acto jurídico que a dichos bienes se refiera;",
+            "3) los que obtenga el usufructo legal de los bienes de sus hijos menores habidos de un matrimonio anterior;",
+            "4) el producto del trabajo de cada cónyuge; y",
+            "5) los bienes propios de cada cónyuge."
+          ],
+          "palabrasClave": [
+            "bienes reservados",
+            "administración reservada",
+            "uso personal",
+            "indemnización",
+            "usufructo legal",
+            "producto del trabajo"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "XIV",
+      "titulo": "Alimentos",
+      "articulos": [
+        {
+          "numero": "76",
+          "epigrafe": "Cuota alimentaria después del divorcio",
+          "texto": [
+            "Si luego del divorcio de la separación personal y disolución de la comunidad conyugal uno de los cónyuges se encontrare imposibilitado de proveer a su subsistencia y careciere de bienes propios, el Juez, a solicitud del interesado podrá, fijar una cuota alimentaria a su favor y a cargo del otro cónyuge.",
+            "Para determinar su monto se tendrá en consideración la edad y estado de salud del peticionante, su nivel profesional y perspectivas de inserción en el mercado de trabajo, su conducta hacia la familia y la duración de la unión conyugal disuelta."
+          ],
+          "palabrasClave": [
+            "cuota alimentaria",
+            "divorcio",
+            "imposibilidad de subsistencia",
+            "edad",
+            "estado de salud",
+            "nivel profesional",
+            "duración de la unión"
+          ]
+        },
+        {
+          "numero": "77",
+          "epigrafe": "Exclusión del cónyuge culpable",
+          "texto": [
+            "No existe obligación de suministrar alimentos al cónyuge declarado judicialmente culpable del divorcio o de la separación personal."
+          ],
+          "palabrasClave": [
+            "exclusión",
+            "cónyuge culpable",
+            "alimentos"
+          ]
+        },
+        {
+          "numero": "78",
+          "epigrafe": "Indemnización por nulidad de matrimonio",
+          "texto": [
+            "En caso de nulidad de matrimonio por sentencia firme el cónyuge de buena fe tendrá derecho a ser indemnizado por el culpable."
+          ],
+          "palabrasClave": [
+            "indemnización",
+            "nulidad de matrimonio",
+            "buena fe",
+            "culpable"
+          ]
+        },
+        {
+          "numero": "79",
+          "epigrafe": "Formas de pago de la pensión alimentaria",
+          "texto": [
+            "La pensión alimentaria podrá ser substituida por la entrega de una sola vez de un capital en dinero efectivo o en otros bienes, o por la constitución de una renta vitalicia, a opción del obligado y aceptación del beneficiario."
+          ],
+          "palabrasClave": [
+            "pensión alimentaria",
+            "capital",
+            "renta vitalicia"
+          ]
+        },
+        {
+          "numero": "80",
+          "epigrafe": "Reajuste de la pensión alimentaria",
+          "texto": [
+            "Toda pensión alimentaria se reajustará en consonancia con las alteraciones del valor del signo monetario nacional."
+          ],
+          "palabrasClave": [
+            "reajuste",
+            "pensión alimentaria",
+            "inflación"
+          ]
+        },
+        {
+          "numero": "81",
+          "epigrafe": "Subsistencia del derecho a la pensión",
+          "texto": [
+            "Si la pensión alimentaria fuere abonada por cuotas periódicas el derecho a percibirla subsistirá mientras el beneficiado no contraiga nueva unión legal o de hecho."
+          ],
+          "palabrasClave": [
+            "subsistencia del derecho",
+            "nueva unión"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "XV",
+      "titulo": "Disposiciones Transitorias",
+      "articulos": [
+        {
+          "numero": "82",
+          "epigrafe": "Pérdida de la patria potestad",
+          "texto": [
+            "El padre o la madre que cometiere adulterio, no perderá por ese solo hecho la patria potestad o el usufructo legal sobre los bienes de sus hijos."
+          ],
+          "palabrasClave": [
+            "pérdida de la patria potestad",
+            "adulterio",
+            "usufructo legal"
+          ]
+        },
+        {
+          "numero": "83",
+          "epigrafe": "Sucesión intestada de la esposa",
+          "texto": [
+            "La esposa puede suceder a su marido, así como éste a aquélla, en la herencia intestada, en las mismas condiciones que el marido con relación a su esposa y los hijos."
+          ],
+          "palabrasClave": [
+            "sucesión intestada",
+            "esposa",
+            "marido",
+            "herederos"
+          ]
+        },
+        {
+          "numero": "84",
+          "epigrafe": "Autorización a la mujer para actos civiles",
+          "texto": [
+            "Suprímese el artículo 160 del Código Civil. En consecuencia la mujer, a partir de la vigencia de esta ley, no necesita autorización marital para realizar ninguno de los actos civiles enumerados en el artículo 158 del Código Civil."
+          ],
+          "palabrasClave": [
+            "autorización marital",
+            "actos civiles",
+            "mujer"
+          ]
+        },
+        {
+          "numero": "85",
+          "epigrafe": "Régimen de los matrimonios anteriores",
+          "texto": [
+            "Los matrimonios existentes a la fecha de vigencia de esta ley continuarán rigiéndose por el régimen de bienes que le corresponda, de acuerdo con la ley anterior, salvo que los cónyuges opten por la modificación del régimen, en las mismas condiciones establecidas para la celebración del matrimonio, por esta ley. La presente disposición se aplicará también a los viudos y divorciados."
+          ],
+          "palabrasClave": [
+            "matrimonios existentes",
+            "régimen anterior",
+            "opción de modificación"
+          ]
+        },
+        {
+          "numero": "86",
+          "epigrafe": "Modificaciones en los casos de divorcio",
+          "texto": [
+            "En los casos de divorcio o separación de cuerpos decretados con anterioridad a la vigencia de esta ley, y en los que por sentencia firme se hubiere ordenado la separación de bienes, los ex cónyuges podrán optar, a su solo requerimiento y sin ninguna otra formalidad, por la liquidación del régimen patrimonial que regía a la fecha de la disolución del vínculo."
+          ],
+          "palabrasClave": [
+            "divorcio anterior",
+            "separación de bienes",
+            "liquidación del régimen"
+          ]
+        },
+        {
+          "numero": "87",
+          "epigrafe": "Acción de estado en las sucesiones",
+          "texto": [
+            "Las acciones de estado en los casos de sucesiones abiertas y en los juicios sucesorios pendientes, en que se hubieran aplicado las normas anteriores a la presente ley, deberán ser resueltas de acuerdo a la ley vigente al tiempo de la apertura de la sucesión o al tiempo del inicio del juicio sucesorio."
+          ],
+          "palabrasClave": [
+            "acciones de estado",
+            "sucesiones abiertas",
+            "juicios sucesorios",
+            "ley vigente"
+          ]
+        },
+        {
+          "numero": "88",
+          "epigrafe": "Separación de bienes por el Juez",
+          "texto": [
+            "A petición de uno de los cónyuges y con citación del otro, el Juez podrá decretar la separación de bienes, cuando comprobare la existencia de alguna de las causales previstas en el artículo 54 de esta ley. El proceso se tramitará por la vía sumarísima."
+          ],
+          "palabrasClave": [
+            "separación de bienes",
+            "vía sumarísima"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "XVI",
+      "titulo": "Unión de Hecho o Concubinato",
+      "articulos": [
+        {
+          "numero": "89",
+          "epigrafe": "Reconocimiento de la unión de hecho",
+          "texto": [
+            "La unión de hecho entre un varón y una mujer, que sea pública y notoria, y que no esté impedida por las disposiciones del artículo 17 de esta ley, se regirá por las normas de la sociedad de gananciales, en cuanto fueren compatibles, siempre que dicha unión haya durado más de dos años."
+          ],
+          "palabrasClave": [
+            "unión de hecho",
+            "concubinato",
+            "pública y notoria",
+            "sociedad de gananciales",
+            "dos años"
+          ]
+        },
+        {
+          "numero": "90",
+          "epigrafe": "Aplicación de normas a la unión de hecho",
+          "texto": [
+            "A la unión de hecho se le aplicarán las disposiciones de esta ley en lo que no se oponga a la naturaleza de la misma."
+          ],
+          "palabrasClave": [
+            "aplicación de normas",
+            "unión de hecho"
+          ]
+        },
+        {
+          "numero": "91",
+          "epigrafe": "Reconocimiento de hijos",
+          "texto": [
+            "En la unión de hecho se estará a las normas sobre reconocimiento de los hijos establecidos en el Código Civil."
+          ],
+          "palabrasClave": [
+            "reconocimiento de hijos",
+            "unión de hecho"
+          ]
+        },
+        {
+          "numero": "92",
+          "epigrafe": "Terminación de la unión de hecho",
+          "texto": [
+            "Terminada la unión de hecho, se aplicará el régimen de alimentos previsto en el artículo 76, y las normas de la liquidación de la comunidad de gananciales."
+          ],
+          "palabrasClave": [
+            "terminación de la unión de hecho",
+            "alimentos",
+            "liquidación de la comunidad"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "XVII",
+      "titulo": "Bien de Familia",
+      "articulos": [
+        {
+          "numero": "95",
+          "epigrafe": "Beneficiarios del bien de familia",
+          "texto": [
+            "Podrán beneficiarse con la institución del bien de familia:",
+            "1) los cónyuges;",
+            "2) el concubino varón o mujer, cualquiera sea la naturaleza de dicha relación;",
+            "3) los hijos biológicos y adoptivos, menores de edad y los incapaces aunque fuesen mayores;",
+            "4) los padres y otros ascendientes mayores de setenta años o si se encuentran en estado de necesidad, cualquiera fuese la edad; y,",
+            "5) los hermanos menores o incapaces del o de la constituyente."
+          ],
+          "palabrasClave": [
+            "bien de familia",
+            "beneficiarios",
+            "cónyuges",
+            "concubino",
+            "hijos",
+            "ascendientes",
+            "hermanos"
+          ]
+        },
+        {
+          "numero": "96",
+          "epigrafe": "Quiénes pueden constituir el bien de familia",
+          "texto": [
+            "Podrán constituir el bien de familia:",
+            "1) cualquiera de los cónyuges sobre bienes de su exclusiva propiedad;",
+            "2) los cónyuges de común acuerdo sobre bienes comunes o gananciales;",
+            "3) el padre o la madre judicialmente separados de bienes en beneficio de los hijos de la segunda unión;",
+            "4) el padre o la madre solteros o viudos sobre bienes propios; y,",
+            "5) cualquier persona dentro de los límites en que pueda disponer libremente de sus bienes por testamentos o donación."
+          ],
+          "palabrasClave": [
+            "constitución del bien de familia",
+            "cónyuges",
+            "bienes propios",
+            "bienes comunes",
+            "padre soltero",
+            "madre soltera"
+          ]
+        },
+        {
+          "numero": "97",
+          "epigrafe": "Bien de familia en beneficio del concubino",
+          "texto": [
+            "Si el o la constituyente tuviere familia de hecho pública y notoria y no existiere descendencia común, podrá constituir el bien de familia en beneficio exclusivo de su concubino."
+          ],
+          "palabrasClave": [
+            "bien de familia",
+            "concubino",
+            "familia de hecho"
+          ]
+        }
+      ]
+    }
+  ]
+}
