@@ -1,1 +1,1774 @@
-
+{
+  "id": "ley-1034-83",
+  "nombre": "Ley N° 1.034/83 – Del Comerciante",
+  "ley": "Ley N° 1.034/83",
+  "vigente": true,
+  "promulgacion": "16/12/1983",
+  "modificada_por": [
+    "Ley N° 2.169/03 (Artículo 2)",
+    "Ley N° 4.924/13 (Artículo 1)"
+  ],
+  "capitulos": [
+    {
+      "numero": "Preliminar",
+      "titulo": "Título Preliminar",
+      "articulos": [
+        {
+          "numero": "1",
+          "epigrafe": "Objeto de la Ley",
+          "texto": [
+            "La presente Ley tiene por objeto regular la actividad profesional del comerciante, sus derechos y obligaciones, la competencia comercial, la transferencia de los establecimientos mercantiles y caracterizar los actos de comercio."
+          ],
+          "palabrasClave": [
+            "comerciante",
+            "actividad profesional",
+            "derechos",
+            "obligaciones",
+            "competencia comercial",
+            "establecimientos mercantiles",
+            "actos de comercio"
+          ]
+        },
+        {
+          "numero": "2",
+          "epigrafe": "Aplicación supletoria del Código Civil y usos mercantiles",
+          "texto": [
+            "A falta de normas especiales de esta Ley, se aplicarán las disposiciones del Código Civil.",
+            "Los usos y costumbres mercantiles pueden servir de regla sólo cuando la ley se refiera a ellos, para determinar el sentido de las palabras o frases técnicas del comercio y para interpretar los actos o convenciones de la misma naturaleza."
+          ],
+          "palabrasClave": [
+            "Código Civil",
+            "aplicación supletoria",
+            "usos mercantiles",
+            "costumbres mercantiles"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "I",
+      "titulo": "De los Comerciantes",
+      "articulos": [
+        {
+          "numero": "3",
+          "epigrafe": "Definición de comerciante",
+          "texto": [
+            "Son comerciantes:",
+            "a) Las personas que realizan profesionalmente actos de comercio;",
+            "b) Las sociedades que tengan por objeto principal la realización de actos de comercio."
+          ],
+          "palabrasClave": [
+            "comerciante",
+            "profesionalmente",
+            "actos de comercio",
+            "sociedades"
+          ]
+        },
+        {
+          "numero": "4",
+          "epigrafe": "Sujeción a la legislación comercial",
+          "texto": [
+            "Los que tienen la calidad de comerciantes según la ley, están sujetos a la legislación comercial en los actos que realicen como tales."
+          ],
+          "palabrasClave": [
+            "legislación comercial",
+            "calidad de comerciante"
+          ]
+        },
+        {
+          "numero": "5",
+          "epigrafe": "Actos accidentales de comercio",
+          "texto": [
+            "Los que realicen accidentalmente actos de comercio no son considerados comerciantes. Quedan, sin embargo, sujetos en cuanto a las consecuencias de dichos actos, a la legislación comercial."
+          ],
+          "palabrasClave": [
+            "actos accidentales",
+            "consecuencias",
+            "legislación comercial"
+          ]
+        },
+        {
+          "numero": "6",
+          "epigrafe": "Capacidad para ejercer el comercio",
+          "texto": [
+            "Toda persona que tenga la libre administración de sus bienes puede ejercer el comercio."
+          ],
+          "palabrasClave": [
+            "libre administración",
+            "capacidad"
+          ]
+        },
+        {
+          "numero": "7",
+          "epigrafe": "Ejercicio del comercio por menores",
+          "texto": [
+            "Todo menor que haya cumplido diez y ocho años, podrá ejercer el comercio si se halla autorizado legalmente o emancipado.",
+            "En caso de oposición del representante legal deberá resolver el Juez de Menores. La autorización otorgada no podrá ser retirada al menor sino por dicho Juez, a instancia del padre, de la madre o del tutor según el caso."
+          ],
+          "palabrasClave": [
+            "menor",
+            "18 años",
+            "emancipación",
+            "autorización",
+            "Juez de Menores"
+          ]
+        },
+        {
+          "numero": "8",
+          "epigrafe": "Matrimonio de la mujer comerciante",
+          "texto": [
+            "El matrimonio de la mujer comerciante no altera sus derechos y obligaciones relativos al comercio."
+          ],
+          "palabrasClave": [
+            "mujer comerciante",
+            "matrimonio",
+            "derechos",
+            "obligaciones"
+          ]
+        },
+        {
+          "numero": "9",
+          "epigrafe": "Incompatibilidades de estado",
+          "texto": [
+            "No pueden ejercer el comercio por incompatibilidad de estado:",
+            "a) Las corporaciones eclesiásticas;",
+            "b) Los Jueces y los representantes del Ministerio Fiscal y de la Defensa Pública;",
+            "c) Los funcionarios públicos, conforme a las disposiciones de la Ley Nº 200/70; y,",
+            "d) Las demás personas inhabilitadas por leyes especiales."
+          ],
+          "palabrasClave": [
+            "incompatibilidades",
+            "corporaciones eclesiásticas",
+            "Jueces",
+            "Ministerio Fiscal",
+            "Defensa Pública",
+            "funcionarios públicos",
+            "Ley Nº 200/70"
+          ]
+        },
+        {
+          "numero": "10",
+          "epigrafe": "Excepciones a las incompatibilidades",
+          "texto": [
+            "La prohibición del Artículo precedente no comprende la facultad de celebrar contratos de préstamos a interés, con tal que no hagan del ejercicio de esa facultad profesión habitual de comercio.",
+            "Tampoco les impide constituir sociedades mercantiles, siempre que no tomen parte en la dirección o administración de las mismas."
+          ],
+          "palabrasClave": [
+            "préstamos a interés",
+            "sociedades mercantiles",
+            "dirección",
+            "administración"
+          ]
+        },
+        {
+          "numero": "11",
+          "epigrafe": "Obligaciones del comerciante",
+          "texto": [
+            "Son obligaciones del comerciante:",
+            "a) Someterse a las formalidades establecidas por la ley mercantil, en los actos que realice;",
+            "b) Inscribir en el Registro Público de Comercio su matrícula y los documentos que la ley exige;",
+            "c) Seguir un orden cronológico y regular de contabilidad, llevando los libros necesarios a ese fin; y",
+            "d) Conservar los libros de contabilidad, la correspondencia y los documentos que tengan relación con el giro de su comercio, por el plazo establecido en el Art. 85º."
+          ],
+          "palabrasClave": [
+            "obligaciones",
+            "formalidades",
+            "Registro Público de Comercio",
+            "matrícula",
+            "contabilidad",
+            "libros",
+            "conservación"
+          ]
+        },
+        {
+          "numero": "12",
+          "epigrafe": "Contenido de la solicitud de matrícula",
+          "texto": [
+            "La matrícula de comerciante deberá ser solicitada al Juez de Comercio, a cuyo efecto el interesado expresará:",
+            "a) Su nombre, domicilio, estado civil y nacionalidad, y tratándose de una sociedad el nombre de los socios y la firma social adoptada;",
+            "b) La determinación del género de su actividad;",
+            "c) El lugar o domicilio del establecimiento u oficina;",
+            "d) El nombre del gerente o factor encargado del establecimiento; y",
+            "e) Los documentos que justifiquen su capacidad."
+          ],
+          "palabrasClave": [
+            "matrícula",
+            "Juez de Comercio",
+            "solicitud",
+            "domicilio",
+            "actividad"
+          ]
+        },
+        {
+          "numero": "13",
+          "epigrafe": "Efectos de la inscripción de la matrícula",
+          "texto": [
+            "La inscripción de la matrícula del comerciante hará presumir su calidad de tal para todos los efectos legales, desde la fecha en que se hubiere efectuado."
+          ],
+          "palabrasClave": [
+            "inscripción",
+            "presunción",
+            "calidad de comerciante"
+          ]
+        },
+        {
+          "numero": "14",
+          "epigrafe": "Aplicación a tutores y curadores",
+          "texto": [
+            "Son aplicables las disposiciones de la Ley relativas a las obligaciones y responsabilidades del comerciante a los tutores y curadores autorizados por el Juez Competente que continúen las actividades comerciales o industriales de los establecimientos que sus pupilos hubieren heredado, o en los que tuvieren participación."
+          ],
+          "palabrasClave": [
+            "tutores",
+            "curadores",
+            "responsabilidad"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "II",
+      "titulo": "De la Empresa Individual de Responsabilidad Limitada",
+      "articulos": [
+        {
+          "numero": "15",
+          "epigrafe": "Constitución y responsabilidad limitada",
+          "texto": [
+            "Toda persona física capaz de ejercer el comercio podrá constituir empresas individuales de responsabilidad limitada, asignándoles un capital determinado.",
+            "Los bienes que formen el capital constituirán un patrimonio separado o independiente de los demás bienes pertenecientes a la persona física. Aquellos bienes están destinados a responder por las obligaciones de tales empresas.",
+            "La responsabilidad del instituyente queda limitada al monto del capital afectado a la empresa. En caso de dolo, fraude o incumplimiento de las disposiciones ordenadas en esta Ley, responderá ilimitadamente con los demás bienes de su patrimonio."
+          ],
+          "palabrasClave": [
+            "empresa individual de responsabilidad limitada",
+            "EIRL",
+            "patrimonio separado",
+            "responsabilidad limitada",
+            "dolo",
+            "fraude"
+          ]
+        },
+        {
+          "numero": "16",
+          "epigrafe": "Contenido del acto constitutivo",
+          "texto": [
+            "La empresa individual de responsabilidad limitada debe constituirse por escritura pública. El acto constitutivo contendrá:",
+            "a) El nombre y apellido, estado civil, nacionalidad, profesión y domicilio del instituyente;",
+            "b) La denominación de la empresa, que deberá incluir siempre el nombre y apellido del instituyente seguido de la locución: 'Empresa Individual de Responsabilidad Limitada', el monto del capital, y ubicación de la empresa;",
+            "c) La designación específica del objeto de la empresa;",
+            "d) El monto del capital afectado, con indicación de sí es en dinero o bienes de otra especie;",
+            "e) El valor que se atribuya a cada uno de los bienes; y",
+            "f) La designación del administrador, que puede ser el instituyente u otra persona que lo represente."
+          ],
+          "palabrasClave": [
+            "escritura pública",
+            "acto constitutivo",
+            "denominación",
+            "capital",
+            "administrador"
+          ]
+        },
+        {
+          "numero": "17",
+          "epigrafe": "Carácter comercial",
+          "texto": [
+            "La empresa individual de responsabilidad limitada será considerada comercial a todos los efectos jurídicos."
+          ],
+          "palabrasClave": [
+            "carácter comercial"
+          ]
+        },
+        {
+          "numero": "18",
+          "epigrafe": "Inicio de actividades",
+          "texto": [
+            "La empresa individual de responsabilidad limitada no podrá iniciar sus actividades antes de su inscripción en el Registro Público de Comercio."
+          ],
+          "palabrasClave": [
+            "inicio de actividades",
+            "inscripción",
+            "Registro Público de Comercio"
+          ]
+        },
+        {
+          "numero": "19",
+          "epigrafe": "Publicación del acto constitutivo",
+          "texto": [
+            "A los efectos del Artículo anterior, el Juez dispondrá previamente la publicación de un resumen del acto constitutivo de la empresa en un diario de gran circulación, por cinco veces en el lapso de quince días."
+          ],
+          "palabrasClave": [
+            "publicación",
+            "diario de gran circulación",
+            "cinco veces",
+            "quince días"
+          ]
+        },
+        {
+          "numero": "20",
+          "epigrafe": "Responsabilidad por omisión de requisitos formales",
+          "texto": [
+            "Los libros, documentos y anuncios de la entidad llevarán impresos el nombre y apellido del instituyente, la locución completa: 'Empresa Individual de Responsabilidad Limitada', y el monto de su capital. El incumplimiento de la presente disposición y el de la contenida en el Artículo anterior hará incurrir al empresario en responsabilidad ilimitada."
+          ],
+          "palabrasClave": [
+            "requisitos formales",
+            "responsabilidad ilimitada",
+            "denominación completa"
+          ]
+        },
+        {
+          "numero": "21",
+          "epigrafe": "Capital mínimo",
+          "texto": [
+            "El capital de una empresa individual de responsabilidad limitada no podrá ser inferior al equivalente de dos mil jornales mínimos legales establecidos para actividades diversas no especificadas de la Capital.",
+            "El capital deberá ser íntegramente aportado en el acto de constitución.",
+            "El Juez ordenará la inscripción de los inmuebles en el Registro de Inmuebles de la Dirección General de los Registros Públicos, y el depósito de dinero efectivo en cuenta bancaria a nombre de la empresa."
+          ],
+          "palabrasClave": [
+            "capital mínimo",
+            "2.000 jornales mínimos",
+            "aporte íntegro",
+            "inscripción de inmuebles",
+            "depósito bancario"
+          ]
+        },
+        {
+          "numero": "22",
+          "epigrafe": "Quiebra de la empresa y responsabilidad del instituyente",
+          "texto": [
+            "La quiebra de la empresa no ocasiona la del instituyente, pero si éste o el administrador designado no cumple las obligaciones impuestas por la Ley o por el acto de creación, con perjuicio posible de terceros, o si la empresa cae en quiebra culpable o dolosa, caducará de pleno derecho el beneficio de limitación de responsabilidad."
+          ],
+          "palabrasClave": [
+            "quiebra",
+            "responsabilidad limitada",
+            "caducidad del beneficio"
+          ]
+        },
+        {
+          "numero": "23",
+          "epigrafe": "Responsabilidad por exceso de valuación",
+          "texto": [
+            "El instituyente responderá ilimitadamente por el exceso del valor asignado a los bienes que no sean dinero, así como la parte del capital en efectivo no integrado."
+          ],
+          "palabrasClave": [
+            "responsabilidad ilimitada",
+            "exceso de valuación",
+            "capital no integrado"
+          ]
+        },
+        {
+          "numero": "24",
+          "epigrafe": "Reserva legal",
+          "texto": [
+            "La reserva legal deberá efectuarse en la forma establecida en el Art. 91º."
+          ],
+          "palabrasClave": [
+            "reserva legal"
+          ]
+        },
+        {
+          "numero": "25",
+          "epigrafe": "Causales de terminación de la empresa",
+          "texto": [
+            "La empresa termina por las causas siguientes:",
+            "a) Las previstas en el acto constitutivo;",
+            "b) La decisión del instituyente, observando las mismas formalidades prescritas para su creación.",
+            "c) La muerte del empresario;",
+            "d) La quiebra de la empresa; y",
+            "e) La pérdida de por lo menos el 50% del capital declarado o en su caso cuando el capital actual se haya reducido a una cantidad inferior al mínimo legal determinado en el Art. 21º. En todos los casos el instituyente o sus herederos procederán a la liquidación de la empresa por la vía que corresponda."
+          ],
+          "palabrasClave": [
+            "terminación",
+            "muerte",
+            "quiebra",
+            "pérdida del 50% del capital",
+            "liquidación"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "III",
+      "titulo": "De Determinados Comerciantes en Particular",
+      "subsecciones": [
+        {
+          "nombre": "SECCIÓN I",
+          "titulo": "De los Corredores",
+          "articulos": [
+            {
+              "numero": "26",
+              "epigrafe": "Definición de corredor y requisitos",
+              "texto": [
+                "Son corredores las personas que sin hallarse en situación de dependencia, median entre la oferta y la demanda para la conclusión de negocios comerciales o vinculen a las partes promoviendo la conclusión de contratos, haciendo de dicha actividad profesión habitual.",
+                "Para ser corredor se requiere la mayoría de edad, poseer título de enseñanza secundaria y reunir las demás condiciones para el ejercicio del comercio."
+              ],
+              "palabrasClave": [
+                "corredor",
+                "mediación",
+                "oferta",
+                "demanda",
+                "mayoría de edad",
+                "título de enseñanza secundaria"
+              ]
+            },
+            {
+              "numero": "27",
+              "epigrafe": "Matrícula del corredor",
+              "texto": [
+                "Todo corredor está obligado a matricularse en el Juzgado competente e inscribir su matrícula y los documentos requeridos en el Registro Público de Comercio. Para dicho efecto, la petición correspondiente contendrá la constancia de tener la edad requerida, o de estar autorizado para el ejercicio del comercio."
+              ],
+              "palabrasClave": [
+                "matrícula",
+                "Juzgado competente",
+                "Registro Público de Comercio"
+              ]
+            },
+            {
+              "numero": "28",
+              "epigrafe": "Registro de operaciones del corredor",
+              "texto": [
+                "Los corredores deberán asentar en forma exacta y ordenada todas las operaciones en que intervinieran, tomando nota de cada una inmediatamente después de concluidas en un cuaderno manual foliado. Consignarán en cada asiento los nombres y apellidos y domicilios de los contratantes, la calidad, cantidad y precio de los efectos que fuesen objeto de negociación, los plazos y condiciones de pago y todas las circunstancias que permitan el esclarecimiento del negocio y los resultados de su gestión. Los asientos guardarán un orden cronológico, en numeración progresiva a partir de uno, hasta el fin de cada año."
+              ],
+              "palabrasClave": [
+                "registro de operaciones",
+                "cuaderno manual",
+                "asientos cronológicos"
+              ]
+            },
+            {
+              "numero": "29",
+              "epigrafe": "Registro de negociaciones especiales",
+              "texto": [
+                "Tratándose de negociaciones de letras, los corredores anotarán las fechas, términos, vencimientos, plazos sobre las que están giradas, nombre y apellido del librador, endosantes y pagador y las estipulaciones relativas al cambio, si algunas se hicieren.",
+                "En el corretaje de seguros, los asientos expresarán, con referencia a la póliza, los nombres y apellidos del asegurador y asegurado, el objeto asegurado, su valor, según el convenio estipulado entre las partes, el lugar donde se carga y descarga, la descripción del medio de transporte, que tratándose de buques comprenderá su nombre, matrícula, pabellón y porte y el nombre y apellido del capitán."
+              ],
+              "palabrasClave": [
+                "letras de cambio",
+                "seguros",
+                "póliza"
+              ]
+            },
+            {
+              "numero": "30",
+              "epigrafe": "Traslado a libros principales",
+              "texto": [
+                "Los asientos del cuaderno manual serán trasladados diariamente a los libros exigidos a los comerciantes, trascribiéndolos literalmente, guardando la misma numeración que llevan en el manual."
+              ],
+              "palabrasClave": [
+                "traslado",
+                "libros de comerciantes"
+              ]
+            },
+            {
+              "numero": "31",
+              "epigrafe": "Certificados del corredor",
+              "texto": [
+                "Ningún corredor podrá dar certificado si no de lo que conste en sus libros y con referencia a ellos. Sólo en virtud de orden de autoridad competente podrá atestiguar sobre lo que vio y oyó en lo relativo a los negocios de su oficio."
+              ],
+              "palabrasClave": [
+                "certificado",
+                "libros",
+                "autoridad competente"
+              ]
+            },
+            {
+              "numero": "32",
+              "epigrafe": "Sanción por certificado falso",
+              "texto": [
+                "El corredor que expidiere certificado que contradiga a lo que constare de los libros será pasible de la cancelación de su matrícula, sin perjuicio de la pena que corresponda al delito de falsedad."
+              ],
+              "palabrasClave": [
+                "certificado falso",
+                "cancelación de matrícula",
+                "delito de falsedad"
+              ]
+            },
+            {
+              "numero": "33",
+              "epigrafe": "Identificación de los contratantes",
+              "texto": [
+                "Los corredores deberán asegurarse en todos los casos de la identidad de las personas entre quienes intermedien para la conclusión de los negocios, así como de su capacidad legal para celebrarlos.",
+                "Si a sabiendas o por negligencia culpable, intervinieren en un contrato celebrado por persona incapacitada para hacerlo, responderán de los daños que se sigan y que sean consecuencia directa de esa situación."
+              ],
+              "palabrasClave": [
+                "identidad",
+                "capacidad legal",
+                "responsabilidad"
+              ]
+            },
+            {
+              "numero": "34",
+              "epigrafe": "Responsabilidad del corredor",
+              "texto": [
+                "Los corredores no responden ni pueden constituirse responsables de la solvencia de los contratantes.",
+                "Serán, sin embargo, garantes, en las negociaciones de letras y valores endosables, de la entrega material del título al tomador, y de la del valor al cedente. Responderán de la autenticidad de la firma del último cedente, a menos que se haya estipulado expresamente en el contrato, que corresponde directamente a los interesados las entregas."
+              ],
+              "palabrasClave": [
+                "solvencia",
+                "garantes",
+                "autenticidad de firma"
+              ]
+            },
+            {
+              "numero": "35",
+              "epigrafe": "Proposición de negocios",
+              "texto": [
+                "Los corredores propondrán los negocios con exactitud, precisión y claridad, absteniéndose de hacer supuestos falsos o ambiguos que puedan inducir a apreciaciones erróneas de los contratantes.",
+                "La proposición inexacta o equívoca motivará la responsabilidad del corredor por el daño ocasionado cuando hubiere inducido a uno de los contratantes a consentir un contrato perjudicial."
+              ],
+              "palabrasClave": [
+                "exactitud",
+                "claridad",
+                "responsabilidad"
+              ]
+            },
+            {
+              "numero": "36",
+              "epigrafe": "Supuestos falsos",
+              "texto": [
+                "Se tendrán por supuestos falsos, haber propuesto el objeto de la negociación bajo distinta calidad de la que se le atribuye por el uso general del comercio, o dar noticia falsa al interesado sobre el precio que tenga corrientemente en la plaza la cosa objeto de la negociación."
+              ],
+              "palabrasClave": [
+                "supuestos falsos",
+                "calidad",
+                "precio"
+              ]
+            },
+            {
+              "numero": "37",
+              "epigrafe": "Secreto profesional",
+              "texto": [
+                "Los corredores están obligados a guardar riguroso secreto de todo lo que concierna a las negociaciones que se les encargare bajo responsabilidad directa por los perjuicios que ocasionare su indiscreción."
+              ],
+              "palabrasClave": [
+                "secreto profesional",
+                "responsabilidad"
+              ]
+            },
+            {
+              "numero": "38",
+              "epigrafe": "Asistencia a la entrega de efectos",
+              "texto": [
+                "En las ventas hechas con su intervención, tienen los corredores la obligación de asistir al acto de entrega de los efectos vendidos, si cualquiera de los interesados lo exigiere."
+              ],
+              "palabrasClave": [
+                "asistencia",
+                "entrega de efectos"
+              ]
+            },
+            {
+              "numero": "39",
+              "epigrafe": "Entrega de minuta al contratante",
+              "texto": [
+                "Los corredores entregarán a cada contratante una minuta firmada del asiento registrado en el libro Diario sobre el negocio concluido dentro de las veinticuatro horas de su realización. Si no lo hicieren, causando perjuicio a una de las partes, perderán todo derecho a su comisión y serán responsables por tales perjuicios."
+              ],
+              "palabrasClave": [
+                "minuta",
+                "libro Diario",
+                "plazo de 24 horas",
+                "comisión"
+              ]
+            },
+            {
+              "numero": "40",
+              "epigrafe": "Presencia en actos que requieran forma escrita",
+              "texto": [
+                "En los negocios que deban celebrarse por escrito, sea por convenio de las partes o por exigencia de la Ley, el corredor tiene la obligación de hallarse presente en el acto de la firma del instrumento, certificar al pie que se hizo con su intervención y conservar un ejemplar bajo su responsabilidad."
+              ],
+              "palabrasClave": [
+                "forma escrita",
+                "certificación",
+                "conservación de ejemplar"
+              ]
+            },
+            {
+              "numero": "41",
+              "epigrafe": "Entrega de libros al cese de actividades",
+              "texto": [
+                "En caso de terminación de la actividad profesional del corredor por cualquier causa, los libros de registros serán entregados al Juzgado de Comercio respectivo por él o sus herederos."
+              ],
+              "palabrasClave": [
+                "cese de actividades",
+                "entrega de libros",
+                "Juzgado de Comercio"
+              ]
+            },
+            {
+              "numero": "42",
+              "epigrafe": "Prohibiciones a los corredores",
+              "texto": [
+                "Queda prohibido a los corredores, bajo pena de suspensión o cancelación de su matrícula:",
+                "a) Intervenir en cualquier operación en la que hubiere oposición entre sus intereses y los de su comitente;",
+                "b) Hacer cobranzas y pagos por cuenta ajena;",
+                "c) Adquirir para sí, o para su cónyuge, ascendiente o descendiente, las cosas cuya venta le haya sido encargada, ni las que se hubieren encomendado a otro corredor, aún cuando se pretenda que la compra se realizó para uso o consumo particular;",
+                "d) Promover la transmisión de letras o valores de otra especie, o la venta de mercaderías, procedentes de personas no conocidas en la plaza, salvo que un comerciante abone la identidad de la persona;",
+                "e) Intervenir en contratos de venta de efectos o en la negociación de letras pertenecientes a personas que hayan suspendido sus pagos;",
+                "f) Pretender además de la comisión una remuneración sobre el mayor valor que se obtuviere en las operaciones, o exigir mayor comisión que la establecida legalmente o, en su defecto, la determinada por los usos comerciales, salvo convención en contrario."
+              ],
+              "palabrasClave": [
+                "prohibiciones",
+                "suspensión",
+                "cancelación de matrícula",
+                "conflicto de intereses",
+                "comisión"
+              ]
+            },
+            {
+              "numero": "43",
+              "epigrafe": "Sanciones por omisión de libros",
+              "texto": [
+                "El corredor que no llevare los libros que le son requeridos con las formalidades especificadas, quedará obligado a la indemnización de los perjuicios que por tal omisión ocasionare, y será suspendido en el ejercicio de su profesión por tres a seis meses.",
+                "En caso de reincidencia, le será cancelada la matrícula."
+              ],
+              "palabrasClave": [
+                "omisión de libros",
+                "suspensión",
+                "reincidencia",
+                "cancelación"
+              ]
+            },
+            {
+              "numero": "44",
+              "epigrafe": "Dolo o fraude del corredor",
+              "texto": [
+                "El corredor que en su actividad profesional incurriere en dolo o fraude, será pasible de la cancelación de la matrícula y quedará sometido a la respectiva acción criminal."
+              ],
+              "palabrasClave": [
+                "dolo",
+                "fraude",
+                "cancelación",
+                "acción criminal"
+              ]
+            },
+            {
+              "numero": "45",
+              "epigrafe": "Derecho a comisión",
+              "texto": [
+                "Cuando en una negociación interviniere un solo corredor, éste tendrá derecho a la comisión de cada uno de los contratantes. Si ha intervenido más de un corredor, cada uno sólo tendrá derecho a exigir la comisión de su comitente. La remuneración del corredor no matriculado, no se regirá por las disposiciones de este Código. La comisión se debe aunque el contrato no se realice por culpa de alguno de los comitentes, o cuando principiada la negociación por el corredor, el comitente la encargare a otra persona o la concluyere por sí mismo."
+              ],
+              "palabrasClave": [
+                "comisión",
+                "contrato no realizado"
+              ]
+            },
+            {
+              "numero": "46",
+              "epigrafe": "Quiebra del corredor",
+              "texto": [
+                "La quiebra del corredor producirá la cancelación de su matrícula profesional y su conducta patrimonial será calificada de dolosa, conforme al Art. 160º de la Ley de Quiebras."
+              ],
+              "palabrasClave": [
+                "quiebra",
+                "cancelación",
+                "conducta dolosa",
+                "Ley de Quiebras"
+              ]
+            }
+          ]
+        },
+        {
+          "nombre": "SECCIÓN II",
+          "titulo": "De los Rematadores",
+          "articulos": [
+            {
+              "numero": "47",
+              "epigrafe": "Requisitos para ser rematador",
+              "texto": [
+                "Para ejercer la profesión de rematador, se requiere:",
+                "a) Ser mayor de edad;",
+                "b) Poseer título de enseñanza secundaria expedido o revalidado en la República; y",
+                "c) Reunir las demás condiciones necesarias para el ejercicio del comercio.",
+                "Son aplicables a los rematadores las disposiciones relativas a la matrícula y su inscripción en el Registro Público de Comercio establecidas para los corredores."
+              ],
+              "palabrasClave": [
+                "rematador",
+                "martillero",
+                "mayoría de edad",
+                "título de enseñanza secundaria",
+                "matrícula"
+              ]
+            },
+            {
+              "numero": "48",
+              "epigrafe": "Libros de los rematadores",
+              "texto": [
+                "El rematador llevará los siguientes libros rubricados por el Juez de la matrícula:",
+                "a) Diario de Entradas: en el que se registrarán los bienes cuya venta se le encomiende, indicando las especificaciones necesarias para su identificación, el nombre y apellido de quien confiere el encargo, por cuenta de quién han de ser vendidos y las condiciones de su enajenación. Tratándose de un remate judicial consignará el Juzgado que lo ha ordenado, la secretaría, y los datos del expediente respectivo;",
+                "b) Diario de Salidas: en el que se asentarán, día por día, las ventas, indicando por cuenta de quien se han efectuado, quien ha resultado comprador, el precio, condiciones de pago y demás especificaciones relativas a las ventas;",
+                "c) De Cuentas de Gestión: entre el martillero y cada uno de sus comitentes.",
+                "Sin perjuicio de los libros exigidos precedentemente, el Juez, en caso de litigio, podrá apreciar si con ellos se satisface la obligación de una registración debida, de acuerdo a las modalidades de cada martillero."
+              ],
+              "palabrasClave": [
+                "libros",
+                "Diario de Entradas",
+                "Diario de Salidas",
+                "Cuentas de Gestión",
+                "rubricación"
+              ]
+            },
+            {
+              "numero": "49",
+              "epigrafe": "Obligaciones de los rematadores",
+              "texto": [
+                "Además de la obligación de llevar los libros mencionados, los rematadores deberán:",
+                "a) Comprobar la existencia del título invocado por el comitente sobre los bienes cuya subasta se les encargue y su registro, en su caso;",
+                "b) Convenir por escrito con el comitente los gastos y la forma de satisfacerlos, condiciones de venta, lugar del remate, base, modos o plazos del pago del precio, instrucciones para la subasta y autorización, en su caso, para suscribir el boleto respectivo en nombre del comitente;",
+                "c) Anunciar los remates con la publicidad necesaria, debiendo indicar en los avisos su nombre y apellido, domicilio especial y matrícula, fecha, hora y lugar del remate, descripción, condiciones legales y estado del bien ofertado;",
+                "d) Tratándose de remate de lotes en cuotas o ubicados en urbanizaciones en formación, los planos deberán estar aprobados por autoridad competente y a escala, debiendo figurar distancia entre la fracción a rematar y las rutas o caminos de comunicación, indicando, en su caso, tipo de pavimento, así como las obras de desagüe o saneamiento y servicios públicos permanentes;",
+                "e) Realizar el remate personalmente, en la fecha y horas señaladas, colocando en lugar visible una bandera con su nombre y explicando en voz alta, en idioma oficial y con precisión y claridad, los caracteres, condiciones legales y cualidades del bien;",
+                "f) Percibir del adquirente en efectivo, o en otra forma, bajo su responsabilidad si no contara con autorización del comitente, la seña o el importe a cuenta del precio, en la proporción fijada en la publicación, otorgando los recibos correspondientes;",
+                "g) Suscribir con los contratantes, previa comprobación de la identidad, el boleto de compraventa por triplicado, en el cual deberá mencionar las estipulaciones convenidas por las partes, debiendo entregarse un ejemplar a cada una de ellas y conservando en su poder el restante para su guarda y archivo. Puede prescindirse de dicho boleto cuando se trata de bienes muebles o de los que sean dados en posesión en el mismo acto y esto sea suficiente para la transmisión de la propiedad, casos en los que bastará el recibo respectivo;",
+                "h) Conservar las muestras, certificados e informes, según corresponda, relativos a los bienes que venda, hasta el momento de la transmisión efectiva del dominio; e",
+                "i) Efectuar rendición de cuentas documentada y entregar el saldo resultante dentro de los cinco días hábiles, incurriendo, en caso contrario, automáticamente en mora y pérdida de la comisión.",
+                "En los remates dispuestos por mandato judicial, informará al Juez dentro de los tres días el resultado de la venta, debiendo depositar en el Banco Central del Paraguay, a la orden del Juzgado los valores que hubiese recibido."
+              ],
+              "palabrasClave": [
+                "obligaciones",
+                "publicidad",
+                "boleto de compraventa",
+                "rendición de cuentas",
+                "plazo de 5 días",
+                "depósito judicial"
+              ]
+            },
+            {
+              "numero": "50",
+              "epigrafe": "Prohibición de ejercer sin matrícula",
+              "texto": [
+                "Queda prohibido a toda persona que carezca de la matrícula correspondiente, la realización de cualquier acto reservado por este Código exclusivamente a los rematadores."
+              ],
+              "palabrasClave": [
+                "prohibición",
+                "matrícula"
+              ]
+            },
+            {
+              "numero": "51",
+              "epigrafe": "Prohibiciones a los rematadores",
+              "texto": [
+                "Se prohíbe a los rematadores:",
+                "a) El ejercicio profesional de otros actos de comercio, sea por sí o bajo nombre de terceros;",
+                "b) Hacer descuentos, bonificaciones o reducción de comisiones arancelarias o exigir del comprador mayores beneficios por la venta;",
+                "c) Tener participación en el precio que se obtenga en el remate a su cargo, no pudiendo convenir sobre diferencias a su favor o de terceras personas;",
+                "d) Ser partícipe o tener interés directo o indirecto en los bienes cuya venta se le encomienda;",
+                "e) Comprar por cuenta de terceros, directa o indirectamente, dichos bienes;",
+                "f) Suscribir boletos de compraventa sin la autorización expresa del comitente;",
+                "g) Aceptar ofertas que no sean hechas de viva voz; y",
+                "h) Suspender el remate habiendo posturas, salvo que fijada una base, la misma no hubiese sido alcanzada."
+              ],
+              "palabrasClave": [
+                "prohibiciones",
+                "conflicto de intereses",
+                "comisión",
+                "participación en el precio"
+              ]
+            },
+            {
+              "numero": "52",
+              "epigrafe": "Sanciones a los rematadores",
+              "texto": [
+                "Los rematadores que no dieren cumplimiento a las obligaciones impuestas por los artículos precedentes, serán pasibles de multa y suspensión de quince días a un año, o cancelación de la matrícula, según la gravedad e importancia económica de la infracción, quedando reservada al Juez de la matrícula su apreciación. Los que infringieren las prohibiciones del Artículo anterior, serán sancionados con la suspensión hasta un año o cancelación de su matrícula por el Juez que le otorgó.",
+                "Las penas mencionadas antecedentemente, no excluyen la responsabilidad civil ni la criminal."
+              ],
+              "palabrasClave": [
+                "sanciones",
+                "multa",
+                "suspensión",
+                "cancelación",
+                "responsabilidad civil",
+                "responsabilidad criminal"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "IV",
+      "titulo": "De los Auxiliares del Comerciante",
+      "subsecciones": [
+        {
+          "nombre": "SECCIÓN I",
+          "titulo": "De los Factores",
+          "articulos": [
+            {
+              "numero": "53",
+              "epigrafe": "Definición de factor",
+              "texto": [
+                "Factor es la persona legalmente capacitada para el ejercicio del comercio, a quien el principal encarga mediante mandato la administración de sus negocios o la de un establecimiento comercial."
+              ],
+              "palabrasClave": [
+                "factor",
+                "mandato",
+                "administración",
+                "principal"
+              ]
+            },
+            {
+              "numero": "54",
+              "epigrafe": "Instrumento de designación del factor",
+              "texto": [
+                "La designación del factor deberá constar en instrumento privado o público otorgado por el principal o por la autoridad competente que lo instituye. Sólo surtirá efecto jurídico respecto de terceros, desde la fecha de la inscripción del instrumento habilitante en el Registro Público de Comercio."
+              ],
+              "palabrasClave": [
+                "designación",
+                "instrumento",
+                "inscripción",
+                "Registro Público de Comercio"
+              ]
+            },
+            {
+              "numero": "55",
+              "epigrafe": "Alcance de la autorización del factor",
+              "texto": [
+                "El factor designado con cláusulas generales se reputará autorizado para ejercer todos los actos inherentes a la dirección y administración del establecimiento mercantil. El instituyente que se proponga reducir estas facultades, deberá consignar expresamente en el instrumento habilitante las restricciones impuestas."
+              ],
+              "palabrasClave": [
+                "cláusulas generales",
+                "autorización",
+                "restricciones"
+              ]
+            },
+            {
+              "numero": "56",
+              "epigrafe": "Actuación en nombre del instituyente",
+              "texto": [
+                "El factor debe tratar el negocio en nombre de su instituyente, expresando en todos los documentos relativos al acto jurídico o giro del establecimiento, que firma como representante autorizado de aquél."
+              ],
+              "palabrasClave": [
+                "representación",
+                "nombre del instituyente"
+              ]
+            },
+            {
+              "numero": "57",
+              "epigrafe": "Responsabilidad del instituyente",
+              "texto": [
+                "Si el factor ha actuado dentro de los límites de su mandato, todas las obligaciones que contraiga en representación de su instituyente serán a cargo exclusivo de éste."
+              ],
+              "palabrasClave": [
+                "responsabilidad",
+                "instituyente",
+                "límites del mandato"
+              ]
+            },
+            {
+              "numero": "58",
+              "epigrafe": "Contratos por cuenta del propietario del establecimiento",
+              "texto": [
+                "Los contratos concluidos por el factor de un establecimiento comercial o industrial, que pertenezca notoriamente a persona o entidad conocida, se entienden realizados por cuenta del propietario del establecimiento, aún cuando el factor no lo declare al tiempo de celebrarlos, siempre que tales contratos recaigan sobre objetos comprendidos en el giro o tráfico del establecimiento.",
+                "Asimismo, son por cuenta del principal los contratos sobre objetos de otra naturaleza, si resulta que el factor actuó con autorización de su comitente, o que éste aprobó su gestión, expresa o tácitamente."
+              ],
+              "palabrasClave": [
+                "propietario del establecimiento",
+                "giro del establecimiento",
+                "aprobación tácita"
+              ]
+            },
+            {
+              "numero": "59",
+              "epigrafe": "Contratos en nombre propio del factor",
+              "texto": [
+                "Fuera de los casos previstos en el Artículo anterior, todo contrato celebrado por un factor en nombre propio, lo obliga directamente hacia la persona con quien contrató. Sin embargo, si se probase que la negociación fue hecha por cuenta del principal, el otro contratante tendrá opción para dirigir su reclamación contra el factor o contra su principal, pero no contra ambos."
+              ],
+              "palabrasClave": [
+                "nombre propio",
+                "responsabilidad directa",
+                "opción"
+              ]
+            },
+            {
+              "numero": "60",
+              "epigrafe": "Prohibiciones al factor",
+              "texto": [
+                "Queda prohibido al factor:",
+                "a) Negociar por cuenta propia o ajena, cuando su intervención pudiese perjudicar los intereses del principal;",
+                "b) Delegar sin autorización expresa, los poderes recibidos del instituyente;"
+              ],
+              "palabrasClave": [
+                "prohibiciones",
+                "conflicto de intereses",
+                "delegación de poderes"
+              ]
+            },
+            {
+              "numero": "61",
+              "epigrafe": "Subsistencia de la personería del factor",
+              "texto": [
+                "La personería del factor subsiste en caso de muerte del instituyente, mientras no lo sean revocados los poderes conferidos, pero concluye por la enajenación que se hiciese del establecimiento.",
+                "Sin embargo, serán válidos los actos jurídicos celebrados por el factor antes de que hubiese sido formalmente notificado de la revocación del mandato o de la enajenación del establecimiento."
+              ],
+              "palabrasClave": [
+                "subsistencia",
+                "muerte",
+                "revocación",
+                "enajenación"
+              ]
+            },
+            {
+              "numero": "62",
+              "epigrafe": "Obligaciones contables del factor",
+              "texto": [
+                "El factor está obligado al cumplimiento de las reglas establecidas para los comerciantes, relativas al registro de la contabilidad y de la rendición de cuentas."
+              ],
+              "palabrasClave": [
+                "contabilidad",
+                "rendición de cuentas"
+              ]
+            }
+          ]
+        },
+        {
+          "nombre": "SECCIÓN II",
+          "titulo": "De los Dependientes",
+          "articulos": [
+            {
+              "numero": "63",
+              "epigrafe": "Definición de dependiente",
+              "texto": [
+                "Dependiente es el empleado de un establecimiento comercial que se halla especialmente autorizado por el principal para actos mercantiles determinados."
+              ],
+              "palabrasClave": [
+                "dependiente",
+                "empleado",
+                "autorización"
+              ]
+            },
+            {
+              "numero": "64",
+              "epigrafe": "Autorización expresa al dependiente",
+              "texto": [
+                "El comerciante que faculte especialmente a un dependiente para ejecutar una parte de las operaciones propias de su negocio, tales como el giro de letras, el cobro de sumas de dinero y el recibo de mercaderías, firmando los documentos correspondientes, u otros semejantes que impongan obligaciones al principal, deberá darle autorización expresa para dichas operaciones, la que se registrará en los términos prescritos por el Art. 54º."
+              ],
+              "palabrasClave": [
+                "autorización expresa",
+                "registro",
+                "giro de letras",
+                "cobro",
+                "recibo de mercaderías"
+              ]
+            },
+            {
+              "numero": "65",
+              "epigrafe": "Actos prohibidos a los dependientes",
+              "texto": [
+                "Queda prohibido a los dependientes, salvo autorización expresa inscripta en el Registro Público de Comercio, la realización de los siguientes actos por cuenta de su principal:",
+                "a) Girar, aceptar o endosar letras u otros documentos fiduciarios;",
+                "b) Expedir recibos de recaudaciones o mercaderías; y",
+                "c) Suscribir cualquier otro documento de cargo o de descargo sobre operaciones de comercio."
+              ],
+              "palabrasClave": [
+                "actos prohibidos",
+                "autorización expresa",
+                "letras",
+                "recibos"
+              ]
+            },
+            {
+              "numero": "66",
+              "epigrafe": "Excepciones a las prohibiciones",
+              "texto": [
+                "Exceptúanse de lo dispuesto en el Artículo anterior:",
+                "a) Al portador de un documento en que se declare el recibo de una cantidad adeudada, a quien se presume autorizado a percibir su importe;",
+                "b) A los dependientes encargados de vender al público en tiendas o almacenes, a quienes se presume autorizados para cobrar el precio de las ventas que realicen al contado. La misma facultad correspondiente al encargado de la caja habilitada al público. Cuando la cobranza se haga fuera del establecimiento, o proceda de ventas a plazo, los recibos deberán suscribirse necesariamente por el principal o por factor o apoderado debidamente habilitado, y",
+                "c) A los contadores públicos encargados de los libros de contabilidad, cuyos asientos producen los mismos efectos que si hubieran sido efectuados por el principal."
+              ],
+              "palabrasClave": [
+                "excepciones",
+                "ventas al contado",
+                "contadores públicos"
+              ]
+            },
+            {
+              "numero": "67",
+              "epigrafe": "Formas de autorización al dependiente",
+              "texto": [
+                "La autorización conferida por el principal a un dependiente, no comprometida dentro de lo dispuesto en el Art. 64º, puede consistir en una comunicación escrita, telegráfica, o por cualquier otro medio legalmente acreditable, dirigida a sus corresponsales o a terceros."
+              ],
+              "palabrasClave": [
+                "autorización",
+                "comunicación escrita",
+                "medios legales"
+              ]
+            },
+            {
+              "numero": "68",
+              "epigrafe": "Responsabilidad del dependiente",
+              "texto": [
+                "El dependiente es responsable ante el principal de cualquier daño que cause a sus intereses por dolo, negligencia o falta de cumplimiento de sus órdenes o instrucciones, sin perjuicio de su responsabilidad criminal."
+              ],
+              "palabrasClave": [
+                "responsabilidad",
+                "dolo",
+                "negligencia",
+                "instrucciones"
+              ]
+            },
+            {
+              "numero": "69",
+              "epigrafe": "Recepción de mercaderías sin objeción",
+              "texto": [
+                "En el caso que el dependiente, encargado por su principal del recibo de mercaderías adquiridas, o que por cualquier concepto le deban ser entregadas, las recibiere sin objeción ni reservas, se considerará hecha la recepción sin admitirse reclamación ulterior del principal, salvo que éste justifique que las mercaderías fueron entregadas en fardos o bajo cubierta que impidiere su reconocimiento. En este supuesto, se estará a lo establecido para los contratos de compraventa y de transporte."
+              ],
+              "palabrasClave": [
+                "recepción de mercaderías",
+                "objeción",
+                "reclamación ulterior",
+                "fardos"
+              ]
+            },
+            {
+              "numero": "70",
+              "epigrafe": "Aplicación de normas a dependientes autorizados",
+              "texto": [
+                "Las disposiciones establecidas para los factores son aplicables, en lo pertinente, a los dependientes a quienes se hubiere concedido la autorización prevista por el Art. 64º. Se aplicarán además las disposiciones del Código del Trabajo, a los empleados dependientes de un establecimiento mercantil que hubieren celebrado contrato individual de trabajo."
+              ],
+              "palabrasClave": [
+                "aplicación de normas",
+                "Código del Trabajo",
+                "contrato individual de trabajo"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "V",
+      "titulo": "De los Actos de Comercio",
+      "articulos": [
+        {
+          "numero": "71",
+          "epigrafe": "Enum",eración de actos de comercio",
+          "texto": [
+            "Son actos de comercio:",
+            "a) Toda adquisición a título oneroso de una cosa mueble o inmueble, de derechos sobre ella, o de derechos intelectuales, para lucrar con su enajenación, sea en el mismo estado que se adquirió o después de darle otra forma de mayor o menor valor;",
+            "b) La transmisión a que se refiere el inciso anterior;",
+            "c) Las operaciones de banco, cambio, seguro, empresas financieras, warrants, corretaje o remate;",
+            "d) Las negociaciones sobre letras de cambio, cheques o cualquier otro documento de crédito endosable o al portador;",
+            "e) La emisión, oferta, suscripción pública, y, en general, las operaciones realizadas en el mercado de capitales, respecto de títulos valores y documentos que le sean equiparados;",
+            "f) La actividad para la distribución de bienes y servicios;",
+            "g) Las comisiones, mandatos comerciales y depósitos;",
+            "h) El transporte de personas o cosas realizado habitualmente;",
+            "i) La adquisición o enajenación de un establecimiento mercantil;",
+            "j) La construcción, compra venta o fletamento de buques y aeronaves y todo lo relativo al comercio marítimo, fluvial, lacustre o aéreo.",
+            "k) Las operaciones de los representantes, factores y dependientes;",
+            "l) Las cartas de crédito, fianzas, prendas y demás accesorios de las operaciones comerciales; y,",
+            "m) Los demás actos especialmente legislados."
+          ],
+          "palabrasClave": [
+            "actos de comercio",
+            "adquisición",
+            "enajenación",
+            "banco",
+            "seguro",
+            "corretaje",
+            "letras de cambio",
+            "cheques",
+            "títulos valores",
+            "transporte",
+            "establecimiento mercantil",
+            "comercio marítimo"
+          ]
+        },
+        {
+          "numero": "72",
+          "epigrafe": "Presunción de actos de comercio",
+          "texto": [
+            "Los actos de los comerciantes realizados en su calidad de tales, se presumen actos de comercio, salvo prueba en contrario."
+          ],
+          "palabrasClave": [
+            "presunción",
+            "prueba en contrario"
+          ]
+        },
+        {
+          "numero": "73",
+          "epigrafe": "Acto comercial para una de las partes",
+          "texto": [
+            "Si un acto es comercial para una de las partes, se presume que lo es para las demás."
+          ],
+          "palabrasClave": [
+            "presunción"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "VI",
+      "titulo": "De los Libros y la Documentación Comercial",
+      "articulos": [
+        {
+          "numero": "74",
+          "epigrafe": "Obligación de llevar contabilidad",
+          "texto": [
+            "Todo comerciante cuyo capital exceda del importe correspondiente a mil jornales mínimos establecidos para actividades diversas no especificadas de la Capital está obligado a registrar, en libros que la técnica contable considere necesarios, una contabilidad ordenada y regular, adecuada a las características y naturaleza de sus actividades, que permita determinar su situación patrimonial y los resultados de su actividad. Deberá conservar, además, su correspondencia mercantil y la documentación contable que exija la naturaleza de su giro comercial."
+          ],
+          "palabrasClave": [
+            "contabilidad",
+            "capital mínimo",
+            "1.000 jornales mínimos",
+            "situación patrimonial",
+            "correspondencia mercantil"
+          ]
+        },
+        {
+          "numero": "75",
+          "epigrafe": "Libros obligatorios",
+          "texto": [
+            "El número de libros y el sistema de contabilidad quedan a criterio del comerciante, debiendo llevar indispensablemente un libro Diario y uno de Inventario, sin perjuicio de los otros libros exigidos para determinada clase de actividades."
+          ],
+          "palabrasClave": [
+            "libro Diario",
+            "libro de Inventario",
+            "sistema de contabilidad"
+          ]
+        },
+        {
+          "numero": "76",
+          "epigrafe": "Medios mecánicos y sistemas modernos de contabilidad",
+          "texto": [
+            "Para el empleo de medios mecánicos u otros sistemas modernos de contabilidad, los representantes de las empresas o sus apoderados legales deberán presentar la comunicación pertinente sobre el sistema a ser utilizado, con certificación de firma de Escribano, a la Dirección de Registro Público de Comercio, la cual inscribirá dicha comunicación, sin necesidad de orden judicial.",
+            "El diario debe llevarse con asientos globales que no comprendan períodos mayores de un mes. En todos los casos, el método de contabilidad a ser utilizado debe adecuarse a las resoluciones establecidas por el Ministerio de Hacienda, y permitir la individualización de las operaciones, sus cuentas deudoras y acreedoras, y su posterior verificación."
+          ],
+          "palabrasClave": [
+            "medios mecánicos",
+            "sistemas modernos",
+            "comunicación",
+            "Dirección de Registro Público de Comercio",
+            "asientos globales",
+            "Ministerio de Hacienda"
+          ]
+        },
+        {
+          "numero": "77",
+          "epigrafe": "Contador matriculado",
+          "texto": [
+            "El que ejerza una actividad comercial de la importancia señalada en el Art. 74º, deberá llevar su contabilidad mediante contador matriculado, siendo ambos responsables solidariamente de que en los asientos se registren con fidelidad los documentos y constancias en cuya base hayan sido extendidos. El contador no es responsable de la veracidad de las operaciones, documentos y constancias en los que no ha participado ni intervenido. Si el comerciante es contador matriculado podrá llevar por sí mismo su contabilidad."
+          ],
+          "palabrasClave": [
+            "contador matriculado",
+            "responsabilidad solidaria",
+            "veracidad de las operaciones"
+          ]
+        },
+        {
+          "numero": "78",
+          "epigrafe": "Rubricación de libros",
+          "texto": [
+            "Los libros de comercio, antes de ser puestos en uso, deben ser presentados al Registro Público de Comercio numerados en todas sus hojas, para que sean rubricadas o selladas y se haga constar en nota datada en su primera página, el número de folios que contengan.",
+            "El mismo requisito se cumplirá con las hojas o fichas de otros sistemas de contabilidad que se autoricen.",
+            "El Registro cerrará los libros usados, con indicación en la última página de la fecha y del número de folios utilizados."
+          ],
+          "palabrasClave": [
+            "rubricación",
+            "numeración",
+            "Registro Público de Comercio",
+            "cierre de libros"
+          ]
+        },
+        {
+          "numero": "79",
+          "epigrafe": "Formalidades de la contabilidad",
+          "texto": [
+            "Los libros de contabilidad serán llevados en idioma oficial debiendo asentarse las operaciones cronológicamente, sin interlineaciones, transportes al margen, ni espacios en blanco. No podrán hacerse enmiendas, raspaduras ni cualquier otra alteración, y si fuere necesaria alguna rectificación, ésta debe practicarse mediante el correspondiente contraasiento. Es prohibido mutilar parte alguna de cualquier libro, sea obligatorio o auxiliar, arrancar o inutilizar hojas, así como alterar la encuadernación y foliación."
+          ],
+          "palabrasClave": [
+            "idioma oficial",
+            "orden cronológico",
+            "contraasientos",
+            "prohibición de mutilar"
+          ]
+        },
+        {
+          "numero": "80",
+          "epigrafe": "Libro Diario",
+          "texto": [
+            "En el libro Diario se asentarán en forma detallada las operaciones diarias del comerciante según el orden en que se hubiesen efectuado, de modo que de cada partida resulte la persona del acreedor y la del deudor en la negociación realizada."
+          ],
+          "palabrasClave": [
+            "libro Diario",
+            "operaciones diarias",
+            "acreedor",
+            "deudor"
+          ]
+        },
+        {
+          "numero": "81",
+          "epigrafe": "Libro de Caja",
+          "texto": [
+            "Si el comerciante lleva libro de Caja es innecesario que asiente en el Diario los pagos que efectuare o recibiere en efectivo. En tal caso, el libro de Caja se considera parte integrante del Diario."
+          ],
+          "palabrasClave": [
+            "libro de Caja",
+            "pagos en efectivo"
+          ]
+        },
+        {
+          "numero": "82",
+          "epigrafe": "Libro de Inventario",
+          "texto": [
+            "En el libro de Inventario se registrarán:",
+            "a) La situación patrimonial al iniciar las operaciones, con indicación y valoración del Activo y Pasivo; y,",
+            "b) La situación patrimonial y los resultados que corresponda a la finalización de cada ejercicio, con el cuadro demostrativo de ganancias y pérdidas.",
+            "En este libro se debe consignar el detalle del inventario cuando el mismo no figure en otros registros; asimismo, se podrán incluir estados contables complementarios."
+          ],
+          "palabrasClave": [
+            "libro de Inventario",
+            "situación patrimonial",
+            "Activo",
+            "Pasivo",
+            "cuadro de ganancias y pérdidas"
+          ]
+        },
+        {
+          "numero": "83",
+          "epigrafe": "Balance general",
+          "texto": [
+            "Todo comerciante deberá confeccionar, dentro de los tres primeros meses de cada año, el balance general de sus operaciones, que contendrá una relación precisa de sus bienes, créditos y acciones, así como sus obligaciones pendientes en la fecha del balance."
+          ],
+          "palabrasClave": [
+            "balance general",
+            "plazo de 3 meses",
+            "bienes",
+            "créditos",
+            "obligaciones"
+          ]
+        },
+        {
+          "numero": "84",
+          "epigrafe": "Duración del ejercicio",
+          "texto": [
+            "La duración de cada ejercicio no podrá exceder de un año."
+          ],
+          "palabrasClave": [
+            "ejercicio",
+            "duración máxima un año"
+          ]
+        },
+        {
+          "numero": "85",
+          "epigrafe": "Conservación de libros y documentos",
+          "texto": [
+            "Los libros y registros de contabilidad deberán ser conservados por cinco años contados a partir de la fecha de la última anotación efectuada en ellos. Durante el mismo lapso se conservarán en forma ordenada los comprobantes, de modo que sea posible su verificación; este plazo se computará desde la fecha en que hubieren sido extendidos."
+          ],
+          "palabrasClave": [
+            "conservación",
+            "plazo de 5 años",
+            "comprobantes"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "VII",
+      "titulo": "De los Libros de las Sociedades",
+      "articulos": [
+        {
+          "numero": "86",
+          "epigrafe": "Obligaciones contables de las sociedades",
+          "texto": [
+            "Toda sociedad está obligada a llevar los libros, registros y documentación a que se refieren los Arts. 74º y 75º, y además aquellos exigidos por su naturaleza."
+          ],
+          "palabrasClave": [
+            "sociedades",
+            "libros",
+            "registros"
+          ]
+        },
+        {
+          "numero": "87",
+          "epigrafe": "Libros de las sociedades por acciones",
+          "texto": [
+            "Las sociedades por acciones deberán llevar además:",
+            "a) El Libro de Registro de Acciones que contendrá:",
+            "  1) El nombre y apellido de los suscriptores, el número y la serie de acciones suscriptas y los pagos efectuados;",
+            "  2) La transmisión de los títulos nominativos, la fecha en que se verifica y los vínculos que se refieran a ellas;",
+            "  3) La especificación de las acciones que se conviertan al portador y de los títulos que se emiten a cambio de ellas; y",
+            "  4) El número de las acciones dadas en garantía de buen desempeño por los administradores de la sociedad, en el caso de que lo exijan los estatutos.",
+            "b) El Libro de Registro de Obligaciones, en el que se anotará el monto de las emitidas y de las extinguidas, el nombre y apellido de los obligacionistas con títulos nominativos, la transmisión y datos relativos a ella y el pago de los intereses;",
+            "c) El Libro de Asistencia a las Asambleas;",
+            "d) El Libro de Actas de las Deliberaciones de las Asambleas y del Directorio o Consejo de Administración. Salvo disposición contraria de los Estatutos, las actas de las asambleas serán firmadas por el presidente y dos socios, por lo menos, designados al efecto. La de las sesiones del Directorio serán firmadas por todos los asistentes."
+          ],
+          "palabrasClave": [
+            "sociedades por acciones",
+            "Registro de Acciones",
+            "Registro de Obligaciones",
+            "Libro de Asistencia",
+            "Libro de Actas"
+          ]
+        },
+        {
+          "numero": "88",
+          "epigrafe": "Depósito de balances",
+          "texto": [
+            "Las copias del balance con la cuenta de pérdidas y ganancias presentadas deberán quedar depositadas en la sede social a disposición de los socios con no menos de quince días de anticipación a su consideración por la asamblea. También se mantendrán a su disposición copias de la Memoria de los administradores y del informe del síndico."
+          ],
+          "palabrasClave": [
+            "balance",
+            "depósito",
+            "plazo de 15 días",
+            "Memoria",
+            "informe del síndico"
+          ]
+        },
+        {
+          "numero": "89",
+          "epigrafe": "Distribución de dividendos",
+          "texto": [
+            "No pueden ser aprobados ni distribuidos dividendos a los socios, sino por utilidades realmente obtenidas y resultantes de un balance confeccionado de acuerdo con la Ley y los estatutos, y aprobado por el órgano social competente."
+          ],
+          "palabrasClave": [
+            "dividendos",
+            "utilidades reales",
+            "balance aprobado"
+          ]
+        },
+        {
+          "numero": "90",
+          "epigrafe": "Irrenunciabilidad del derecho de impugnar balances",
+          "texto": [
+            "El derecho de aprobar o impugnar los balances y votar las resoluciones de cualquier orden es irrenunciable, y cualquier convención en contrario será nula."
+          ],
+          "palabrasClave": [
+            "impugnación de balances",
+            "irrenunciable",
+            "nulidad"
+          ]
+        },
+        {
+          "numero": "91",
+          "epigrafe": "Reserva legal",
+          "texto": [
+            "Las sociedades por acciones y las de responsabilidad limitada deben efectuar una reserva legal no menor del cinco por ciento de las utilidades netas del ejercicio, hasta alcanzar el veinte por ciento del capital suscripto."
+          ],
+          "palabrasClave": [
+            "reserva legal",
+            "5% de utilidades",
+            "20% del capital suscripto"
+          ]
+        },
+        {
+          "numero": "92",
+          "epigrafe": "Responsabilidad de administradores y síndicos",
+          "texto": [
+            "La aprobación del balance por parte de los órganos sociales competentes, no implica la liberación de los administradores, y de los síndicos, en su caso, por la responsabilidad legal en que hayan incurrido en la gestión social y por violación de la Ley y de los estatutos."
+          ],
+          "palabrasClave": [
+            "responsabilidad",
+            "administradores",
+            "síndicos",
+            "violación de la Ley"
+          ]
+        },
+        {
+          "numero": "93",
+          "epigrafe": "Cobertura de pérdidas",
+          "texto": [
+            "Las sociedades no podrán distribuir utilidades hasta tanto no se cubran las pérdidas de los ejercicios anteriores.",
+            "Cuando los directores o síndicos sean remunerados con un porcentaje de las utilidades, la Asamblea podrá disponer en cada caso su pago aún cuando no se cubran las pérdidas anteriores."
+          ],
+          "palabrasClave": [
+            "pérdidas anteriores",
+            "distribución de utilidades",
+            "remuneración de directores"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "VIII",
+      "titulo": "De la Exhibición de los Libros y de la Prueba Resultante",
+      "articulos": [
+        {
+          "numero": "95",
+          "epigrafe": "Exhibición general de libros",
+          "texto": [
+            "Salvo disposiciones especiales de derecho público, la exhibición general de los libros, registros y comprobantes de los comerciantes, sólo podrá decretarse a instancia de parte, en los juicios sucesorios, de comunidad de bienes, o sociedad, administración o gestión mercantil por cuenta ajena y en los casos de liquidación.",
+            "En los de convocación de acreedores y quiebra, se estará a lo dispuesto por la Ley respectiva."
+          ],
+          "palabrasClave": [
+            "exhibición de libros",
+            "juicios sucesorios",
+            "comunidad de bienes",
+            "liquidación",
+            "quiebra"
+          ]
+        },
+        {
+          "numero": "96",
+          "epigrafe": "Exhibición parcial de libros",
+          "texto": [
+            "Fuera de los casos especificados en el Artículo anterior, sólo se podrá proveer judicialmente a instancia de parte o de oficio contra la voluntad de sus dueños, a la exhibición parcial de los libros de comercio y exclusivamente en cuanto tenga relación con el punto en cuestión de que se trate.",
+            "En tal caso, el reconocimiento de los libros exhibidos se verificará con la presencia del dueño de éstos, o de la persona que lo represente."
+          ],
+          "palabrasClave": [
+            "exhibición parcial",
+            "relación con el punto en cuestión",
+            "presencia del dueño"
+          ]
+        },
+        {
+          "numero": "97",
+          "epigrafe": "Exhibición de libros de corredores y rematadores",
+          "texto": [
+            "La exhibición de los libros sólo podrá decretarse cuando el dueño de ellos sea parte en el juicio, pero la oposición a su exhibición no podrá hacerse por las partes sino por aquél. Procede, sin embargo, la exhibición de los libros de los corredores, rematadores, aunque no sean parte en el juicio, siempre que hayan intervenido en la operación que se ventila."
+          ],
+          "palabrasClave": [
+            "corredores",
+            "rematadores",
+            "intervención en la operación"
+          ]
+        },
+        {
+          "numero": "98",
+          "epigrafe": "Exhibición de libros auxiliares",
+          "texto": [
+            "Cuando un comerciante llevare libros auxiliares con la formalidad establecida para los principales, la exhibición de ellos quedará sometida a las reglas establecidas en los tres artículos anteriores."
+          ],
+          "palabrasClave": [
+            "libros auxiliares",
+            "formalidad"
+          ]
+        },
+        {
+          "numero": "99",
+          "epigrafe": "Exhibición por herederos y sucesores",
+          "texto": [
+            "La obligación de exhibir los libros de contabilidad comprende no sólo a los herederos de los comerciantes, sino al sucesor a título singular, a quien se hubiere transmitido el activo y el pasivo del comerciante."
+          ],
+          "palabrasClave": [
+            "herederos",
+            "sucesor a título singular"
+          ]
+        },
+        {
+          "numero": "100",
+          "epigrafe": "Admisión como medio de prueba",
+          "texto": [
+            "Los libros, registros y comprobantes serán admitidos en juicio como medio de prueba del modo y en las condiciones que se establecen en los artículos siguientes de esta Sección."
+          ],
+          "palabrasClave": [
+            "prueba",
+            "juicio"
+          ]
+        },
+        {
+          "numero": "101",
+          "epigrafe": "Prueba en contra del comerciante",
+          "texto": [
+            "Los asientos de los libros o registros y sus comprobantes probarán en contra de los comerciantes a quienes pertenezcan o sus sucesores; pero el adversario no podrá aceptar los asientos y comprobantes que le sean favorables y desechar los que le perjudiquen."
+          ],
+          "palabrasClave": [
+            "prueba en contra",
+            "unidad de la prueba"
+          ]
+        },
+        {
+          "numero": "102",
+          "epigrafe": "Prueba a favor del comerciante",
+          "texto": [
+            "Entre comerciantes y en actos propios de su giro, los asientos de los libros y los registros llevados en forma, probarán a su favor o de sus sucesores, cuando su adversario no presente asientos en contrario llevados en debida forma u otra prueba plena y concluyente, debiendo tenerse en cuenta al efecto la naturaleza del litigio y las demás pruebas producidas."
+          ],
+          "palabrasClave": [
+            "prueba a favor",
+            "asientos en contrario",
+            "prueba plena y concluyente"
+          ]
+        },
+        {
+          "numero": "103",
+          "epigrafe": "Prueba contradictoria",
+          "texto": [
+            "Cuando resulte prueba contradictoria de los asientos de los libros, registros y sus comprobantes, llevados en forma, se prescindirá de este medio de prueba y se estará a las demás producidas."
+          ],
+          "palabrasClave": [
+            "prueba contradictoria",
+            "prescindir de los libros"
+          ]
+        },
+        {
+          "numero": "104",
+          "epigrafe": "Actos no comerciales",
+          "texto": [
+            "Tratándose de actos no comerciales o cumplidos entre el comerciante y uno que no lo es, los libros y registros comerciales sólo servirán como principio de prueba."
+          ],
+          "palabrasClave": [
+            "actos no comerciales",
+            "principio de prueba"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "IX",
+      "titulo": "De la Competencia Comercial",
+      "articulos": [
+        {
+          "numero": "105",
+          "epigrafe": "Libre competencia",
+          "texto": [
+            "La competencia comercial puede ejercerse libremente siempre que no lesione los intereses de la economía nacional y dentro de los límites establecidos por las disposiciones de este Código, las leyes especiales o lo que las partes acordasen contractualmente."
+          ],
+          "palabrasClave": [
+            "competencia comercial",
+            "libre competencia",
+            "intereses de la economía nacional"
+          ]
+        },
+        {
+          "numero": "106",
+          "epigrafe": "Pacto de limitación de competencia",
+          "texto": [
+            "El pacto que limite la competencia será válido si se circunscribe a una zona y actividad determinada y por no más de cinco años, siempre que no tenga por finalidad perjudicar a terceros.",
+            "Si no se hubiese estipulado plazo o se conviniere uno mayor al establecido en este Artículo su duración será de cinco años."
+          ],
+          "palabrasClave": [
+            "pacto de no competencia",
+            "zona determinada",
+            "actividad determinada",
+            "plazo máximo 5 años"
+          ]
+        },
+        {
+          "numero": "107",
+          "epigrafe": "Proveedor único",
+          "texto": [
+            "El que fuere proveedor único de un servicio o un producto está obligado a suministrarlo a todos los interesados en igualdad de condiciones y precio."
+          ],
+          "palabrasClave": [
+            "proveedor único",
+            "igualdad de condiciones",
+            "igualdad de precio"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "X",
+      "titulo": "De la Competencia Desleal",
+      "articulos": [
+        {
+          "numero": "108",
+          "epigrafe": "Actos de competencia desleal",
+          "texto": [
+            "Sin perjuicio de lo que dispongan las normas especiales sobre marcas, patentes y otros derechos análogos, no están permitidos y se consideran actos de competencia desleal, entre otros, los que se enuncian a continuación:",
+            "a) Usar nombres o signos distintivos que puedan causar confusión con los legítimamente usados por otros;",
+            "b) Imitar los productos de un competidor, o realizar por cualquier otro medio actos susceptibles de crear confusión con los productos o con la actividad de aquél;",
+            "c) Difundir noticias o apreciaciones sobre los productos o actividad de un competidor, para ocasionar su descrédito o apropiarse de los méritos de los productos de aquél;",
+            "d) Utilizar directa o indirectamente cualquier medio contrario a los principios de la ética profesional que puedan causar daño al competidor."
+          ],
+          "palabrasClave": [
+            "competencia desleal",
+            "confusión",
+            "imitación",
+            "descrédito",
+            "ética profesional"
+          ]
+        },
+        {
+          "numero": "109",
+          "epigrafe": "Efectos de la sentencia",
+          "texto": [
+            "La sentencia que califique un acto de competencia desleal prohibirá su reiteración y establecerá medidas adecuadas para eliminar sus efectos."
+          ],
+          "palabrasClave": [
+            "sentencia",
+            "prohibición de reiteración",
+            "eliminación de efectos"
+          ]
+        },
+        {
+          "numero": "110",
+          "epigrafe": "Responsabilidad por competencia desleal",
+          "texto": [
+            "Los actos de competencia desleal realizados con dolo o culpa del agente lo obligan a reparar el daño causado. La sentencia que así lo declare podrá ser publicada."
+          ],
+          "palabrasClave": [
+            "responsabilidad",
+            "reparación del daño",
+            "publicación de la sentencia"
+          ]
+        },
+        {
+          "numero": "111",
+          "epigrafe": "Presunción de culpabilidad y legitimación",
+          "texto": [
+            "Se presume, salvo prueba en contrario, que el acto declarado de competencia desleal es culpable. La acción encaminada a reprimir la competencia desleal corresponde al particular afectado y a las asociaciones profesionales interesadas."
+          ],
+          "palabrasClave": [
+            "presunción de culpabilidad",
+            "legitimación activa",
+            "asociaciones profesionales"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "XI",
+      "titulo": "De la Transferencia de los Establecimientos Comerciales",
+      "articulos": [
+        {
+          "numero": "112",
+          "epigrafe": "Elementos constitutivos del establecimiento comercial",
+          "texto": [
+            "Son elementos constitutivos de un establecimiento comercial, las instalaciones, existencias de mercaderías, nombre y enseña comercial, derecho al local, patentes de invención, marcas de productos y servicios, dibujos y modelos industriales, menciones honoríficas y todos los demás derechos derivados de la propiedad comercial o industrial."
+          ],
+          "palabrasClave": [
+            "establecimiento comercial",
+            "instalaciones",
+            "existencias",
+            "nombre comercial",
+            "enseña comercial",
+            "patentes",
+            "marcas",
+            "propiedad industrial"
+          ]
+        },
+        {
+          "numero": "113",
+          "epigrafe": "Publicidad de la transferencia",
+          "texto": [
+            "Toda transferencia de un establecimiento comercial por acto privado o en remate público, deberá ser anunciada con veinte días de anticipación en dos diarios de gran circulación por cinco veces alternadas durante diez días.",
+            "Las publicaciones indicarán la denominación, clase y ubicación del establecimiento, nombre y domicilio del vendedor y del comprador, y los del rematador o del escribano, en su caso."
+          ],
+          "palabrasClave": [
+            "transferencia",
+            "publicidad",
+            "plazo de 20 días",
+            "dos diarios de gran circulación",
+            "cinco veces en diez días"
+          ]
+        },
+        {
+          "numero": "114",
+          "epigrafe": "Declaración de créditos y deudas",
+          "texto": [
+            "El enajenante entregará al adquirente, en todos los casos, una declaración que contenga los créditos y las deudas, con especificación del nombre y domicilio de los acreedores y deudores, monto de los créditos y deudas y fecha de vencimiento de los mismos."
+          ],
+          "palabrasClave": [
+            "declaración",
+            "créditos",
+            "deudas",
+            "acreedores",
+            "deudores"
+          ]
+        },
+        {
+          "numero": "115",
+          "epigrafe": "Oposición de acreedores",
+          "texto": [
+            "La transferencia no podrá ser formalizada antes de transcurridos diez días de la última publicación, plazo dentro del cual los acreedores podrán notificar su oposición al adquirente, en el domicilio denunciado en la publicación, o al rematador o escribano que interviniere, exigiendo la retención del importe de sus créditos y su depósito en cuenta especial.",
+            "El derecho de oposición podrá ser ejercido tanto por los acreedores reconocidos, como por los omitidos que presentaren los títulos de sus créditos o justificaren su existencia por asientos llevados en los libros y registros de contabilidad."
+          ],
+          "palabrasClave": [
+            "oposición",
+            "plazo de 10 días",
+            "retención",
+            "depósito en cuenta especial"
+          ]
+        },
+        {
+          "numero": "116",
+          "epigrafe": "Plazo para gestionar embargo",
+          "texto": [
+            "Efectuado el depósito por el comprador, o, en su caso, por el rematador o escribano, los oponentes dispondrán del plazo de veinte días, a contar del vencimiento de los diez días que tuvieren para deducir su oposición, a objeto de gestionar el embargo de lo depositado.",
+            "Si no lo hicieren en dicho plazo, las sumas podrán se retiradas por el depositante."
+          ],
+          "palabrasClave": [
+            "embargo",
+            "plazo de 20 días"
+          ]
+        },
+        {
+          "numero": "117",
+          "epigrafe": "Crédito cuestionado",
+          "texto": [
+            "En caso de que el crédito del oponente fuera cuestionado, el enajenante podrá pedir al Juez autorización para retirar la parte del precio correspondiente al crédito de que se trate, ofreciendo caución suficiente para responder por él."
+          ],
+          "palabrasClave": [
+            "crédito cuestionado",
+            "caución"
+          ]
+        },
+        {
+          "numero": "118",
+          "epigrafe": "Formalización de la transferencia",
+          "texto": [
+            "Publicados los avisos y transcurridos los diez días de la última publicación sin que se haya deducido oposición, podrá otorgarse válidamente el documento de transferencia. También podrá hacerse en el caso del Artículo anterior.",
+            "Para que la transferencia surta efecto respecto de terceros debe celebrarse por escrito e inscribirse en el Registro Público de Comercio."
+          ],
+          "palabrasClave": [
+            "formalización",
+            "inscripción",
+            "Registro Público de Comercio"
+          ]
+        },
+        {
+          "numero": "119",
+          "epigrafe": "Precio mínimo de transferencia",
+          "texto": [
+            "No podrá efectuarse la transferencia de un establecimiento comercial o industrial por un precio inferior al importe de los créditos constitutivos del pasivo declarado por el vendedor, más el importe de las demás deudas no declaradas cuyos acreedores hubieren hecho oposición, salvo el caso de conformidad de los interesados."
+          ],
+          "palabrasClave": [
+            "precio mínimo",
+            "pasivo declarado",
+            "conformidad de los interesados"
+          ]
+        },
+        {
+          "numero": "120",
+          "epigrafe": "Transferencia en remate público",
+          "texto": [
+            "En los casos de transferencia total o parcial en remate público, el martillero levantará previamente inventario de las existencias y lo anunciará en las publicaciones correspondientes, debiendo ajustarse a lo previsto para el caso de oposición.",
+            "Si el producto del remate no cubriere la suma a ser retenida, el rematador depositará en cuenta especial, el producto total de la subasta, previa deducción de comisión y gastos.",
+            "Si el rematador hiciere pagos o entregas al vendedor mediando oposición, quedará obligado solidariamente con éste respecto de los acreedores hasta el importe de las sumas entregadas."
+          ],
+          "palabrasClave": [
+            "remate público",
+            "martillero",
+            "inventario",
+            "responsabilidad solidaria"
+          ]
+        },
+        {
+          "numero": "121",
+          "epigrafe": "Responsabilidad solidaria por omisiones",
+          "texto": [
+            "Las omisiones o transgresiones a esta Ley harán responsables solidariamente por el importe de los créditos que resulten impagos como consecuencia de ellas y hasta el monto del precio de lo vendido, al vendedor, al comprador, y en su caso, al escribano o rematador que hubiere intervenido."
+          ],
+          "palabrasClave": [
+            "responsabilidad solidaria",
+            "omisiones",
+            "transgresiones"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "Final",
+      "titulo": "Disposición Final",
+      "articulos": [
+        {
+          "numero": "122",
+          "epigrafe": "Derogación",
+          "texto": [
+            "Derógase el Libro Primero del Código de Comercio excepto el Título III relativo a las bolsas y mercados de comercio."
+          ],
+          "palabrasClave": [
+            "derogación",
+            "Código de Comercio",
+            "Libro Primero"
+          ]
+        },
+        {
+          "numero": "123",
+          "epigrafe": "Comunicación",
+          "texto": [
+            "Comuníquese al Poder Ejecutivo."
+          ],
+          "palabrasClave": [
+            "comunicación"
+          ]
+        }
+      ]
+    }
+  ]
+}
