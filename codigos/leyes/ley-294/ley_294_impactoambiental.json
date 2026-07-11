@@ -1,0 +1,733 @@
+{
+  "id": "ley-294-93",
+  "nombre": "Ley N° 294/93 – De Evaluación de Impacto Ambiental",
+  "ley": "Ley N° 294/93",
+  "vigente": true,
+  "promulgacion": "31/12/1993",
+  "reglamentada_por": "Decreto N° 14.281/96",
+  "capitulos": [
+    {
+      "numero": "I",
+      "titulo": "Disposiciones Generales",
+      "articulos": [
+        {
+          "numero": "1",
+          "epigrafe": "Obligatoriedad de la Evaluación de Impacto Ambiental",
+          "texto": [
+            "Declárase obligatoria la Evaluación de Impacto ambiental. Se entenderá por Impacto Ambiental, a los efectos legales, toda modificación del medio ambiente provocada por obras o actividades humanas que tengan como consecuencia positiva o negativa, directa o indirecta, afectar la vida en general, la Biodiversidad, la calidad o una cantidad significativa de los recursos naturales o ambientales y su aprovechamiento, el bienestar, la salud, la seguridad personal, los hábitos y costumbres, el patrimonio cultural, los medios de vida legítimos."
+          ],
+          "palabrasClave": [
+            "Evaluación de Impacto Ambiental",
+            "impacto ambiental",
+            "modificación del medio ambiente",
+            "obras humanas",
+            "actividades humanas",
+            "biodiversidad",
+            "recursos naturales",
+            "salud",
+            "patrimonio cultural"
+          ]
+        },
+        {
+          "numero": "2",
+          "epigrafe": "Definición de Evaluación de Impacto Ambiental",
+          "texto": [
+            "Se entenderá por Evaluación de Impacto Ambiental a los efectos legales, el estudio científico que, permita identificar, prever y estimar impactos ambientales en toda obra o actividad proyectada o en ejecución."
+          ],
+          "palabrasClave": [
+            "Evaluación de Impacto Ambiental",
+            "estudio científico",
+            "identificar impactos",
+            "prever impactos",
+            "estimar impactos"
+          ]
+        },
+        {
+          "numero": "3",
+          "epigrafe": "Contenido mínimo de la Evaluación de Impacto Ambiental",
+          "texto": [
+            "Toda Evaluación de Impacto Ambiental deberá contener, como mínimo:",
+            "a) Una descripción del tipo de obra o naturaleza de la actividad proyectada con mención de sus propietarios y responsables; su localización; sus magnitudes; su proceso de instalación, operación y mantenimiento; tipos de materia prima e insumos a utilizar; las etapas y el cronograma de ejecución; número y caracterización de la fuerza de trabajo a emplear.",
+            "b) Una estimación de la significación socioeconómica del proyecto, su vinculación con las políticas gubernamentales, municipales y departamentales y su adecuación a una política de desarrollo sustentable, así como a las regulaciones territoriales, urbanísticas y técnicas.",
+            "c) Los límites del área geográfica a ser afectada, con una descripción física, biológica, socioeconómica y cultural, detallada tanto cuantitativa como cualitativamente, del área de influencia directa de las obras o actividades y un inventario ambiental de la misma, de tal modo a caracterizar su estado previo a las transformaciones proyectadas, con especial atención en la determinación de las cuencas hidrográficas.",
+            "d) Los análisis indispensables para determinar los posibles impactos y los riesgos de las obras o actividades durante cada etapa de su ejecución y luego de finalizada; sus efectos positivos y negativos, directos e indirectos, permanentes o temporales, reversibles o irreversibles, continuos o discontinuos, regulares o irregulares, acumulativos o sinérgicos, de corto, mediano o largo plazo.",
+            "e) Un plan de Gestión Ambiental que contendrá la descripción de las medidas protectoras o de mitigación de impactos negativos que se prevén en el proyecto; de las compensaciones e indemnizaciones previstas, de los métodos e instrumentos de vigilancia, monitoreo y control que se utilizarán, así como las demás previsiones que se agreguen en las reglamentaciones;",
+            "f) Una relación de las alternativas técnicas del proyecto y de las de su localización, así como una estimación de las circunstancias que se debían si el mismo no se realizase; y",
+            "g) RELATORIO en el cual se resumirá la información detallada de la evaluación de impacto ambiental y las conclusiones del documento. El Relatorio deberá redactarse en términos fácilmente comprensibles, con empleo de medios de comunicación visual y otras técnicas didácticas y no deberá exceder de la quinta parte del Estudio de Impacto Ambiental."
+          ],
+          "palabrasClave": [
+            "contenido mínimo",
+            "descripción de la obra",
+            "significación socioeconómica",
+            "área geográfica afectada",
+            "inventario ambiental",
+            "cuencas hidrográficas",
+            "impactos",
+            "riesgos",
+            "Plan de Gestión Ambiental",
+            "medidas de mitigación",
+            "alternativas técnicas",
+            "Relatorio de Impacto Ambiental"
+          ]
+        },
+        {
+          "numero": "4",
+          "epigrafe": "Responsables de la Evaluación de Impacto Ambiental",
+          "texto": [
+            "La EVALUACION DE IMPACTO AMBIENTAL y sus Relatorios, así como sus ampliaciones y modificaciones, deberán ser realizados por las personas, empresas u organismos especializados que estén debidamente autorizados e inscriptos para el efecto y deberán ser costeados por los responsables del proyecto, quienes los suscribirán en tantos ejemplares como exija cada reglamentación."
+          ],
+          "palabrasClave": [
+            "consultores ambientales",
+            "autorización",
+            "inscripción",
+            "costos del proyecto"
+          ]
+        },
+        {
+          "numero": "5",
+          "epigrafe": "Presentación de la Declaración de Impacto Ambiental",
+          "texto": [
+            "Toda Declaración de Impacto Ambiental (DIA) será presentada por su o sus responsables ante la Autoridad Administrativa junto con el proyecto de obra o actividad y los demás requisitos que ésta determine."
+          ],
+          "palabrasClave": [
+            "Declaración de Impacto Ambiental",
+            "Autoridad Administrativa"
+          ]
+        },
+        {
+          "numero": "6",
+          "epigrafe": "Autoridad Administrativa competente",
+          "texto": [
+            "La Autoridad Administrativa con facultad para examinar y dictaminar acerca de la EVALUACION DE IMPACTO AMBIENTAL y sus Relatorios será el Ministerio de Agricultura y Ganadería, a través de la Dirección de Ordenamiento Ambiental, o de los organismos que pudieran sucederle. La reglamentación de esta Ley y la aplicación de sus prescripciones estarán a cargo de la Autoridad Administrativa."
+          ],
+          "palabrasClave": [
+            "Autoridad Administrativa",
+            "Ministerio de Agricultura y Ganadería",
+            "Dirección de Ordenamiento Ambiental"
+          ]
+        },
+        {
+          "numero": "7",
+          "epigrafe": "Proyectos que requieren Evaluación de Impacto Ambiental",
+          "texto": [
+            "Se requerirá EVALUACION DE IMPACTO AMBIENTAL para los siguientes proyectos de obras o actividades públicas o privadas.",
+            "a) Los asentamientos humanos, las colonizaciones y las urbanizaciones, sus planes directores y reguladores;",
+            "b) La explotación agrícola, ganadera, forestal y granjera.",
+            "c) Los complejos y unidades industriales de cualquier tipo;",
+            "d) Extracción de minerales sólidos, superficiales o de profundidad y sus procesamientos;",
+            "e) Extracción de combustibles fósiles y sus procesamientos;",
+            "f) Construcción y operación de conductos de agua, petróleo, gas, minerales, agua servida y efluentes industriales en general;",
+            "g) Obras hidráulicas en general;",
+            "h) Usinas y líneas de transmisión de energía eléctrica;",
+            "i) La producción de carbón vegetal y otros generadores de energía así como las actividades que lo utilicen;",
+            "j) Recolección, tratamiento y disposición final de residuos urbanos e industriales;",
+            "k) Obras viales en general;",
+            "l) Obras portuarias en general y sus sistemas operativos;",
+            "m) Pistas de aterrizajes y sus sistemas operativos;",
+            "n) Depósitos y sus sistemas operativos;",
+            "ñ) Talleres mecánicos, de fundición y otros que sean susceptibles de causar efectos en el exterior;",
+            "o) Obras de construcción, desmontes y excavaciones;",
+            "p) Actividades arqueológicas, espeleológicas y de prospección en general;",
+            "q) La introducción de especies exóticas, la explotación de bosques nativos, de flora y fauna silvestres, la pesca comercial; y,",
+            "r) Cualquier otra obra o actividad que por sus dimensiones o intensidad sea susceptible de causar impactos ambientales."
+          ],
+          "palabrasClave": [
+            "proyectos sujetos a EIA",
+            "asentamientos humanos",
+            "explotación agrícola",
+            "explotación ganadera",
+            "explotación forestal",
+            "industrias",
+            "extracción de minerales",
+            "combustibles fósiles",
+            "conductos",
+            "obras hidráulicas",
+            "usinas eléctricas",
+            "residuos",
+            "obras viales",
+            "obras portuarias",
+            "pistas de aterrizaje",
+            "depósitos",
+            "talleres mecánicos",
+            "excavaciones",
+            "actividades arqueológicas",
+            "especies exóticas"
+          ]
+        },
+        {
+          "numero": "8",
+          "epigrafe": "Publicidad y participación ciudadana",
+          "texto": [
+            "La Autoridad Administrativa pondrá a disposición del público y de los organismos afectados en el ámbito nacional, departamental y municipal, la Evaluación de Impacto Ambiental por los medios y el término a establecerse en las reglamentaciones de esta Ley. Se protegerán los derechos del secreto industrial y se asegurará un procedimiento que permita la consideración de las observaciones, denuncias e impugnaciones de datos efectuadas por los interesados.",
+            "Cuando los Impactos negativos fueran susceptibles de producir efectos transfronterizos, la Autoridad Administrativa deberá informar al Ministerio de Relaciones Exteriores."
+          ],
+          "palabrasClave": [
+            "participación ciudadana",
+            "secreto industrial",
+            "efectos transfronterizos",
+            "Ministerio de Relaciones Exteriores"
+          ]
+        },
+        {
+          "numero": "9",
+          "epigrafe": "Excepciones y parámetros mínimos",
+          "texto": [
+            "Las reglamentaciones de la presente Ley establecerán las características que deberán reunir las obras y actividades mencionadas en el Artículo 7° de esta Ley cuyos proyectos requieran la Declaración de Impacto Ambiental, y de los estándares y niveles mínimos por debajo de los cuales éstas no serán exigibles. Los proyectos de obras y actividades directamente vinculadas con la Defensa Nacional no requerirán la Evaluación de Impacto Ambiental."
+          ],
+          "palabrasClave": [
+            "excepciones",
+            "estándares mínimos",
+            "Defensa Nacional"
+          ]
+        },
+        {
+          "numero": "10",
+          "epigrafe": "Declaración de Impacto Ambiental",
+          "texto": [
+            "Una vez culminado el estudio de cada Evaluación de Impacto Ambiental, la Autoridad Administrativa expedirá una Declaración de Impacto Ambiental, en la que se consignará, con fundamentos:",
+            "a) Su aprobación o reprobación del proyecto, la que podrá ser simple o condicionada; y,",
+            "b) La devolución de la Evaluación de Impacto Ambiental para complementación o rectificación de datos y estimaciones; o, su rechazo parcial o total.",
+            "Toda Evaluación de Impacto Ambiental quedará aprobada sin más trámite, si no recibiera su correspondiente Declaración en el término de 90 (noventa) días.",
+            "El caso de ausencia de parámetros, de fijación de niveles o de estándares referenciales oficiales, a los efectos del cumplimiento de la obligación de la Evaluación de Impacto Ambiental, se recurrirá a los tratados Internacionales y a los principios generales que rigen la materia."
+          ],
+          "palabrasClave": [
+            "Declaración de Impacto Ambiental",
+            "aprobación",
+            "reprobación",
+            "condicionada",
+            "rechazo",
+            "plazo de 90 días",
+            "tratados internacionales"
+          ]
+        },
+        {
+          "numero": "11",
+          "epigrafe": "Licencia ambiental",
+          "texto": [
+            "La Declaración de Impacto Ambiental constituirá el documento que otorgará al solicitante la licencia para iniciar o proseguir la obra o actividad que ejecute el proyecto evaluado, bajo la obligación del cumplimiento del Plan de Gestión Ambiental y sin perjuicio de exigírsele una nueva Evaluación de Impacto Ambiental en caso de modificaciones significativas del proyecto, de ocurrencia de efectos no previstos, de ampliaciones posteriores o de potenciación de los efectos negativos por cualquier causa subsecuente."
+          ],
+          "palabrasClave": [
+            "licencia ambiental",
+            "Plan de Gestión Ambiental",
+            "modificaciones significativas"
+          ]
+        },
+        {
+          "numero": "12",
+          "epigrafe": "Requisito ineludible",
+          "texto": [
+            "La Declaración de Impacto Ambiental será requisito ineludible en las siguientes tramitaciones relacionadas con el proyecto:",
+            "a) Para obtención de créditos o garantías.",
+            "b) Para obtención de autorizaciones de otros organismos públicos; y,",
+            "c) Para obtención de subsidios y de exenciones tributarias."
+          ],
+          "palabrasClave": [
+            "requisito ineludible",
+            "créditos",
+            "garantías",
+            "autorizaciones",
+            "subsidios",
+            "exenciones tributarias"
+          ]
+        },
+        {
+          "numero": "13",
+          "epigrafe": "Facultades de verificación de la Autoridad Administrativa",
+          "texto": [
+            "En caso de duda sobre la veracidad de la información proporcionada en la Evaluación de Impacto Ambiental, la Autoridad Administrativa, por Resolución fundada, podrá efectuar inspecciones, verificaciones, mediciones y demás actos necesarios. Asimismo, podrá verificar la correcta implementación del Plan de Gestión Ambiental por los medios idóneos que estime conveniente."
+          ],
+          "palabrasClave": [
+            "facultades de verificación",
+            "inspecciones",
+            "Plan de Gestión Ambiental"
+          ]
+        },
+        {
+          "numero": "14",
+          "epigrafe": "Sanciones",
+          "texto": [
+            "Toda ocultación deliberada o falsedad de datos contenidos en la Evaluación de Impacto Ambiental, así como las alteraciones en la ejecución del proyecto, cometidas con el objeto de transgredir obligaciones previstas en esta Ley, serán sancionadas con la cancelación de la validez de la Declaración de Impacto Ambiental y la inmediata suspensión de la obra o actividad."
+          ],
+          "palabrasClave": [
+            "sanciones",
+            "ocultación deliberada",
+            "falsedad de datos",
+            "cancelación de la DIA",
+            "suspensión de la obra"
+          ]
+        },
+        {
+          "numero": "15",
+          "epigrafe": "Comunicación al Poder Ejecutivo",
+          "texto": [
+            "Comuníquese al Poder Ejecutivo."
+          ],
+          "palabrasClave": [
+            "comunicación"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "Reglamento",
+      "titulo": "Decreto N° 14.281/96 – Reglamentación de la Ley N° 294/93",
+      "articulos": [
+        {
+          "numero": "1",
+          "epigrafe": "Objeto",
+          "texto": [
+            "Reglamentase la Ley N° 294/93 de 'Evaluación de Impacto Ambiental'."
+          ],
+          "palabrasClave": [
+            "reglamentación",
+            "Ley 294/93"
+          ]
+        },
+        {
+          "numero": "2",
+          "epigrafe": "Definiciones",
+          "texto": [
+            "Para los efectos de este reglamento se conviene en establecer las siguientes definiciones:",
+            "1) Medio Ambiente: Es el conjunto de factores físicos, químicos, biológicos y socioeconómicos y sus interacciones, que permite mantener la vida en todas sus formas.",
+            "2) Evaluación de impacto ambiental (EvIA): Es un instrumento de política ambiental, formado por un conjunto de procedimientos capaces de asegurar, desde el inicio del proceso, un examen sistemático de los impactos ambientales de una acción propuesta (proyecto, programa, plan o política) y de sus alternativas.",
+            "3) Impacto ambiental: Es toda alteración de las propiedades físicas, químicas y biológicas del medio ambiente, causada por cualquier forma de materia o energía resultante de las actividades humanas que, directa o indirectamente, afectan: a) la salud, la seguridad y el bienestar de la población; b) las actividades socioeconómicas; c) los ecosistemas; d) la estructura y función de los sistemas ambientales; e) la calidad de los recursos naturales y ambientales.",
+            "4) Estudio de Impacto Ambiental (EIA): Es uno de los instrumentos del proceso de evaluación de impacto ambiental, consistente en un documento técnico-científico de análisis de los métodos, procesos, obras y actividades capaces de causar significativa degradación ambiental, puesto a consideración de la autoridad competente con el propósito de decidir sobre la Declaración de Impacto Ambiental.",
+            "5) Relatorio de Impacto Ambiental (RIMA): Es un instrumento del proceso de evaluación de impacto ambiental, que debe ser presentado en forma de documento escrito, de manera sencilla y comprensible por la comunidad, con empleo de medios de comunicación visual y otras técnicas didácticas. Deberá contener el resumen del EIA, aclarando sus conclusiones y será presentado separado de éste.",
+            "6) Declaración de Impacto Ambiental (DIA): Es el pronunciamiento de la autoridad administrativa, en el que, de conformidad con la Ley 294/93, se determina la conveniencia o no de realizar la actividad proyectada, respecto a los efectos ambientales previsibles, y, en caso afirmativo. Las condiciones que deben establecerse en orden a la adecuada protección del medio ambiente y los recursos naturales.",
+            "7) Efecto positivo: Aquel admitido como tal, tanto por la comunidad técnica y científica como por la población en general, en el contexto de un análisis completo de los costos y beneficios genéricos y de las externalidades de la actuación contemplada.",
+            "8) Efecto negativo: Aquel que se traduce en pérdida de productividad ecológica y pérdida de valor socioeconómico, histórico cultural y paisajístico, o en aumento de los perjuicios derivados de la degradación ambiental del área de influencia del proyecto.",
+            "9) Efecto directo: Aquel cuya causa es la acción que usualmente ocurre al mismo tiempo y en el mismo lugar que él. Generalmente está asociado con la construcción, operación o mantenimiento de una instalación o actividad y frecuentemente es cuantificable.",
+            "10) Efecto indirecto: Aquel impacto producido por una acción en el medio ambiente que agrupa los efectos potenciales de cambios adicionales que posiblemente ocurran más adelante o en un sitio diferente.",
+            "11) Efecto permanente: Aquel que supone una alteración, indefinida en el tiempo, de factores de acción predominante en la estructura o en la función de los sistemas ambientales presentes en el área de influencia del proyecto.",
+            "12) Efecto temporal: Aquel que supone alteración no permanente en el tiempo, con un plazo de manifestación que puede estimarse o determinarse.",
+            "13) Efecto reversible: Aquel en el que la alteración que supone puede ser asimilada por el entorno de forma medible, debido al funcionamiento de los procesos naturales de la sucesión ecológica, y de los mecanismos de autodepuración del medio ambiente.",
+            "14) Efecto irreversible: Aquel que supone la imposibilidad, o la 'dificultad externa', de retornar a la situación anterior a la acción que lo produjo.",
+            "15) Efecto contínuo: Aquel que se manifiesta a través de alteraciones regulares en su permanencia.",
+            "16) Efecto discontinuo: Aquel que se manifiesta a través de alteraciones irregulares o intermitentes en su permanencia.",
+            "17) Efecto Regular: Aquel que se manifiesta de forma previsible en el tiempo y cuyas alteraciones es preciso evaluar en función de una probabilidad de ocurrencia continua.",
+            "18) Efecto irregular: Aquel que se manifiesta de forma imprevisible en el tiempo y cuyas alteraciones es preciso evaluar en función de una probabilidad de ocurrencia, sobre todo en aquellas circunstancias no contínuas.",
+            "19) Efecto acumulativo: Aquel que, al prolongarse en el tiempo la acción del agente inductor, incrementa progresivamente su dimensión.",
+            "20) Efecto sinérgico: Aquel que se produce cuando el efecto conjunto de la presencia simultánea de varios agentes supone una incidencia ambiental mayor que el efecto suma de las incidencias individuales contempladas aisladamente.",
+            "21) Efecto a corto, mediano y largo plazo: Aquel cuya incidencia puede manifestarse, respectivamente, en un determinado ciclo de tiempo.",
+            "22) Industrias manufactureras: Se entiende por industrias manufactureras aquellas que realizan la transformación física y química de materiales y componentes en productos nuevos, ya sea que el trabajo se efectúe con máquinas, a mano, en la fábrica o en el domicilio, o que los productos se vendan al por mayor o al por menor. A los fines del EIA, la DOA solicitará al organismo de competencia sustantiva los criterios de clasificación de industrias.",
+            "23) Término de Referencia (TOR): Es un documento que comprende las exigencias de contenido de los Estudios de Impacto Ambiental y su respectivo Relatorio de Impacto Ambiental.",
+            "24) Plan de Gestión Ambiental (PGA): Es una parte del EIA y su respectivo RIMA que contiene los programas de acompañamiento de las evoluciones de los impactos ambientales positivos y negativos causados por el emprendimiento (en las fases de planeamiento, implantación, operación y desactivación cuando fuera el caso). Deberá presentar los métodos e instrumentos de vigilancia, monitoreo y control que se utilizarán y las medidas mitigadoras y/o compensatorias de los impactos negativos.",
+            "25) Proyecto: Es una acción propuesta a través de un documento técnico que define o condiciona de modo necesario, particularmente en lo que se refiere a la localización, la realización de planes y programas, la realización de construcciones o de otras instalaciones y obras, así como otras intervenciones en el medio natural o en el paisaje, incluidas las destinadas a la explotación de los recursos naturales renovables y no renovables.",
+            "26) Residuo: Cualquier material excedente o de desecho que ya no es útil ni necesario y que se destina al abandono.",
+            "27) Residuo Peligroso: Cualquier residuo que contenga cantidades significativas de una sustancia que puede presentar peligro: a) para la vida o la salud de los organismos vivos cuando se libera al medio ambiente; b) para la seguridad de los seres humanos o el equipo en las plantas de vertido si se manipula incorrectamente.",
+            "28) Residuos hospitalarios y/o infecciosos: Son aquellos que por su naturaleza pueden incorporar al medio ambiente virus, bacterias, hongos y cualesquiera otros microorganismos vivos patógenos o sus toxinas, y que proceden de hospitales, centros, puestos de salud, clínicas en general (incluye clínicas veterinarias) y sanatorios, laboratorios, y crematorios.",
+            "29) Sustancia tóxica: Cualquier sustancia que produzca un efecto nocivo sobre los organismos vivos por contacto físico, ingestión o inhalación. Las propiedades tóxicas incluyen envenenamiento agudo y crónico, efectos cancerígenos y mutagénicos, efectos alérgicos, desfiguración de la piel y otros.",
+            "30) Titular del proyecto o proponente: Se considera como tal a la persona natural o jurídica, pública o privada, que solicita una autorización relativa a la realización de un proyecto."
+          ],
+          "palabrasClave": [
+            "definiciones",
+            "medio ambiente",
+            "EvIA",
+            "impacto ambiental",
+            "EIA",
+            "RIMA",
+            "DIA",
+            "PGA",
+            "residuos peligrosos",
+            "sustancia tóxica"
+          ]
+        },
+        {
+          "numero": "3",
+          "epigrafe": "Organismo con Competencia Sustantiva",
+          "texto": [
+            "Son aquellos organismos de Carácter público, que por su naturaleza o competencia en las áreas donde se desarrollarán las actividades sujetas a la EvIA, así como por las normas legales vigentes, deben tener injerencias en dichas actividades."
+          ],
+          "palabrasClave": [
+            "competencia sustantiva"
+          ]
+        },
+        {
+          "numero": "4",
+          "epigrafe": "Comisiones interinstitucionales",
+          "texto": [
+            "A fin de compatibilizar las acciones y procedimientos con los organismos con competencia sustantiva, podrán conformarse comisiones interinstitucionales que serán coordinadas por la DOA. La constitución de las comisiones se formalizarán por medio de Decreto del Poder Ejecutivo, debiendo garantizarse la participación de todas las instituciones públicas involucradas, de acuerdo con la ubicación geográfica y tipo del proyecto."
+          ],
+          "palabrasClave": [
+            "comisiones interinstitucionales",
+            "DOA"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "Reglamento_II",
+      "titulo": "Decreto N° 14.281/96 – Capítulo II: De las Actividades que requieren la EvIA",
+      "articulos": [
+        {
+          "numero": "5",
+          "epigrafe": "Actividades sujetas a la EvIA",
+          "texto": [
+            "Son actividades sujetas a la EvIA y consecuente presentación del EIA y su respectivo RIMA, como requisito indispensable para su ejecución, las siguientes:",
+            "1) Los asentamientos humanos, las colonizaciones y las urbanizaciones, sus planes directores y reguladores. - Estarán sujetos al EvIA los desarrollos urbanísticos, con una población propuesta superior a 2.500 habitantes o con una extensión de más de 20 hás., o menores a éstos cuando estén situados en áreas de interés ambiental. - Desarrollos turísticos que ocupen áreas superiores a las diez (10) hectáreas o menores, si contempla construcciones superiores a 5.000 m2. - Asentamientos humanos organizados en colonias, conforme a la intensidad del uso de la tierra que se proyecta desarrollar. - A los proyectos menores que los citados arriba podrá exigírseles un EIA o la aplicación de medidas mitigadoras y compensatorias a criterio de la DOA.",
+            "2) Explotaciones agropecuarias y forestales - Explotaciones agrícolas y ganaderas con superficies mayores a 1.000 has o menores, cuando se trata de áreas significativas, en términos porcentuales, con relación al uso actual y aptitud de la tierra en la zona o de importancia desde el punto vista ambiental. - Explotaciones forestales cuando tengan lugar en terrenos con extensión superior a 50 has. de aprovechamiento. Los proyectos que tengan plan de manejo conforme al artículo 2° de la Ley N° 536/95 y al artículo 6° del Decreto N° 9.425/95 podrán ser liberados de la presentación del estudio de impacto ambiental. - La DOA podrá exigir la presentación del EIA en los casos siguientes: a) plantaciones forestales de especies nativas o introducidas, que se establecen en forma de monocultivos en superficies mayores a 1000 has, b) plantaciones menores a 1.000 has, en caso que en la zona ya existan grandes extensiones de bosques implantados, o cuando se trata de áreas significativas, en términos porcentuales, con relación al uso actual y aptitud de la tierra en la zona o de importancia desde el punto de vista ambiental. - Explotaciones horti-granjeras con más de 25 has de extensión. Las granjas productoras de animales serán juzgadas conforme a la intensidad de uso del terreno (cantidad de animales por unidad de área).",
+            "3) Los complejos y unidades industriales y de servicios - Los complejos y unidades industriales y de servicios serán calificados por la DOA, la cual analizará caso por caso la necesidad o no de exigir la presentación del EIA. Esta tomará su determinación de acuerdo al contenido del Anexo 1, el cual fue elaborado en base a la Clasificación Internacional Industrial Uniforme (CIIU) de las Naciones Unidas, Revisión 2 del año 1968. Las actividades contempladas en este capítulo, pero que no se encuentran específicamente descriptas, se regirán por el Anexo 2.",
+            "4) Extracción de minerales sólidos, superficiales o de profundidad y sus procesamientos. - Explotaciones que tengan un movimiento total de tierras y/o materiales pétreos, superior a 10.000 metros cúbicos, y/o cuando estas explotaciones se desarrollen a distancias de 300 metros o menos de cursos fluviales y/o en pendientes superiores a 10 %, o en las cercanías de comunidades indígenas. - Explotaciones situadas a distancias inferiores a dos kilómetros de núcleos urbanos con 1.000 o más habitantes. - La explotaciones de materiales de préstamo, con movimiento total de tierras y/o materiales pétreos inferior a los 10.000 metros cúbicos no necesitará estudio de impacto ambiental, pero las mismas deben estar ajustadas a las Normas Legales referentes a la materia. - La plantas trituradoras de roca. En los casos no previstos, o menores que los citados, cuando estén situados en áreas de relevante interés ambiental, a criterio de la DOA, podrá ser exigido un EIA/RIMA y/o un PLAN DE CONTROL AMBIENTAL (PCA). Todos los EIAs/RIMAs y PCAs de extracción mineral deberán presentar un Plan de Recuperación Ambiental (PRA) del área de explotación.",
+            "5) Prospección, exploración y explotación de combustibles fósiles y sus procesamientos. - Los trabajos de prospección, exploración y explotación de combustibles fósiles, sin excepción, requerirán de un estudio de impacto ambiental. - Los proyectos de instalación de refinerías de petróleo.",
+            "6) Construcción y operación de condustos de petróleo, gas y minerales, así como plantas de gasificación y licuefacción.",
+            "7) Construcción y operación de sistemas de abastecimiento de agua, tratamiento y disposición de aguas servidas, y descargas efluentes industriales a ríos o cuerpos de aguas. Estarán sujetos al proceso de EvIA los sistemas de abastecimiento de agua y red cloacal. La DOA determinará en cada caso la magnitud de las poblaciones afectadas, para las cuales se requiere la EvIA.",
+            "8) Obras hidráulicas en general - La presas con áreas de embalse superior a las 5 has. Y/o que estén proyectadas en cercanías a áreas de protección de la vida silvestre y/o afecten a poblaciones situadas aguas abajo.",
+            "9) Usinas y líneas de transmisión eléctrica - Centrales térmicas y otras instalaciones de combustión con atencia nominal de al menos 100 MW. - Líneas de transmisión eléctrica con una potencia superior a los 100.000 voltios, en especial cuando éstas pasan por áreas ecológicas importantes (bosques), centros de gran urbanización, y/o cercanas a aeropuertos o pistas de aviación.",
+            "10) Tratamiento y disposición final de residuos urbanos e industriales. - Plantas de tratamiento de desechos urbanos, plantas de transferencia de residuos hospitalarios y/o infecciosos e industriales y los procesos de incineración. - Planta de eliminación de residuos tóxicos y peligrosos mediante incineración, tratamiento químico o depósito en tierra. - Todos los casos de vertederos serán analizados por la DOA, respecto al requerimiento de EIA.",
+            "11) Obras viales en general - Los EIAs para esta materia estarán sujetos a los procedimientos y normas de la Construcción de Obras Viales.",
+            "12) Obras portuarias en general y sus sistemas operativos. - Puertos comerciales, vías navegables y puertos de navegación que permitan el acceso a todo tipo de embarcaciones.",
+            "13) Pistas de aterrizaje y sus sistemas operativos - Todos los casos deberán ser analizados por la DOA; las pistas superiores a 3.000 metros de longitud deben presentar un EIA.",
+            "14) Depósitos y sus sistemas operativos - Depósitos de sustancias peligrosas y otros que por su envergadura puedan tener efecto en el medio ambiente. La DOA determinará en cada caso la realización o no del EIA.",
+            "15) Talleres mecánicos, de fundición y otros que sean susceptibles de causar efectos al ambiente exterior - Tendrán el mismo tratamiento que las instalaciones industriales (numeral 3 del presente artículo).",
+            "16) Actividades arqueológicas, espeleológicas y de prospección en general - Estarán sujetas al proceso de la Ley, sin embargo la DOA determinará si la actividad contará o no con un EIA.",
+            "17) Producción, comercialización y transporte de sustancias peligrosas - La DOA determinará caso por caso la necesidad o no de realizar un EIA.",
+            "18) La introducción de especies exóticas de animales y plantas y la pesca comercial - Estarán sujetas al proceso de la Ley, sin embargo la DOA determinará si la actividad contará o no con un estudio de impacto ambiental. En relación con la fauna silvestre y la pesca comercial, estas actividades estarán sujetas a las leyes que regulan su explotación y que establecen los preceptos para su protección.",
+            "19) Los proyectos o actividades que signifiquen la producción de energía nuclear, utilización de materiales radioactivos para fines industriales, médicos, investigación u otro fin.",
+            "20) Proyectos que podrán requerir de EIA de acuerdo a las características naturales y socioeconómicas de las áreas en donde se desarrollarán los mismos: - Canalizaciones - Muros de contención - Puentes - Tuberías para desagüe cloacal y drenajes",
+            "PARAGRAFO UNICO. Proyectos desarrollados en áreas urbanas que no requieren EIA: - Pavimentación asfáltica de calles empedradas - Repavimentación de calles asfaltadas - Empedrados de calles de tierra - Remoción y reposición de empedrados - Centros comerciales, con construcciones menores a 5.000 metros cuadrados. - Plazas y parques recreacionales municipales. Excepto cuando son realizadas en áreas significativas desde el punto de vista ambiental, histórico, cultural y paisajístico."
+          ],
+          "palabrasClave": [
+            "actividades sujetas",
+            "asentamientos humanos",
+            "urbanizaciones",
+            "explotaciones agropecuarias",
+            "explotaciones forestales",
+            "industrias",
+            "extracción de minerales",
+            "combustibles fósiles",
+            "conductos",
+            "obras hidráulicas",
+            "usinas eléctricas",
+            "residuos",
+            "obras viales",
+            "obras portuarias",
+            "pistas de aterrizaje",
+            "depósitos",
+            "sustancias peligrosas",
+            "especies exóticas",
+            "energía nuclear",
+            "áreas urbanas excluidas"
+          ]
+        },
+        {
+          "numero": "6",
+          "epigrafe": "Actividades no mencionadas",
+          "texto": [
+            "Cualquier actividad que no se mencione en el artículo anterior, que implique efectos negativos a los recursos naturales y el medio ambiente, o requiera, según las disposiciones contenidas en Leyes, Reglamentos y Normas Técnicas, la consideración de la variable ambiental para ser autorizada, podrá ser objeto de la exigencia de EIA/RIMA y/o un Plan de Control Ambiental (PCA), de acuerdo a la evaluación del cuestionario ambiental básico contenido en este reglamento, que deberá ser analizado y dictaminado por la DOA."
+          ],
+          "palabrasClave": [
+            "actividades no mencionadas",
+            "Plan de Control Ambiental"
+          ]
+        },
+        {
+          "numero": "7",
+          "epigrafe": "Proyectos excluidos",
+          "texto": [
+            "Los proyectos de obras y actividades directamente vinculadas con la Defensa Nacional no requerirán la EvIA (Artículo 9 de la Ley). La DOA y el Ministerio de Defensa Nacional establecerán, en forma conjunta, cuales obras y actividades quedan comprendidas dentro de esta categoría."
+          ],
+          "palabrasClave": [
+            "excluidos",
+            "Defensa Nacional"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "Reglamento_III",
+      "titulo": "Decreto N° 14.281/96 – Capítulo III: Del Procedimiento",
+      "articulos": [
+        {
+          "numero": "13",
+          "epigrafe": "Información al titular del proyecto",
+          "texto": [
+            "Establecida la obligatoriedad del EIA, la DOA fijará los TOR para la realización del mismo. El dictamen correspondiente debe ser firmado por el Director de la DOA.",
+            "PARAGRAFO UNICO: En caso de no establecerse la obligatoriedad de realizar un EIA, los interesados deberán incorporar a su actividad o proyecto las variables que estipulen las normas ambientales vigentes. En caso contrario, se seguirá el procedimiento aquí establecido hasta la emisión de la DIA del proyecto."
+          ],
+          "palabrasClave": [
+            "Términos de Referencia",
+            "Director de la DOA"
+          ]
+        },
+        {
+          "numero": "14",
+          "epigrafe": "De la realización del estudio de impacto ambiental",
+          "texto": [
+            "La DOA suministrará al proponente del proyecto un listado de firmas consultoras ambientales inscriptas en el Catastro habilitado para el efecto.",
+            "PARAGRAFO UNICO.- El responsable del proyecto deberá presentar informes parciales durante la ejecución del estudio, a fin de agilizar el proceso de evaluación del mismo, cuando la DOA lo requiriese."
+          ],
+          "palabrasClave": [
+            "consultoras ambientales",
+            "informes parciales"
+          ]
+        },
+        {
+          "numero": "15",
+          "epigrafe": "Procedimiento para la obtención de la DIA",
+          "texto": [
+            "1. Una vez finalizado el EIA, el proponente remitirá el expediente a la DOA.",
+            "2. La DOA formulará la DIA en un plazo máximo de 90 días hábiles, a computarse a partir de la última modificación y/o complementación presentada por el titular del estudio, la cual determinará las condiciones que deben establecerse para la adecuada protección del ambiente.",
+            "3. En caso de no aprobación del estudio de un determinado emprendimiento, la DOA comunicará su negativa y fundamentos al titular del emprendimiento."
+          ],
+          "palabrasClave": [
+            "procedimiento",
+            "plazo de 90 días hábiles"
+          ]
+        },
+        {
+          "numero": "16",
+          "epigrafe": "Información pública del EIA",
+          "texto": [
+            "El RIMA quedará a disposición del público para su revisión y consulta por el plazo e 15 (quince) días hábiles en la DOA o en el lugar que ésta disponga, lo cual se comunicará a través de publicaciones por tres días consecutivos en dos diarios de gran circulación y por medio de una emisora radial de alcance nacional. Los gastos publicitarios quedarán a cargo del titular del proyecto.",
+            "El plazo de 15 (quince) días hábiles deberá computarse a partir del día siguiente de la última publicidad. El mismo podrá ampliarse si las alegaciones y formulaciones presentadas merezcan una mayor consideración a criterio de la DOA.",
+            "El RIMA debe ser ampliamente divulgado en las áreas afectadas. Para el efecto, el titular del emprendimiento deberá presentar suficiente número de copias del relatorio a la intendencia municipal, gobernación departamental y la DOA para consideración del público.",
+            "El responsable del estudio deberá agregar al mismo suficiente constancia que acredite el cumplimiento del presente artículo.",
+            "PARAGRAFO PRIMERO. Los interesados podrán solicitar a la DOA que se mantenga en reserva la información que haya sido integrada a los documentos y que de hacerse pública, pudiera afectar derechos de propiedad industrial e intereses lícitos de naturaleza mercantil.",
+            "PARAGRAFO SEGUNDO. Antes de efectuar la DIA, la DOA a la vista de las alegaciones y observaciones formuladas en el periodo de información pública y dentro de los 15 (quince) días hábiles siguientes a la terminación de dicho trámite, comunicará al titular del proyecto los aspectos en que, en su caso, el estudio ha de ser modificado y/o complementado, fijándose un plazo de 15 (quince) días hábiles para su cumplimiento. Los plazos previstos en el presente artículo no tendrán carácter perentorio, pudiendo ampliarse los mismos cuando las circunstancias del caso y a criterio de la DOA requiriese uno mayor.",
+            "PARAGRAFO TERCERO. Las observaciones o comentarios de los interesados a dichos estudios, deberán consignarse por escrito, incluyendo fundamentos técnicos, científicos y jurídicos que los sustenten. Las observaciones podrán ser incorporadas total o parcialmente al EIA de acuerdo a su evaluación técnica.",
+            "PARAGRAFO CUARTO. LA DOA, si juzgare necesario, podrá llamar a una reunión o audiencia pública para escuchar la postura de la comunidad. Las modalidades en que serán realizadas estas, deberán ser establecidas por la DOA mediante reglas específicas."
+          ],
+          "palabrasClave": [
+            "información pública",
+            "RIMA",
+            "15 días hábiles",
+            "publicaciones",
+            "reserva",
+            "audiencia pública"
+          ]
+        },
+        {
+          "numero": "17",
+          "epigrafe": "Declaración de Impacto Ambiental (DIA)",
+          "texto": [
+            "La DIA expedida por la DOA consignará:",
+            "a) La aprobación o reprobación del proyecto, la que podrá ser simple o condicionada.",
+            "b) La devolución del estudio de impacto ambiental para complementación o rectificación de datos y estimaciones, o su rechazo parcial o total.",
+            "c) Plazo de validez.",
+            "PARAGRAFO PRIMERO. En caso de ausencia de parámetros, de fijación de niveles o de estándares referenciales oficiales, a los efectos del cumplimiento de la obligación de la EvIA, se recurrirá a los tratados internacionales firmados y/o ratificados por la República del Paraguay y a los principios generales que rigen la materia.",
+            "PARAGRAFO SEGUNDO. La DIA constituirá el documento que otorgará al solicitante la licencia para iniciar o proseguir la obra o actividad, bajo la obligación del cumplimiento del PGA y sin perjuicio de exigírsele un nuevo EIA en caso de modificaciones significativas del proyecto, de ocurrencia de efectos no previstos, de ampliaciones posteriores o de potenciación de los efectos negativos por cualquier causa subsecuente.",
+            "PARAGRAFO TERCERO. La DIA tendrá un plazo máximo de validez de dos años a partir de la fecha de su firma, transcurrido el mismo, el emprendimiento deberá ser evaluado, debiendo exigírsele una ampliación o un nuevo EIA, a criterio de la DOA.",
+            "PARAGRAFO CUARTO. La DIA será cancelada cuando ocurriera incumplimiento del PGA, así como en el caso que se produzcan alteraciones en la ejecución del proyecto, cometidas con el objeto de transgredir obligaciones previstas en la Ley."
+          ],
+          "palabrasClave": [
+            "DIA",
+            "plazo de validez",
+            "dos años",
+            "cancelación de la DIA"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "Reglamento_IV",
+      "titulo": "Decreto N° 14.281/96 – Capítulo IV: Del Contenido de los Estudios de Impacto Ambiental",
+      "articulos": [
+        {
+          "numero": "18",
+          "epigrafe": "Contenido de los EIA",
+          "texto": [
+            "El contenido de los EIA se ajustará a lo estipulado en el Artículo 3° de la Ley 294/93 y a los TOR de cada caso en particular. Mediante una norma interna, la DOA establecerá los TOR, el contenido y forma de presentación del EIA y su respectivo RIMA."
+          ],
+          "palabrasClave": [
+            "contenido del EIA",
+            "Términos de Referencia"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "Reglamento_V",
+      "titulo": "Decreto N° 14.281/96 – Capítulo V: De los Consultores Ambientales",
+      "articulos": [
+        {
+          "numero": "19",
+          "epigrafe": "Consultores ambientales",
+          "texto": [
+            "Se considerarán como consultores ambientales a las personas naturales o jurídicas dedicadas a realización de estudios ambientales, que cumplan con los requisitos exigidos por la DOA, los cuales serán definidos en la reglamentación interna."
+          ],
+          "palabrasClave": [
+            "consultores ambientales"
+          ]
+        },
+        {
+          "numero": "20",
+          "epigrafe": "Personal competente",
+          "texto": [
+            "Los consultores deberán contar con el personal competente que garantice el cumplimiento de los requerimientos técnicos y científicos para este tipo de estudio."
+          ],
+          "palabrasClave": [
+            "personal competente"
+          ]
+        },
+        {
+          "numero": "21",
+          "epigrafe": "Responsabilidad de los consultores",
+          "texto": [
+            "Los consultores serán responsables del contenido técnico y científico de los EIA y su respectivo RIMA, hasta la emisión de la DIA."
+          ],
+          "palabrasClave": [
+            "responsabilidad de los consultores"
+          ]
+        },
+        {
+          "numero": "22",
+          "epigrafe": "Inscripción en el Catastro Técnico de Consultoras Ambientales",
+          "texto": [
+            "Los consultores deberán registrarse anualmente en el Catastro Técnico de Consultoras Ambientales (CTCA) de la DOA, para lo cual deberán consignar los siguientes recaudos:",
+            "a) Solicitud de inscripción",
+            "b) Comprobante de pago de la tasa de inscripción.",
+            "c) Perfil de la consultora",
+            "d) Curriculum Vitae de profesionales y sus respectivos registros.",
+            "e) Documentos que acrediten su experiencia en el área de estudios de impacto ambiental.",
+            "f) Otras informaciones que la DOA considere de interés.",
+            "PARAGRAFO PRIMERO. Los consultores inscriptos deberán notificar a la DOA, en el plazo de 5 (cinco) días hábiles, cualquier modificación o variación de algunos de los recaudos presentados, bajo apercibimiento de que si así no lo hicieren, podrá ordenarse la cancelación del registro de los mismos en el CTCA.",
+            "PARAGRAFO SEGUNDO. La DOA hará un seguimiento de los consultores y podrá cancelar su inscripción en el CTCA a aquellos que presenten EIA que no reúnan la calidad técnica y científica pertinente. Igual sanción será aplicada a los que falseen datos en los estudios presentados.",
+            "PARAGRAFO TERCERO. La DOA está facultada a fijar, resolución mediante, el monto de la tasa de inscripción en el CTCA."
+          ],
+          "palabrasClave": [
+            "Catastro Técnico de Consultoras Ambientales",
+            "inscripción",
+            "cancelación del registro"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "Reglamento_VI",
+      "titulo": "Decreto N° 14.281/96 – Capítulo VI: De la vigilancia, control y las sanciones",
+      "articulos": [
+        {
+          "numero": "23",
+          "epigrafe": "Organismo responsable",
+          "texto": [
+            "La DOA será la responsable del seguimiento y vigilancia del cumplimiento de lo establecido en la DIA."
+          ],
+          "palabrasClave": [
+            "vigilancia",
+            "control",
+            "DOA"
+          ]
+        },
+        {
+          "numero": "24",
+          "epigrafe": "Objetivos de la vigilancia",
+          "texto": [
+            "La vigilancia del cumplimiento de lo establecido en la DIA tendrá como objetivo:",
+            "a) Velar para que, en relación con el ambiente, la actividad se realice según el proyecto y las condiciones en que se hubiera autorizado.",
+            "b) Determinar la eficacia de las medidas de protección ambiental contenidas en la DIA.",
+            "c) Verificar la exactitud y corrección de la evaluación del impacto ambiental realizada."
+          ],
+          "palabrasClave": [
+            "objetivos de la vigilancia",
+            "medidas de protección"
+          ]
+        },
+        {
+          "numero": "25",
+          "epigrafe": "Suspensión de actividades",
+          "texto": [
+            "La DOA podrá ordenar la suspensión de las actividades en los siguientes casos:",
+            "a) Por incumplimiento de las medidas de mitigación y/o compensatorias, que produzcan daños a terceros y/o al medio ambiente;",
+            "b) Cuando hubiera ocultación deliberada o falsedad de datos contenidos en el EIA;",
+            "c) Cuando hubiera alteraciones en la ejecución del proyecto.",
+            "Cuando las causas del mismo, tanto en el estudio, o durante la ejecución y/u operación del proyecto, sean imputables a consultores inscriptos en el CTCA, el registro será cancelado. En todos previstos en el presente artículo, la sanción deberá ser aplicada por resolución fundada, dictada por el Director de la DOA."
+          ],
+          "palabrasClave": [
+            "suspensión",
+            "incumplimiento",
+            "falsedad de datos",
+            "Director de la DOA"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "Reglamento_VII",
+      "titulo": "Decreto N° 14.281/96 – Capítulo VII: De los Recursos contra las Resoluciones",
+      "articulos": [
+        {
+          "numero": "26",
+          "epigrafe": "Recurso de reconsideración",
+          "texto": [
+            "Las resoluciones dictadas por la DOA en cuestiones relacionadas con la presente ley, podrán ser objeto de recurso de reconsideración, que deberá ser planteado ante la misma, en escrito fundado, dentro del plazo máximo de 5 (cinco) días hábiles de notificadas."
+          ],
+          "palabrasClave": [
+            "recurso de reconsideración",
+            "plazo de 5 días"
+          ]
+        },
+        {
+          "numero": "27",
+          "epigrafe": "Falta de pronunciamiento",
+          "texto": [
+            "La falta de pronunciamiento respecto del recurso de reconsideración interpuesto, en el plazo máximo de 45 (cuarenta y cinco) días hábiles, importará hacer lugar al mismo."
+          ],
+          "palabrasClave": [
+            "falta de pronunciamiento",
+            "plazo de 45 días"
+          ]
+        },
+        {
+          "numero": "28",
+          "epigrafe": "Recurso de apelación y alzada",
+          "texto": [
+            "En caso de no hacerse lugar al recurso señalado en el artículo anterior, el afectado podrá interponer el recurso de apelación ante el Viceministro de Recursos Naturales y Medio Ambiente, dentro del plazo máximo de 5 (cinco) días hábiles de notificada la resolución pertinente. En un plazo máximo de 45 (cuarenta y cinco) días hábiles, el Viceministro nombrado deberá dictar su resolución. Esta podrá ser recurrida en alzada ante el Ministerio de Agricultura y Ganadería en un plazo máximo de 5 (cinco) días hábiles de notificada la resolución respectiva, quien deberá pronunciarse dentro del plazo máximo de 45 (cuarenta y cinco) días hábiles. Todo esto sin perjuicio de la acción contencioso-administrativa que pudiera corresponder."
+          ],
+          "palabrasClave": [
+            "recurso de apelación",
+            "Viceministro de Recursos Naturales y Medio Ambiente",
+            "recurso de alzada",
+            "Ministerio de Agricultura y Ganadería",
+            "acción contencioso-administrativa"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "Reglamento_VIII",
+      "titulo": "Decreto N° 14.281/96 – Capítulo VIII: Evaluación de impactos ambientales con efectos transfronterizos",
+      "articulos": [
+        {
+          "numero": "29",
+          "epigrafe": "Efectos transfronterizos",
+          "texto": [
+            "En relación con los países limítrofes y del MERCOSUR.-",
+            "1. Cuando el proyecto tenga repercusiones sobre el ambiente de otro país, el Gobierno pondrá en su conocimiento tanto el contenido del EIA, como el de la DIA.",
+            "2. Cuando en el estudio se advierta que el proyecto produce efectos transfronterizos, el Ministerio de Relaciones Exteriores intervendrá en el procedimiento de su competencia, manteniendo al respecto las necesarias relaciones con los Estados que puedan ser afectados."
+          ],
+          "palabrasClave": [
+            "efectos transfronterizos",
+            "MERCOSUR",
+            "Ministerio de Relaciones Exteriores"
+          ]
+        },
+        {
+          "numero": "30",
+          "epigrafe": "Intercambio de información y consulta",
+          "texto": [
+            "Con el fin de lograr la mayor difusión posible en los intercambios de información y consulta entre los distintos Estados, y una solución amistosa en los casos de controversias, se seguirán, de acuerdo con el derecho comunitario y, en su caso, con el derecho internacional, las técnicas que sean más adecuadas, según las diferentes actividades y componentes ambientales y según las legislaciones sectoriales aplicables en cada país. A este fin, podrán establecerse comités o comisiones bilaterales o mixtos, compuestos por expertos representantes de los países afectados por la actividad proyectada y, a través de los cuales, se canalizarán las actuaciones de los EIAs."
+          ],
+          "palabrasClave": [
+            "intercambio de información",
+            "consulta",
+            "comisiones bilaterales"
+          ]
+        },
+        {
+          "numero": "31",
+          "epigrafe": "Anexos",
+          "texto": [
+            "Establecense como anexos de la presente reglamentación los siguientes:",
+            "ANEXO 1: CATEGORIA DE RESIDUOS. Tipos genéricos de residuos (Y1 a Y45).",
+            "ANEXO 2: Actividades industriales sujetas a EIA (Código CIIU)."
+          ],
+          "palabrasClave": [
+            "anexos",
+            "categoría de residuos",
+            "CIIU"
+          ]
+        }
+      ]
+    }
+  ]
+}
