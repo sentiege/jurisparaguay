@@ -30,28 +30,28 @@ const CODIGOS = [
   { id:'codigo-sanitario',             nombre:'Código Sanitario',                        path:'codigos/codigosanitario/codigo_sanitario_completo.json' },
   { id:'constitucion-nacional',        nombre:'Constitución Nacional',                   path:'codigos/constitucion/constitucion_nacional.json' },
   // ── Leyes ──────────────────────────────────────────────────────────────
-  { id:'ley-1',     nombre:'Ley de Matrimonio Civil',                          path:'codigos/leyes/ley-1/ley_1_matrimonio_civil.json' },
-  { id:'ley-45',    nombre:'Ley de Adopciones',                                path:'codigos/leyes/ley-45/ley_45_adopciones.json' },
-  { id:'ley-125',   nombre:'Ley Tributaria N° 125/91',                         path:'codigos/leyes/ley-125/ley_125_tributacion.json' },
-  { id:'ley-294',   nombre:'Ley de Evaluación de Impacto Ambiental',           path:'codigos/leyes/ley-294/ley_294_evaluacion_impacto_ambiental.json' },
-  { id:'ley-861',   nombre:'Ley General de Bancos y Entidades de Crédito',     path:'codigos/leyes/ley-861/ley_861_general_de_bancos_financieras_y_otras_entidades_de_credito.json' },
-  { id:'ley-1034',  nombre:'Ley del Comerciante',                              path:'codigos/leyes/ley-1034/ley_1034_del_comerciante.json' },
-  { id:'ley-1294',  nombre:'Ley de Marcas',                                    path:'codigos/leyes/ley-1294/ley_1294_de_marcas.json' },
-  { id:'ley-1328',  nombre:'Ley de Derecho de Autor y Derechos Conexos',       path:'codigos/leyes/ley-1328/ley_1328_derecho_de_autor_y_derechos_conexos.json' },
-  { id:'ley-1337',  nombre:'Ley Orgánica del Poder Ejecutivo',                 path:'codigos/leyes/ley-1337/ley_1337_poder_ejecutivo.json' },
-  { id:'ley-1535',  nombre:'Ley de Administración Financiera del Estado',      path:'codigos/leyes/ley-1535/ley_1535_administracion_financiera_del_estado.json' },
-  { id:'ley-1561',  nombre:'Ley del Sistema Nacional del Ambiente',            path:'codigos/leyes/ley-1561/ley_1561_sistema_nacional_del_ambiente.json' },
-  { id:'ley-1863',  nombre:'Estatuto Agrario',                                 path:'codigos/leyes/ley-1863/ley_1863_estatuto_agrario.json' },
-  // ley-2051 pendiente: no tiene JSON aún
-  { id:'ley-3966',  nombre:'Ley Orgánica Municipal',                           path:'codigos/leyes/ley-3966/ley_3966_organica_municipal.json' },
-  { id:'ley-4868',  nombre:'Ley de Comercio Electrónico',                      path:'codigos/leyes/ley-4868/ley_4868_comercio_electronico.json' },
-  { id:'ley-5074',  nombre:'Ley de Obras Públicas (Régimen Especial)',         path:'codigos/leyes/ley-5074/ley_5074.json' },
-  { id:'ley-5542',  nombre:'Ley de Defensa del Consumidor y el Usuario',       path:'codigos/leyes/ley-5542/ley_5542_proteccion_consumidor.json' },
+  { id:'ley-1',     nombre:'Ley de Matrimonio Civil',                               path:'codigos/leyes/ley-1/ley_1_matrimonio_civil.json' },
+  { id:'ley-45',    nombre:'Ley de Adopciones',                                     path:'codigos/leyes/ley-45/ley_45_adopciones.json' },
+  { id:'ley-125',   nombre:'Ley Tributaria N° 125/91',                              path:'codigos/leyes/ley-125/ley_125_tributacion.json' },
+  { id:'ley-294',   nombre:'Ley de Evaluación de Impacto Ambiental',                path:'codigos/leyes/ley-294/ley_294_evaluacion_impacto_ambiental.json' },
+  { id:'ley-861',   nombre:'Ley General de Bancos y Entidades de Crédito',          path:'codigos/leyes/ley-861/ley_861_general_de_bancos_financieras_y_otras_entidades_de_credito.json' },
+  { id:'ley-1034',  nombre:'Ley del Comerciante',                                   path:'codigos/leyes/ley-1034/ley_1034_del_comerciante.json' },
+  { id:'ley-1294',  nombre:'Ley de Marcas',                                         path:'codigos/leyes/ley-1294/ley_1294_de_marcas.json' },
+  { id:'ley-1328',  nombre:'Ley de Derecho de Autor y Derechos Conexos',            path:'codigos/leyes/ley-1328/ley_1328_derecho_de_autor_y_derechos_conexos.json' },
+  { id:'ley-1337',  nombre:'Ley Orgánica del Poder Ejecutivo',                      path:'codigos/leyes/ley-1337/ley_1337_poder_ejecutivo.json' },
+  { id:'ley-1535',  nombre:'Ley de Administración Financiera del Estado',           path:'codigos/leyes/ley-1535/ley_1535_administracion_financiera_del_estado.json' },
+  { id:'ley-1561',  nombre:'Ley del Sistema Nacional del Ambiente',                 path:'codigos/leyes/ley-1561/ley_1561_sistema_nacional_del_ambiente.json' },
+  { id:'ley-1863',  nombre:'Estatuto Agrario',                                      path:'codigos/leyes/ley-1863/ley_1863_estatuto_agrario.json' },
+  { id:'ley-2051',  nombre:'Ley de Contrataciones Públicas',                        path:'codigos/leyes/ley-2051/ley_2051_contrataciones_publicas.json' },
+  { id:'ley-3966',  nombre:'Ley Orgánica Municipal',                                path:'codigos/leyes/ley-3966/ley_3966_organica_municipal.json' },
+  { id:'ley-4868',  nombre:'Ley de Comercio Electrónico',                           path:'codigos/leyes/ley-4868/ley_4868_comercio_electronico.json' },
+  { id:'ley-5074',  nombre:'Ley de Obras Públicas (Régimen Especial)',              path:'codigos/leyes/ley-5074/ley_5074.json' },
+  { id:'ley-5542',  nombre:'Ley de Defensa del Consumidor y el Usuario',            path:'codigos/leyes/ley-5542/ley_5542_proteccion_consumidor.json' },
   { id:'ley-5659',  nombre:'Ley de Buen Trato y Protección contra el Castigo Físico', path:'codigos/leyes/ley-5659/ley_5659.json' },
-  { id:'ley-5777',  nombre:'Ley Integral de Protección de las Mujeres',        path:'codigos/leyes/ley-5777/ley_5777_proteccion_mujeres.json' },
-  { id:'ley-6380',  nombre:'Ley de Modernización y Simplificación Tributaria', path:'codigos/leyes/ley-6380/ley_6380_modernizacion_tributaria.json' },
-  { id:'ley-6480',  nombre:'Ley de Empresa por Acciones Simplificadas (EAS)', path:'codigos/leyes/ley-6480/ley_6480_empresa_por_acciones_simplificadas.json' },
-  { id:'ley-7445',  nombre:'Ley de la Función Pública',                        path:'codigos/leyes/ley-7445/ley_7445_funcion_publica.json' },
+  { id:'ley-5777',  nombre:'Ley Integral de Protección de las Mujeres',             path:'codigos/leyes/ley-5777/ley_5777_proteccion_mujeres.json' },
+  { id:'ley-6380',  nombre:'Ley de Modernización y Simplificación Tributaria',      path:'codigos/leyes/ley-6380/ley_6380_modernizacion_tributaria.json' },
+  { id:'ley-6480',  nombre:'Ley de Empresa por Acciones Simplificadas (EAS)',      path:'codigos/leyes/ley-6480/ley_6480_empresa_por_acciones_simplificadas.json' },
+  { id:'ley-7445',  nombre:'Ley de la Función Pública',                             path:'codigos/leyes/ley-7445/ley_7445_funcion_publica.json' },
 ];
 const PREVIEW = 20;
 
@@ -111,8 +111,8 @@ function setProgreso(done, total, errores) {
   bar.style.width = pct + '%';
   if (txt) {
     if (done < total) txt.textContent = `Cargando índice… ${done}/${total} documentos`;
-    else if (errores)  txt.textContent = `⚠️ ${done} cargados, ${errores} con error`;
-    else               txt.textContent = `✅ ${total} documentos listos para búsqueda`;
+    else if (errores)  txt.textContent = `⚠️ ${done} cargados, ${errores} sin JSON aún`;
+    else               txt.textContent = `✅ Índice listo — ${INDICE.length} artículos`;
   }
   if (pct === 100 && wrap) setTimeout(() => wrap.classList.add('jp-progress--done'), 1500);
 }
@@ -124,7 +124,14 @@ async function cargarIndice() {
   const todos = await Promise.allSettled(
     CODIGOS.map(async cod => {
       const res = await fetch(`${BASE}/${cod.path}`);
+      // Si el servidor responde con un HTTP error real (no 404 silencioso de GH Pages)
       if (!res.ok) throw new Error(`HTTP ${res.status}: ${cod.path}`);
+      // GH Pages devuelve 200 + HTML cuando el archivo .json no existe → skip silencioso
+      const ct = res.headers.get('content-type') || '';
+      if (!ct.includes('application/json') && !ct.includes('text/plain')) {
+        console.warn(`⏩ Sin JSON aún: ${cod.path}`);
+        return null;  // null = skip, no error
+      }
       const data = await res.json();
       const arts = []; extraerArticulos(data, arts);
       done++; setProgreso(done, CODIGOS.length, errores);
@@ -135,9 +142,12 @@ async function cargarIndice() {
   INDICE = [];
   todos.forEach(r => {
     if (r.status !== 'fulfilled') {
-      errores++; console.error('❌', r.reason?.message);
-      diag('❌ ' + (r.reason?.message||'Error'), 'error'); return;
+      errores++;
+      console.error('❌', r.reason?.message);
+      diag('❌ ' + (r.reason?.message||'Error'), 'error');
+      return;
     }
+    if (r.value === null) { errores++; return; } // skip silencioso
     const { cod, arts } = r.value;
     const meta = (typeof CATEGORIAS!=='undefined')
       ? CATEGORIAS.flatMap(c=>c.codigos).find(c=>c.id===cod.id) : null;
@@ -203,9 +213,7 @@ function renderGrid(cats) {
       const cerrado = oculto.hidden;
       oculto.hidden = !cerrado;
       const resto   = parseInt(btn.dataset.resto, 10);
-      btn.textContent = cerrado
-        ? '▴ Ocultar'
-        : `▾ Ver ${resto} más`;
+      btn.textContent = cerrado ? '▴ Ocultar' : `▾ Ver ${resto} más`;
     });
   });
 }
@@ -268,7 +276,7 @@ function renderResultadosLeyes(leyes, rawQ, contenedor) {
       <div class="jp-ley-item__meta">Promulgación${fecha}${ley.tipoPromulgacion ? ' · ' + esc(ley.tipoPromulgacion) : ''}</div>`;
     lista.appendChild(item);
   });
-  if (!leyes.length) lista.innerHTML = '<p class="jp-leyes-no-resultados">No se encontraron leyes para esta búsqueda.</p>';
+  if (!leyes.length) lista.innerHTML = '<p class="jp-leyes-no-resultados">No se encontraron leyes.</p>';
   sec.appendChild(lista);
   contenedor.appendChild(sec);
 }
@@ -388,7 +396,7 @@ function buscar() {
 /* ── Init ── */
 document.addEventListener('DOMContentLoaded', () => {
   renderGrid(CATEGORIAS);
-  cargarIndice().catch(e => { console.error(e); diag('❌ Error: '+e.message,'error'); });
+  cargarIndice().catch(e => { console.error(e); diag('❌ Error crítico: '+e.message,'error'); });
   const input = document.getElementById('searchInput');
   if (!input) return;
   let timer = null;
@@ -399,9 +407,6 @@ document.addEventListener('DOMContentLoaded', () => {
     timer = setTimeout(() => ejecutarBusqueda(q), 350);
   });
   input.addEventListener('keydown', e => {
-    if (e.key === 'Enter') {
-      clearTimeout(timer);
-      buscar();
-    }
+    if (e.key === 'Enter') { clearTimeout(timer); buscar(); }
   });
 });
