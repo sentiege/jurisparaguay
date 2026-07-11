@@ -1,0 +1,724 @@
+{
+  "id": "ley-1561-00",
+  "nombre": "Ley N° 1.561/00 – Que crea el Sistema Nacional del Ambiente, el Consejo Nacional del Ambiente y la Secretaría del Ambiente",
+  "ley": "Ley N° 1.561/00",
+  "vigente": true,
+  "promulgacion": "29/05/2000",
+  "capitulos": [
+    {
+      "numero": "I",
+      "titulo": "De los Objetivos de la Ley y del Sistema Nacional del Ambiente",
+      "articulos": [
+        {
+          "numero": "1",
+          "epigrafe": "Objeto de la ley",
+          "texto": [
+            "Esta ley tiene por objeto crear y regular el funcionamiento de los organismos responsables de la elaboración, normalización, coordinación, ejecución y fiscalización de la política y gestión ambiental nacional."
+          ],
+          "palabrasClave": [
+            "política ambiental nacional",
+            "gestión ambiental",
+            "organismos ambientales"
+          ]
+        },
+        {
+          "numero": "2",
+          "epigrafe": "Sistema Nacional del Ambiente (SISNAM)",
+          "texto": [
+            "Instituyese el Sistema Nacional del Ambiente (SISNAM), integrado por el conjunto de órganos y entidades públicas de los gobiernos nacional, departamental y municipal, con competencia ambiental; y las entidades privadas creadas con igual objeto, a los efectos de actuar en forma conjunta, armónica y ordenada, en la búsqueda de respuestas y soluciones a la problemática ambiental. Asimismo para evitar conflictos interinstitucionales, vacíos o superposiciones de competencia, y para responder con eficiencia y eficacia a los objetivos de la política ambiental."
+          ],
+          "palabrasClave": [
+            "SISNAM",
+            "Sistema Nacional del Ambiente",
+            "coordinación interinstitucional",
+            "política ambiental"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "II",
+      "titulo": "Del Consejo Nacional del Ambiente",
+      "articulos": [
+        {
+          "numero": "3",
+          "epigrafe": "Creación del CONAM",
+          "texto": [
+            "Créase el Consejo Nacional del Ambiente, identificado con las siglas CONAM, órgano colegiado, de carácter interinstitucional, como instancia deliberativa, consultiva y definidora de la política ambiental nacional."
+          ],
+          "palabrasClave": [
+            "CONAM",
+            "Consejo Nacional del Ambiente",
+            "política ambiental nacional",
+            "órgano deliberativo",
+            "órgano consultivo"
+          ]
+        },
+        {
+          "numero": "4",
+          "epigrafe": "Integración del CONAM",
+          "texto": [
+            "El CONAM estará integrado por:",
+            "a) el Secretario Ejecutivo de la Secretaría del Ambiente, quien será su Presidente;",
+            "b) los representantes de las unidades ambientales: de los ministerios, secretarías y órganos públicos sectoriales; por las Secretarías y Departamentos ambientales de los gobiernos departamentales y de los municipales; y",
+            "c) los representantes de las entidades gremiales, así también de los sectores productivos privados y de las organizaciones ambientalistas no gubernamentales sin fines de lucro.",
+            "Sus miembros deberán ser idóneos y de reconocida solvencia moral e intelectual."
+          ],
+          "palabrasClave": [
+            "integración CONAM",
+            "Secretario Ejecutivo SEAM",
+            "unidades ambientales",
+            "gobiernos departamentales",
+            "municipalidades",
+            "organizaciones no gubernamentales"
+          ]
+        },
+        {
+          "numero": "5",
+          "epigrafe": "Funciones del CONAM",
+          "texto": [
+            "Son funciones del CONAM:",
+            "a) definir, supervisar y evaluar la política ambiental nacional;",
+            "b) proponer normas, criterios, directrices y patrones en las cuestiones sometidas a su consideración por la Secretaría del Ambiente;",
+            "c) cooperar con el Secretario Ejecutivo de la Secretaría para el cumplimiento de esta ley y sus reglamentos; y",
+            "d) las demás que le correspondan de acuerdo a la ley."
+          ],
+          "palabrasClave": [
+            "funciones CONAM",
+            "definir política ambiental",
+            "supervisar política ambiental",
+            "evaluar política ambiental",
+            "proponer normas ambientales"
+          ]
+        },
+        {
+          "numero": "6",
+          "epigrafe": "Sesiones del CONAM",
+          "texto": [
+            "El CONAM sesionará ordinariamente tres veces al año. También lo hará de modo extraordinario cuando las circunstancias así lo requieran, o por convocatoria de su Presidente o a pedido de la mitad más uno de sus miembros."
+          ],
+          "palabrasClave": [
+            "sesiones CONAM",
+            "ordinarias",
+            "extraordinarias"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": "III",
+      "titulo": "De la Secretaría del Ambiente",
+      "subsecciones": [
+        {
+          "nombre": "Capítulo I",
+          "titulo": "Creación y Naturaleza Jurídica",
+          "articulos": [
+            {
+              "numero": "7",
+              "epigrafe": "Creación de la SEAM",
+              "texto": [
+                "Créase la Secretaría del Ambiente, identificada con las siglas SEAM, como institución autónoma, autárquica, con personería jurídica de derecho público, patrimonio propio y duración indefinida."
+              ],
+              "palabrasClave": [
+                "SEAM",
+                "Secretaría del Ambiente",
+                "autónoma",
+                "autárquica",
+                "personería jurídica",
+                "patrimonio propio"
+              ]
+            },
+            {
+              "numero": "8",
+              "epigrafe": "Dependencia",
+              "texto": [
+                "La Secretaría dependerá del Presidente de la República. Se regirá por las disposiciones de esta ley y los decretos reglamentarios que se dicten al efecto."
+              ],
+              "palabrasClave": [
+                "dependencia",
+                "Presidente de la República"
+              ]
+            },
+            {
+              "numero": "9",
+              "epigrafe": "Domicilio",
+              "texto": [
+                "La Secretaría tendrá su domicilio en la ciudad de Asunción, sin perjuicio de que pueda establecer oficinas y dependencias en otros lugares del país."
+              ],
+              "palabrasClave": [
+                "domicilio",
+                "Asunción",
+                "oficinas regionales"
+              ]
+            },
+            {
+              "numero": "10",
+              "epigrafe": "Capacidad jurídica",
+              "texto": [
+                "La Secretaría tendrá capacidad para comprar, vender o arrendar bienes muebles e inmuebles y títulos valores, y podrá recibir donaciones. Asimismo, tendrá capacidad para realizar y celebrar todos los actos y contratos necesarios para el desempeño de su cometido, de conformidad con lo que dispone la Ley de Organización Administrativa."
+              ],
+              "palabrasClave": [
+                "capacidad jurídica",
+                "contratos",
+                "donaciones",
+                "bienes"
+              ]
+            }
+          ]
+        },
+        {
+          "nombre": "Capítulo II",
+          "titulo": "Misión, Objetivos y Competencias",
+          "articulos": [
+            {
+              "numero": "11",
+              "epigrafe": "Objetivo general",
+              "texto": [
+                "La SEAM tiene por objetivo la formulación, coordinación, ejecución y fiscalización de la política ambiental nacional."
+              ],
+              "palabrasClave": [
+                "objetivo SEAM",
+                "política ambiental nacional",
+                "formulación",
+                "coordinación",
+                "ejecución",
+                "fiscalización"
+              ]
+            },
+            {
+              "numero": "12",
+              "epigrafe": "Funciones, atribuciones y responsabilidades",
+              "texto": [
+                "La SEAM tendrá por funciones, atribuciones y responsabilidades, las siguientes:",
+                "a) elaborar la política ambiental nacional, en base a una amplia participación ciudadana, y elevar las propuestas correspondientes al CONAM;",
+                "b) formular los planes nacionales y regionales de desarrollo económico y social, con el objetivo de asegurar el carácter de sustentabilidad de los procesos de aprovechamiento de los recursos naturales y el mejoramiento de la calidad de vida;",
+                "c) formular, ejecutar, coordinar y fiscalizar la gestión y el cumplimiento de los planes, programas y proyectos, referentes a la preservación, la conservación, la recuperación, recomposición y el mejoramiento ambiental considerando los aspectos de equidad social y sostenibilidad de los mismos;",
+                "d) determinar los criterios y/o principios ambientales a ser incorporados en la formulación de políticas nacionales;",
+                "e) elaborar anteproyectos de legislación adecuada para el desarrollo de las pautas normativas generales establecidas en esta ley, así como cumplir y hacer cumplir la legislación que sirva de instrumento a la política, programas, planes y proyectos indicados en los incisos anteriores;",
+                "f) participar en representación del Gobierno Nacional, previa intervención del Ministerio de Relaciones Exteriores, en la suscripción de convenios internacionales, así como en la cooperación regional o mundial, sobre intereses comunes en materia ambiental;",
+                "g) coordinar y fiscalizar la gestión de los organismos públicos con competencia en materia ambiental y en el aprovechamiento de recursos naturales;",
+                "h) proponer planes nacionales y regionales de ordenamiento ambiental del territorio, con participación de los sectores sociales interesados;",
+                "i) proponer al CONAM niveles y estándares ambientales; efectuar la normalización técnica y ejercer su control y monitoreo en materia ambiental;",
+                "j) definir las técnicas de valuación del patrimonio ambiental y de los recursos naturales, a los efectos de determinar los costos socioeconómicos y ambientales;",
+                "k) proponer y difundir sistemas más aptos para la protección ambiental y para el aprovechamiento sostenible de los recursos naturales y el mantenimiento de la biodiversidad;",
+                "l) suscribir convenios interinstitucionales, organizar y administrar un Sistema Nacional de Información Ambiental, en coordinación y cooperación con organismos de planificación o de investigación, educacionales y otros que sean afines, públicos o privados, nacionales o extranjeros;",
+                "m) organizar y administrar un sistema nacional de defensa del patrimonio ambiental en coordinación y cooperación con el Ministerio Público;",
+                "n) promover el control y fiscalización de las actividades tendientes a la explotación de bosques, flora, fauna silvestre y recursos hídricos, autorizando el uso sustentable de los mismos y la mejoría de la calidad ambiental;",
+                "o) participar en planes y organismos de prevención, control y asistencia en desastres naturales y contingencias ambientales;",
+                "p) concertar y apoyar la acción de asociaciones civiles y organismos no gubernamentales, con las de carácter público nacional, en materias ambientales y afines;",
+                "q) apoyar y coordinar programas de educación, extensión e investigación relacionados con los recursos naturales y el medio ambiente;",
+                "r) organizar y participar en representación del Gobierno Nacional, en congresos, seminarios, exposiciones, ferias, concursos, campañas publicitarias o de información masiva, en foros nacionales, internacionales y extranjeros;",
+                "s) administrar sus recursos presupuestarios;",
+                "t) preparar el anteproyecto de presupuesto anual de la Secretaría y someterlo a consideración del Poder Ejecutivo;",
+                "u) efectuar operaciones bancarias que sean necesarias para el mejor cumplimiento de los objetivos;",
+                "v) ejecutar los proyectos y convenios nacionales e internacionales; y",
+                "w) imponer sanciones y multas conforme a las leyes vigentes, a quienes cometan infracciones a los reglamentos respectivos. Respecto a la aplicación de penas e infracciones no económicas, se estará sujeto a la legislación penal, debiendo requerirse la comunicación y denuncia a la justicia ordinaria del supuesto hecho punible.",
+                "Además de los objetivos, atribuciones y responsabilidades que estén citados en esta ley, los que sean complementarios o inherentes a ellos; todos aquellos que siendo de carácter ambiental, no estuvieran atribuidos expresamente y con exclusividad a otros organismos."
+              ],
+              "palabrasClave": [
+                "funciones SEAM",
+                "política ambiental",
+                "planes de desarrollo",
+                "sustentabilidad",
+                "recursos naturales",
+                "calidad de vida",
+                "legislación ambiental",
+                "convenios internacionales",
+                "ordenamiento territorial",
+                "estándares ambientales",
+                "biodiversidad",
+                "Sistema Nacional de Información Ambiental",
+                "defensa del patrimonio ambiental",
+                "control de explotación de recursos",
+                "educación ambiental",
+                "sanciones ambientales"
+              ]
+            },
+            {
+              "numero": "13",
+              "epigrafe": "Descentralización de funciones",
+              "texto": [
+                "La SEAM promoverá la descentralización de las atribuciones y funciones que se le confiere por esta ley, a fin de mejorar el control ambiental y la conservación de los recursos naturales, a los órganos y entidades públicas de los gobiernos departamentales y municipales que actúan en materia ambiental. Asimismo, podrá facilitar el fortalecimiento institucional de esos órganos y de las entidades públicas o privadas, prestando asistencia técnica y transferencia de tecnología, las que deberán establecerse en cada caso a través de convenios."
+              ],
+              "palabrasClave": [
+                "descentralización",
+                "gobiernos departamentales",
+                "municipalidades",
+                "asistencia técnica",
+                "transferencia de tecnología"
+              ]
+            },
+            {
+              "numero": "14",
+              "epigrafe": "Autoridad de aplicación",
+              "texto": [
+                "La SEAM adquiere el carácter de autoridad de aplicación de las siguientes leyes:",
+                "a) Nº 583/76 'Que aprueba y ratifica la convención sobre el Comercio Internacional de las Especies Amenazadas de Fauna y Flora Silvestres';",
+                "b) Nº 42/90 'Que prohíbe la importación, depósito, utilización de productos calificados como residuos industriales peligrosos o basuras tóxicas y establece las penas correspondientes a su incumplimiento';",
+                "c) Nº 112/91 'Que aprueba y ratifica el convenio para establecer y conservar la reserva natural del bosque Mbaracayú y la cuenca que lo rodea del río Jejuí';",
+                "d) Nº 61/92 'Que aprueba y ratifica el Convenio de Viena para la Protección de la Capa de Ozono; y la enmienda del Protocolo de Montreal';",
+                "e) Nº 96/92 'De la Vida Silvestre';",
+                "f) Nº 232/93 'Que aprueba el ajuste complementario al acuerdo de cooperación técnica en materia de mediciones de la calidad del agua';",
+                "g) Nº 251/93 'Que aprueba el convenio sobre cambio climático';",
+                "h) Nº 253/93 'Que aprueba el convenio sobre diversidad biológica';",
+                "i) Nº 294/93 'De Evaluación de Impacto Ambiental', su modificación la 345/94 y su decreto reglamentario;",
+                "j) Nº 350/94 'Que aprueba la convención relativa a los humedales de importancia internacional';",
+                "k) Nº 352/94 'De áreas silvestres protegidas';",
+                "l) Nº 970/96 'Que aprueba la Convención de las Naciones Unidas de lucha contra la desertificación';",
+                "m) Nº 1314/98 'Que aprueba la Convención sobre la Conservación de las Especies Migratorias de Animales Silvestres';",
+                "n) Nº 799/96 'De pesca' y su decreto reglamentario; y",
+                "o) todas aquellas disposiciones legales (leyes, decretos, acuerdos internacionales, ordenanzas, resoluciones, etc.) que legislen en materia ambiental."
+              ],
+              "palabrasClave": [
+                "autoridad de aplicación",
+                "CITES",
+                "residuos peligrosos",
+                "bosque Mbaracayú",
+                "capa de ozono",
+                "vida silvestre",
+                "cambio climático",
+                "diversidad biológica",
+                "evaluación de impacto ambiental",
+                "humedales",
+                "áreas silvestres protegidas",
+                "desertificación",
+                "especies migratorias",
+                "pesca"
+              ]
+            },
+            {
+              "numero": "15",
+              "epigrafe": "Coordinación con otras autoridades",
+              "texto": [
+                "Asimismo, la SEAM ejercerá autoridad en los asuntos que conciernan a su ámbito de competencia y en coordinación con las demás autoridades competentes en las siguientes leyes:",
+                "a) Nº 369/72 'Que crea el Servicio Nacional de Saneamiento Ambiental' y su modificación Nº 908/96;",
+                "b) Nº 422/73 'Forestal';",
+                "c) Nº 836/80 'De Código Sanitario';",
+                "d) Nº 904/81 'Estatuto de las Comunidades Indígenas' y su modificación 919/96;",
+                "e) Nº 60/90 y Nº 117/91 'De inversión de capitales' y su decreto reglamentario;",
+                "f) Nº 123/91 'Que adopta nuevas formas de protección fitosanitarias';",
+                "g) Nº 198/93 'Que aprueba el Convenio en materia de salud fronteriza suscrito entre el Gobierno de la República del Paraguay y el Gobierno de la República Argentina';",
+                "h) Nº 234/93 'Que aprueba y ratifica el Convenio Nº 169 sobre Pueblos Indígenas y Tribales';",
+                "i) Nº 1344/98 'De defensa del consumidor y del usuario' y su decreto reglamentario; y",
+                "j) Nº 751/95 'Que aprueba el acuerdo sobre cooperación para el combate al tráfico ilícito de maderas'."
+              ],
+              "palabrasClave": [
+                "coordinación interinstitucional",
+                "saneamiento ambiental",
+                "ley forestal",
+                "código sanitario",
+                "comunidades indígenas",
+                "inversiones",
+                "protección fitosanitaria",
+                "salud fronteriza",
+                "defensa del consumidor",
+                "tráfico ilícito de maderas"
+              ]
+            },
+            {
+              "numero": "16",
+              "epigrafe": "Privilegios de la SEAM",
+              "texto": [
+                "La SEAM gozará de los siguientes privilegios:",
+                "inembargabilidad de sus bienes, depósitos, fondos y rentas;",
+                "las liquidaciones que emita, en que consten obligaciones a cargo de personas físicas o jurídicas, por concepto de cánones, infracciones, prestación de servicios no abonados, intereses o cualquier otro tipo de deudas a favor de la Secretaría, tendrán carácter de título ejecutivo y se harán efectivos por el procedimiento de ejecución de sentencias conforme a lo establecido en el Código Procesal Civil. Las liquidaciones formuladas en virtud de la aplicación de las leyes y reglamentaciones vigentes, prescribirán a los diez años siguientes de la fecha de su exigibilidad;",
+                "exención de fianza de costas y depósitos para garantizar medidas cautelares; y",
+                "exención del Impuesto a la Renta, del Impuesto a las Rentas de las Actividades Agropecuarias, Inmobiliario y de todo impuesto municipal en toda la República del Paraguay."
+              ],
+              "palabrasClave": [
+                "inembargabilidad",
+                "título ejecutivo",
+                "prescripción de 10 años",
+                "exención de fianza",
+                "exención de impuestos"
+              ]
+            }
+          ]
+        },
+        {
+          "nombre": "Capítulo III",
+          "titulo": "De la Estructura Organizacional de la Secretaría del Ambiente",
+          "articulos": [
+            {
+              "numero": "17",
+              "epigrafe": "Máxima dirección",
+              "texto": [
+                "La máxima dirección y administración de la SEAM será su Secretario Ejecutivo, con rango de ministro, quien será de nacionalidad paraguaya y nombrado por el Presidente de la República."
+              ],
+              "palabrasClave": [
+                "Secretario Ejecutivo",
+                "rango de ministro",
+                "nombramiento presidencial"
+              ]
+            },
+            {
+              "numero": "18",
+              "epigrafe": "Funciones y atribuciones del Secretario Ejecutivo",
+              "texto": [
+                "El Secretario Ejecutivo tendrá las siguientes funciones y atribuciones:",
+                "a) presidir el CONAM y hacer cumplir las resoluciones aprobadas por el mismo;",
+                "b) representar judicial y extrajudicialmente a la SEAM. En caso de contienda ante los tribunales podrá delegar en los asesores jurídicos de la Secretaría;",
+                "c) contratar, previa autorización del Presidente de la República, y, en su caso, con aprobación del Congreso, préstamos con entidades nacionales o extranjeras, con las formalidades y limitaciones establecidas en la legislación vigente;",
+                "d) administrar los bienes y recursos de la Secretaría; así como los provenientes de los convenios que celebre la Secretaría, aplicándolos al cumplimiento de los programas específicos de dichos convenios;",
+                "e) contratar y despedir al personal;",
+                "f) conferir poderes especiales a funcionarios de la institución; y",
+                "g) dictar todas las resoluciones que sean necesarias para la consecución de los fines de la Secretaría, pudiendo establecer los reglamentos internos necesarios para su funcionamiento."
+              ],
+              "palabrasClave": [
+                "presidir CONAM",
+                "representación",
+                "contratación de préstamos",
+                "administración de bienes",
+                "personal",
+                "resoluciones"
+              ]
+            },
+            {
+              "numero": "19",
+              "epigrafe": "Recursos contra resoluciones",
+              "texto": [
+                "Las resoluciones del Secretario Ejecutivo serán recurribles dentro del plazo de nueve días hábiles, a partir de la fecha de su notificación, ante el Tribunal de Cuentas."
+              ],
+              "palabrasClave": [
+                "recursos administrativos",
+                "plazo de 9 días hábiles",
+                "Tribunal de Cuentas"
+              ]
+            },
+            {
+              "numero": "20",
+              "epigrafe": "Estructura organizacional",
+              "texto": [
+                "La SEAM tendrá la siguiente estructura administrativa básica:",
+                "a) asesorías de apoyo al Secretario Ejecutivo;",
+                "b) órganos de apoyo:",
+                "1) Dirección de Planificación Estratégica,",
+                "2) Dirección de Administración y Finanzas,",
+                "3) Asesoría Jurídica, y",
+                "4) Auditoría Interna.",
+                "c) Direcciones Generales temáticas:",
+                "1) Dirección General de Gestión Ambiental,",
+                "2) Dirección General de Control de la Calidad Ambiental y de los Recursos Naturales,",
+                "3) Dirección General de Protección y Conservación de la Biodiversidad, y",
+                "4) Dirección General de Protección y Conservación de los Recursos Hídricos.",
+                "d) Unidades Descentralizadas: Centros Regionales Ambientales."
+              ],
+              "palabrasClave": [
+                "estructura SEAM",
+                "Dirección de Planificación Estratégica",
+                "Dirección de Administración y Finanzas",
+                "Asesoría Jurídica",
+                "Auditoría Interna",
+                "Gestión Ambiental",
+                "Control de Calidad Ambiental",
+                "Biodiversidad",
+                "Recursos Hídricos",
+                "Centros Regionales Ambientales"
+              ]
+            },
+            {
+              "numero": "21",
+              "epigrafe": "Dirección de Planificación Estratégica",
+              "texto": [
+                "La Dirección de Planificación Estratégica tendrá como funciones: formular, coordinar y supervisar la política nacional ambiental, en articulación directa con el Consejo. Estarán bajo esta dirección las unidades ejecutoras de los programas de financiamiento y de cooperación técnica internacionales actuales y futuras a ser firmados por la Secretaría."
+              ],
+              "palabrasClave": [
+                "planificación estratégica",
+                "política nacional ambiental",
+                "cooperación técnica internacional"
+              ]
+            }
+          ]
+        },
+        {
+          "nombre": "Capítulo IV",
+          "titulo": "De las Funciones Específicas de las Áreas Temáticas",
+          "articulos": [
+            {
+              "numero": "22",
+              "epigrafe": "Dirección General de Gestión Ambiental",
+              "texto": [
+                "La Dirección General de Gestión Ambiental tendrá como funciones: formular, coordinar y supervisar políticas, programas y proyectos sobre ordenamiento ambiental del territorio nacional; articulación intersectorial e intergubernamental; educación y concienciación ambiental; relaciones internacionales; Sistema Nacional de Información Ambiental."
+              ],
+              "palabrasClave": [
+                "gestión ambiental",
+                "ordenamiento territorial",
+                "educación ambiental",
+                "concienciación",
+                "relaciones internacionales",
+                "Sistema Nacional de Información Ambiental"
+              ]
+            },
+            {
+              "numero": "23",
+              "epigrafe": "Dirección General de Control de la Calidad Ambiental y de los Recursos Naturales",
+              "texto": [
+                "La Dirección General de Control de la Calidad Ambiental y de los Recursos Naturales deberá formular: coordinar, supervisar, evaluar y ejecutar, de modo compartido con los gobiernos departamentales y las municipalidades, programas, proyectos, actividades de evaluación de los estudios sobre los impactos ambientales y consecuentes autorizaciones, control, fiscalización, monitoreo y gestión de la calidad ambiental."
+              ],
+              "palabrasClave": [
+                "control de calidad ambiental",
+                "evaluación de impacto ambiental",
+                "autorizaciones ambientales",
+                "fiscalización",
+                "monitoreo"
+              ]
+            },
+            {
+              "numero": "24",
+              "epigrafe": "Dirección General de Protección y Conservación de la Biodiversidad",
+              "texto": [
+                "La Dirección General de Protección y Conservación de la Biodiversidad deberá: crear, administrar, manejar, fiscalizar y controlar las Áreas Protegidas, boscosas o no, pertenecientes al dominio público, establecer estrategias de uso y conservación de la biodiversidad, incluyendo la caza, cría, tráfico y comercialización de fauna y flora silvestre e implementar el Sistema Nacional de Áreas Silvestres Protegidas que incluya los poderes públicos y los sectores privados."
+              ],
+              "palabrasClave": [
+                "biodiversidad",
+                "áreas protegidas",
+                "fauna silvestre",
+                "flora silvestre",
+                "Sistema Nacional de Áreas Silvestres Protegidas"
+              ]
+            },
+            {
+              "numero": "25",
+              "epigrafe": "Dirección General de Protección y Conservación de los Recursos Hídricos",
+              "texto": [
+                "La Dirección General de Protección y Conservación de los Recursos Hídricos, deberá: formular, coordinar y evaluar políticas de mantenimiento y conservación de los recursos hídricos y sus cuencas, asegurando el proceso de renovación, el mantenimiento de los caudales básicos de las corrientes de agua, la capacidad de recarga de los acuíferos, el cuidado de los diferentes usos y el aprovechamiento de los recursos hídricos, preservando el equilibrio ecológico."
+              ],
+              "palabrasClave": [
+                "recursos hídricos",
+                "cuencas",
+                "acuíferos",
+                "caudales",
+                "equilibrio ecológico"
+              ]
+            }
+          ]
+        },
+        {
+          "nombre": "Capítulo V",
+          "titulo": "Del Patrimonio y Fuentes de Recursos",
+          "articulos": [
+            {
+              "numero": "26",
+              "epigrafe": "Instituciones que pasan a integrar la SEAM",
+              "texto": [
+                "Las siguientes instituciones del Estado pasarán a integrar la Secretaría del Ambiente:",
+                "Del Ministerio de Agricultura y Ganadería:",
+                "a) Subsecretaría de Estado de Recursos Naturales y Medio Ambiente;",
+                "b) Dirección de Ordenamiento Ambiental;",
+                "c) Dirección de Parques Nacionales y Vida Silvestre;",
+                "d) Oficina CITES-Paraguay (CITES-PY); y",
+                "e) Oficina Nacional de Pesca.",
+                "Del Ministerio de Salud Pública y Bienestar Social:",
+                "Dirección de Protección Ambiental, repartición dependiente del Servicio de Nacional de Saneamiento Ambiental (SENASA)."
+              ],
+              "palabrasClave": [
+                "integración institucional",
+                "Subsecretaría de Recursos Naturales",
+                "Dirección de Ordenamiento Ambiental",
+                "Parques Nacionales",
+                "CITES",
+                "Pesca",
+                "SENASA"
+              ]
+            },
+            {
+              "numero": "27",
+              "epigrafe": "Transferencia de activos",
+              "texto": [
+                "Todas estas reparticiones enunciadas en el artículo anterior deberán transferir sus activos a la Secretaría, para todos los efectos legales y patrimoniales que correspondan.",
+                "Los bienes activos deberán ser transferidos por las reparticiones indicadas en el artículo 26 bajo intervención de la Contraloría General de la República, del Departamento de Patrimonio Fiscal del Ministerio de Hacienda y de la Escribanía Mayor de Gobierno. A los efectos de determinar los bienes activos de cada repartición, deberá procederse a un inventario de los bienes de capital adquiridos en el marco de la ejecución de su Presupuesto General de la Nación, cuanto menos, contados desde los tres últimos años anteriores a la vigencia de la presente ley.",
+                "Los bienes inmuebles destinados a áreas silvestres protegidas que se encuentran bajo dominio jurídico del Ministerio de Agricultura y Ganadería, serán transferidos a la Secretaría del Ambiente."
+              ],
+              "palabrasClave": [
+                "transferencia de activos",
+                "Contraloría General",
+                "Patrimonio Fiscal",
+                "Escribanía Mayor de Gobierno",
+                "áreas silvestres protegidas"
+              ]
+            },
+            {
+              "numero": "28",
+              "epigrafe": "Patrimonio y fuentes de recursos de la SEAM",
+              "texto": [
+                "El patrimonio de la SEAM y sus fuentes de recursos estarán constituidos por:",
+                "a) los bienes inmuebles del dominio privado de propiedad de las reparticiones indicadas en el artículo precedente;",
+                "b) todos los bienes, muebles o inmuebles que se adquieran en virtud a la ejecución de su presupuesto o a cualquier título o naturaleza;",
+                "c) el importe de la prestación de servicios, tasas, contribuciones y aplicación de multas por infracciones a las leyes ambientales y no ambientales que indiquen la ley y reglamentos;",
+                "d) el importe asignado anualmente en el Presupuesto General de la Nación;",
+                "e) los créditos internos y externos y sus productos obtenidos por la Secretaría, para el cumplimiento de sus objetivos;",
+                "f) aportes, donaciones o legados de otras personas físicas o jurídicas públicas o privadas, nacionales o extranjeras;",
+                "g) cualquier otro bien propiedad del Estado o privado que sea transferido a la Secretaría;",
+                "h) el producido de bonos, letras, títulos valores y otros recursos que se afecten al patrimonio de la Secretaría; y",
+                "i) los activos provenientes de convenios y proyectos ejecutados por las reparticiones indicadas en el artículo 26 de esta ley."
+              ],
+              "palabrasClave": [
+                "patrimonio SEAM",
+                "fuentes de recursos",
+                "Presupuesto General de la Nación",
+                "créditos",
+                "donaciones",
+                "multas"
+              ]
+            }
+          ]
+        },
+        {
+          "nombre": "Capítulo VI",
+          "titulo": "De las Infracciones y Sanciones",
+          "articulos": [
+            {
+              "numero": "29",
+              "epigrafe": "Aplicación de sanciones",
+              "texto": [
+                "La SEAM aplicará las sanciones previstas en las leyes enunciadas en el artículo 14 de esta ley, de las que se constituye como autoridad de aplicación."
+              ],
+              "palabrasClave": [
+                "sanciones",
+                "autoridad de aplicación"
+              ]
+            },
+            {
+              "numero": "30",
+              "epigrafe": "Sanciones administrativas",
+              "texto": [
+                "Además de las expresamente previstas en disposiciones legales vigentes independientemente de que hechos ilícitos merezcan juicio civil o penal, la Secretaría podrá aplicar a los responsables las siguientes sanciones administrativas: apercibimiento, multa, inhabilitación, suspensión o revocación de licencia o clausura de locales, suspensión de actividades, retención o decomiso de bienes."
+              ],
+              "palabrasClave": [
+                "sanciones administrativas",
+                "apercibimiento",
+                "multa",
+                "inhabilitación",
+                "suspensión",
+                "clausura",
+                "decomiso"
+              ]
+            },
+            {
+              "numero": "31",
+              "epigrafe": "Medidas preventivas",
+              "texto": [
+                "La Secretaría podrá solicitar a la autoridad competente medidas preventivas tendientes a evitar la consumación de hechos ilícitos atentatorios contra los bienes y valores protegidos por esta ley, o asegurar los resultados de intervenciones o decisiones administrativas."
+              ],
+              "palabrasClave": [
+                "medidas preventivas",
+                "bienes protegidos"
+              ]
+            }
+          ]
+        },
+        {
+          "nombre": "Capítulo VII",
+          "titulo": "Disposiciones Finales y Transitorias",
+          "articulos": [
+            {
+              "numero": "32",
+              "epigrafe": "Saldos presupuestarios",
+              "texto": [
+                "Los saldos presupuestarios relativos a programas y sub-programas aprobados por la Ley de Presupuesto General de la Nación del ejercicio fiscal del año 2000, correspondientes a las reparticiones indicadas en el artículo 26 de la presente ley, pasarán a formar parte del presupuesto inicial para su ejecución por la SEAM."
+              ],
+              "palabrasClave": [
+                "saldos presupuestarios",
+                "presupuesto inicial SEAM"
+              ]
+            },
+            {
+              "numero": "33",
+              "epigrafe": "Transferencia de personal",
+              "texto": [
+                "El personal de cada una de las reparticiones indicadas en el artículo 26 de la presente ley, que a la fecha de promulgación de la misma, formen parte del anexo de Personal, pasarán a formar parte de la nómina inicial de la SEAM y gozarán de los mismos privilegios en cuanto a la antigüedad y régimen de jubilación. La nómina vinculada bajo régimen de contratos con fecha a término, también deberán formar parte de la SEAM, siempre que la afectación sea con el presupuesto de las reparticiones sucedidas."
+              ],
+              "palabrasClave": [
+                "transferencia de personal",
+                "antigüedad",
+                "régimen de jubilación",
+                "contratos"
+              ]
+            },
+            {
+              "numero": "34",
+              "epigrafe": "Reglamentación del CONAM",
+              "texto": [
+                "Los requisitos y las condiciones para el funcionamiento del CONAM serán establecidos en el correspondiente decreto reglamentario."
+              ],
+              "palabrasClave": [
+                "CONAM",
+                "decreto reglamentario"
+              ]
+            },
+            {
+              "numero": "35",
+              "epigrafe": "Instalación del CONAM",
+              "texto": [
+                "El CONAM se instalará dentro de un plazo no mayor de treinta días civiles contados a partir de la reglamentación de la presente ley."
+              ],
+              "palabrasClave": [
+                "instalación CONAM",
+                "plazo de 30 días"
+              ]
+            },
+            {
+              "numero": "36",
+              "epigrafe": "Fondo ambiental",
+              "texto": [
+                "El SISNAM contará con un fondo ambiental, cuyo proyecto de ley de creación y funcionamiento será elaborado por la Secretaría en un plazo no mayor de dos años, a partir de la vigencia de la presente ley."
+              ],
+              "palabrasClave": [
+                "fondo ambiental",
+                "SISNAM",
+                "proyecto de ley"
+              ]
+            },
+            {
+              "numero": "37",
+              "epigrafe": "Código ambiental",
+              "texto": [
+                "La SEAM elaborará en un plazo no mayor de dos años, un Código ambiental que unifique y armonice la legislación específica."
+              ],
+              "palabrasClave": [
+                "Código ambiental",
+                "unificación legislativa",
+                "armonización"
+              ]
+            },
+            {
+              "numero": "38",
+              "epigrafe": "Reglamentación",
+              "texto": [
+                "El Poder Ejecutivo reglamentará la presente ley en un plazo no mayor a sesenta días."
+              ],
+              "palabrasClave": [
+                "reglamentación",
+                "plazo de 60 días"
+              ]
+            },
+            {
+              "numero": "39",
+              "epigrafe": "Derogaciones",
+              "texto": [
+                "La presente ley deroga todas las disposiciones legales que establezcan facultades de formular políticas, regulación, reglamentación y de fiscalización de planes y programas en materia ambiental a cargo de la Sub-Secretaría de Recursos Naturales y Medio Ambiente del Ministerio de Agricultura y Ganadería, creado por Ley N° 81/92; de la Dirección de Protección Ambiental, repartición del Servicio de Saneamiento Ambiental del Ministerio de Salud Pública y Bienestar Social."
+              ],
+              "palabrasClave": [
+                "derogaciones",
+                "Subsecretaría de Recursos Naturales y Medio Ambiente",
+                "Ley 81/92",
+                "Dirección de Protección Ambiental",
+                "SENASA"
+              ]
+            },
+            {
+              "numero": "40",
+              "epigrafe": "Comunicación",
+              "texto": [
+                "Comuníquese al Poder Ejecutivo."
+              ],
+              "palabrasClave": [
+                "comunicación"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
