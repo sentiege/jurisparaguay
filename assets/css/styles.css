@@ -63,22 +63,24 @@ body {
 
 /* ============================================
    INDEX — Grid de categorías en columnas
+   Usamos column-count (masonry) para que los
+   grupos se apilen sin dejar huecos vacíos.
    ============================================ */
 
 .categorias-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  padding: 2rem 0 3rem;
-  align-items: start;
+  column-count: 3;
+  column-gap: 1.25rem;
+  padding: 1.5rem 0 2.5rem;
 }
-@media (max-width: 860px) { .categorias-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 520px) { .categorias-grid { grid-template-columns: 1fr; } }
+@media (max-width: 860px) { .categorias-grid { column-count: 2; } }
+@media (max-width: 520px) { .categorias-grid { column-count: 1; } }
 
 /* Columna de una categoría */
 .cat-section {
+  break-inside: avoid;     /* nunca parte un grupo entre columnas */
   display: flex;
   flex-direction: column;
+  margin-bottom: 1.25rem;  /* espacio entre grupos dentro de la misma columna */
 }
 
 /* Etiqueta de color de la categoría */
@@ -316,3 +318,20 @@ body {
   .jp-chips { gap:.3rem; }
   .jp-chip { font-size:.7rem; }
 }
+
+/* --- Leyes resultados --- */
+.jp-leyes-resultados { margin-top: 1.5rem; }
+.jp-leyes-resultados h3 { font-size:.95rem; color:var(--clr-primary); margin-bottom:.75rem; }
+.jp-ley-item {
+  display:block; padding:.55rem .9rem;
+  background:#fff; border:1px solid var(--clr-border);
+  border-radius:6px; margin-bottom:.5rem;
+  text-decoration:none; color:inherit;
+  transition:background var(--transition);
+}
+.jp-ley-item:hover { background:#f5f8ff; }
+.jp-ley-item__num { font-size:.72rem; font-weight:800; color:var(--clr-primary); margin-bottom:.1rem; }
+.jp-ley-item__titulo { font-size:.86rem; font-weight:600; }
+.jp-ley-item__meta { font-size:.75rem; color:var(--clr-text-muted); margin-top:.1rem; }
+.jp-leyes-no-resultados { color:var(--clr-text-muted); font-size:.85rem; }
+.jp-search-status { padding:2rem 0; color:var(--clr-text-muted); font-size:.9rem; }
