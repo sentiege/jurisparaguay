@@ -30,6 +30,78 @@ const CATEGORIAS = [
           { label: 'CEDUNA', url: 'https://ceduna.jimdofree.com/codigos-y-leyes/' }
         ],
         internalUrl: 'codigos/codigoninez/index.html'
+      },
+      {
+        id: 'ley-1',
+        nombre: 'Ley de Matrimonio Civil',
+        ley: 'Ley N° 1/54',
+        descripcion: 'Regula el matrimonio civil, sus requisitos, efectos, nulidades y el régimen de bienes entre cónyuges.',
+        links: [],
+        internalUrl: 'codigos/leyes/ley-1/index.html'
+      },
+      {
+        id: 'ley-45',
+        nombre: 'Ley de Adopciones',
+        ley: 'Ley N° 45/91',
+        descripcion: 'Establece el régimen legal de la adopción plena en el Paraguay, sus requisitos, procedimientos y efectos jurídicos.',
+        links: [],
+        internalUrl: 'codigos/leyes/ley-45/index.html'
+      },
+      {
+        id: 'ley-861',
+        nombre: 'Ley General de Bancos, Financieras y Otras Entidades de Crédito',
+        ley: 'Ley N° 861/96',
+        descripcion: 'Regula la organización, funcionamiento, supervisión y liquidación de las entidades del sistema financiero nacional.',
+        links: [],
+        internalUrl: 'codigos/leyes/ley-861/index.html'
+      },
+      {
+        id: 'ley-1034',
+        nombre: 'Ley del Comerciante',
+        ley: 'Ley N° 1034/83',
+        descripcion: 'Define al comerciante, regula los actos de comercio, los registros mercantiles y las obligaciones contables.',
+        links: [],
+        internalUrl: 'codigos/leyes/ley-1034/index.html'
+      },
+      {
+        id: 'ley-1294',
+        nombre: 'Ley de Marcas',
+        ley: 'Ley N° 1294/98',
+        descripcion: 'Protege los signos distintivos, marcas de productos y servicios, denominaciones de origen y la competencia desleal.',
+        links: [],
+        internalUrl: 'codigos/leyes/ley-1294/index.html'
+      },
+      {
+        id: 'ley-1328',
+        nombre: 'Ley de Derecho de Autor y Derechos Conexos',
+        ley: 'Ley N° 1328/98',
+        descripcion: 'Protege las obras literarias, artísticas y científicas, así como los derechos de artistas, productores y organismos de radiodifusión.',
+        links: [],
+        internalUrl: 'codigos/leyes/ley-1328/index.html'
+      },
+      {
+        id: 'ley-4868',
+        nombre: 'Ley de Comercio Electrónico',
+        ley: 'Ley N° 4868/13',
+        descripcion: 'Regula las transacciones comerciales realizadas por medios electrónicos, la firma digital y los documentos electrónicos.',
+        links: [],
+        internalUrl: 'codigos/leyes/ley-4868/index.html'
+      },
+      {
+        id: 'ley-5542',
+        nombre: 'Ley de Defensa del Consumidor y el Usuario',
+        ley: 'Ley N° 5542/15',
+        descripcion: 'Establece los derechos de los consumidores y usuarios, y las obligaciones de los proveedores de bienes y servicios.',
+        links: [],
+        internalUrl: 'codigos/leyes/ley-5542/index.html'
+      },
+      {
+        id: 'ley-6480',
+        nombre: 'Ley de Empresa por Acciones Simplificadas (EAS)',
+        ley: 'Ley N° 6480/20',
+        descripcion: 'Crea la figura de la Empresa por Acciones Simplificadas, un nuevo tipo societario de constitución ágil y digital.',
+        links: [],
+        internalUrl: 'codigos/leyes/ley-6480/index.html'
       }
     ]
   },
@@ -57,6 +129,14 @@ const CATEGORIAS = [
           { label: 'CEDUNA', url: 'https://ceduna.jimdofree.com/codigos-y-leyes/' }
         ],
         internalUrl: 'codigos/codigoejecucionpenal/index.html'
+      },
+      {
+        id: 'ley-5659',
+        nombre: 'Ley de Buen Trato y Protección contra el Castigo Físico',
+        ley: 'Ley N° 5659/16',
+        descripcion: 'Promueve la crianza positiva y prohíbe el castigo físico o cualquier tipo de violencia como método de corrección hacia niños, niñas y adolescentes.',
+        links: [],
+        internalUrl: 'codigos/leyes/ley-5659/index.html'
       }
     ]
   },
@@ -141,6 +221,54 @@ const CATEGORIAS = [
           { label: 'BaseLegal.com.py', url: 'https://baselegal.com.py/' }
         ],
         internalUrl: 'codigos/codigoelectoral/index.html'
+      },
+      {
+        id: 'ley-1337',
+        nombre: 'Ley Orgánica del Poder Ejecutivo',
+        ley: 'Ley N° 1337/99',
+        descripcion: 'Organiza la estructura del Poder Ejecutivo, los Ministerios, Secretarías y entidades del Estado central.',
+        links: [],
+        internalUrl: 'codigos/leyes/ley-1337/index.html'
+      },
+      {
+        id: 'ley-1535',
+        nombre: 'Ley de Administración Financiera del Estado',
+        ley: 'Ley N° 1535/99',
+        descripcion: 'Regula la administración de los recursos públicos, el presupuesto, la tesorería y el control de las finanzas del Estado.',
+        links: [],
+        internalUrl: 'codigos/leyes/ley-1535/index.html'
+      },
+      {
+        id: 'ley-2051',
+        nombre: 'Ley de Contrataciones Públicas',
+        ley: 'Ley N° 2051/03',
+        descripcion: 'Establece el régimen jurídico de las adquisiciones y contrataciones del Estado paraguayo y sus entidades.',
+        links: [],
+        internalUrl: 'codigos/leyes/ley-2051/index.html'
+      },
+      {
+        id: 'ley-3966',
+        nombre: 'Ley Orgánica Municipal',
+        ley: 'Ley N° 3966/10',
+        descripcion: 'Regula la organización, competencias, finanzas y funcionamiento de los gobiernos municipales del Paraguay.',
+        links: [],
+        internalUrl: 'codigos/leyes/ley-3966/index.html'
+      },
+      {
+        id: 'ley-5074',
+        nombre: 'Ley de Obras Públicas (Régimen Especial)',
+        ley: 'Ley N° 5074/13',
+        descripcion: 'Modifica y amplía el régimen de obras públicas, habilitando financiamientos especiales para infraestructura vial, portuaria y energética.',
+        links: [],
+        internalUrl: 'codigos/leyes/ley-5074/index.html'
+      },
+      {
+        id: 'ley-7445',
+        nombre: 'Ley de la Función Pública',
+        ley: 'Ley N° 7445/24',
+        descripcion: 'Regula el ingreso, permanencia, derechos, deberes, carrera y retiro de los funcionarios públicos del Estado paraguayo.',
+        links: [],
+        internalUrl: 'codigos/leyes/ley-7445/index.html'
       }
     ]
   },
@@ -209,6 +337,46 @@ const CATEGORIAS = [
         descripcion: 'Fija los principios de la salud pública, control de enfermedades, alimentos, fármacos y la vigilancia médica nacional.',
         links: [],
         internalUrl: 'codigos/codigosanitario/index.html'
+      },
+      {
+        id: 'ley-125',
+        nombre: 'Ley Tributaria',
+        ley: 'Ley N° 125/91',
+        descripcion: 'Establece el régimen tributario general del Paraguay: impuesto a la renta, al valor agregado y tributos selectivos al consumo.',
+        links: [],
+        internalUrl: 'codigos/leyes/ley-125/index.html'
+      },
+      {
+        id: 'ley-294',
+        nombre: 'Ley de Evaluación de Impacto Ambiental',
+        ley: 'Ley N° 294/93',
+        descripcion: 'Establece la obligación de evaluación ambiental previa para obras y actividades susceptibles de afectar el ambiente.',
+        links: [],
+        internalUrl: 'codigos/leyes/ley-294/index.html'
+      },
+      {
+        id: 'ley-1561',
+        nombre: 'Ley del Sistema Nacional del Ambiente',
+        ley: 'Ley N° 1561/00',
+        descripcion: 'Crea el Sistema Nacional del Ambiente y el Consejo Nacional del Ambiente (CONAM) para la gestión ambiental del país.',
+        links: [],
+        internalUrl: 'codigos/leyes/ley-1561/index.html'
+      },
+      {
+        id: 'ley-1863',
+        nombre: 'Estatuto Agrario',
+        ley: 'Ley N° 1863/02',
+        descripcion: 'Regula el régimen de la tierra rural, la reforma agraria, el acceso a la tierra y las relaciones agrarias en el Paraguay.',
+        links: [],
+        internalUrl: 'codigos/leyes/ley-1863/index.html'
+      },
+      {
+        id: 'ley-6380',
+        nombre: 'Ley de Modernización y Simplificación Tributaria',
+        ley: 'Ley N° 6380/19',
+        descripcion: 'Moderniza el sistema tributario paraguayo: IRE, IVA, IRP y renta del capital, sustituyendo parcialmente la Ley 125/91.',
+        links: [],
+        internalUrl: 'codigos/leyes/ley-6380/index.html'
       }
     ]
   },
@@ -228,6 +396,22 @@ const CATEGORIAS = [
           { label: 'OEA', url: 'https://www.oas.org/juridico/spanish/par_res3.htm' }
         ],
         internalUrl: 'codigos/constitucion/index.html'
+      }
+    ]
+  },
+  {
+    id: 'leyes-interes',
+    nombre: 'Leyes de Interés',
+    svgIcon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>',
+    color: '#7a3a1a',
+    codigos: [
+      {
+        id: 'ley-5777',
+        nombre: 'Ley Integral de Protección de las Mujeres',
+        ley: 'Ley N° 5777/16',
+        descripcion: 'Establece la protección integral de las mujeres contra toda forma de violencia, incluyendo el femicidio, violencia doméstica y acoso.',
+        links: [],
+        internalUrl: 'codigos/leyes/ley-5777/index.html'
       }
     ]
   }
