@@ -11,6 +11,7 @@ if ('serviceWorker' in navigator) {
 
 const BASE = 'https://sentiege.github.io/jurisparaguay';
 const CODIGOS = [
+  // ── Códigos ────────────────────────────────────────────────────────────
   { id:'codigo-civil',                 nombre:'Código Civil',                            path:'codigos/codigocivil/codigo_civil_completo.json' },
   { id:'codigo-penal',                 nombre:'Código Penal',                            path:'codigos/codigopenal/codigo_penal_completo.json' },
   { id:'codigo-ninez',                 nombre:'Código de la Niñez y Adolescencia',       path:'codigos/codigoninez/codigo_ninez_completo.json' },
@@ -28,6 +29,29 @@ const CODIGOS = [
   { id:'codigo-mineria',               nombre:'Código de Minería',                       path:'codigos/codigomineria/codigo_minero_completo.json' },
   { id:'codigo-sanitario',             nombre:'Código Sanitario',                        path:'codigos/codigosanitario/codigo_sanitario_completo.json' },
   { id:'constitucion-nacional',        nombre:'Constitución Nacional',                   path:'codigos/constitucion/constitucion_nacional.json' },
+  // ── Leyes ──────────────────────────────────────────────────────────────
+  { id:'ley-1',     nombre:'Ley de Matrimonio Civil',                          path:'codigos/leyes/ley-1/ley_1_matrimonio_civil.json' },
+  { id:'ley-45',    nombre:'Ley de Adopciones',                                path:'codigos/leyes/ley-45/ley_45_adopciones.json' },
+  { id:'ley-125',   nombre:'Ley Tributaria N° 125/91',                         path:'codigos/leyes/ley-125/ley_125_tributacion.json' },
+  { id:'ley-294',   nombre:'Ley de Evaluación de Impacto Ambiental',           path:'codigos/leyes/ley-294/ley_294_evaluacion_impacto_ambiental.json' },
+  { id:'ley-861',   nombre:'Ley General de Bancos y Entidades de Crédito',     path:'codigos/leyes/ley-861/ley_861_general_de_bancos_financieras_y_otras_entidades_de_credito.json' },
+  { id:'ley-1034',  nombre:'Ley del Comerciante',                              path:'codigos/leyes/ley-1034/ley_1034_del_comerciante.json' },
+  { id:'ley-1294',  nombre:'Ley de Marcas',                                    path:'codigos/leyes/ley-1294/ley_1294_de_marcas.json' },
+  { id:'ley-1328',  nombre:'Ley de Derecho de Autor y Derechos Conexos',       path:'codigos/leyes/ley-1328/ley_1328_derecho_de_autor_y_derechos_conexos.json' },
+  { id:'ley-1337',  nombre:'Ley Orgánica del Poder Ejecutivo',                 path:'codigos/leyes/ley-1337/ley_1337_poder_ejecutivo.json' },
+  { id:'ley-1535',  nombre:'Ley de Administración Financiera del Estado',      path:'codigos/leyes/ley-1535/ley_1535_administracion_financiera_del_estado.json' },
+  { id:'ley-1561',  nombre:'Ley del Sistema Nacional del Ambiente',            path:'codigos/leyes/ley-1561/ley_1561_sistema_nacional_del_ambiente.json' },
+  { id:'ley-1863',  nombre:'Estatuto Agrario',                                 path:'codigos/leyes/ley-1863/ley_1863_estatuto_agrario.json' },
+  { id:'ley-2051',  nombre:'Ley de Contrataciones Públicas',                   path:'codigos/leyes/ley-2051/ley_2051_contrataciones_publicas.json' },
+  { id:'ley-3966',  nombre:'Ley Orgánica Municipal',                           path:'codigos/leyes/ley-3966/ley_3966_organica_municipal.json' },
+  { id:'ley-4868',  nombre:'Ley de Comercio Electrónico',                      path:'codigos/leyes/ley-4868/ley_4868_comercio_electronico.json' },
+  { id:'ley-5074',  nombre:'Ley de Obras Públicas (Régimen Especial)',         path:'codigos/leyes/ley-5074/ley_5074.json' },
+  { id:'ley-5542',  nombre:'Ley de Defensa del Consumidor y el Usuario',       path:'codigos/leyes/ley-5542/ley_5542_proteccion_consumidor.json' },
+  { id:'ley-5659',  nombre:'Ley de Buen Trato y Protección contra el Castigo Físico', path:'codigos/leyes/ley-5659/ley_5659.json' },
+  { id:'ley-5777',  nombre:'Ley Integral de Protección de las Mujeres',        path:'codigos/leyes/ley-5777/ley_5777_proteccion_mujeres.json' },
+  { id:'ley-6380',  nombre:'Ley de Modernización y Simplificación Tributaria', path:'codigos/leyes/ley-6380/ley_6380_modernizacion_tributaria.json' },
+  { id:'ley-6480',  nombre:'Ley de Empresa por Acciones Simplificadas (EAS)', path:'codigos/leyes/ley-6480/ley_6480_empresa_por_acciones_simplificadas.json' },
+  { id:'ley-7445',  nombre:'Ley de la Función Pública',                        path:'codigos/leyes/ley-7445/ley_7445_funcion_publica.json' },
 ];
 const PREVIEW = 20;
 
@@ -86,9 +110,9 @@ function setProgreso(done, total, errores) {
   const pct = Math.round((done/total)*100);
   bar.style.width = pct + '%';
   if (txt) {
-    if (done < total) txt.textContent = `Cargando índice… ${done}/${total} códigos`;
+    if (done < total) txt.textContent = `Cargando índice… ${done}/${total} documentos`;
     else if (errores)  txt.textContent = `⚠️ ${done} cargados, ${errores} con error`;
-    else               txt.textContent = `✅ ${total} códigos listos para búsqueda`;
+    else               txt.textContent = `✅ ${total} documentos listos para búsqueda`;
   }
   if (pct === 100 && wrap) setTimeout(() => wrap.classList.add('jp-progress--done'), 1500);
 }
@@ -277,7 +301,7 @@ function renderResultados(matches, rawQ, qn) {
   hdr.innerHTML = `
     <h2 class="jp-resultados-titulo">
       🔎 <strong>${matches.length}</strong> artículo${matches.length!==1?'s':''}
-      en <strong>${orden.length}</strong> código${orden.length!==1?'s':''}
+      en <strong>${orden.length}</strong> documento${orden.length!==1?'s':''}
       para &ldquo;<em>${esc(rawQ)}</em>&rdquo;
     </h2>
     <div class="jp-chips">
@@ -293,7 +317,7 @@ function renderResultados(matches, rawQ, qn) {
       <span class="jp-grupo__nombre">${esc(g.nombre)}</span>
       <span class="jp-grupo__meta">
         <span class="jp-grupo__count">${g.arts.length} resultado${g.arts.length!==1?'s':''}</span>
-        <a href="${g.url}" class="jp-grupo__link">Abrir código →</a>
+        <a href="${g.url}" class="jp-grupo__link">Abrir →</a>
       </span></div>`;
     const lista = document.createElement('div');
     lista.className = 'jp-art-lista';
