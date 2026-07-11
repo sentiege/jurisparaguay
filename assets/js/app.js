@@ -11,7 +11,7 @@ if ('serviceWorker' in navigator) {
 
 const BASE = 'https://sentiege.github.io/jurisparaguay';
 const CODIGOS = [
-  // ── Códigos ────────────────────────────────────────────────────────────
+  // ── Códigos ──────────────────────────────────────────────────────────────────
   { id:'codigo-civil',                 nombre:'Código Civil',                            path:'codigos/codigocivil/codigo_civil_completo.json' },
   { id:'codigo-penal',                 nombre:'Código Penal',                            path:'codigos/codigopenal/codigo_penal_completo.json' },
   { id:'codigo-ninez',                 nombre:'Código de la Niñez y Adolescencia',       path:'codigos/codigoninez/codigo_ninez_completo.json' },
@@ -29,7 +29,7 @@ const CODIGOS = [
   { id:'codigo-mineria',               nombre:'Código de Minería',                       path:'codigos/codigomineria/codigo_minero_completo.json' },
   { id:'codigo-sanitario',             nombre:'Código Sanitario',                        path:'codigos/codigosanitario/codigo_sanitario_completo.json' },
   { id:'constitucion-nacional',        nombre:'Constitución Nacional',                   path:'codigos/constitucion/constitucion_nacional.json' },
-  // ── Leyes ──────────────────────────────────────────────────────────────
+  // ── Leyes ──────────────────────────────────────────────────────────────────
   { id:'ley-1',     nombre:'Ley de Matrimonio Civil',                               path:'codigos/leyes/ley-1/ley_1_matrimonio_civil.json' },
   { id:'ley-45',    nombre:'Ley de Adopciones',                                     path:'codigos/leyes/ley-45/ley_45_adopciones.json' },
   { id:'ley-125',   nombre:'Ley Tributaria N° 125/91',                              path:'codigos/leyes/ley-125/ley_125_tributacion.json' },
@@ -38,7 +38,6 @@ const CODIGOS = [
   { id:'ley-1034',  nombre:'Ley del Comerciante',                                   path:'codigos/leyes/ley-1034/ley_1034_del_comerciante.json' },
   { id:'ley-1294',  nombre:'Ley de Marcas',                                         path:'codigos/leyes/ley-1294/ley_1294_de_marcas.json' },
   { id:'ley-1328',  nombre:'Ley de Derecho de Autor y Derechos Conexos',            path:'codigos/leyes/ley-1328/ley_1328_derecho_de_autor_y_derechos_conexos.json' },
-  { id:'ley-1337',  nombre:'Ley Orgánica del Poder Ejecutivo',                      path:'codigos/leyes/ley-1337/ley_1337_poder_ejecutivo.json' },
   { id:'ley-1535',  nombre:'Ley de Administración Financiera del Estado',           path:'codigos/leyes/ley-1535/ley_1535_administracion_financiera_del_estado.json' },
   { id:'ley-1561',  nombre:'Ley del Sistema Nacional del Ambiente',                 path:'codigos/leyes/ley-1561/ley_1561_sistema_nacional_del_ambiente.json' },
   { id:'ley-1863',  nombre:'Estatuto Agrario',                                      path:'codigos/leyes/ley-1863/ley_1863_estatuto_agrario.json' },
@@ -124,13 +123,11 @@ async function cargarIndice() {
   const todos = await Promise.allSettled(
     CODIGOS.map(async cod => {
       const res = await fetch(`${BASE}/${cod.path}`);
-      // Si el servidor responde con un HTTP error real (no 404 silencioso de GH Pages)
       if (!res.ok) throw new Error(`HTTP ${res.status}: ${cod.path}`);
-      // GH Pages devuelve 200 + HTML cuando el archivo .json no existe → skip silencioso
       const ct = res.headers.get('content-type') || '';
       if (!ct.includes('application/json') && !ct.includes('text/plain')) {
         console.warn(`⏩ Sin JSON aún: ${cod.path}`);
-        return null;  // null = skip, no error
+        return null;
       }
       const data = await res.json();
       const arts = []; extraerArticulos(data, arts);
@@ -147,7 +144,7 @@ async function cargarIndice() {
       diag('❌ ' + (r.reason?.message||'Error'), 'error');
       return;
     }
-    if (r.value === null) { errores++; return; } // skip silencioso
+    if (r.value === null) { errores++; return; }
     const { cod, arts } = r.value;
     const meta = (typeof CATEGORIAS!=='undefined')
       ? CATEGORIAS.flatMap(c=>c.codigos).find(c=>c.id===cod.id) : null;
@@ -200,7 +197,7 @@ function renderGrid(cats) {
             ${leyesVisibles}
             ${leyesOcultas ? `<div class="cat-list--collapsed" hidden>${leyesOcultas}</div>` : ''}
           </div>
-          ${resto > 0 ? `<button type="button" class="cat-ver-mas" data-resto="${resto}">&#9660; Ver ${resto} más</button>` : ''}
+          ${resto > 0 ? `<button type="button" class="cat-ver-mas" data-resto="${resto}">▼ Ver ${resto} más</button>` : ''}
         ` : ''}
       </div>`;
   }).join('');
