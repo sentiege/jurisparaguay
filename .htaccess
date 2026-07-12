@@ -1,0 +1,92 @@
+# ============================================================
+#  JurisParaguay — .htaccess
+#  Seguridad y rendimiento para hosting cPanel (Hostinger)
+# ============================================================
+
+# ── Tipos MIME ────────────────────────────────────────────────────────────
+AddType application/json .json
+AddType application/javascript .js
+AddType text/css .css
+
+# Ocultar listado de directorios
+Options -Indexes
+
+# ── Forzar HTTPS ─────────────────────────────────────────────────────────
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# ── Headers de seguridad ────────────────────────────────────────────────
+<IfModule mod_headers.c>
+
+  # Evita que el sitio sea embebido en iframes de otros dominios
+  Header always set X-Frame-Options "SAMEORIGIN"
+
+  # Evita que el navegador adivine el tipo de archivo
+  Header always set X-Content-Type-Options "nosniff"
+
+  # Evita filtrar información del servidor
+  Header always unset X-Powered-By
+  Header always unset Server
+
+  # Protección XSS para navegadores legacy
+  Header always set X-XSS-Protection "1; mode=block"
+
+  # Controla qué recursos externos puede cargar la página
+  # connect-src permite fetch() a la API del Congreso
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://datos.congreso.gov.py; font-src 'self'; object-src 'none'; base-uri 'self';"
+
+  # No enviar el referrer a sitios externos
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+  # Desactivar funciones del navegador que no se usan
+  Header always set Permissions-Policy "geolocation=(), camera=(), microphone=(), payment=()"
+
+  # HSTS: forzar HTTPS por 1 año (activar solo si el SSL está configurado)
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+
+</IfModule>
+
+# ── Bloquear archivos sensibles ──────────────────────────────────────────────
+<FilesMatch "(\.(git|env|log|sh|sql|bak|swp|DS_Store)|composer\.lock|package\.json|package-lock\.json)$">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+  </IfModule>
+</FilesMatch>
+
+# Bloquear acceso a la carpeta .git si fue subida por error
+<IfModule mod_rewrite.c>
+  RewriteRule ^(\.git|\.\./) - [F,L]
+</IfModule>
+
+# ── Cache para estáticos ─────────────────────────────────────────────────────
+<IfModule mod_expires.c>
+  ExpiresActive On
+  # Imágenes y fuentes: 30 días
+  ExpiresByType image/png                "access plus 30 days"
+  ExpiresByType image/jpg                "access plus 30 days"
+  ExpiresByType image/jpeg               "access plus 30 days"
+  ExpiresByType image/svg+xml            "access plus 30 days"
+  ExpiresByType image/webp               "access plus 30 days"
+  ExpiresByType font/woff2               "access plus 30 days"
+  # CSS y JS: 1 día (para poder actualizar sin problemas)
+  ExpiresByType text/css                 "access plus 1 day"
+  ExpiresByType application/javascript   "access plus 1 day"
+  # JSON de códigos: 1 día
+  ExpiresByType application/json         "access plus 1 day"
+  # HTML: sin cache (siempre fresco)
+  ExpiresByType text/html                "access plus 0 seconds"
+</IfModule>
+
+# ── Compresión GZIP ──────────────────────────────────────────────────────────
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/json
+  AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
